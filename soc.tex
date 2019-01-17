@@ -4,6 +4,7 @@
 % package includes
 \usepackage{titlesec}
 \usepackage[utf8]{inputenc}
+\usepackage{tabularx}
 
 % font stuff
 \usepackage[T1]{fontenc}
@@ -22,6 +23,102 @@
 \titlespacing{\section}{0pt}{0pt}{0.3em}
 \titlespacing{\subsection}{0pt}{0pt}{0.2em}
 
+% page numbering only starts at TOC page
+\pagenumbering{gobble}
+
 \begin{document}
+  % first page's geometry is different
+  \newgeometry{top=2.5cm, left=2.5cm, right=2.5cm, bottom=2.5cm}
+
+  \bfseries
+
+  \begin{center}
+    {\fontsize{18}{21.6} \selectfont STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}\\%
+    \vspace*{\baselineskip}
+    {\fontsize{14}{16.8} \selectfont Obor č. <číslo oboru>}\\%
+
+    \topskip0pt
+    \vspace{16em}
+    {\fontsize{20}{24} \selectfont Robotika Jednoduše}%
+    \vspace*{\fill}
+  \end{center}
+
+  \fontsize{16}{19.2} \selectfont
+  Tomáš Sláma\\
+  Liberecký Kraj
+  \hfill
+  Turnov 2019
+
+  % the geometry for the rest of the document
+  \newgeometry{top=2.5cm, left=3.5cm, right=1.5cm, bottom=2.5cm}
+
+  \newpage
+  \begin{center}
+    {\fontsize{18}{21.6} \selectfont STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}\\%
+    \vspace*{\baselineskip}
+    {\fontsize{14}{16.8} \selectfont Obor č. <číslo oboru>}\\%
+
+    \topskip0pt
+    \vspace{10em}
+    \fontsize{20}{24} \selectfont
+    Robotika Jednoduše%
+
+    Robotics Simplified%
+    \vspace*{\fill}
+  \end{center}
+
+  \normalfont
+  \fontsize{16}{19.6} \selectfont
+
+  \textbf{Autoři:} Tomáš Sláma\\
+  \textbf{Škola:} Gymnázium, Turnov, Jana Palacha 804, příspěvková \\ organizace, 511 21 Turnov \\
+  \textbf{Kraj:} Liberecký kraj \\
+  \textbf{Konzultant:}
+
+  \vspace{\baselineskip}
+
+  \fontsize{12}{14.4} \selectfont
+  Turnov 2019
+
+  \vspace{4em}
+
+  \newpage
+
+  \section*{\normalfont\textbf{Prohlášení}}
+  Prohlašuji, že jsem svou práci SOČ vypracoval/a samostatně a použil/a jsem pouze prameny a literaturu uvedené v seznamu bibliografických záznamů.
+
+  Prohlašuji, že tištěná verze a elektronická verze soutěžní práce SOČ jsou shodné.
+
+  Nemám závažný důvod proti zpřístupňování této práce v souladu se zákonem č. 121/2000 Sb., o právu autorském, o právech souvisejících s právem autorským a o změně některých zákonů (autorský zákon) ve znění pozdějších předpisů.
+
+  \qquad
+
+  V město dne datum ………………………………\\%
+  \makebox[\linewidth]{Tomáš Sláma}%
+
+  \newpage
+
+  \section*{\normalfont\textbf{Poděkování}}
+
+  \newpage
+
+  \section*{\normalfont\textbf{Anotace}}
+  \section*{\normalfont\textbf{Klíčová slova}}
+  \section*{\normalfont\textbf{Annotation}}
+  \section*{\normalfont\textbf{Keywords}}
+
+  \newpage
+
+  % genereate TOC (with a different name for contents)
+  \renewcommand{\contentsname}{Obsah}
+  \tableofcontents
+
+  % continue page numbering from this point on
+  \newcounter{savepage}
+  \setcounter{savepage}{\value{page}}%
+  \pagenumbering{arabic}
+  \setcounter{page}{\numexpr\value{savepage}-1}%
+
+  \newpage
 
 \end{document}
