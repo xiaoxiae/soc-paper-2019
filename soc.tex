@@ -6,6 +6,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage{tabularx}
 
+% to automatically add date of compilation
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{. }
+
 % font stuff
 \usepackage[T1]{fontenc}
 \usepackage{type1ec}
@@ -93,7 +97,7 @@
 
   \qquad
 
-  V město dne datum ………………………………\\%
+  V Turnově dne \today \, ………………………….\\%
   \makebox[\linewidth]{Tomáš Sláma}%
 
   \newpage
