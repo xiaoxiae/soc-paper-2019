@@ -109,15 +109,17 @@
 
   \newpage
 
-  % genereate TOC (with a different name for contents)
-  \renewcommand{\contentsname}{Obsah}
-  \tableofcontents
-
-  % continue page numbering from this point on
+  % start page numbering at the first TOC page
   \newcounter{savepage}
   \setcounter{savepage}{\value{page}}%
   \pagenumbering{arabic}
   \setcounter{page}{\numexpr\value{savepage}-1}%
+
+  % genereate TOC (with a different name for contents)
+  \renewcommand{\contentsname}{Obsah}
+  \tableofcontents
+
+
 
   \newpage
 
