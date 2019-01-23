@@ -9,7 +9,7 @@
 %% merlin.mbs  (with options: `tail,exlang,lang,vonx,nm-rev,jnrlst,aunm-semi,nmlm,x3,m3,atit-u,vnum-nr,volp-sp,jwdpg,pp-last,jwdvol,num-xser,ser-vol,ser-ed,pg-bk,add-pub,isbn,issn,doi,edpar,edby,blk-tit,au-col,čeština,pp,and-xcom,xand,eprint,url,url-nl,nfss,,{}')
 %% ----------------------------------------
 %% *** Styl snažící se být v souladu s normou ISO 690. Pomocí latex makebst vytvořil David Martinek. ***
-%% 
+%%
 %% Copyright 1994-2004 Patrick W Daly
  % ===============================================================
  % IMPORTANT NOTICE:
@@ -1546,8 +1546,11 @@ FUNCTION {presort}
   #1 entry.max$ substring$
   'sort.key$ :=
 }
-ITERATE {presort}
-SORT
+
+%% avoid sorting
+%%ITERATE {presort}
+%%SORT
+
 STRINGS { longest.label }
 INTEGERS { number.label longest.label.width }
 FUNCTION {initialize.longest.label}
