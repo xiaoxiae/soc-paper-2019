@@ -1,10 +1,18 @@
 \documentclass[a4paper, 12pt]{article}
 \usepackage[top=2.5cm, left=3.5cm, right=1.5cm, bottom=2.5cm, includefoot]{geometry}
 
+% image and caption include setup
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+
 % misc includes
 \usepackage{titlesec}
 \usepackage{tabularx}
 \usepackage[hyphens,spaces,obeyspaces]{url}
+
+% figure caption setup
+\usepackage[font=small,labelfont=bf]{caption}
+\renewcommand{\figurename}{Obr. č.}
 
 % to automatically add date of compilation
 \usepackage[ddmmyyyy]{datetime}
