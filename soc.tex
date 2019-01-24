@@ -295,4 +295,13 @@
   \bibliographystyle{czechiso}
   \bibliography{soc}
 
+  % create the list of figures and add it to TOC
+  \renewcommand{\listfigurename}{Seznam obrázků a tabulek}
+  \addcontentsline{toc}{section}{Seznam obrázků a tabulek}
+  {%
+  \let\oldnumberline\numberline%
+  \renewcommand{\numberline}{\figurename~\oldnumberline}%
+  \listoffigures%
+  }
+
 \end{document}
