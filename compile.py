@@ -1,6 +1,6 @@
-import subprocess
+import os
 
-subprocess.run("pdflatex soc.tex")
-subprocess.run("bibtex soc")
-subprocess.run("pdflatex soc.tex")
-subprocess.run("pdflatex soc.tex")
+os.system("pdflatex soc.tex")
+os.system("bibtex soc")
+os.system("pdflatex soc.tex")
+os.system("pdflatex soc.tex")
