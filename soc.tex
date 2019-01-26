@@ -10,6 +10,17 @@
 \usepackage{tabularx}
 \usepackage[hyphens,spaces,obeyspaces]{url}
 
+% for numbering bibliography and list of figures
+\usepackage[numbib]{tocbibind}
+\makeatletter
+\renewcommand\listoffigures{%
+    \section{\listfigurename}%
+    \@mkboth{\MakeUppercase\listfigurename}%
+        {\MakeUppercase\listfigurename}%
+    \@starttoc{lof}%
+}
+\makeatother
+
 % figure caption setup
 \usepackage[font=small,labelfont=bf]{caption}
 \renewcommand{\figurename}{Obr. č.}
@@ -289,15 +300,13 @@
 
   \section{Závěr}
 
-  % create the bibliography with the proper formating and a czech name and add it to TOC
+  % create the bibliography
   \renewcommand{\refname}{Použitá literatura}
-  \addcontentsline{toc}{section}{Použitá literatura}
   \bibliographystyle{czechiso}
   \bibliography{soc}
 
-  % create the list of figures and add it to TOC
+  % create the list of figures
   \renewcommand{\listfigurename}{Seznam obrázků a tabulek}
-  \addcontentsline{toc}{section}{Seznam obrázků a tabulek}
   {%
   \let\oldnumberline\numberline%
   \renewcommand{\numberline}{\figurename~\oldnumberline}%
