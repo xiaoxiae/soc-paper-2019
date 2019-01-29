@@ -153,22 +153,22 @@
   \newpage
 
   \section{Úvod}
-  V dnešním světě plným technologií se robotika rozvíjí stále rapidnějším tempem. Roboti jsou díky brilantním programátorům a inženýrům rychlejší, obratnější a chytřejší než kdy jindy a uplatnění nalézají v nesčetném množství oborů. Jen za rok 2018 se prodej industriálních robotů zvýšil o 30 \%\cite{industrial-robot-growth} a nadnárodní korporace jako Amazon jich používají na úkor lidské pracovní síly stále více\cite{amazon-hiring}. Bez talentovaných lidí by však takový pokrok nebyl možný, proto vzniká řada programů a organizací, které se vzdělávání budoucí generace snaží podporovat.
+  V dnešním světě plném technologií se robotika rozvíjí stále rapidnějším tempem. Roboti jsou díky brilantním programátorům a inženýrům rychlejší, obratnější a chytřejší než kdy jindy a uplatnění nalézají v nesčetném množství oborů. Jen za rok 2018 se prodej industriálních robotů zvýšil o 30 \%\cite{industrial-robot-growth} a nadnárodní korporace jako Amazon jich používají na úkor lidské pracovní síly stále více\cite{amazon-hiring}. Bez talentovaných lidí by však takový pokrok nebyl možný, proto vzniká řada programů a organizací, které se vzdělávání budoucí generace snaží podporovat.
 
-  Značnou zásluhu má například neziskový program FIRST\cite{first-inspires} a jeho soutěže FRC (First Robotics Competition), FTC (First Technical Challenge) a FLL (First Lego League), které z robotiky dělají hru. Teamy tvořeny studenty základních a středních škol mají za úkol během několika týdnů robota od základu navrhnout, postavit a naprogramovat tak, aby plnil úkoly každým rokem se měnící výzvy.
+  Značnou zásluhu má například neziskový program FIRST\cite{first-inspires} a jeho soutěže FRC (First Robotics Competition), FTC (First Technical Challenge) a FLL (First Lego League), které z robotiky dělají hru. Týmy tvořeny studenty základních a středních škol mají za úkol během několika týdnů robota od základu navrhnout, postavit a naprogramovat tak, aby plnil úkoly každým rokem se měnící výzvy.
 
   Týmy začátečníků a jednotlivci se zájmem o robotiku se však musí potýkat s problematikou hledání studijních materiálů, ať už se jedná o programování robota či o jeho stavbu. Čtení odborných prací a luštění komplexních matematických vzorců není pro každého, zvláště pokud o daném oboru ví pramálo, a hledání kvalitních zdrojů trvá dlouho a často končí neúspěchem.
 
   Stránka \url{robotics-simplified.com} se snaží tento problém řešit tím, že poskytuje centralizovaný zdroj informací pro nováčky do oboru robotiky. Je strukturována jako série článků, které koncepty intuitivním způsobem vysvětlují, pro snazší pochopení jsou články obohaceny o ilustrace a interaktivní vizualizace, a jsou pro zájemce o programování doplněny zdrojovými kódy, které koncepty implementují. Celá stránka je rovněž optimalizovaná pro mobilní zařízení a je dostupná také v knižní podobě (ve formátu PDF), proto připojení k internetu není pro čtení stránky třeba.
 
-  Tato práce se zabývá procesem tvorby, provozem a fungováním výše zmíněné webové stránky. Popisuje nástroje a programovací jazyky, které stránka využívá a opodstatňuje jejich použití oproti alternativám. Ke konci rozebírá statistiky návštěvnosti a jejich dělené podle kritérií jako věk, pohlaví, délka návštěvy stránky a jiné.
+  Tato práce se zabývá procesem tvorby, provozem a fungováním výše zmíněné webové stránky. Popisuje nástroje a programovací jazyky, které stránka využívá a opodstatňuje jejich použití oproti alternativám. Ke konci rozebírá statistiky návštěvnosti a jejich dělení podle kritérií jako věk, pohlaví, délka návštěvy stránky a jiné.
 
   \newpage
 
   \section{Požadavky na výsledný produkt}
   Myšlenka tvorby kvalitních materiálů pro studium robotiky je příliš rozsáhlá na to, aby mohla práce na projektu začít bez větší úvahy: bude se jednat o webovou stránku, aplikaci, či repozitář se zdrojovými kódy?
 
-  Před začátkem je třeba definovat požadavky, které by výsledný produkt měl splňovat. Podle těch lze varianty provedení hodnotit a použít tu, se jeví za nejvhodnější.
+  Před začátkem je třeba definovat požadavky, které by výsledný produkt měl splňovat. Podle těch lze způsoby provedení porovnat a použít ten, který se jeví za nejvhodnější.
 
 
   \subsection{Otevřenost zdrojového kódu}
@@ -180,7 +180,7 @@
   \subsection{Multiplatformnost}
   Co se dostupnosti týče, důležitým požadavkem je multiplatformnost, tj. možnost přístupu k produktu z více než jedné platformy\footnote{Slovem platforma je tomto kontextu myšlen způsob přístup na stránku jako tablet, stolní počítač, mobil, čtečka elektronických knih, aj.}. Výsledný produkt musí být multiplatformní primárně kvůli mému osobnímu názoru, že vzdělání by nemělo být omezeno technologickými preferencemi jednotlivce.
 
-  Tato podmínka znemožňuje tvorbu aplikace, jelikož by se jak finanční\cite{apple-store-membership,android-store-membership,wedos-hosting}, tak časové nároky mnohonásobně zvýšily a komplexita projektu by přerostla nad rámec jednotlivce.
+  Tato podmínka fakticky znemožňuje tvorbu aplikace, jelikož by se jak finanční\cite{apple-store-membership,android-store-membership,wedos-hosting}, tak časové nároky mnohonásobně zvýšily a komplexita projektu by přerostla nad rámec jednotlivce.
 
 
   \section{Použité programovací jazyky}
@@ -211,17 +211,17 @@
   \subsection{Git} \label{sec:Git}
   Git je open-source verzovací systém vytvořen Linusem Torvaldsem pro použití na verzování operačního systému Linux. V open-source komunitě se v současné době jedná o nejpoužívanější verzovací systém\cite{version-control-usage-statistics}, což je jeden z důvodů pro jeho využití v tomto projektu.
 
-  Git je narozdíl od centralizovaných verzovacím systémům jako Subversion a CVS decentralizovaný -- místo jedné centrální úschovny kódu má každý svou lokální kopii s úplnou historií projektu. Výhody tohoto přístupu jsou např. rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru\cite{cvcs-vs-dvcs}.
+  Narozdíl od centralizovaných verzovacím systémům jako Subversion a CVS je Git decentralizovaný -- místo jedné centrální úschovny kódu má každý svou lokální kopii s úplnou historií projektu. Výhody tohoto přístupu jsou např. rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru\cite{cvcs-vs-dvcs}.
 
   To, že má každý svou lokální kopii však nezamezuje existenci hlavního repozitáře. Příklad tohoto faktu jsou služby jako GitHub, GitLab či GitBucket, které tuto centrální úschovnu poskytují.
 
-  Nepříliš používanou\cite{version-control-usage-statistics} alternativou decentralizovaného verzovacího systému je Mercurial, který však jako další použitelná varianta stojí za zmínku.
+  Nepříliš používanou\cite{version-control-usage-statistics} alternativou decentralizovaného verzovacího systému je Mercurial, který nicméně jako další platná alternativa stojí za zmínku.
 
 
   \subsection{Jekyll}
   Jekyll je open-source generátor statických webových stránek napsán v jazyce Ruby. Od tradičních přístupů ke stavbě webové stránky využívajících databáze či systém pro správu obsahu se liší tím, že stránku generuje pouze dle textových souborů udávajících obsah a styl stránky. Výsledný produkt je statická stránka, která není napojena na žádný dynamický systém.
 
-  Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu text. Další výhoda je ochrana před potenciálními útoky, protože u statického obsahu fakticky není na co útočit - produkt si neukládá nic, co by útočník mohl zneužít.
+  Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu text. Další výhoda je ochrana před potenciálními útoky, protože u statického obsahu není na co útočit (co se obsahu týče), protože si produkt neukládá nic, co by útočník mohl zneužít.
 
   Nejpopulárnější alternativna je Hugo, který byl při vývoji stránky rovněž testován, avšak nakonec byl kvůli aktivnější komunitě zvolen Jekyll.
 
@@ -240,9 +240,9 @@
   \subsection{Webhosting a doména}
   Na českém trhu operuje velké množství firem, které zajišťují jak registraci domény, tak hostování samotné stránky. Každá má své výhody a nevýhody, proto je volba provozovatele vysoce individuální a záleží na řadě faktorů.
 
-  Stránka je hostována a doména zprostředkována společností WEDOS Internet a jejich službou NoLimit, zejména kvůli mým pozitivním zkušenostem s touto službou v rámci minulých projektů a faktem, že ceny a parametry jiných hostingů se od využívaného pro menší projekty příliš neliší.
+  Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit, zejména kvůli mým pozitivním zkušenostem v rámci minulých projektů a faktem, že ceny a parametry jiných hostingů se od využívaného pro menší projekty příliš neliší.
 
-  Jelikož je však Jekyll podporován GitHubem, který hostuje zdrojový kód stránky, další rozumná volba by byla hosting přes službu GitHub Pages\cite{github-pages}. Stránka by byla hostována zdarma, nebylo by potřeba obsah nahrávat přes FTP a po provedení změny na projektu by generování stránky probíhalo automaticky. Tento přístup by však znemožnil využívání scriptů pro stavbu stránky, proto není pro potřebné účely vhodný.
+  Jelikož je Jekyll podporován GitHubem, který hostuje zdrojový kód stránky, další možnost hostingu je služba GitHub Pages\cite{github-pages}. Stránka by byla hostována zdarma, nebylo by třeba obsah nahrávat přes FTP a po provedení změny na projektu by generování stránky probíhalo automaticky. Tento přístup by však znemožnil využívání scriptů pro stavbu stránky, proto není pro účely projektu vhodný.
 
 
   \subsection{Design}
@@ -250,7 +250,7 @@
   \subsubsection{Tvorba loga}
   Na dobré vizáži každé stránky má značný podíl její logo, které by mělo tematicky odpovídat zaměření stránky bez toho, aby působilo příliš složitě.
 
-  Hlavní nápad za logem projektu je spojení výrazů „RO“ a „SI“ (první dva znaky jména projektu) do jednoho, což tyto výrazy zjednodušuje (tématika jména stránky). Tvar znaku „O“ je rovněž podobný ozubenému kolu, což do celého designu elegantně zapadá.
+  Hlavní koncept, na kterém za je logo postaveno je spojení výrazů „RO“ a „SI“ (první dva znaky jména projektu) do jednoho, čímž dochází k tématice zjednodušení, na které je stránka založena. Tvar znaku „O“ je rovněž podobný ozubenému kolu, což do designu loga pro stránku zaměřenou na robotiku elegantně zapadá.
 
   \begin{center}
     \includegraphics[width=0.9\textwidth]{logo}
@@ -259,9 +259,9 @@
 
   \end{center}
 
-  Obrázek č.~\ref{img:Vývoj loga stránky} znázorňuje proces tvorby loga -- počáteční nápad spojení „RO“ a „SI,“ následné přidání ozubeného kola a doladění finální podoby loga.
+  Obrázek č.~\ref{img:Vývoj loga stránky} znázorňuje proces tvorby loga: počáteční nápad, následné přidání ozubeného kola a drobné úpravy na závěr.
 
-  Ke tvorbě loga byl použit program Inkscape (viz. kapitola \ref{sec:Inkscape}).
+  Ke tvorbě loga byl použit program na úpravu vektorové grafiky Inkscape (viz. kapitola \ref{sec:Inkscape}).
 
 
   \subsubsection{Zvýraznění syntaxe kódu}
