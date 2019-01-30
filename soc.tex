@@ -80,7 +80,7 @@
   \begin{center}
     {\fontsize{18}{21.6} \selectfont STŘEDOŠKOLSKÁ ODBORNÁ ČINNOST}\\%
     \vspace*{\baselineskip}
-{\fontsize{14}{16.8} \selectfont Obor č. 18: Informatika}\\%
+    {\fontsize{14}{16.8} \selectfont Obor č. 18: Informatika}\\%
 
     \topskip0pt
     \vspace{10em}
@@ -207,7 +207,7 @@
   \subsection{\TeX{}} \label{sec:TeX}
   \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století. Počáteční impulz pro vznik byla Knuthova nespokojenost s tiskovou kvalitou při vydávání jedné z jeho knih, což jej vedlo ke studiu principů sázení, tvorby fontů a později až k vytvoření vlastního sázecího systému \TeX\cite{tex-history}.
 
-  Od klasických WYSIWYG (what you see is what you get) programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument měl vypadat a \TeX{} se o samotné sázení postárá. Tento princip klade větší důraz na obsah, jelikož autor se nemusí formátováním příliš zabývat.
+  Od klasických WYSIWYG (what you see is what you get) programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument měl vypadat a \TeX{} se o samotné sázení postárá. Tento princip klade větší důraz na obsah -- autor se formátováním do značné míry nemusí zabývat.
 
   V projektu je používán \LaTeX. Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům (automatické číslování stránek, vkládání referencí, aj.) umožňuje pohodlnější tvorbu dokumentů \cite{getting-started-with-latex}. K převodu \LaTeX u do formátu PDF je použit český program pdf\TeX{}\cite{pdftex}.
 
@@ -217,19 +217,19 @@
   Popis jejich funkce, jejich využití v projektu a jejich možné náhrady.
 
   \subsection{Git} \label{sec:Git}
-  Git je open-source verzovací systém vytvořen Linusem Torvaldsem pro použití na verzování operačního systému Linux. V open-source komunitě se v současné době jedná o nejpoužívanější verzovací systém\cite{version-control-usage-statistics}, což je jeden z důvodů pro jeho využití v tomto projektu.
+  Git je otevřený\cite{git-source} verzovací systém vytvořen Linusem Torvaldsem pro použití na operačním systému Linux. V open-source komunitě se v současné době jedná o nejpoužívanější software tohoto typu\cite{version-control-usage-statistics}, což je jeden z důvodů pro jeho využití v tomto projektu.
 
-  Narozdíl od centralizovaných verzovacím systémům jako Subversion a CVS je Git decentralizovaný -- místo jedné centrální úschovny kódu má každý svou lokální kopii s úplnou historií projektu. Výhody tohoto přístupu jsou např. rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru\cite{cvcs-vs-dvcs}.
+  Verzovací systém umožňuje zaznamenávat změny (a jejich důvod/význam) na vezrované skupině souborů a složek (tzv. repozitáři), aby se zamezilo ztrátě práce, zjednodušilo se hledání bugů (chyb) v kódu a usnadnila se kolaborace.
 
-  To, že má každý svou lokální kopii však nezamezuje existenci hlavního repozitáře. Příklad tohoto faktu jsou služby jako GitHub, GitLab či GitBucket, které tuto centrální úschovnu poskytují.
+  Narozdíl od centralizovaných verzovacích systémů jako Subversion a CVS je Git decentralizovaný -- místo jedné centrální úschovny kódu má každý svou lokální kopii s úplnou historií projektu. Výhody tohoto přístupu jsou např. rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru\cite{cvcs-vs-dvcs}.
 
-  Nepříliš používanou\cite{version-control-usage-statistics} alternativou decentralizovaného verzovacího systému je Mercurial, který nicméně jako další platná alternativa stojí za zmínku.
+  To, že má každý svou lokální kopii však nezamezuje existenci hlavního repozitáře. Tento fakt dokazují služby jako GitHub, GitLab či GitBucket, které tuto centrální úschovnu poskytují.
 
 
-  \subsection{Jekyll}
-  Jekyll je open-source generátor statických webových stránek napsán v jazyce Ruby. Od tradičních přístupů ke stavbě webové stránky využívajících databáze či systém pro správu obsahu se liší tím, že stránku generuje pouze dle textových souborů udávajících obsah a styl stránky. Výsledný produkt je statická stránka, která není napojena na žádný dynamický systém.
+  \subsection{Jekyll} \label{sec:Jekyll}
+  Jekyll je otevřený\cite{jekyll-source} generátor statických webových stránek napsán v jazyce Ruby. Od tradičních přístupů ke stavbě webové stránky využívajících databáze či systém pro správu obsahu se liší tím, že stránku generuje pouze z textových souborů udávajících obsah a styl stránky. Výsledný produkt je statická stránka, která není napojena na žádný dynamický systém.
 
-  Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu text. Další výhoda je ochrana před potenciálními útoky, protože u statického obsahu není na co útočit (co se obsahu týče), protože si produkt neukládá nic, co by útočník mohl zneužít.
+  Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu text. Další výhoda je ochrana před potenciálními útoky, protože u statických webových stránek není mnoho frekventovaně používaných útoků možných -- produkt si neukládá nic, co by útočník mohl zneužít.
 
   Nejpopulárnější alternativna je Hugo, který byl při vývoji stránky rovněž testován, avšak nakonec byl kvůli aktivnější komunitě zvolen Jekyll.
 
@@ -248,9 +248,9 @@
   \subsection{Webhosting a doména} \label{sec:Webhosting a doména}
   Na českém trhu operuje velké množství firem, které zajišťují jak registraci domény, tak hostování samotné stránky. Každá má své výhody a nevýhody, proto je volba provozovatele vysoce individuální a záleží na řadě faktorů.
 
-  Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit, zejména kvůli mým pozitivním zkušenostem v rámci minulých projektů a faktem, že ceny a parametry jiných hostingů se od využívaného pro menší projekty příliš neliší.
+  Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit\cite{wedos-hosting}, zejména kvůli mým pozitivním zkušenostem v rámci minulých projektů a faktem, že ceny a parametry jiných hostingů se od využívaného pro menší projekty příliš neliší.
 
-  Jelikož je Jekyll podporován GitHubem, který hostuje zdrojový kód stránky, další možnost hostingu je služba GitHub Pages\cite{github-pages}. Stránka by byla hostována zdarma, nebylo by třeba obsah nahrávat přes FTP a po provedení změny na projektu by generování stránky probíhalo automaticky. Tento přístup by však znemožnil využívání scriptů pro stavbu stránky, proto není pro účely projektu vhodný.
+  Jelikož je Jekyll podporován GitHubem, který hostuje zdrojový kód stránky, další možností je služba GitHub Pages\cite{github-pages}. Stránka by byla hostována zdarma, nebylo by třeba obsah nahrávat přes FTP a po provedení změny na projektu by generování stránky probíhalo automaticky. Tento přístup by však znemožnil využívání scriptů pro stavbu stránky, proto není pro účely projektu vhodný.
 
 
   \subsection{Design}
@@ -264,7 +264,6 @@
     \includegraphics[width=0.9\textwidth]{logo}
     \captionof{figure}{Vývoj loga stránky}
     \label{img:Vývoj loga stránky}
-
   \end{center}
 
   Obrázek č.~\ref{img:Vývoj loga stránky} znázorňuje proces tvorby loga: počáteční nápad, následné přidání ozubeného kola a drobné úpravy na závěr.
@@ -284,7 +283,7 @@
 
   \subsection{Struktura obsahu}
 
-  \section{Funkcionalita webové stránky}
+  \section{Funkčnost webové stránky}
 
   \subsection{Automatizace provozu}
   Napsat o deploy.py, který celý proces automatizuje.
