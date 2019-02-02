@@ -171,13 +171,13 @@
   \subsection{Otevřenost zdrojového kódu}
   Hlavní požadavek, který by produkt měl splňovat je otevřenost (bezplatná dostupnost) zdrojového kódu. Otevřenost výrazně usnadňuje kolaboraci (kdokoliv může navrhnout změnu) a zvyšuje důvěru v daný software (chování programu lze snadno ověřit nahlednutím do kódu).
 
-  Příklady populárního otevřeného softwaru využívaného při stavbě tohoto projektu jsou např. Inkscape\cite{inkscape-source}, Atom\cite{atom-source}, Git\cite{git-source} nebo Jekyll\cite{jekyll-source}, které jsou podrobněji rozebírány v kapitole \ref{sec:Použité nástroje}.
+  Příklady populárního otevřeného softwaru využívaného při stavbě tohoto projektu jsou např. Inkscape, Atom, Git či Jekyll, které jsou podrobněji rozebírány v kapitole \ref{sec:Použité nástroje}.
 
 
   \subsection{Multiplatformnost}
-  Co se dostupnosti týče, důležitým požadavkem je multiplatformnost, tj. možnost přístupu k produktu z více než jedné platformy\footnote{Slovem platforma je tomto kontextu myšlen způsob přístup na stránku jako tablet, stolní počítač, mobil, čtečka elektronických knih, aj.}. Výsledný produkt musí být multiplatformní primárně kvůli mému osobnímu názoru, že vzdělání by nemělo být omezeno technologickými preferencemi jednotlivce.
+  Co se dostupnosti týče, důležitým požadavkem je multiplatformnost, tj. možnost přístupu k produktu z více než jedné platformy (stolní počítač, mobil, čtečka elektronických knih, aj.). Výsledný produkt musí být multiplatformní primárně kvůli mému osobnímu názoru, že vzdělání by nemělo být omezeno technologickými preferencemi jednotlivce.
 
-  Tato podmínka fakticky znemožňuje tvorbu aplikace, jelikož by se jak finanční\cite{apple-store-membership,android-store-membership,wedos-hosting}, tak časové nároky mnohonásobně zvýšily a komplexita projektu by přerostla nad rámec jednotlivce.
+  Tato podmínka fakticky znemožňuje tvorbu aplikace, jelikož by se jak finanční\cite{apple-store-membership,android-store-membership}, tak časové nároky mnohonásobně zvýšily a komplexita projektu by přerostla nad rámec jednotlivce.
 
 
   \section{Použité programovací jazyky}
@@ -201,12 +201,12 @@
 
   \subsection{Liquid}
 
-  \subsection{\TeX{}} \label{sec:TeX}
+  \subsection{\TeX} \label{sec:TeX}
   \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století. Počáteční impulz pro vznik byla Knuthova nespokojenost s tiskovou kvalitou při vydávání jedné z jeho knih, což jej vedlo ke studiu principů sázení, tvorby fontů a později až k vytvoření vlastního sázecího systému \TeX\cite{tex-history}.
 
-  Od klasických WYSIWYG (what you see is what you get) programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument měl vypadat a \TeX{} se o samotné sázení postárá. Tento princip klade větší důraz na obsah -- autor se formátováním do značné míry nemusí zabývat.
+  Od klasických WYSIWYG (what you see is what you get) programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument měl vypadat a \TeX{} se o samotné sázení postárá. Tento princip klade větší důraz na obsah -- autor se formátováním do značné míry nemusí zabývat. Další výhoda \TeX u je fakt, že celý dokument je text, proto jej lze verzovat.
 
-  V projektu je používán \LaTeX. Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům (automatické číslování stránek, vkládání referencí, aj.) umožňuje pohodlnější tvorbu dokumentů \cite{getting-started-with-latex}. K převodu \LaTeX u do formátu PDF je použit český program pdf\TeX{}\cite{pdftex}.
+  V projektu je používán \LaTeX. Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů\cite{getting-started-with-latex}. K převodu \LaTeX u do formátu PDF je používán český program pdf\TeX{}\cite{pdftex}.
 
 
   \section{Použité nástroje} \label{sec:Použité nástroje}
@@ -216,11 +216,11 @@
   \subsection{Git} \label{sec:Git}
   Git je otevřený\cite{git-source} verzovací systém vytvořen Linusem Torvaldsem pro použití na operačním systému Linux. V open-source komunitě se v současné době jedná o nejpoužívanější software tohoto typu\cite{version-control-usage-statistics}, což je jeden z důvodů pro jeho využití v tomto projektu.
 
-  Verzovací systém umožňuje zaznamenávat změny (a jejich důvod/význam) na vezrované skupině souborů a složek (tzv. repozitáři), aby se zamezilo ztrátě práce, zjednodušilo se hledání bugů (chyb) v kódu a usnadnila se kolaborace.
+  Verzovací systém umožňuje zaznamenávat změny (a jejich důvod/význam) na vezrované skupině souborů a složek (tzv. repozitáři), aby se zamezilo ztrátě práce, zjednodušilo se hledání chyb v kódu a usnadnila se kolaborace mezi vícero autory.
 
-  Narozdíl od centralizovaných verzovacích systémů jako Subversion a CVS je Git decentralizovaný -- místo jedné centrální úschovny kódu má každý svou lokální kopii s úplnou historií projektu. Výhody tohoto přístupu jsou např. rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru\cite{cvcs-vs-dvcs}.
+  Narozdíl od centralizovaných verzovacích systémů jako Subversion a CVS je Git decentralizovaný -- místo jedné centrální úschovny kódu má každý svou lokální kopii s úplnou historií projektu. Výhody tohoto přístupu oproti centrální úschovně jsou např. rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru\cite{cvcs-vs-dvcs}.
 
-  To, že má každý svou lokální kopii však nezamezuje existenci hlavního repozitáře. Tento fakt dokazují služby jako GitHub, GitLab či GitBucket, které tuto centrální úschovnu poskytují.
+  To, že má každý svou lokální kopii však nezamezuje existenci hlavní kopie. Tento fakt dokazují služby jako GitHub, GitLab či GitBucket, které tuto centrální úschovnu poskytují.
 
 
   \subsection{Jekyll} \label{sec:Jekyll}
@@ -228,7 +228,7 @@
 
   Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu text. Další výhoda je ochrana před potenciálními útoky, protože u statických webových stránek není mnoho frekventovaně používaných útoků možných -- produkt si neukládá nic, co by útočník mohl zneužít.
 
-  Nejpopulárnější alternativna je Hugo, který byl při vývoji stránky rovněž testován, avšak nakonec byl kvůli aktivnější komunitě zvolen Jekyll.
+  Nejpopulárnější alternativna je Hugo, který byl při vývoji stránky rovněž testován, avšak nakonec byl kvůli aktivnější komunitě a osobní preferenci zvolen Jekyll.
 
 
   \subsection{Inkscape} \label{sec:Inkscape}
@@ -246,7 +246,7 @@
   \subsection{Fusion 360}
   V rámci tvorby ilustrací k odborné literatuře je kromě tradičních přístupů rozebíraných v kapitole \ref{sec:Inkscape} používaný CAD (computer-aided design) software, který slouží ke tvorbě technických nákresů. Na rozdíl od tradičních programů na tvorbu grafiky jsou rozměry tvořených objektů přesně definovány v jednotkách SI, aby odpovídaly objektům reálného světa.
 
-  V komunitě soutěže FRC je populární Fusion 360 od společnosti Autodesk, převážně protože je licence pro studenty (a jejich mentory) zdarma \cite{fusion-360-pricing}. Profesionální alternativou je program SolidWorks, který je většinou poskytován školami kvůli jeho ceně pro jednotlivce\cite{solidworks-pricing}.
+  V komunitě soutěže FRC je populární Fusion 360 od společnosti Autodesk, převážně protože je licence pro studenty (a jejich mentory) zdarma\cite{fusion-360-pricing}. Profesionální alternativou je program SolidWorks, který je často používán studenty technických škol.
 
   Stojí za zmínku, že Fusion 360 je jediný v projektu použitý program, který nefunguje na operačním systému Linux a to z toho důvodu, že neexistuje kvalitní multiplatformní náhrada.
 
@@ -260,9 +260,9 @@
   \subsection{Webhosting a doména} \label{sec:Webhosting a doména}
   Na českém trhu operuje velké množství firem, které zajišťují jak registraci domény, tak hostování samotné stránky. Každá má své výhody a nevýhody, proto je volba provozovatele vysoce individuální a záleží na řadě faktorů.
 
-  Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit\cite{wedos-hosting}, zejména kvůli mým pozitivním zkušenostem v rámci minulých projektů a faktem, že ceny a parametry jiných hostingů se od využívaného pro menší projekty příliš neliší.
+  Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit\cite{wedos-hosting}, zejména kvůli mým pozitivním zkušenostem s touto službou v rámci minulých projektů a faktem, že ceny a parametry služeb jiných hostingů se od využívané pro menší projekty příliš neliší.
 
-  Jelikož je Jekyll podporován GitHubem, který hostuje zdrojový kód stránky, další možností je služba GitHub Pages\cite{github-pages}. Stránka by byla hostována zdarma, nebylo by třeba obsah nahrávat přes FTP a po provedení změny na projektu by generování stránky probíhalo automaticky. Tento přístup by však znemožnil využívání scriptů pro stavbu stránky, proto není pro účely projektu vhodný.
+  Jelikož je Jekyll podporován GitHubem, na kterém je hostován zdrojový kód stránky, další možností je služba GitHub Pages\cite{github-pages}. Stránka by byla hostována zdarma, nebylo by třeba obsah nahrávat přes FTP a generování stránky by probíhalo automaticky. Tento přístup by však znemožnil využívání Python scriptů, proto není pro účely projektu vhodný.
 
 
   \subsection{Design loga}
