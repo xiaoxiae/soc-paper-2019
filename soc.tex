@@ -190,23 +190,25 @@
 
   \subsection{JavaScript}
 
-  \subsubsection{p5.js}
+  Dnes se jedná o webový standard, díky kterému přidat to webové stránky interaktivitu a dlouhodobě nejpoužívanější programovací jazyk na platformě GitHub\cite{github-statistics}, na kterém stojí řada podstatných funkcí projektu.
 
   \subsubsection{MathJax}
 
+  \subsubsection{p5.js} \label{sec:p5.js}
   \subsection{CSS}
   Sass.
 
   \subsection{HTML}
 
-  \subsection{Python}
+  \subsection{Python} \label{sec:Python}
   Python je programovací jazyk vytvořený pro použití na distribuovaném operačním systému Amoeba Guidem van Rossumem v 80. letech 20. století. Byl silně inspirován Guidovou prací na jazyce ABC -- samotný Rossum o Pythonu prohlásil: „Vzal jsem ingredience z ABC a trochu jsem je promíchal. Python byl v mnoha věcech podobný ABC, ale v mnoha také rozdílný.“ Na rozdíl od ABC je např. velice jednoduché přidávat tzv. moduly (psaných v samotném Pythonu či zkompilovaných z jiného jazyka), které rozšiřují základní funkcionalitu Pythonu\cite{making-of-python}.
 
   Od svého vzniku se Python vyvinul v mocný a frekventovaně používaný programovací jazyk -- má silnou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub\cite{github-statistics}, od stavby webových stránek po knihovny na trénování neuronových sítí.
 
-  \subsection{Markdown} \label{sec:Markdown}
+  Na stránce je používán jako scriptovací jazyk pro automatizaci provozu webové stránky (viz. kapitola \ref{sec:Automatizace provozu}).
 
-  \subsection{Liquid}
+
+  \subsection{Markdown} \label{sec:Markdown}
 
   \subsection{\TeX} \label{sec:TeX}
   \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století. Počáteční impulz pro vznik byla Knuthova nespokojenost s tiskovou kvalitou při vydávání jedné z jeho knih, což jej vedlo ke studiu principů sázení, tvorby fontů a později až k vytvoření vlastního sázecího systému \TeX\cite{tex-history}.
@@ -244,7 +246,7 @@
   Jedná se o populární volbu pro ty, kteří nepoužívají profesionální software jako Adobe Illustrator z důvodů ceny, uzavřenosti kódu či nedostupnosti pro operační systém Linux\cite{illustrator-pricing}.
 
 
-  \subsection{Fusion 360}
+  \subsection{Fusion 360} \label{sec:Fusion 360}
   V rámci tvorby ilustrací k odborné literatuře je kromě tradičních přístupů rozebíraných v kapitole \ref{sec:Inkscape} používaný CAD (computer-aided design) software, který slouží ke tvorbě technických nákresů. Na rozdíl od tradičních programů na tvorbu grafiky jsou rozměry tvořených objektů přesně definovány v jednotkách SI, aby odpovídaly objektům reálného světa.
 
   V komunitě soutěže FRC je populární Fusion 360 od společnosti Autodesk, převážně protože je licence pro studenty (a jejich mentory) zdarma\cite{fusion-360-pricing}. Profesionální alternativou je program SolidWorks, který je často používán studenty technických škol.
@@ -294,7 +296,7 @@
 
   \section{Funkčnost webové stránky}
 
-  \subsection{Automatizace provozu}
+  \subsection{Automatizace provozu} \label{sec:Automatizace provozu}
   K produktivnímu tvorby vzdělávacího materiálu je potřeba plynulý a do co největší míry automatizovaný provoz -- přidávání článků by mělo být pouze napsání nového souboru a jeho vložení do správné složky projektu.
 
   Projekt je v tomto duchu automatizován několika scripty psanými v jazyce Python, aby se autor mohl plně soustředit na práci.
@@ -312,7 +314,7 @@
   Script \texttt{sitemap.py} podle pořadí článků generuje záznamy do souboru \texttt{sitemap.xml}. Umístění a data poslední úpravy jsou lehce získána z atributů souboru a priorita je přidělena podle pozice na stránce -- úvodní stránka má prioritu $1.0$, hlavní články mají prioritu $0.8$ a vedlejší $0.6$.
 
 
-  \subsubsection{Převod webové stránky do PDF}
+  \subsubsection{Převod webové stránky do PDF} \label{sec:Převod webové stránky do PDF}
   Pro offline dostupnost existuje mnoho různých typů souborů, na které by stránka šla převést. Často používané přípony jako \texttt{doc} a \texttt{docx} jsou však pro naše použití nevhodné, protože se mohou na různých zařízení zobrazit jinak. Pro potřeby projektu je tedy vhodnější použít formáty jako PostScript či PDF (Portable Document Format), jejiž vizáž není nezávislá na prostředí\cite{history-of-pdf}.
 
   Přímočará varianta by tedy byla převést za sebe seřazené články programem pro převod z formátu Markdown do formátu PDF (např. Pandoc). Nastává zde však několik problémů: úrovně sekce se mění podle toho, jsou-li hlavními či vedlejšími články, generování obsahu a úvodní stránky by bylo obtížné a bylo by prakticky nemožné upravit výsledné formátování.
@@ -340,7 +342,7 @@
   Stránka je verzována pomocí verzovacího systému Git (viz. kapitola \ref{sec:Git}). Kód je otevřený a volně dostupný přes GitHub na adrese \url{https://github.com/xiaoxiae/Robotics-Simplified-Website}.
 
 
-  \section{Provoz webové stránky}
+  \section{Analytika a propagace webové stránky}
   Jak probíhá provoz serveru.
 
   \subsection{Analýza návštěvnosti}
