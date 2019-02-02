@@ -1,21 +1,20 @@
 \documentclass[a4paper, 12pt]{article}
 \usepackage[top=2.5cm, left=3.5cm, right=1.5cm, bottom=2.5cm, includefoot]{geometry}
 
-% image and caption include setup
-\usepackage{graphicx}
-\graphicspath{ {./img/} }
+\usepackage{graphicx}                         % graphics
+\graphicspath{ {./img/} }                     % graphics path
 
-% misc includes
-\usepackage{titlesec}
-\usepackage{tabularx}
+\usepackage{titlesec}                         % title
+\usepackage{tabularx}                         % tables
+\usepackage[hyphens,spaces,obeyspaces]{url}   % url
+\usepackage[hidelinks,unicode]{hyperref}      % interactive links
+\usepackage{amsmath, amstext}                 % math
 
-% link macros
-\usepackage[hyphens,spaces,obeyspaces]{url}
-\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[font=small,labelfont=bf]{caption} % caption settings
+\renewcommand{\figurename}{Obr. č.}           % change caption name
 
-% for numbering bibliography, list of figures and for removing TOC reference from TOC
-\usepackage[numbib, nottoc]{tocbibind}
-\makeatletter
+\usepackage[numbib, nottoc]{tocbibind}        % number bib, no toc in toc
+\makeatletter                                 % lof numbering
 \renewcommand\listoffigures{%
     \section{\listfigurename}%
     \@mkboth{\MakeUppercase\listfigurename}%
@@ -24,15 +23,10 @@
 }
 \makeatother
 
-% figure caption setup
-\usepackage[font=small,labelfont=bf]{caption}
-\renewcommand{\figurename}{Obr. č.}
+\usepackage[dmyyyy]{datetime}                 % for dmyyyy datetimes
+\renewcommand{\dateseparator}{. }             % change datetime separator
 
-% to automatically add date of compilation
-\usepackage[dmyyyy]{datetime}
-\renewcommand{\dateseparator}{. }
-
-% font and encoding stuff
+% encoding and font stuff
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{type1ec}
