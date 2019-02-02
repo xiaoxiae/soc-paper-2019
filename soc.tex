@@ -291,22 +291,50 @@
   \section{Funkčnost webové stránky}
 
   \subsection{Automatizace provozu}
-  Napsat o deploy.py, který celý proces automatizuje.
+  K produktivnímu tvorby vzdělávacího materiálu je potřeba plynulý a do co největší míry automatizovaný provoz -- přidávání článků by mělo být pouze napsání nového souboru a jeho vložení do správné složky projektu.
+
+  Projekt je v tomto duchu automatizován několika scripty psanými v jazyce Python, aby se autor mohl plně soustředit na práci.
+
 
   \subsubsection{Nahrání obsahu přes FTP}
-  FTP připojení, vše smaže a poté to tam rekurzivně zase nahraje.
+  FTP (File Transfer Protocol) je protokol zprostředkovávající přenos souborů mezi počítači po síti. Jedná se o populární volbu protokolu pro hostingy webových stránek a hosting tohoto projektu není výjimkou (viz. kapitola \ref{sec:Webhosting a doména}).
+
+  Script \texttt{upload.py} se po zadání hesla připojí přes protokol FTP na server, rekurzivně smaže soubory a adresáře aktuální verze stránky a nahraje verzi novou. Pro dodatečné zabezpečení je IP serveru šifrována symetrickou šifrou AES.
+
 
   \subsubsection{Generování souboru sitemap.xml}
+  Protokol sitemap (\url{https://www.sitemaps.org/protocol.html}) udává informace o pořadí procházení, časech změny a relativní prioritě částí stránky. Slouží vyhledávacím portálům, které tyto informace využívají pro inteligentnější indexování stránky ve svém systému.
+
+  Script \texttt{sitemap.py} podle pořadí článků generuje záznamy do souboru \texttt{sitemap.xml}. Umístění a data poslední úpravy jsou lehce získána z atributů souboru a priorita je přidělena podle pozice na stránce -- úvodní stránka má prioritu $1.0$, hlavní články mají prioritu $0.8$ a vedlejší $0.6$.
+
 
   \subsubsection{Převod webové stránky do PDF}
-  Generování přes regexy.
+  Pro offline dostupnost existuje mnoho různých typů souborů, na které by stránka šla převést. Často používané přípony jako \texttt{doc} a \texttt{docx} jsou však pro naše použití nevhodné, protože se mohou na různých zařízení zobrazit jinak. Pro potřeby projektu je tedy vhodnější použít formáty jako PostScript či PDF (Portable Document Format), jejiž vizáž není nezávislá na prostředí\cite{history-of-pdf}.
+
+  Přímočará varianta by tedy byla převést za sebe seřazené články programem pro převod z formátu Markdown do formátu PDF (např. Pandoc). Nastává zde však několik problémů: úrovně sekce se mění podle toho, jsou-li hlavními či vedlejšími články, generování obsahu a úvodní stránky by bylo obtížné a bylo by prakticky nemožné upravit výsledné formátování.
+
+  Pro potřeby projektu byl tedy zvolen převod souboru typu Markdown do typu \LaTeX{} (viz. kapitola \ref{sec:TeX}), který všechny víše zmíněné nevýhody Pandocu elegantně řeší. Samotný \LaTeX{} je poté převeden do PDF pomocí programu pdf\LaTeX.
+
+  Script \texttt{tex.py} získá pořadí článků, spojí je za sebe do jednoho dokumentu a poté na ně aplikuje řadu regulárních výrazů, které provedou konverzi z formátu Markdown do formátu \LaTeX.
+
 
   \subsubsection{Komprimace obrázků}
-  http://www.tinypdf.com/
+  O komprimaci obrázků pro zmenšení velikosti stránky se stará script \texttt{compress.py}, který s pomocí služby TinyPNG (\url{https://tinypng.com/}) a jejího Python API zkomprimuje všechny obrázky vygenerované stránky. Samotný API klíč je pro zamezení zneužití šifrován symetrickou šifrou AES.
+
+
+  \subsubsection{Minimalizace zdrojového kódu}
+  Zkompaktnění zdrojového kódu je další možná optimalizace, kterou lze načítání stránky urychlit. Prohlížečům na mezerách v kódu nezáleží a běžné uživatele vizáž kódu nezajímá, proto jej lze na úkor čitelnosti zmenšit.
+
+  Tuto funkci zastává script \texttt{minify.py}, který soubory typu CSS a HTML zmenší bez toho, aby upravil jejich funkčnost.
+
+
+  \subsubsection{Automatizace procesu}
+  Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí script \texttt{deploy.py}, který stránku nejprve pomocí Jekyllu (viz. kapitola \ref{sec:Jekyll}) vygeneruje, poté ve správném pořadí spustí všechny scripty pro generování dodatečného obsahu a optimalizace, a nakonec script pro stránky na webhosting.
+
 
   \subsection{Verzování zdrojového kódu}
-  Jak probíhá verzování a přes jaký verzovací systém je prováděno.
-  Kam je
+  Stránka je verzována pomocí verzovacího systému Git (viz. kapitola \ref{sec:Git}). Kód je otevřený a volně dostupný přes GitHub na adrese \url{https://github.com/xiaoxiae/Robotics-Simplified-Website}.
+
 
   \section{Provoz webové stránky}
   Jak probíhá provoz serveru.
