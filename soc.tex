@@ -173,13 +173,13 @@
 
 
   \subsection{Otevřenost zdrojového kódu}
-  Hlavní požadavek, který by produkt měl splňovat je otevřenost (bezplatná dostupnost) zdrojového kódu. Otevřenost výrazně usnadňuje kolaboraci (kdokoliv může navrhnout změnu) a zvyšuje důvěru v daný software (chování programu lze snadno ověřit nahlednutím do kódu).
+  Hlavní požadavek, který by produkt měl splňovat je \emph{otevřenost} (bezplatná dostupnost) zdrojového kódu. Otevřenost výrazně usnadňuje kolaboraci (kdokoliv může navrhnout změnu) a zvyšuje důvěru v daný software (chování programu lze snadno ověřit nahlednutím do kódu).
 
   Příklady populárního otevřeného softwaru využívaného při stavbě tohoto projektu jsou např. Inkscape, Atom, Git či Jekyll, které jsou podrobněji rozebírány v kapitole \ref{sec:Použité nástroje}.
 
 
   \subsection{Multiplatformnost}
-  Co se dostupnosti týče, důležitým požadavkem je multiplatformnost, tj. možnost přístupu k produktu z více než jedné platformy (stolní počítač, mobil, čtečka elektronických knih, aj.). Výsledný produkt musí být multiplatformní primárně kvůli mému osobnímu názoru, že vzdělání by nemělo být omezeno technologickými preferencemi jednotlivce.
+  Co se dostupnosti týče, důležitým požadavkem je \emph{multiplatformnost}, tj. možnost přístupu k produktu z více než jedné platformy jako stolní počítač, mobil, čtečka elektronických knih, aj. Výsledný produkt musí být multiplatformní primárně kvůli mému osobnímu názoru, že vzdělání by nemělo být omezeno technologickými preferencemi jednotlivce.
 
   Tato podmínka fakticky znemožňuje tvorbu aplikace, jelikož by se jak finanční\cite{apple-store-membership,android-store-membership}, tak časové nároky mnohonásobně zvýšily a komplexita projektu by přerostla nad rámec jednotlivce.
 
@@ -201,7 +201,7 @@
   \subsection{HTML}
 
   \subsection{Python} \label{sec:Python}
-  Python je programovací jazyk vytvořený pro použití na distribuovaném operačním systému Amoeba Guidem van Rossumem v 80. letech 20. století. Byl silně inspirován Guidovou prací na jazyce ABC -- samotný Rossum o Pythonu prohlásil: „Vzal jsem ingredience z ABC a trochu jsem je promíchal. Python byl v mnoha věcech podobný ABC, ale v mnoha také rozdílný.“ Na rozdíl od ABC je např. velice jednoduché přidávat tzv. moduly (psaných v samotném Pythonu či zkompilovaných z jiného jazyka), které rozšiřují základní funkcionalitu Pythonu\cite{making-of-python}.
+  Python je programovací jazyk vytvořený pro použití na distribuovaném operačním systému Amoeba Guidem van Rossumem v 80. letech 20. století. Byl silně inspirován Guidovou prací na jazyce ABC -- samotný Rossum o Pythonu prohlásil: „Vzal jsem ingredience z ABC a trochu jsem je promíchal. Python byl v mnoha věcech podobný ABC, ale v mnoha také rozdílný.\cite{making-of-python}“
 
   Od svého vzniku se Python vyvinul v mocný a frekventovaně používaný programovací jazyk -- má silnou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub\cite{github-statistics}, od stavby webových stránek po knihovny na trénování neuronových sítí.
 
@@ -215,7 +215,7 @@
 
   Od klasických WYSIWYG (what you see is what you get) programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument měl vypadat a \TeX{} se o samotné sázení postárá. Tento princip klade větší důraz na obsah -- autor se formátováním do značné míry nemusí zabývat. Další výhoda \TeX u je fakt, že celý dokument je text, proto jej lze verzovat.
 
-  V projektu je používán \LaTeX. Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů\cite{getting-started-with-latex}. K převodu \LaTeX u do formátu PDF je používán český program pdf\TeX{}\cite{pdftex}.
+  V projektu je pro převod stránky do offline verze používán \LaTeX{} (viz. kapitola \ref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů\cite{getting-started-with-latex}. K převodu \LaTeX u do formátu PDF je používán český program pdf\TeX{}\cite{pdftex}.
 
 
   \section{Použité nástroje} \label{sec:Použité nástroje}
@@ -223,9 +223,9 @@
   Popis jejich funkce, jejich využití v projektu a jejich možné náhrady.
 
   \subsection{Git} \label{sec:Git}
-  Git je otevřený\cite{git-source} verzovací systém vytvořen Linusem Torvaldsem pro použití na operačním systému Linux. V open-source komunitě se v současné době jedná o nejpoužívanější software tohoto typu\cite{version-control-usage-statistics}, což je jeden z důvodů pro jeho využití v tomto projektu.
+  Git je otevřený\cite{git-source} verzovací systém vytvořen Linusem Torvaldsem pro použití na operačním systému Linux. V open-source komunitě se v současné době jedná o nejpoužívanější vezrovací systém\cite{version-control-usage-statistics}, což je jeden z důvodů pro jeho využití v tomto projektu.
 
-  Verzovací systém umožňuje zaznamenávat změny (a jejich důvod/význam) na vezrované skupině souborů a složek (tzv. repozitáři), aby se zamezilo ztrátě práce, zjednodušilo se hledání chyb v kódu a usnadnila se kolaborace mezi vícero autory.
+  Verzovací systém umožňuje zaznamenávat změny (a jejich důvod/význam) na verzované skupině souborů a složek (tzv. repozitáři), aby se zamezilo ztrátě práce, zjednodušilo se hledání chyb v kódu a usnadnila se spolupráce mezi autory.
 
   Narozdíl od centralizovaných verzovacích systémů jako Subversion a CVS je Git decentralizovaný -- místo jedné centrální úschovny kódu má každý svou lokální kopii s úplnou historií projektu. Výhody tohoto přístupu oproti centrální úschovně jsou např. rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru\cite{cvcs-vs-dvcs}.
 
@@ -233,15 +233,15 @@
 
 
   \subsection{Jekyll} \label{sec:Jekyll}
-  Jekyll je otevřený\cite{jekyll-source} generátor statických webových stránek napsán v jazyce Ruby. Od tradičních přístupů ke stavbě webové stránky využívajících databáze či systém pro správu obsahu se liší tím, že stránku generuje pouze z textových souborů udávajících obsah a styl stránky. Výsledný produkt je statická stránka, která není napojena na žádný dynamický systém.
+  Jekyll je otevřený\cite{jekyll-source} generátor statických webových stránek napsán v jazyce Ruby. Od tradičních přístupů ke stavbě webové stránky využívajících databáze či systém pro správu obsahu se liší tím, že stránku generuje pouze z textových souborů udávajících obsah a styl stránky. Výsledný produkt je plně statická stránka, která není napojena na žádný dynamický systém.
 
-  Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu text. Další výhoda je ochrana před potenciálními útoky, protože u statických webových stránek není mnoho frekventovaně používaných útoků možných -- produkt si neukládá nic, co by útočník mohl zneužít.
+  Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu text. Další výhoda je ochrana před potenciálními útoky, protože u statických webových stránek není řada frekventovaně používaných útoků možná -- produkt si neukládá nic, co by útočník mohl zneužít.
 
   Nejpopulárnější alternativna je Hugo, který byl při vývoji stránky rovněž testován, avšak nakonec byl kvůli aktivnější komunitě a osobní preferenci zvolen Jekyll.
 
 
   \subsection{Inkscape} \label{sec:Inkscape}
-  Inkscape je otevřený\cite{inkscape-source} multiplaformní software na tvorbu vektorové grafiky. Oproti \emph{bitmapovým} softwarům, které pracují se samotnými pixely, si \emph{vektorové} pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací.
+  Inkscape je otevřený\cite{inkscape-source} multiplaformní software na tvorbu vektorové grafiky. Oproti \emph{bitmapovým} softwarům, které pracují se samotnými pixely, si \emph{vektorové} pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola \ref{sec:Ilustrace}).
 
   Jedná se o populární volbu pro ty, kteří nepoužívají profesionální software jako Adobe Illustrator z důvodů ceny, uzavřenosti kódu či nedostupnosti pro operační systém Linux\cite{illustrator-pricing}.
 
@@ -263,7 +263,7 @@
   \subsection{Webhosting a doména} \label{sec:Webhosting a doména}
   Na českém trhu operuje velké množství firem, které zajišťují jak registraci domény, tak hostování samotné stránky. Každá má své výhody a nevýhody, proto je volba provozovatele vysoce individuální a záleží na řadě faktorů.
 
-  Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit\cite{wedos-hosting}, zejména kvůli mým pozitivním zkušenostem s touto službou v rámci minulých projektů a faktem, že ceny a parametry služeb jiných hostingů se od využívané pro menší projekty příliš neliší.
+  Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit\cite{wedos-hosting}, zejména kvůli mým pozitivním zkušenostem s touto službou v rámci minulých projektů a faktem, že ceny a parametry služeb jiných hostingů se od využívané příliš neliší.
 
   Jelikož je Jekyll podporován GitHubem, na kterém je hostován zdrojový kód stránky, další možností je služba GitHub Pages (\url{https://pages.github.com/}). Stránka by byla hostována zdarma, nebylo by třeba obsah nahrávat přes FTP a generování stránky by probíhalo automaticky. Tento přístup by však znemožnil využívání scriptů, proto není pro účely projektu vhodný.
 
@@ -299,11 +299,11 @@
   \subsection{Automatizace provozu} \label{sec:Automatizace provozu}
   K produktivnímu tvorby vzdělávacího materiálu je potřeba plynulý a do co největší míry automatizovaný provoz -- přidávání článků by mělo být pouze napsání nového souboru a jeho vložení do správné složky projektu.
 
-  Projekt je v tomto duchu automatizován několika scripty psanými v jazyce Python, aby se autor mohl plně soustředit na práci.
+  Projekt je v tomto duchu automatizován několika scripty psanými v jazyce Python (viz. kapitola \ref{sec:Python}), aby se autor mohl plně soustředit na práci.
 
 
   \subsubsection{Nahrání obsahu přes FTP}
-  FTP (File Transfer Protocol) je protokol zprostředkovávající přenos souborů mezi počítači po síti. Jedná se o populární volbu protokolu pro hostingy webových stránek a hosting tohoto projektu není výjimkou (viz. kapitola \ref{sec:Webhosting a doména}).
+  FTP (File Transfer Protocol) je protokol zprostředkovávající přenos souborů mezi počítači po síti. Jedná se o populární volbu protokolu pro hostingy webových stránek a hosting tohoto projektu není výjimkou.
 
   Script \texttt{upload.py} se po zadání hesla připojí přes protokol FTP na server, rekurzivně smaže soubory a adresáře aktuální verze stránky a nahraje verzi novou. Pro dodatečné zabezpečení je IP serveru šifrována symetrickou šifrou AES.
 
@@ -311,15 +311,15 @@
   \subsubsection{Generování souboru sitemap.xml}
   Protokol sitemap (\url{https://www.sitemaps.org/protocol.html}) udává informace o pořadí procházení, časech změny a relativní prioritě částí stránky. Slouží vyhledávacím portálům, které tyto informace využívají pro inteligentnější indexování stránky ve svém systému.
 
-  Script \texttt{sitemap.py} podle pořadí článků generuje záznamy do souboru \texttt{sitemap.xml}. Umístění a data poslední úpravy jsou lehce získána z atributů souboru a priorita je přidělena podle pozice na stránce -- úvodní stránka má prioritu $1.0$, hlavní články mají prioritu $0.8$ a vedlejší $0.6$.
+  Script \texttt{sitemap.py} podle pořadí článků generuje záznamy do souboru \texttt{sitemap.xml}. Informace o umístění a pslední úpravě jsou získávány z atributů souboru a priorita je přidělena podle pozice na stránce -- úvodní stránka má prioritu $1.0$, hlavní články mají prioritu $0.8$ a vedlejší $0.6$.
 
 
   \subsubsection{Převod webové stránky do PDF} \label{sec:Převod webové stránky do PDF}
-  Pro offline dostupnost existuje mnoho různých typů souborů, na které by stránka šla převést. Často používané přípony jako \texttt{doc} a \texttt{docx} jsou však pro naše použití nevhodné, protože se mohou na různých zařízení zobrazit jinak. Pro potřeby projektu je tedy vhodnější použít formáty jako PostScript či PDF (Portable Document Format), jejiž vizáž není nezávislá na prostředí\cite{history-of-pdf}.
+  Pro offline dostupnost existuje mnoho různých typů souborů, na které by stránka šla převést. Často používané formátu jako \texttt{doc} a \texttt{docx} jsou však pro naše použití nevhodné, protože se mohou na různých zařízení zobrazit jinak. Je tedy vhodnější použít PostScript či PDF (Portable Document Format), jejiž vizáž není nezávislá na prostředí\cite{history-of-pdf}.
 
-  Přímočará varianta by tedy byla převést za sebe seřazené články programem pro převod z formátu Markdown do formátu PDF (např. Pandoc). Nastává zde však několik problémů: úrovně sekce se mění podle toho, jsou-li hlavními či vedlejšími články, generování obsahu a úvodní stránky by bylo obtížné a bylo by prakticky nemožné upravit výsledné formátování.
+  Přímočará varianta by tedy byla převést za sebe seřazené články programem pro převod z formátu Markdown do formátu PDF (např. Pandoc). Tímto přístupem by však bylo obtížné měnit úrovně sekce podle toho, jedná-li se o hlavní či vedlejší články, generovat obsah a úvodní stránkum a prakticky nemožné upravit výsledné formátování.
 
-  Pro potřeby projektu byl tedy zvolen převod souboru typu Markdown do typu \LaTeX{} (viz. kapitola \ref{sec:TeX}), který všechny víše zmíněné nevýhody Pandocu elegantně řeší. Samotný \LaTeX{} je poté převeden do PDF pomocí programu pdf\LaTeX.
+  Pro potřeby projektu byl tedy zvolen převod formátu Markdown do \LaTeX u a až poté do formátu PDF (viz. kapitola \ref{sec:TeX}). Tento přístup elegantně řeší všechny výše zmíněné nevýhody Pandocu.
 
   Script \texttt{tex.py} získá pořadí článků, spojí je za sebe do jednoho dokumentu a poté na ně aplikuje řadu regulárních výrazů, které provedou konverzi z formátu Markdown do formátu \LaTeX.
 
@@ -335,7 +335,7 @@
 
 
   \subsubsection{Automatizace procesu}
-  Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí script \texttt{deploy.py}, který stránku nejprve pomocí Jekyllu (viz. kapitola \ref{sec:Jekyll}) vygeneruje, poté ve správném pořadí spustí všechny scripty pro generování dodatečného obsahu a optimalizace, a nakonec script pro stránky na webhosting.
+  Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí script \texttt{deploy.py}, který stránku nejprve vygeneruje, poté ve správném pořadí spustí všechny scripty pro generování dodatečného obsahu a optimalizace, a nakonec i script pro stránky na webhosting.
 
 
   \subsection{Verzování zdrojového kódu}
