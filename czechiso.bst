@@ -113,7 +113,7 @@ FUNCTION {output.check}
   if$
 }
 FUNCTION {fin.entry}
-{ add.period$
+{
   write$
   newline$
 }
