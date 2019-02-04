@@ -137,7 +137,7 @@
   \newpage
 
   \section*{\normalfont\textbf{Poděkování}}
-  V první řadě bych rád poděkoval své rodině za neustálou podporu a pozitivní energii při tvorbě projektu. Za učitečné konzultace o obsahu, struktuře a použitých technologiích děkuji Lukáši Pitoňákovi, Janu Poláškovi a Tomáši Novotnému. Také děkuji Kateřině Sulkové za rady ke psaní samotné SOČ práce a na závěr všem návštěvníkům stránky, kteří svou přítomností a feedbackem pomáhají v jejím rozvoji.
+  V první řadě bych rád poděkoval své rodině a přátelům za neustálou podporu a pozitivitu při tvorbě projektu. Za učitečné konzultace o obsahu, struktuře a použitých technologiích děkuji Lukáši Pitoňákovi, Janu Poláškovi a Tomáši Novotnému. Také děkuji Kateřině Sulkové za rady ke psaní samotné SOČ práce a na závěr všem návštěvníkům stránky, kteří svou přítomností a feedbackem pomáhají v jejím rozvoji.
 
   \newpage
 
@@ -148,7 +148,7 @@
   robotika; webová stránka; vzdělávání
 
   \section*{\normalfont\textbf{Annotation}}
-  This paper decribes the process of creating the \url{robotics-simplified.com} website. The site covers topics in the field of robotics in a beginner-friendly way. It is powered by the static site generator Jekyll, and is suplemented by JavaScript libraries used for rendering mathematical equations, analyzing the website traffic and creating interactive visualizations of the discussed concepts. Python scripts fully automate image compression, sitemap file generation, content upload via FTP and conversion to a book version for offline reading.
+  This paper decribes the process of creating the \url{robotics-simplified.com} website. The site covers topics in the field of robotics in a beginner-friendly way. It is powered by the static site generator Jekyll, and is suplemented by JavaScript libraries for rendering mathematical equations, analyzing the website traffic and creating interactive visualizations of the discussed concepts. Python scripts fully automate image compression, sitemap file generation, content upload via FTP and conversion to a book version for offline reading.
 
   \section*{\normalfont\textbf{Keywords}}
   robotics; website; education
@@ -199,21 +199,21 @@
 
 
   \section{Použité programovací jazyky}
-  Jaké programovací jazyky jsem použil při stavění projektů.
-  Popis jejich funkce, jejich využití v projektu a jejich možné náhrady.
+  Následující kapitola rozebírá historii programovacích jazyků a jejich použití v projektu.
+
 
   \subsection{JavaScript}
   Okolo roku 1995 bylo pro internetový prohlížeč Netscape potřeba vytvořit interpretovaný scriptovací jazyk pro zlepšení interaktivity webových stránek, který by měl jít vložit přímo do HTML. Tímto úkolem byl pověřen Brendan Eich a jelikož bylo z ekonomických důvodů potřeba práci vykonat rychle, první funkční prototyp jeho úsilí byl údajně zhotoven za pouhých 10 dní\cite{the-origin-of-javascript}.
 
-  Dnes se jedná o webový standard, díky kterému přidat to webové stránky interaktivitu a dlouhodobě nejpoužívanější programovací jazyk na platformě GitHub\cite{github-statistics} a na kterém stojí řada podstatných funkcí tohoto projektu.
+  Dnes se jedná o webový standard, díky kterému přidat to webové stránky interaktivitu a o dlouhodobě nejpoužívanější programovací jazyk na platformě GitHub\cite{github-statistics} a na kterém stojí řada podstatných funkcí tohoto projektu.
 
 
   \subsubsection{p5.js} \label{sec:p5.js}
 
   \subsubsection{\texorpdfstring{\KaTeX}{KaTeX}} \label{sec:KaTeX}
-  \KaTeX{} (\url{https://katex.org/}) je JavaScriptová knihovna, která je na stránce používána na renderování matematických rovnic z \LaTeX ové notace (viz. kapitola \ref{sec:Matematika}), vytvořena pro použití na vzdělávací stránce Khan Academy a dostupná pod licencí MIT.
+  \KaTeX{} (\url{https://katex.org/}) je JavaScriptová knihovna vytvořena pro vzdělávací stránku Khan Academy, která je na stránce používána na renderování matematických rovnic z \LaTeX ové notace (viz. kapitola \ref{sec:Matematika}).
 
-  Populární alternativa, která byla na stránce dříve používána je knihovna MathJax (\url{https://www.mathjax.org/}), která je však oproti \KaTeX u znatelně pomalejší a proto byla nahrazena\cite{katex-mathjax-comparison}.
+  Populární alternativa, která byla na stránce dříve používána je knihovna MathJax (\url{https://www.mathjax.org/}), která je však oproti \KaTeX u znatelně pomalejší a proto jí byla nahrazena\cite{katex-mathjax-comparison}.
 
 
   \subsection{HTML} \label{sec:HTML}
@@ -221,11 +221,11 @@
   \subsection{CSS} \label{sec:CSS}
 
   \subsection{Python} \label{sec:Python}
-  Python je programovací jazyk vytvořený pro použití na distribuovaném operačním systému Amoeba Guidem van Rossumem v 80. letech 20. století. Byl silně inspirován Guidovou prací na jazyce ABC -- samotný Rossum o Pythonu prohlásil: „Vzal jsem ingredience z ABC a trochu jsem je promíchal. Python byl v mnoha věcech podobný ABC, ale v mnoha také rozdílný.\cite{making-of-python}“
+  Python je programovací jazyk vytvořený pro distribuovaný operační systém Amoeba Guidem van Rossumem v 80. letech 20. století. Byl silně inspirován Guidovou prací na jazyce ABC -- samotný Rossum o Pythonu prohlásil: „Vzal jsem ingredience z ABC a trochu jsem je promíchal. Python je v mnoha věcech podobný ABC, ale v mnoha také rozdílný.\cite{making-of-python}“
 
   Od svého vzniku se Python vyvinul v mocný a frekventovaně používaný programovací jazyk -- má silnou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub\cite{github-statistics}, od stavby webových stránek po knihovny na trénování neuronových sítí.
 
-  Na stránce je používán jako scriptovací jazyk pro automatizaci provozu webové stránky (viz. kapitola \ref{sec:Automatizace provozu}).
+  Na stránce zastává funkci scriptovacího jazyka pro automatizaci provozu (viz. kapitola \ref{sec:Automatizace provozu}).
 
 
   \subsection{Markdown} \label{sec:Markdown}
@@ -233,17 +233,19 @@
   \subsection{\TeX} \label{sec:TeX}
   \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století. Počáteční impulz pro vznik byla Knuthova nespokojenost s tiskovou kvalitou při vydávání jedné z jeho knih, což jej vedlo ke studiu principů sázení, tvorby fontů a později až k vytvoření vlastního sázecího systému \TeX\cite{tex-history}.
 
-  Od klasických WYSIWYG (what you see is what you get) programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument měl vypadat a \TeX{} se o samotné sázení postárá. Tento princip klade větší důraz na obsah -- autor se formátováním do značné míry nemusí zabývat. Další výhoda \TeX u je fakt, že celý dokument je text, proto jej lze verzovat.
+  Od klasických WYSIWYG (what you see is what you get) programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postárá. Tento přístup klade větší důraz na obsah -- autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda \TeX u je fakt, že celý dokument je text, proto jej lze verzovat.
 
   V projektu je pro převod stránky do offline verze používán \LaTeX{} (viz. kapitola \ref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů\cite{getting-started-with-latex}. K převodu \LaTeX u do formátu PDF je používán český program pdf\TeX{}\cite{pdftex}.
 
 
   \section{Použité nástroje} \label{sec:Použité nástroje}
-  Jaké nástroje jsem použil při stavění projektů.
-  Popis jejich funkce, jejich využití v projektu a jejich možné náhrady.
+  Tato kapitola rozebírá v projektu použité nástroje, jejich účel a porovnání s alternativami.
+
+  Hlavní kritérium výběru byla multiplatformnost, jelikož jsou při vývoji aktivně využívaný oba operační systémy Windows a Linux.
+
 
   \subsection{Git} \label{sec:Git}
-  Git je otevřený\cite{git-source} verzovací systém vytvořen Linusem Torvaldsem pro použití na operačním systému Linux. V open-source komunitě se v současné době jedná o nejpoužívanější vezrovací systém\cite{version-control-usage-statistics}, což je jeden z důvodů pro jeho využití v tomto projektu.
+  Git je otevřený\cite{git-source} verzovací systém vytvořený Linusem Torvaldsem pro použití na operačním systému Linux. V open-source komunitě se v současné době jedná o nejpoužívanější vezrovací systém\cite{version-control-usage-statistics}, což je jeden z hlavních důvodů pro jeho využití v tomto projektu.
 
   Verzovací systém umožňuje zaznamenávat změny (a jejich důvod/význam) na verzované skupině souborů a složek (tzv. repozitáři), aby se zamezilo ztrátě práce, zjednodušilo se hledání chyb v kódu a usnadnila se spolupráce mezi autory.
 
@@ -253,21 +255,21 @@
 
 
   \subsection{Jekyll} \label{sec:Jekyll}
-  Jekyll je otevřený\cite{jekyll-source} generátor statických webových stránek napsán v jazyce Ruby. Od tradičních přístupů ke stavbě webové stránky využívajících databáze či systém pro správu obsahu se liší tím, že stránku generuje pouze z textových souborů udávajících obsah a styl stránky. Výsledný produkt je plně statická stránka, která není napojena na žádný dynamický systém.
+  Jekyll je otevřený\cite{jekyll-source} generátor statických webových stránek napsaný v jazyce Ruby. Od tradičních přístupů ke stavbě webové stránky využívajících databáze či systém pro správu obsahu se liší tím, že stránku generuje pouze z textových souborů udávajících obsah a vzhled stránky. Výsledný produkt je plně statická stránka, která není napojena na žádný dynamický systém.
 
-  Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu text. Další výhoda je ochrana před potenciálními útoky, protože u statických webových stránek není řada frekventovaně používaných útoků možná -- produkt si neukládá nic, co by útočník mohl zneužít.
+  Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu prostý text. Další výhoda je ochrana před potenciálními útoky, protože u statických webových stránek není řada frekventovaně používaných útoků možná -- produkt si neukládá nic, co by útočník mohl zneužít.
 
   Nejpopulárnější alternativna je Hugo, který byl při vývoji stránky rovněž testován, avšak nakonec byl kvůli aktivnější komunitě a osobní preferenci zvolen Jekyll.
 
 
   \subsection{Inkscape} \label{sec:Inkscape}
-  Inkscape je otevřený\cite{inkscape-source} multiplaformní software na tvorbu vektorové grafiky. Oproti \emph{bitmapovým} softwarům, které pracují se samotnými pixely, si \emph{vektorové} pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola \ref{sec:Ilustrace}).
+  Inkscape je otevřený\cite{inkscape-source} multiplaformní software na tvorbu vektorové grafiky. Oproti \emph{rastrovým} softwarům, které pracují se samotnými pixely, si \emph{vektorové} pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola \ref{sec:Ilustrace}).
 
   Jedná se o populární volbu pro ty, kteří nepoužívají profesionální software jako Adobe Illustrator z důvodů ceny, uzavřenosti kódu či nedostupnosti pro operační systém Linux\cite{illustrator-pricing}.
 
 
   \subsection{Fusion 360} \label{sec:Fusion 360}
-  V rámci tvorby ilustrací k odborné literatuře je kromě tradičních přístupů rozebíraných v kapitole \ref{sec:Inkscape} používaný CAD (computer-aided design) software, který slouží ke tvorbě technických nákresů. Na rozdíl od tradičních programů na tvorbu grafiky jsou rozměry tvořených objektů přesně definovány v jednotkách SI, aby odpovídaly objektům reálného světa.
+  V rámci tvorby ilustrací k odborné literatuře je kromě tradičních přístupů rozebíraných v kapitole používaný CAD (computer-aided design) software, který slouží ke tvorbě technických nákresů. Na rozdíl od tradičních programů na tvorbu grafiky jsou rozměry tvořených objektů přesně definovány v jednotkách SI, aby odpovídaly objektům reálného světa.
 
   V komunitě soutěže FRC je populární Fusion 360 od společnosti Autodesk, převážně protože je licence pro studenty (a jejich mentory) zdarma\cite{fusion-360-pricing}. Profesionální alternativou je program SolidWorks, který je často používán studenty technických škol.
 
@@ -291,7 +293,7 @@
   \subsection{Design loga}
   Na dobré vizáži každé stránky má značný podíl její logo, které by mělo tematicky odpovídat zaměření stránky bez toho, aby působilo příliš složitě.
 
-  Hlavní koncept, na kterém za je logo postaveno je spojení výrazů „RO“ a „SI“ (první dva znaky jména projektu) do jednoho, čímž dochází k tématice zjednodušení, na které je stránka založena. Tvar znaku „O“ je rovněž podobný ozubenému kolu, což do designu loga pro stránku zaměřenou na robotiku elegantně zapadá.
+  Hlavní nápad za vizáží loga je spojení výrazů „RO“ a „SI“ (první dva znaky jména projektu) do jednoho. Toto spojení výrazy zjednodušuje a odpovídá tak tematicky obsahu webové stránky, která je založena na jednoduchosti a intuitivnosti. Tvar znaku „O“ je rovněž podobný ozubenému kolu, což do designu loga pro stránku zaměřenou na robotiku elegantně zapadá.
 
   \begin{center}
     \includegraphics[width=0.9\textwidth]{logo}
@@ -299,22 +301,23 @@
     \label{img:Vývoj loga stránky}
   \end{center}
 
-  Obrázek č.~\ref{img:Vývoj loga stránky} znázorňuje proces tvorby loga: počáteční nápad, následné přidání ozubeného kola a drobné úpravy na závěr.
-
-  Ke tvorbě loga byl použit program na úpravu vektorové grafiky Inkscape (viz. kapitola \ref{sec:Inkscape}).
+  Obrázek č.~\ref{img:Vývoj loga stránky} znázorňuje proces tvorby loga: počáteční nápad, následné přidání ozubeného kola a drobné úpravy na závěr. K designu loga byl použit program na úpravu vektorové grafiky Inkscape (viz. kapitola \ref{sec:Inkscape}).
 
 
   \section{Obsah webové stránky}
 
   \subsection{Cílové publikum}
 
-  \subsection{Tvorba článků}
+
+  \subsection{Tvorba článků} \label{sec:Tvorba článků}
   Jak probíhá psaní článků.
   Jak vypadá struktura článku - přirovnání k Wikipedii.
 
   \subsection{Struktura obsahu}
 
   \section{Funkčnost webové stránky}
+  Následující kapitola pokrývá některé ze zajímavějších technických řešení použitých při tvorbě projektu.
+
 
   \subsection{Automatizace provozu} \label{sec:Automatizace provozu}
   K produktivnímu tvorby vzdělávacího materiálu je potřeba plynulý a do co největší míry automatizovaný provoz -- přidávání článků by mělo být pouze napsání nového souboru a jeho vložení do správné složky projektu.
@@ -335,65 +338,73 @@
 
 
   \subsubsection{Převod webové stránky do PDF} \label{sec:Převod webové stránky do PDF}
-  Pro offline dostupnost existuje mnoho různých typů souborů, na které by stránka šla převést. Často používané formátu jako \texttt{doc} a \texttt{docx} jsou však pro naše použití nevhodné, protože se mohou na různých zařízení zobrazit jinak. Je tedy vhodnější použít PostScript či PDF (Portable Document Format), jejiž vizáž není nezávislá na prostředí\cite{history-of-pdf}.
+  Pro offline dostupnost existuje mnoho různých typů souborů, na které by stránka šla převést. Často používané formátu jako \texttt{doc} a \texttt{docx} jsou však pro naše použití nevhodné, protože se mohou na různých zařízení zobrazit jinak. Je tedy vhodnější použít PostScript či PDF (Portable Document Format), jejichž vizáž na prostředí závislá není\cite{history-of-pdf}.
 
   Přímočará varianta by tedy byla převést za sebe seřazené články programem pro převod z formátu Markdown do formátu PDF (např. Pandoc). Tímto přístupem by však bylo obtížné měnit úrovně sekce podle toho, jedná-li se o hlavní či vedlejší články, generovat obsah a úvodní stránkum a prakticky nemožné upravit výsledné formátování.
 
-  Pro potřeby projektu byl tedy zvolen převod formátu Markdown do \LaTeX u a až poté do formátu PDF (viz. kapitola \ref{sec:TeX}). Tento přístup elegantně řeší všechny výše zmíněné nevýhody Pandocu.
+  Pro potřeby projektu byl tedy zvolen převod formátu Markdown do \LaTeX u (viz. kapitola \ref{sec:TeX}) a až poté do formátu PDF. Tento přístup elegantně řeší všechny výše zmíněné nevýhody Pandocu.
 
   Script \texttt{tex.py} získá pořadí článků, spojí je za sebe do jednoho dokumentu a poté na ně aplikuje řadu regulárních výrazů, které provedou konverzi z formátu Markdown do formátu \LaTeX.
 
+  % příklad konverze
+
 
   \subsubsection{Komprimace obrázků}
-  O komprimaci obrázků pro zmenšení velikosti stránky se stará script \texttt{compress.py}, který s pomocí služby TinyPNG (\url{https://tinypng.com/}) a jejího Python API zkomprimuje všechny obrázky vygenerované stránky. Samotný API klíč je pro zamezení zneužití šifrován symetrickou šifrou AES.
+  O komprimaci obrázků pro zmenšení velikosti stránky se stará script \texttt{compress.py}, který pomocí služby TinyPNG (\url{https://tinypng.com/}) a jejího Python API zkomprimuje všechny obrázky vygenerované stránky. Samotný API klíč je pro zamezení zneužití šifrován symetrickou šifrou AES.
+
+  % přidat, jak komprimuje
 
 
   \subsubsection{Minimalizace zdrojového kódu}
-  Zkompaktnění zdrojového kódu je další možná optimalizace, kterou lze načítání stránky urychlit. Prohlížečům na mezerách v kódu nezáleží a běžné uživatele vizáž kódu nezajímá, proto jej lze na úkor čitelnosti zmenšit.
+  Zkompaktnění zdrojového kódu je další možná optimalizace, kterou lze načítání stránky urychlit. Prohlížečům na vzhledu kódu nezáleží a běžné uživatele nezajímá, proto jej lze na úkor čitelnosti zmenšit.
 
   Tuto funkci zastává script \texttt{minify.py}, který soubory typu CSS a HTML zmenší bez toho, aby upravil jejich funkčnost.
 
+  % přidat, jak minimalizuje
 
   \subsubsection{Automatizace procesu}
-  Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí script \texttt{deploy.py}, který stránku nejprve vygeneruje, poté ve správném pořadí spustí všechny scripty pro generování dodatečného obsahu a optimalizace, a nakonec i script pro stránky na webhosting.
+  Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí script \texttt{deploy.py}, který stránku nejprve vygeneruje, poté ve správném pořadí spustí všechny scripty pro generování dodatečného obsahu a optimalizace, a nakonec i script pro nahrání stránky na webhosting.
 
 
   \subsection{Verzování zdrojového kódu}
   Stránka je verzována pomocí verzovacího systému Git (viz. kapitola \ref{sec:Git}). Kód je otevřený a volně dostupný přes GitHub na adrese \url{https://github.com/xiaoxiae/Robotics-Simplified-Website}.
 
+  % k čemu jsou větve
+
 
   \section{Analytika a propagace webové stránky}
-  Jak probíhá provoz serveru.
+  % Jak probíhá provoz serveru.
 
   \subsection{Analýza návštěvnosti}
 
   \subsubsection{Google Analytics}
-  Na co to je
-  Proč Analytics
-  Statistiky, grafy
+  % Na co to je
+  % Proč Analytics
+  % Ukázat hezké statistiky a grafy
 
   \subsubsection{Google Search Console}
-  Na co to je
-  Proč Search
-  Statistiky, grafy
+  % Na co to je
+  % Proč Search
+  % Ukázat hezké statistiky, grafy
 
   \subsection{Marketting}
 
   \subsubsection{Sociální média}
-  Reddit, Hacker News, Facebook...
+  % Reddit, Hacker News, Facebook...
 
   \subsubsection{FRC a FLL teamy}
 
   \subsection{Testování výkonu}
-  https://www.webpagetest.org/
+  % https://www.webpagetest.org/
+  % https://sitechecker.pro/seo-report/
 
   \subsubsection{Rychlost načítání}
-  Kolik dat stránka načítá.
-  Jak rychle se načítá z různých zemí světa.
+  % Kolik dat stránka načítá.
+  % Jak rychle se načítá z různých zemí světa.
 
   \subsubsection{Multiplatformnost}
-  Jak to funguje na různých prohlížečích.
-  Jak to funguje na různých platformách.
+  % Jak to funguje na různých prohlížečích.
+  % Jak to funguje na různých platformách.
 
   \section{Závěr}
 
