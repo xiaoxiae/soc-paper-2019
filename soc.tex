@@ -352,15 +352,14 @@
   \subsubsection{Komprimace obrázků}
   O komprimaci obrázků pro zmenšení velikosti stránky se stará script \texttt{compress.py}, který pomocí služby TinyPNG (\url{https://tinypng.com/}) a jejího Python API zkomprimuje všechny obrázky vygenerované stránky. Samotný API klíč je pro zamezení zneužití šifrován symetrickou šifrou AES.
 
-  % přidat, jak komprimuje
+  Úprava fotek funguje na principu \emph{kvantování barev} -- podobné barvy jsou spojeny do jedné, proto jdou z tradičních 24-bitových palet PNG obrázků udělat palety 8-bitové, čímž lze obrázek zmenšit bez výrazného zhoršení kvality.
 
 
   \subsubsection{Minimalizace zdrojového kódu}
   Zkompaktnění zdrojového kódu je další možná optimalizace, kterou lze načítání stránky urychlit. Prohlížečům na vzhledu kódu nezáleží a běžné uživatele nezajímá, proto jej lze na úkor čitelnosti zmenšit.
 
-  Tuto funkci zastává script \texttt{minify.py}, který soubory typu CSS a HTML zmenší bez toho, aby upravil jejich funkčnost.
+  Tuto funkci zastává script \texttt{minify.py}, který soubory typu CSS a HTML zmenší odstraněním komentářů, nepotřebných tagů a uvozovek, přebytečných mezer a úpravou dalších věcí, které funkcionalitu kódu nezmění.
 
-  % přidat, jak minimalizuje
 
   \subsubsection{Automatizace procesu}
   Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí script \texttt{deploy.py}, který stránku nejprve vygeneruje, poté ve správném pořadí spustí všechny scripty pro generování dodatečného obsahu a optimalizace, a nakonec i script pro nahrání stránky na webhosting.
