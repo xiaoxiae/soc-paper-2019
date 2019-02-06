@@ -137,7 +137,7 @@
   \newpage
 
   \section*{\normalfont\textbf{Poděkování}}
-  V první řadě bych rád poděkoval své rodině a přátelům za neustálou podporu a pozitivitu při tvorbě projektu. Za učitečné konzultace o obsahu, struktuře a použitých technologiích děkuji Lukáši Pitoňákovi, Janu Poláškovi a Tomáši Novotnému. Také děkuji Kateřině Sulkové za rady ke psaní samotné SOČ práce a na závěr všem návštěvníkům stránky, kteří svou přítomností a feedbackem pomáhají v jejím rozvoji.
+  V první řadě bych rád poděkoval své rodině a přátelům za neustálou podporu a pozitivitu při tvorbě projektu. Za konzultace o obsahu, struktuře a použitých technologiích děkuji Lukáši Pitoňákovi, Janu Poláškovi a Tomáši Novotnému. Také děkuji Kateřině Sulkové za rady ke psaní samotné SOČ práce a na závěr všem návštěvníkům projekty, kteří svou přítomností a feedbackem pomáhají v jeho rozvoji.
 
   \newpage
 
@@ -181,7 +181,7 @@
   \newpage
 
   \section{Požadavky na výsledný produkt}
-  Myšlenka tvorby kvalitních materiálů pro studium robotiky je příliš rozsáhlá na to, aby mohla práce na projektu začít bez větší úvahy: bude se jednat o webovou stránku, aplikaci, či repozitář se zdrojovými kódy?
+  Myšlenka tvorby kvalitních materiálů pro studium robotiky je příliš rozsáhlá na to, aby mohla práce na projektu začít bez větší úvahy: bude se jednat o webovou stránku, aplikaci, knihu, či repozitář se zdrojovými kódy?
 
   Před začátkem je třeba definovat požadavky, které by výsledný produkt měl splňovat. Podle těch lze způsoby provedení porovnat a použít ten, který se jeví za nejvhodnější.
 
@@ -203,7 +203,7 @@
 
 
   \subsection{JavaScript}
-  Okolo roku 1995 bylo pro internetový prohlížeč Netscape potřeba vytvořit interpretovaný scriptovací jazyk pro zlepšení interaktivity webových stránek, který by měl jít vložit přímo do HTML. Tímto úkolem byl pověřen Brendan Eich a jelikož bylo z ekonomických důvodů potřeba práci vykonat rychle, první funkční prototyp jeho úsilí byl údajně zhotoven za pouhých 10 dní\cite{the-origin-of-javascript}.
+  Okolo roku 1995 bylo pro internetový prohlížeč Netscape potřeba vytvořit interpretovaný scriptovací jazyk pro zlepšení interaktivity webových stránek, který by měl jít vložit přímo do HTML. Tímto úkolem byl pověřen Brendan Eich a jelikož bylo z ekonomických důvodů potřeba práci vykonat rychle, první funkční verze JavaScriptu byla údajně zhotovena za pouhých 10 dní\cite{the-origin-of-javascript}.
 
   Dnes se jedná o webový standard, díky kterému přidat to webové stránky interaktivitu a o dlouhodobě nejpoužívanější programovací jazyk na platformě GitHub\cite{github-statistics} a na kterém stojí řada podstatných funkcí tohoto projektu.
 
@@ -213,7 +213,7 @@
   \subsubsection{\texorpdfstring{\KaTeX}{KaTeX}} \label{sec:KaTeX}
   \KaTeX{} (\url{https://katex.org/}) je JavaScriptová knihovna vytvořena pro vzdělávací stránku Khan Academy, která je na stránce používána na renderování matematických rovnic z \LaTeX ové notace (viz. kapitola \ref{sec:Matematika}).
 
-  Populární alternativa, která byla na stránce dříve používána je knihovna MathJax (\url{https://www.mathjax.org/}), která je však oproti \KaTeX u znatelně pomalejší a proto jí byla nahrazena\cite{katex-mathjax-comparison}.
+  Populární alternativa, která byla na stránce dříve používána je knihovna MathJax (\url{https://www.mathjax.org/}), která je však oproti \KaTeX u znatelně pomalejší, proto jí byla nahrazena\cite{katex-mathjax-comparison}.
 
 
   \subsection{HTML} \label{sec:HTML}
@@ -229,7 +229,7 @@
 
 
   \subsection{Markdown} \label{sec:Markdown}
-  Markdown je styl formátování prostého textu, vytvořený v roce 2004 Johnem Gruberem pro autory webových stránek. Je uzpůsobený k jednoduchému čtení, psaní, a převodu do pokročilejších značkovacích jazyků jako HTML či \LaTeX\cite{markdown-history}.
+  Markdown je styl formátování prostého textu, vytvořený v roce 2004 Johnem Gruberem pro autory webových stránek. Je uzpůsobený k jednoduchému čtení, psaní, a převodu do pokročilejších značkovacích jazyků jako HTML\cite{markdown-history}.
 
   V projektu je v kombinaci s šablonovým jazykem Liquid (\url{https://shopify.github.io/liquid/}) používán pro psaní článků (viz. kapitola \ref{sec:Tvorba článků}).
 
@@ -237,7 +237,7 @@
   \subsection{\TeX} \label{sec:TeX}
   \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století. Počáteční impulz pro vznik byla Knuthova nespokojenost s tiskovou kvalitou při vydávání jedné z jeho knih, což jej vedlo ke studiu principů sázení, tvorby fontů a později až k vytvoření vlastního sázecího systému \TeX\cite{tex-history}.
 
-  Od klasických WYSIWYG (what you see is what you get) programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postárá. Tento přístup klade větší důraz na obsah -- autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda \TeX u je fakt, že celý dokument je text, proto jej lze verzovat.
+  Od klasických WYSIWYG (what you see is what you get) programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postárá. Tento přístup klade větší důraz na obsah -- autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda \TeX u je fakt, že celý dokument je prostý text, proto jej lze verzovat.
 
   V projektu je pro převod stránky do offline verze používán \LaTeX{} (viz. kapitola \ref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů\cite{getting-started-with-latex}. K převodu \LaTeX u do formátu PDF je používán český program pdf\TeX{}\cite{pdftex}.
 
@@ -267,7 +267,7 @@
 
 
   \subsection{Inkscape} \label{sec:Inkscape}
-  Inkscape je otevřený\cite{inkscape-source} multiplaformní software na tvorbu vektorové grafiky. Oproti \emph{rastrovým} softwarům, které pracují se samotnými pixely, si \emph{vektorové} pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola \ref{sec:Ilustrace}).
+  Inkscape je otevřený\cite{inkscape-source} multiplaformní software na tvorbu vektorové grafiky. Oproti rastrovým softwarům, které pracují se samotnými pixely, si vektorové pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola \ref{sec:Ilustrace}).
 
   Jedná se o populární volbu pro ty, kteří nepoužívají profesionální software jako Adobe Illustrator z důvodů ceny, uzavřenosti kódu či nedostupnosti pro operační systém Linux\cite{illustrator-pricing}.
 
@@ -275,21 +275,24 @@
   \subsection{Fusion 360} \label{sec:Fusion 360}
   V rámci tvorby ilustrací k odborné literatuře je kromě tradičních přístupů rozebíraných v kapitole používaný CAD (computer-aided design) software, který slouží ke tvorbě technických nákresů. Na rozdíl od tradičních programů na tvorbu grafiky jsou rozměry tvořených objektů přesně definovány v jednotkách SI, aby odpovídaly objektům reálného světa.
 
-  V komunitě soutěže FRC je populární Fusion 360 od společnosti Autodesk, převážně protože je licence pro studenty (a jejich mentory) zdarma\cite{fusion-360-pricing}. Profesionální alternativou je program SolidWorks, který je často používán studenty technických škol.
+  Mezi členy FRC teamů je populární volba CAD softwaru Fusion 360 od společnosti Autodesk, převážně protože je licence pro studenty (a jejich mentory) zdarma\cite{fusion-360-pricing}. Profesionální alternativou je program SolidWorks, který je často používán studenty technických škol.
 
-  Stojí za zmínku, že Fusion 360 je jediný v projektu použitý program, který nefunguje na operačním systému Linux a to z toho důvodu, že neexistuje kvalitní multiplatformní náhrada.
-
+  Jelikož za Fusion 360 neexistuje kvalitní multiplatformní náhrada, tak se jedná o jediný v projektu použitý program, který nefunguje na operačním systému Linux.
 
   \section{Vývoj webové stránky}
+  % Rozhodl jsem se pro stránku
+  % OS
+  % Multiplatformn
+  % Ilustrace fungování jak na mobilu, tak na PC?
 
   \subsection{Konfigurace Jekyllu}
-  Hledání themu.
-  Konfigurace themu.
+  % Hledání themu.
+  % Konfigurace themu.
 
   \subsection{Webhosting a doména} \label{sec:Webhosting a doména}
   Na českém trhu operuje velké množství firem, které zajišťují jak registraci domény, tak hostování samotné stránky. Každá má své výhody a nevýhody, proto je volba provozovatele vysoce individuální a záleží na řadě faktorů.
 
-  Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit\cite{wedos-hosting}, zejména kvůli mým pozitivním zkušenostem s touto službou v rámci minulých projektů a faktem, že ceny a parametry služeb jiných hostingů se od využívané příliš neliší.
+  Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit (\url{https://hosting.wedos.com/cs/webhosting.html}), zejména kvůli mým pozitivním zkušenostem s touto službou v rámci minulých projektů a faktem, že ceny a parametry služeb jiných hostingů se od využívané příliš neliší.
 
   Jelikož je Jekyll podporován GitHubem, na kterém je hostován zdrojový kód stránky, další možností je služba GitHub Pages (\url{https://pages.github.com/}). Stránka by byla hostována zdarma, nebylo by třeba obsah nahrávat přes FTP a generování stránky by probíhalo automaticky. Tento přístup by však znemožnil využívání scriptů, proto není pro účely projektu vhodný.
 
@@ -305,7 +308,9 @@
     \label{img:Vývoj loga stránky}
   \end{center}
 
-  Obrázek č.~\ref{img:Vývoj loga stránky} znázorňuje proces tvorby loga: počáteční nápad, následné přidání ozubeného kola a drobné úpravy na závěr. K designu loga byl použit program na úpravu vektorové grafiky Inkscape (viz. kapitola \ref{sec:Inkscape}).
+  Obrázek č.~\ref{img:Vývoj loga stránky} znázorňuje proces tvorby loga: počáteční nápad, následné přidání ozubeného kola a drobné úpravy na závěr.
+
+  K designu loga byl použit program na úpravu vektorové grafiky Inkscape (viz. kapitola \ref{sec:Inkscape}).
 
 
   \section{Obsah webové stránky}
@@ -314,8 +319,8 @@
 
 
   \subsection{Tvorba článků} \label{sec:Tvorba článků}
-  Jak probíhá psaní článků.
-  Jak vypadá struktura článku - přirovnání k Wikipedii.
+  % Jak probíhá psaní článků.
+  % Jak vypadá struktura článku - přirovnání k Wikipedii.
 
   \subsection{Struktura obsahu}
 
@@ -338,7 +343,7 @@
   \subsubsection{Generování souboru sitemap.xml}
   Protokol sitemap (\url{https://www.sitemaps.org/protocol.html}) udává informace o pořadí procházení, časech změny a relativní prioritě částí stránky. Slouží vyhledávacím portálům, které tyto informace využívají pro inteligentnější indexování stránky ve svém systému.
 
-  Script \texttt{sitemap.py} podle pořadí článků generuje záznamy do souboru \texttt{sitemap.xml}. Informace o umístění a pslední úpravě jsou získávány z atributů souboru a priorita je přidělena podle pozice na stránce -- úvodní stránka má prioritu $1.0$, hlavní články mají prioritu $0.8$ a vedlejší $0.6$.
+  Script \texttt{sitemap.py} podle pořadí článků generuje záznamy do souboru \texttt{sitemap.xml}. Informace o umístění a pslední úpravě jsou získávány z atributů souboru a priorita je přidělena podle pozice na stránce -- úvodní stránka má prioritu $1.0$, hlavní články mají prioritu $0.8$ a vedlejší články prioritu $0.6$.
 
 
   \subsubsection{Převod webové stránky do PDF} \label{sec:Převod webové stránky do PDF}
@@ -366,13 +371,11 @@
 
 
   \subsubsection{Automatizace procesu}
-  Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí script \texttt{deploy.py}, který stránku nejprve vygeneruje, poté ve správném pořadí spustí všechny scripty pro generování dodatečného obsahu a optimalizace, a nakonec i script pro nahrání stránky na webhosting.
+  Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí script \texttt{deploy.py}, který stránku nejprve pomocí Jekyllu vygeneruje, poté ve správném pořadí spustí všechny scripty pro generování dodatečného obsahu a optimalizace, a nakonec i script pro nahrání stránky na webhosting.
 
 
   \subsection{Verzování zdrojového kódu}
   Stránka je verzována pomocí verzovacího systému Git (viz. kapitola \ref{sec:Git}). Kód je otevřený a volně dostupný přes GitHub na adrese \url{https://github.com/xiaoxiae/Robotics-Simplified-Website}.
-
-  % k čemu jsou větve
 
 
   \section{Analytika a propagace webové stránky}
