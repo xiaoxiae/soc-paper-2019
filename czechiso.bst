@@ -437,7 +437,7 @@ FUNCTION {format.names}
   numnames 'namesleft :=
     { namesleft #0 > }
     { s nameptr
-      "{vv~}{ll}{, f.}{, jj}"
+      "{vv~}{ll}{, ff}{, jj}"
       format.name$
       bibinfo bibinfo.check
       't :=
@@ -452,9 +452,9 @@ FUNCTION {format.names}
             'skip$
           if$
           namesleft #1 >
-            { "; " * t * }
+            { ", " * t * }
             {
-              ";" *
+              "" *
               s nameptr "{ll}" format.name$ duplicate$ "others" =
                 { 't := }
                 { pop$ }
@@ -463,7 +463,7 @@ FUNCTION {format.names}
                 {
                   " " * bbl.etal *
                 }
-                { " " * t * }
+                { " a " * t * }
               if$
             }
           if$
