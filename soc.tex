@@ -1,6 +1,8 @@
 \documentclass[a4paper, 12pt]{article}
 \usepackage[top=2.5cm, left=3.5cm, right=1.5cm, bottom=2.5cm, includefoot]{geometry}
 
+\usepackage[czech]{babel}                     % use the czech language
+
 \usepackage{graphicx}                         % graphics
 \graphicspath{ {./img/} }                     % graphics path
 \usepackage{float}                            % floats in correct position
@@ -12,7 +14,7 @@
 \usepackage{amsmath, amstext}                 % math
 
 \usepackage[font=small,labelfont=bf]{caption} % caption settings
-\renewcommand{\figurename}{Obr. č.}           % change caption name
+\usepackage[figurename=Obr. č.]{caption}   % caption name
 
 \usepackage[numbib, nottoc]{tocbibind}        % number bib, no toc in toc
 \makeatletter                                 % lof numbering
