@@ -195,7 +195,7 @@
   \subsection{Multiplatformnost}
   Co se dostupnosti týče, důležitým požadavkem je \emph{multiplatformnost}, tj. možnost přístupu k produktu z více než jedné platformy jako stolní počítač, mobil, čtečka elektronických knih, aj. Výsledný produkt musí být multiplatformní primárně kvůli mému osobnímu názoru, že vzdělání by nemělo být omezeno technologickými preferencemi jednotlivce.
 
-  Tato podmínka fakticky znemožňuje tvorbu aplikace, jelikož by se jak finanční\cite{apple-store-membership,android-store-membership}, tak časové nároky mnohonásobně zvýšily a komplexita projektu by přerostla nad rámec jednotlivce.
+  Tato podmínka fakticky znemožňuje tvorbu aplikace, jelikož by finanční i časové nároky stavby aplikací pro vícero systémů přerostly nad možnosti jednotlivce.
 
 
   \section{Použité programovací jazyky}
@@ -233,7 +233,7 @@
   \subsection{Markdown} \label{sec:Markdown}
   Markdown je styl formátování prostého textu, vytvořený v roce 2004 Johnem Gruberem pro autory webových stránek. Je uzpůsobený k jednoduchému čtení, psaní, a převodu do pokročilejších značkovacích jazyků jako HTML\cite{markdown-history}.
 
-  V projektu je v kombinaci s šablonovým jazykem Liquid (\url{https://shopify.github.io/liquid/}) používán pro psaní článků (viz. kapitola \ref{sec:Tvorba článků}).
+  V projektu je v kombinaci s šablonovým jazykem Liquid používán ke psaní článků (viz. kapitola \ref{sec:Tvorba článků}).
 
 
   \subsection{\TeX} \label{sec:TeX}
@@ -251,7 +251,7 @@
 
 
   \subsection{Git} \label{sec:Git}
-  Git je otevřený\cite{git-source} verzovací systém vytvořený Linusem Torvaldsem pro použití na operačním systému Linux. V open-source komunitě se v současné době jedná o nejpoužívanější vezrovací systém\cite{version-control-usage-statistics}, což je jeden z hlavních důvodů pro jeho využití v tomto projektu.
+  Git je otevřený\footnote{Zdrojový kód Gitu je dostupný na adrese \url{https://github.com/git/git}.} verzovací systém vytvořený Linusem Torvaldsem pro použití na operačním systému Linux. V open-source komunitě se v současné době jedná o nejpoužívanější vezrovací systém\cite{version-control-usage-statistics}, což je jeden z hlavních důvodů pro jeho využití v tomto projektu.
 
   Verzovací systém umožňuje zaznamenávat změny (a jejich důvod/význam) na verzované skupině souborů a složek (tzv. repozitáři), aby se zamezilo ztrátě práce, zjednodušilo se hledání chyb v kódu a usnadnila se spolupráce mezi autory.
 
@@ -261,7 +261,7 @@
 
 
   \subsection{Jekyll} \label{sec:Jekyll}
-  Jekyll je otevřený\cite{jekyll-source} generátor statických webových stránek napsaný v jazyce Ruby. Od tradičních přístupů ke stavbě webové stránky využívajících databáze či systém pro správu obsahu se liší tím, že stránku generuje pouze z textových souborů udávajících obsah a vzhled stránky. Výsledný produkt je plně statická stránka, která není napojena na žádný dynamický systém.
+  Jekyll je otevřený\footnote{Zdrojový kód Inkscapu je dostupný na adrese \url{https://gitlab.com/inkscape/inkscape}.} generátor statických webových stránek napsaný v jazyce Ruby. Od tradičních přístupů ke stavbě webové stránky využívajících databáze či systém pro správu obsahu se liší tím, že stránku generuje pouze z textových souborů udávajících obsah a vzhled stránky. Výsledný produkt je plně statická stránka, která není napojena na žádný dynamický systém.
 
   Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu prostý text. Další výhoda je ochrana před potenciálními útoky, protože u statických webových stránek není řada frekventovaně používaných útoků možná -- produkt si neukládá nic, co by útočník mohl zneužít.
 
@@ -269,15 +269,15 @@
 
 
   \subsection{Inkscape} \label{sec:Inkscape}
-  Inkscape je otevřený\cite{inkscape-source} multiplaformní software na tvorbu vektorové grafiky. Oproti rastrovým softwarům, které pracují se samotnými pixely, si vektorové pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola \ref{sec:Ilustrace}).
+  Inkscape je otevřený\footnote{Zdrojový kód Jekyllu je dostupný na adrese \url{https://github.com/jekyll/jekyll}.} multiplaformní software na tvorbu vektorové grafiky. Oproti rastrovým softwarům, které pracují se samotnými pixely, si vektorové pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola \ref{sec:Ilustrace}).
 
-  Jedná se o populární volbu pro ty, kteří nepoužívají profesionální software jako Adobe Illustrator z důvodů ceny, uzavřenosti kódu či nedostupnosti pro operační systém Linux\cite{illustrator-pricing}.
+  Jedná se o populární volbu pro ty, kteří nepoužívají profesionální software jako Adobe Illustrator z důvodů ceny, uzavřenosti kódu či nedostupnosti pro operační systém Linux.
 
 
   \subsection{Fusion 360} \label{sec:Fusion 360}
   V rámci tvorby ilustrací k odborné literatuře je kromě tradičních přístupů rozebíraných v kapitole používaný CAD (computer-aided design) software, který slouží ke tvorbě technických nákresů. Na rozdíl od tradičních programů na tvorbu grafiky jsou rozměry tvořených objektů přesně definovány v jednotkách SI, aby odpovídaly objektům reálného světa.
 
-  Mezi členy FRC teamů je populární volba CAD softwaru Fusion 360 od společnosti Autodesk, převážně protože je licence pro studenty (a jejich mentory) zdarma\cite{fusion-360-pricing}. Profesionální alternativou je program SolidWorks, který je často používán studenty technických škol.
+  Mezi členy FRC teamů je populární volba CAD softwaru Fusion 360 od společnosti Autodesk, převážně protože je licence pro studenty (a jejich mentory) zdarma. Profesionální alternativou je program SolidWorks, který je často používán studenty technických škol.
 
   Jelikož za Fusion 360 neexistuje kvalitní multiplatformní náhrada, tak se jedná o jediný v projektu použitý program, který nefunguje na operačním systému Linux.
 
