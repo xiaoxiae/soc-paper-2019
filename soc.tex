@@ -3,6 +3,7 @@
 
 \usepackage{graphicx}                         % graphics
 \graphicspath{ {./img/} }                     % graphics path
+\usepackage{float}                            % floats in correct position
 
 \usepackage{titlesec}                         % title
 \usepackage{tabularx}                         % tables
@@ -302,13 +303,16 @@
   \subsection{Design loga}
   Na dobré vizáži každé stránky má značný podíl její logo, které by mělo tematicky odpovídat zaměření stránky bez toho, aby působilo příliš složitě.
 
-  Hlavní nápad za vizáží loga je spojení výrazů „RO“ a „SI“ (první dva znaky jména projektu) do jednoho. Toto spojení výrazy zjednodušuje a odpovídá tak tematicky obsahu webové stránky, která je založena na jednoduchosti a intuitivnosti. Tvar znaku „O“ je rovněž podobný ozubenému kolu, což do designu loga pro stránku zaměřenou na robotiku elegantně zapadá.
+  Hlavní nápad za vizáží loga je spojení výrazů „RO“ a „SI“ (první dva znaky jména projektu) do jednoho. Toto spojení výrazy zjednodušuje a odpovídá tak tematicky obsahu webové stránky, která je založena na jednoduchosti a intuitivnosti.
 
-  \begin{center}
-    \includegraphics[width=0.9\textwidth]{logo}
-    \captionof{figure}{Vývoj loga stránky}
-    \label{img:Vývoj loga stránky}
-  \end{center}
+  Tvar znaku „O“ je rovněž podobný ozubenému kolu, což do designu loga pro stránku zaměřenou na robotiku elegantně zapadá.
+
+  \begin{figure}[H]
+    \minipage{0.95\textwidth}
+      \includegraphics[width=\linewidth]{logo.png}
+      \caption{Vývoj loga stránky} \label{img:Vývoj loga stránky}
+    \endminipage
+  \end{figure}
 
   Obrázek č.~\ref{img:Vývoj loga stránky} znázorňuje proces tvorby loga: počáteční nápad, následné přidání ozubeného kola a drobné úpravy na závěr.
 
