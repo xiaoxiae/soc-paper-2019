@@ -1,23 +1,23 @@
 \documentclass[a4paper, 12pt]{article}
 \usepackage[top=2.5cm, left=3.5cm, right=1.5cm, bottom=2.5cm, includefoot]{geometry}
 
-\usepackage[czech]{babel}                     % use the czech language
+\usepackage[czech]{babel}                       % use the czech language
 
-\usepackage{graphicx}                         % graphics
-\graphicspath{ {./img/} }                     % graphics path
-\usepackage{float}                            % floats in correct position
+\usepackage{graphicx}                           % graphics
+\graphicspath{ {./img/} }                       % graphics path
+\usepackage{float}                              % floats in correct position
 
-\usepackage{titlesec}                         % title
-\usepackage{tabularx}                         % tables
-\usepackage[hyphens,spaces,obeyspaces]{url}   % url
-\usepackage[hidelinks,unicode]{hyperref}      % interactive links
-\usepackage{amsmath, amstext}                 % math
+\usepackage{titlesec}                           % title
+\usepackage{tabularx}                           % tables
+\usepackage[hyphens,spaces,obeyspaces]{url}     % url
+\usepackage[hidelinks,unicode]{hyperref}        % interactive links
+\usepackage{amsmath, amstext}                   % math
 
-\usepackage[font=small,labelfont=bf]{caption} % caption settings
-\usepackage[figurename=Obr. č.]{caption}   % caption name
+\usepackage[font=small,labelfont=bf]{caption}   % caption settings
+\usepackage[figurename=Obr. č.]{caption}        % caption name
 
-\usepackage[numbib, nottoc]{tocbibind}        % number bib, no toc in toc
-\makeatletter                                 % lof numbering
+\usepackage[numbib, nottoc]{tocbibind}          % number bib, no toc in toc
+\makeatletter                                   % lof numbering
 \renewcommand\listoffigures{%
     \section{\listfigurename}%
     \@mkboth{\MakeUppercase\listfigurename}%
@@ -26,33 +26,28 @@
 }
 \makeatother
 
-\usepackage[dmyyyy]{datetime}                 % for dmyyyy datetimes
-\renewcommand{\dateseparator}{. }             % change datetime separator
+\usepackage[dmyyyy]{datetime}                   % dmyyyy datetimes
+\renewcommand{\dateseparator}{. }               % changes datetime separator
 
-% encoding and font stuff
-\usepackage[T1]{fontenc}
-\usepackage{fontspec}
-\usepackage{type1ec}
+\usepackage[T1]{fontenc}                        % font encoding
+\usepackage{fontspec}                           % font selector
+\usepackage{type1ec}                            % arbitrary font sizing
 
-% paragraph spacing and indentation
-\setlength\parindent{0pt}
-\setlength{\parskip}{1.2em}
+\setlength\parindent{0pt}                       % paragraph indentation
+\setlength{\parskip}{1.2em}                     % paragraph spacing
 
 % title formatting
 \titleformat{\section}{\bfseries\scshape\fontsize{18}{21.6}\selectfont}{\thesection}{1em}{}
 \titleformat{\subsection}{\bfseries\fontsize{16}{19.2}\selectfont}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\bfseries\fontsize{14}{16.8}\selectfont}{\thesubsubsection}{1em}{}
 
-% paragraph and title spacing
-\titlespacing{\section}{0pt}{0pt}{0.3em}
-\titlespacing{\subsection}{0pt}{0pt}{0.2em}
+\titlespacing{\section}{0pt}{0pt}{0.3em}        % section spacing
+\titlespacing{\subsection}{0pt}{0pt}{0.2em}     % subsection spacing
 
-% prevent widow and orphan lines
-\widowpenalty10000
-\clubpenalty10000
+\widowpenalty10000                              % prevent widows
+\clubpenalty10000                               % prevent orphans
 
-% page numbering only starts at TOC page
-\pagenumbering{gobble}
+\pagenumbering{gobble}   % suppress page numbering until TOC page
 
 % define KaTeX logo
 \makeatletter
