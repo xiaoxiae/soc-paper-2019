@@ -220,9 +220,11 @@
 
 
   \subsection{HTML} \label{sec:HTML}
-  Značkovací jazyk HTML (HyperText Mark-up Language) vytvořil Tim Berners-Lee z výskumného centra CERN v roce 1989. Hlavní důvod vzniku byla snaha zjednodušit přístup k odborné literatuře vkládáním odkazů přímo do samotných dokumentů. V rámci této snahy Tim rovněž vytvořil protokol HTTP (HyperText Transfer Protocol), který slouží na přenos HTML po síti\cite{html-history}.
+  Značkovací jazyk HTML (HyperText Mark-up Language) vytvořil Tim Berners-Lee z výzkumného centra CERN v roce 1989. Hlavní důvod vzniku byla snaha zjednodušit přístup k odborné literatuře vkládáním odkazů přímo do samotných dokumentů. V rámci této snahy Tim rovněž vytvořil protokol HTTP (HyperText Transfer Protocol), který slouží ke přenosu souborů HTML po síti\cite{html-history}.
 
-  Tvorba dokumentů funguje na principu tagů nezávislých na prostředí, které formátují jimi obklopený text. V HTML je psán zdrojový kód převážné většiny webových stránek internetu, včetně kódu tohoto projektu, který je generován programem Jekyll.
+  Tvorba dokumentů funguje na principu na prostředí nezávislých tagů, které formátují a udávají strukturu jimi obklopeného textu.
+
+  V HTML je psán zdrojový kód převážné většiny webových stránek včetně kódu tohoto projektu, který je generován programem Jekyll.
 
 
   \subsection{CSS} \label{sec:CSS}
@@ -234,9 +236,9 @@
 
 
   \subsection{Python} \label{sec:Python}
-  Python je programovací jazyk vytvořený pro distribuovaný operační systém Amoeba Guidem van Rossumem v 80. letech 20. století. Byl silně inspirován Guidovou prací na jazyce ABC -- samotný Rossum o Pythonu prohlásil: „Vzal jsem ingredience z ABC a trochu jsem je promíchal. Python je v mnoha věcech podobný ABC, ale v mnoha také rozdílný.\cite{making-of-python}“
+  Python je programovací jazyk vytvořený pro distribuovaný operační systém Amoeba Guidem van Rossumem v 80. letech 20. století. Byl silně inspirován Guidovou prací na jazyce ABC: „Vzal jsem ingredience z ABC a trochu jsem je promíchal. Python je v mnoha věcech podobný ABC, ale v mnoha také rozdílný.\cite{making-of-python}“
 
-  Od svého vzniku se Python vyvinul v mocný a frekventovaně používaný programovací jazyk -- má silnou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub\cite{github-statistics}, od stavby webových stránek po knihovny na trénování neuronových sítí.
+  Od svého vzniku se Python vyvinul v mocný a frekventovaně používaný programovací jazyk -- má rozsáhlou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub\cite{github-statistics}, od stavby webových stránek po knihovny na trénování neuronových sítí.
 
   Na stránce zastává funkci scriptovacího jazyka pro automatizaci provozu (viz. kapitola \ref{sec:Automatizace provozu}).
 
@@ -252,7 +254,7 @@
 
   Od klasických WYSIWYG (what you see is what you get) programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postárá. Tento přístup klade větší důraz na obsah -- autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda \TeX u je fakt, že celý dokument je prostý text, proto jej lze verzovat.
 
-  V projektu je pro převod stránky do offline verze používán \LaTeX{} (viz. kapitola \ref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů\cite{getting-started-with-latex}. K převodu \LaTeX u do formátu PDF je používán český program pdf\TeX{}\cite{pdftex}.
+  V projektu je používán \LaTeX{} (viz. kapitola \ref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů\cite{getting-started-with-latex}. K převodu \LaTeX u do formátu PDF je používán český program pdf\TeX{}\cite{pdftex}.
 
 
   \section{Použité nástroje} \label{sec:Použité nástroje}
@@ -264,9 +266,9 @@
   \subsection{Git} \label{sec:Git}
   Git je otevřený\footnote{Zdrojový kód Gitu je dostupný na adrese \url{https://github.com/git/git}.} verzovací systém vytvořený Linusem Torvaldsem pro použití na operačním systému Linux. V open-source komunitě se v současné době jedná o nejpoužívanější vezrovací systém\cite{version-control-usage-statistics}, což je jeden z hlavních důvodů pro jeho využití v tomto projektu.
 
-  Verzovací systém umožňuje zaznamenávat změny (a jejich důvod/význam) na verzované skupině souborů a složek (tzv. repozitáři), aby se zamezilo ztrátě práce, zjednodušilo se hledání chyb v kódu a usnadnila se spolupráce mezi autory.
+  Verzovací systém umožňuje zaznamenávat změny (a jejich důvod/význam) na verzované skupině souborů a složek (tzv. repozitáři) a pomáhá tím zamezit ztrátě práce, zjednodušit hledání chyb v kódu a usnadnit spolupráci mezi autory.
 
-  Narozdíl od centralizovaných verzovacích systémů jako Subversion a CVS je Git decentralizovaný -- místo jedné centrální úschovny kódu má každý svou lokální kopii s úplnou historií projektu. Výhody tohoto přístupu oproti centrální úschovně jsou např. rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru\cite{cvcs-vs-dvcs}.
+  Narozdíl od centralizovaných verzovacích systémů jako Subversion či CVS je Git decentralizovaný -- místo jedné centrální úschovny kódu má každý svou lokální kopii s úplnou historií projektu. Výhody tohoto přístupu oproti centrální úschovně jsou např. rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru\cite{cvcs-vs-dvcs}.
 
   To, že má každý svou lokální kopii však nezamezuje existenci hlavní kopie. Tento fakt dokazují služby jako GitHub, GitLab či GitBucket, které tuto centrální úschovnu poskytují.
 
@@ -274,23 +276,23 @@
   \subsection{Jekyll} \label{sec:Jekyll}
   Jekyll je otevřený\footnote{Zdrojový kód Inkscapu je dostupný na adrese \url{https://gitlab.com/inkscape/inkscape}.} generátor statických webových stránek napsaný v jazyce Ruby. Od tradičních přístupů ke stavbě webové stránky využívajících databáze či systém pro správu obsahu se liší tím, že stránku generuje pouze z textových souborů udávajících obsah a vzhled stránky. Výsledný produkt je plně statická stránka, která není napojena na žádný dynamický systém.
 
-  Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu prostý text. Další výhoda je ochrana před potenciálními útoky, protože u statických webových stránek není řada frekventovaně používaných útoků možná -- produkt si neukládá nic, co by útočník mohl zneužít.
+  Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu prostý text. Další výhoda je ochrana před potenciálními útoky, protože u statických webových stránek není řada frekventovaně využívaných útoků možná -- hosting si neukládá nic, co by potenciální útočník mohl zneužít.
 
   Nejpopulárnější alternativna je Hugo, který byl při vývoji stránky rovněž testován, avšak nakonec byl kvůli aktivnější komunitě a osobní preferenci zvolen Jekyll.
 
 
   \subsection{Inkscape} \label{sec:Inkscape}
-  Inkscape je otevřený\footnote{Zdrojový kód Jekyllu je dostupný na adrese \url{https://github.com/jekyll/jekyll}.} multiplaformní software na tvorbu vektorové grafiky. Oproti rastrovým softwarům, které pracují se samotnými pixely, si vektorové pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola \ref{sec:Ilustrace}).
+  Inkscape je otevřený\footnote{Zdrojový kód Jekyllu je dostupný na adrese \url{https://github.com/jekyll/jekyll}.} multiplaformní software na tvorbu vektorové grafiky. Oproti rastrovým softwarům, které pracují se samotnými pixely obrázku, si vektorové pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola \ref{sec:Ilustrace}).
 
   Jedná se o populární volbu pro ty, kteří nepoužívají profesionální software jako Adobe Illustrator z důvodů ceny, uzavřenosti kódu či nedostupnosti pro operační systém Linux.
 
 
   \subsection{Fusion 360} \label{sec:Fusion 360}
-  V rámci tvorby ilustrací k odborné literatuře je kromě tradičních přístupů rozebíraných v kapitole používaný CAD (computer-aided design) software, který slouží ke tvorbě technických nákresů. Na rozdíl od tradičních programů na tvorbu grafiky jsou rozměry tvořených objektů přesně definovány v jednotkách SI, aby odpovídaly objektům reálného světa.
+  V rámci tvorby ilustrací k odborné literatuře je kromě přístupů rozebíraných v kapitole \ref{sec:Inkscape} používaný CAD (computer-aided design) software, který slouží ke tvorbě technických nákresů. Na rozdíl od tradičních programů na tvorbu grafiky jsou rozměry tvořených objektů přesně definovány v jednotkách SI, aby odpovídaly objektům reálného světa.
 
   Mezi členy FRC teamů je populární volba CAD softwaru Fusion 360 od společnosti Autodesk, převážně protože je licence pro studenty (a jejich mentory) zdarma. Profesionální alternativou je program SolidWorks, který je často používán studenty technických škol.
 
-  Jelikož za Fusion 360 neexistuje kvalitní multiplatformní náhrada, tak se jedná o jediný v projektu použitý program, který nefunguje na operačním systému Linux.
+  Jelikož za Fusion 360 neexistuje kvalitní multiplatformní náhrada, tak se jedná o jediný v projeku používaný program, který nefunguje na operačním systému Linux.
 
   \section{Vývoj webové stránky}
   % Rozhodl jsem se pro stránku
@@ -305,15 +307,15 @@
   \subsection{Webhosting a doména} \label{sec:Webhosting a doména}
   Na českém trhu operuje velké množství firem, které zajišťují jak registraci domény, tak hostování samotné stránky. Každá má své výhody a nevýhody, proto je volba provozovatele vysoce individuální a záleží na řadě faktorů.
 
-  Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit (\url{https://hosting.wedos.com/cs/webhosting.html}), zejména kvůli mým pozitivním zkušenostem s touto službou v rámci minulých projektů a faktem, že ceny a parametry služeb jiných hostingů se od využívané příliš neliší.
+  Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit (\url{https://hosting.wedos.com/cs/webhosting.html}), zejména kvůli mým pozitivním zkušenostem s tímto provozovatelem v rámci minulých projektů a faktem, že ceny a parametry služeb jiných hostingů se od využívané příliš neliší.
 
-  Jelikož je Jekyll podporován GitHubem, na kterém je hostován zdrojový kód stránky, další možností je služba GitHub Pages (\url{https://pages.github.com/}). Stránka by byla hostována zdarma, nebylo by třeba obsah nahrávat přes FTP a generování stránky by probíhalo automaticky. Tento přístup by však znemožnil využívání scriptů, proto není pro účely projektu vhodný.
+  Jelikož je Jekyll podporován GitHubem, na kterém je hostován zdrojový kód stránky, další možností je služba GitHub Pages (\url{https://pages.github.com/}). Stránka by byla hostována zdarma, nebylo by třeba obsah nahrávat přes FTP a generování stránky by probíhalo automaticky. Tento přístup by však znemožnil využívání Python scriptů, proto není pro účely projektu vhodný.
 
 
   \subsection{Design loga}
-  Na dobré vizáži každé stránky má značný podíl její logo, které by mělo tematicky odpovídat zaměření stránky bez toho, aby působilo příliš složitě.
+  Na dobré vizáži každé stránky má značný podíl její logo, které by mělo tematicky odpovídat zaměření stránky bez toho, aby bylo příliš složité.
 
-  Hlavní nápad za vizáží loga je spojení výrazů „RO“ a „SI“ (první dva znaky jména projektu) do jednoho. Toto spojení výrazy zjednodušuje a odpovídá tak tematicky obsahu webové stránky, která je založena na jednoduchosti a intuitivnosti.
+  Hlavní nápad za designem loga je spojení výrazů „RO“ a „SI“ (první dva znaky jména projektu) do jednoho. Toto spojení výrazy zjednodušuje a odpovídá tak tematicky obsahu webové stránky, která je založena na jednoduchosti a intuitivnosti.
 
   Tvar znaku „O“ je rovněž podobný ozubenému kolu, což do designu loga pro stránku zaměřenou na robotiku elegantně zapadá.
 
