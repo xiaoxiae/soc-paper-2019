@@ -226,6 +226,12 @@
 
 
   \subsection{CSS} \label{sec:CSS}
+  Po vzniku HTML bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který r. 1994 publikoval první specifikaci stylopisného standardu CSS (Cascading Style Sheets)\cite{css-proposal, css-saga}, které umožňuje ovlivnit vlastnosti HTML tagů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné HTML neumožňuje\footnote{To, že v HTML nejde měnit vzhled stránky není úplně pravda, ale většinou se jedná o zastaralé a nepoužívané tagy (jako např. \texttt{<center>}), jejichž použití je oproti CSS nepotřebné.}.
+
+  Při použití CSS je důležitý princip kaskádování -- vzhled stránky mohou ovlivnit jak požadavky čtenáře, tak požadavky autora. Samotné kaskádování je kombinace těchto požadavků a případná rezoluce takto vzniklých konfliktů (autor chce písmo velikosti \texttt{12pt}, ale čtenář velikosti \texttt{10pt}).
+
+  V projektu je používán SASS (Syntactically Awesome Style Sheets), který převádí CSS s pokročilejším syntaxem a dodatečnou funkcionalitou do standardního CSS.
+
 
   \subsection{Python} \label{sec:Python}
   Python je programovací jazyk vytvořený pro distribuovaný operační systém Amoeba Guidem van Rossumem v 80. letech 20. století. Byl silně inspirován Guidovou prací na jazyce ABC -- samotný Rossum o Pythonu prohlásil: „Vzal jsem ingredience z ABC a trochu jsem je promíchal. Python je v mnoha věcech podobný ABC, ale v mnoha také rozdílný.\cite{making-of-python}“
