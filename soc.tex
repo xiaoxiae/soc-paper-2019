@@ -214,7 +214,7 @@
   \subsection{CSS} \label{sec:CSS}
   Po vzniku HTML bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který r. 1994 publikoval první specifikaci stylopisného standardu CSS (Cascading Style Sheets)\cite{css-proposal, css-saga}, které umožňuje ovlivnit vlastnosti HTML tagů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné HTML neumožňuje\footnote{To, že v HTML nejde měnit vzhled stránky není úplně pravda, ale většinou se jedná o zastaralé a nepoužívané tagy (jako např. \texttt{<center>}), jejichž použití je oproti CSS nepotřebné.}.
 
-  Při použití CSS je důležitý princip kaskádování -- vzhled stránky mohou ovlivnit jak požadavky čtenáře, tak požadavky autora. Samotné kaskádování je kombinace těchto požadavků a případná rezoluce takto vzniklých konfliktů (autor chce písmo velikosti \texttt{12pt}, ale čtenář velikosti \texttt{10pt}).
+  Při použití CSS je důležitý princip kaskádování~--~vzhled stránky mohou ovlivnit jak požadavky čtenáře, tak požadavky autora. Samotné kaskádování je kombinace těchto požadavků a případná rezoluce takto vzniklých konfliktů (autor chce písmo velikosti \texttt{12pt}, ale čtenář velikosti \texttt{10pt}).
 
   V projektu je používán SASS (Syntactically Awesome Style Sheets), který převádí CSS s pokročilejším syntaxem a dodatečnou funkcionalitou do standardního CSS.
 
@@ -238,7 +238,7 @@
   \subsection{Python} \label{sec:Python}
   Python je programovací jazyk vytvořený pro distribuovaný operační systém Amoeba Guidem van Rossumem v 80. letech 20. století. Byl silně inspirován Guidovou prací na jazyce ABC: „Vzal jsem ingredience z ABC a trochu jsem je promíchal. Python je v mnoha věcech podobný ABC, ale v mnoha také rozdílný.\cite{making-of-python}“
 
-  Od svého vzniku se Python vyvinul v mocný a frekventovaně používaný programovací jazyk -- má rozsáhlou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub\cite{github-statistics}, od stavby webových stránek po knihovny na trénování neuronových sítí.
+  Od svého vzniku se Python vyvinul v mocný a frekventovaně používaný programovací jazyk~--~má rozsáhlou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub\cite{github-statistics}, od stavby webových stránek po knihovny na trénování neuronových sítí.
 
   Na stránce zastává funkci scriptovacího jazyka pro automatizaci provozu (viz. kapitola \ref{sec:Automatizace provozu}).
 
@@ -252,7 +252,7 @@
   \subsection{\TeX} \label{sec:TeX}
   \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století. Počáteční impulz pro vznik byla Knuthova nespokojenost s tiskovou kvalitou při vydávání jedné z jeho knih, což jej vedlo ke studiu principů sázení, tvorby fontů a později až k vytvoření vlastního sázecího systému \TeX\cite{tex-history}.
 
-  Od klasických WYSIWYG (what you see is what you get) programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postárá. Tento přístup klade větší důraz na obsah -- autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda \TeX u je fakt, že celý dokument je prostý text, proto jej lze verzovat.
+  Od klasických WYSIWYG (what you see is what you get) programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postárá. Tento přístup klade větší důraz na obsah~--~autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda \TeX u je fakt, že celý dokument je prostý text, proto jej lze verzovat.
 
   V projektu je používán \LaTeX{} (viz. kapitola \ref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů\cite{getting-started-with-latex}. K převodu \LaTeX u do formátu PDF je používán český program pdf\TeX{}\cite{pdftex}.
 
@@ -268,7 +268,7 @@
 
   Verzovací systém umožňuje zaznamenávat změny (a jejich důvod/význam) na verzované skupině souborů a složek (tzv. repozitáři) a pomáhá tím zamezit ztrátě práce, zjednodušit hledání chyb v kódu a usnadnit spolupráci mezi autory.
 
-  Narozdíl od centralizovaných verzovacích systémů jako Subversion či CVS je Git decentralizovaný -- místo jedné centrální úschovny kódu má každý svou lokální kopii s úplnou historií projektu. Výhody tohoto přístupu oproti centrální úschovně jsou např. rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru\cite{cvcs-vs-dvcs}.
+  Narozdíl od centralizovaných verzovacích systémů jako Subversion či CVS je Git decentralizovaný~--~místo jedné centrální úschovny kódu má každý svou lokální kopii s úplnou historií projektu. Výhody tohoto přístupu oproti centrální úschovně jsou např. rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru\cite{cvcs-vs-dvcs}.
 
   To, že má každý svou lokální kopii však nezamezuje existenci hlavní kopie. Tento fakt dokazují služby jako GitHub, GitLab či GitBucket, které tuto centrální úschovnu poskytují.
 
@@ -276,7 +276,7 @@
   \subsection{Jekyll} \label{sec:Jekyll}
   Jekyll je otevřený\footnote{Zdrojový kód Inkscapu je dostupný na adrese \url{https://gitlab.com/inkscape/inkscape}.} generátor statických webových stránek napsaný v jazyce Ruby. Od tradičních přístupů ke stavbě webové stránky využívajících databáze či systém pro správu obsahu se liší tím, že stránku generuje pouze z textových souborů udávajících obsah a vzhled stránky. Výsledný produkt je plně statická stránka, která není napojena na žádný dynamický systém.
 
-  Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu prostý text. Další výhoda je ochrana před potenciálními útoky, protože u statických webových stránek není řada frekventovaně využívaných útoků možná -- hosting si neukládá nic, co by potenciální útočník mohl zneužít.
+  Tento přístup výrazně zjednodušuje verzování, jelikož je převážná většina souborů projektu prostý text. Další výhoda je ochrana před potenciálními útoky, protože u statických webových stránek není řada frekventovaně využívaných útoků možná~--~hosting si neukládá nic, co by potenciální útočník mohl zneužít.
 
   Nejpopulárnější alternativna je Hugo, který byl při vývoji stránky rovněž testován, avšak nakonec byl kvůli aktivnější komunitě a osobní preferenci zvolen Jekyll.
 
@@ -348,7 +348,7 @@
 
 
   \subsection{Automatizace provozu} \label{sec:Automatizace provozu}
-  Ke tvorbě kvalitního vzdělávacího materiálu je potřeba plynulý a do co největší míry automatizovaný provoz stránky -- přidávání článků by mělo být pouze vytvoření nového souboru a jeho umístění do příslušné složky projektu.
+  Ke tvorbě kvalitního vzdělávacího materiálu je potřeba plynulý a do co největší míry automatizovaný provoz stránky~--~přidávání článků by mělo být pouze vytvoření nového souboru a jeho umístění do příslušné složky projektu.
 
   Stránka je v tomto duchu automatizována scripty psanými v jazyce Python (viz. kapitola \ref{sec:Python}), aby se autor mohl plně soustředit na práci.
 
@@ -362,7 +362,7 @@
   \subsubsection{Generování souboru sitemap.xml}
   Protokol sitemap (\url{https://www.sitemaps.org/protocol.html}) udává informace o pořadí procházení, časech změny a relativní prioritě částí stránky. Slouží vyhledávacím portálům, které tyto informace využívají pro inteligentnější indexování stránky ve svém systému.
 
-  Script \texttt{sitemap.py} podle pořadí článků generuje záznamy do souboru \texttt{sitemap.xml}. Informace o umístění a pslední úpravě jsou získávány z atributů souboru a priorita je přidělena podle pozice na stránce -- úvodní stránka má prioritu $1.0$, hlavní články mají prioritu $0.8$ a vedlejší články prioritu $0.6$.
+  Script \texttt{sitemap.py} podle pořadí článků generuje záznamy do souboru \texttt{sitemap.xml}. Informace o umístění a pslední úpravě jsou získávány z atributů souboru a priorita je přidělena podle pozice na stránce~--~úvodní stránka má prioritu $1.0$, hlavní články mají prioritu $0.8$ a vedlejší články prioritu $0.6$.
 
 
   \subsubsection{Převod webové stránky do PDF} \label{sec:Převod webové stránky do PDF}
@@ -380,7 +380,7 @@
   \subsubsection{Komprimace obrázků}
   O komprimaci obrázků pro zmenšení velikosti stránky se stará script \texttt{compress.py}, který pomocí služby TinyPNG (\url{https://tinypng.com/}) a jejího Python API zkomprimuje všechny obrázky vygenerované stránky. Samotný API klíč je pro zamezení zneužití šifrován symetrickou šifrou AES.
 
-  Úprava fotek funguje na principu \emph{kvantování barev} -- podobné barvy jsou spojeny do jedné, proto jdou z tradičních 24-bitových palet PNG obrázků udělat palety 8-bitové, čímž lze obrázek zmenšit bez výrazného zhoršení kvality.
+  Úprava fotek funguje na principu \emph{kvantování barev}~--~podobné barvy jsou spojeny do jedné, proto jdou z tradičních 24-bitových palet PNG obrázků udělat palety 8-bitové, čímž lze obrázek zmenšit bez výrazného zhoršení kvality.
 
 
   \subsubsection{Minimalizace zdrojového kódu}
