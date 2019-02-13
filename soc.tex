@@ -11,6 +11,9 @@
 \usepackage{float}                              % floats in correct position
 \usepackage{subfig}                             % subfigure package
 
+\setlength{\fboxsep}{0pt}                       % image border separation
+\setlength{\fboxrule}{1pt}                      % image border thickness
+
 \usepackage{titlesec}                           % title
 \usepackage{tabularx}                           % tables
 \usepackage[hyphens,spaces,obeyspaces]{url}     % url
@@ -335,16 +338,91 @@
 
 
   \section{Obsah webové stránky}
+  Následující kapitola rozebírá obsah webové stránky~--~pro koho je určena, jakým způsobem probíhá tvorba obsahu a jak je strukturovaná.
+
 
   \subsection{Cílové publikum}
-  Jako cílové publikum jsem si vybral lidi v podobné situaci, ve které jsem byl já v roce 2017 -- jedinci se zájmem o robotiku, kteří jsou frustrovaní nedostatkem kvalitních materiálů pro studium. Materiál není kromě zájmu o robotiku omezen věkem, pohlavím či jinými osobními charakteristikami.
+  Jako cílové publikum jsem si vybral lidi v podobné situaci, ve které jsem byl já v roce 2017~--~jedinci se zájmem o robotiku, kteří jsou frustrovaní nedostatkem kvalitních materiálů pro studium. Materiál není kromě zájmu o robotiku omezen věkem, pohlavím či jinými osobními charakteristikami.
 
 
   \subsection{Tvorba článků} \label{sec:Tvorba článků}
-  % Jak probíhá psaní článků.
-  % Jak vypadá struktura článku - přirovnání k Wikipedii.
+  Články jsou psány převážně o tématech, se kterými jsem měl problém, když jsem se je snažil pochopit z jiných internetových zdrojů.
 
-  \subsection{Struktura obsahu}
+  Při psaní je nejprve potřeba vyhledat potřebné materiály ke studiu daného tématu.
+
+
+  \subsubsection{Vizualizace} \label{sec:Vizualizace}
+  Vizualizace jsou implementovány v jazyce JavaScript s využitím knihovny p5.js (viz. kapitola \ref{sec:p5.js}) a jsou uzpůsobeny pro ovládání myší či dotykem, aby byly funkční jak na osobních počítačích, tak na mobilech.
+
+  Za zmínku stojí, že offline verze vizualizace neobsahuje, protože formát PDF vkládání kódu kvůli bezpečnosti neumožňuje\cite{history-of-pdf}.
+
+
+  \subsubsection{Ilustrace} \label{sec:Ilustrace}
+  Ke tvorbě ilustrací je používán program na tvorbu vektorové grafiky Inkscape (viz. kapitola \ref{sec:Inkscape}) v kombinaci s CAD softwarem Fusion 360 (viz. kapitola \ref{sec:Fusion 360}).
+
+  Vektorová grafika je pro vytváření ilustrací dobrá volba proto, že potřebné tvary lze vytvářet a upravovat výrazně rychleji a efektivněji než rastr. Zabírá rovněž méně místa a je ukládána v prostém textu, což má oproti binárnímu formátu řadu výhod.
+
+
+  \subsubsection{Matematika} \label{sec:Matematika}
+  Jelikož jsou probírané koncepty a algoritmy založeny na matematice, tak stránka podporuje vkládání rovnic a výrazů do článků. Tuto funkcionalitu zajišťuje JavaScriptová knihovna \KaTeX{} (viz. kapitola \ref{sec:KaTeX}), díky které lze \LaTeX ové rovnice umísťovat přímo do Markdownových článků.
+
+  Příkladem zápisu matematiky v článku je rovnice č. \ref{eq:katex equation}, která je pomocí \KaTeX u převedena na rovnici č. \ref{eq:converted equation}.
+
+  \begin{equation} \label{eq:katex equation}
+    \verb|Je pravda, že $$\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$$.|
+  \end{equation}
+
+  \begin{equation} \label{eq:converted equation}
+    \text{Je pravda, že }\sum_{i=1}^{n} i = \frac{n(n+1)}{2}\text{.}
+  \end{equation}
+
+
+  \subsection{Navigace}
+  Stránka je pro ulehčení převodu do PDF a plynulosti navigace strukturována do značné míry jako kniha.
+
+  Návštěvníka po zobrazení stránky přivítá \emph{úvodní stránka} (obr. č. \ref{img:Úvodní stránka}), která představí projekt a jeho cíle, případně obsahuje důležitá sdělení o provozu stránky. Poté následuje \emph{předmluva} (obr. č. \ref{img:Předmluva}), kde jsou kromě diskuzi o předpokladech pro čtení zodpovězeny otázky, které by čtenáři při čtení článků stránky mohli mít.
+
+  \begin{figure}[H]
+    \minipage{0.47\textwidth}
+      \fbox{\includegraphics[width=\linewidth]{1.png}}
+      \caption{Úvodní stránka} \label{img:Úvodní stránka}
+    \endminipage\hfill
+     \minipage{0.47\textwidth}
+      \fbox{\includegraphics[width=\linewidth]{2.png}}
+      \caption{Předmluva} \label{img:Předmluva}
+    \endminipage
+  \end{figure}
+
+  Hlavní náplní projektu jsou \emph{tématické okruhy} (obr. č. \ref{img:Příklad článku 1}, \ref{img:Příklad článku 2}, \ref{img:Příklad článku 3}), které se skládají z článků probírajících koncepty s podobnou tematikou, v pořadí, ve kterém by pro návaznost měly být čteny.
+
+  \begin{figure}[H]
+    \minipage{0.3\textwidth}
+      \fbox{\includegraphics[width=\linewidth]{3-1.png}}
+      \caption{Příklad článku 1} \label{img:Příklad článku 1}
+    \endminipage\hfill
+     \minipage{0.3\textwidth}
+      \fbox{\includegraphics[width=\linewidth]{3-2.png}}
+      \caption{Příklad článku 2} \label{img:Příklad článku 2}
+    \endminipage\hfill
+     \minipage{0.3\textwidth}
+      \fbox{\includegraphics[width=\linewidth]{3-3.png}}
+      \caption{Příklad článku 3} \label{img:Příklad článku 3}
+    \endminipage
+  \end{figure}
+
+  Na závěr je přiložen článek s \emph{odkazy na materiály} (obr. č. \ref{img:Odkazy na materiály}) použité při tvorbě projektu a sekce \emph{O nás} (obr. č. \ref{img:O nás}), která popisuje důvod za vznikem projektu, kontakty a návod na případnou spolupráci na projektu.
+
+  \begin{figure}[H]
+    \minipage{0.47\textwidth}
+      \fbox{\includegraphics[width=\linewidth]{4.png}}
+      \caption{Odkazy na materiály} \label{img:Odkazy na materiály}
+    \endminipage\hfill
+     \minipage{0.47\textwidth}
+      \fbox{\includegraphics[width=\linewidth]{5.png}}
+      \caption{O nás} \label{img:O nás}
+    \endminipage
+  \end{figure}
+
 
   \section{Funkčnost webové stránky}
   Následující kapitola pokrývá některé ze zajímavějších technických řešení použitých při tvorbě projektu.
