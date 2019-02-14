@@ -483,11 +483,21 @@
 
 
   \subsection{Testování výkonu}
-  % https://www.webpagetest.org/
 
   \subsubsection{Rychlost načítání}
-  % Kolik dat stránka načítá.
-  % Jak rychle se načítá z různých zemí světa.
+  Rychlost načítání webové stránky je jedním z hlavních faktorů ovlivňujících její úspěšnost. Přebytečný čas nad optimální dobu (mezi $1,8$ a $2,7$ vteřinami) má negativní vliv na procento konverzí stránky. Při zpoždění o $100$ milisekund nad tuto dobu klesá procento konverzí uživatelů osobních počítačů o $7,8 \%$. Konverze dále klesají až o $26,2 \%$ při zpoždění v řádu $2$ vteřin\cite{conversion-rate-statistics}.
+
+  Testování bylo provedeno službou \url{https://www.webpagetest.org/}, která analyzuje webové stránky z různých lokací světa (a různých prohlížečů) a poskytuje statistiky o rychlosti načítání, množství načtených dat a mnoho dalšího.
+
+  Obrázek \ref{img:Mapa rychlostí načítání} (vytvořený pomocí Google GeoChart API) obsahuje informace o rychlosti načítání stránky \url{http://robotics-simplified.com/} z většiny dostupných testovacích lokalit výše uvedené služby. % TODO: přidat odkazy na testovaná data do přílohy
+
+  \begin{figure}[H]
+    \includegraphics[width=\linewidth]{map.png}
+    \caption{Mapa rychlostí načítání} \label{img:Mapa rychlostí načítání}
+  \end{figure}
+
+  % TODO: add discussion about the results
+
 
   \subsubsection{Multiplatformnost}
   % TODO: how does the website work on different devices and browsers
