@@ -211,7 +211,7 @@
   \subsection{HTML} \label{sec:HTML}
   Značkovací jazyk HTML (HyperText Mark-up Language) vytvořil Tim Berners-Lee z výzkumného centra CERN v roce 1989. Hlavní důvod vzniku byla snaha zjednodušit přístup k odborné literatuře vkládáním odkazů přímo do samotných dokumentů. V rámci této snahy Tim rovněž vytvořil protokol HTTP (HyperText Transfer Protocol), který slouží ke přenosu souborů HTML po síti\cite{html-history}.
 
-  Tvorba dokumentů funguje na principu na prostředí nezávislých tagů, které formátují a udávají strukturu jimi obklopeného textu. % ještě trochu rozepsat
+  % TODO: write more about how the structuring works and how there should be no styling in HTML
 
   V HTML je psán zdrojový kód převážné většiny webových stránek včetně kódu tohoto projektu, který je generován programem Jekyll.
 
@@ -221,13 +221,15 @@
 
   Při použití CSS je důležitý princip kaskádování~--~vzhled stránky mohou ovlivnit jak požadavky čtenáře, tak požadavky autora. Samotné kaskádování je kombinace těchto požadavků a případná rezoluce takto vzniklých konfliktů (autor chce písmo velikosti \texttt{12pt}, ale čtenář velikosti \texttt{10pt}).
 
-  V projektu je používán SASS (Syntactically Awesome Style Sheets), který převádí CSS s pokročilejším syntaxem a dodatečnou funkcionalitou do standardního CSS, díky čemuž jde vzhled stránky upravovat znatelně jednodušeji.
+  V projektu je používán SASS (Syntactically Awesome Style Sheets), který převádí CSS s pokročilejším syntaxem a dodatečnou funkcionalitou do standardního CSS, díky čemuž jde vzhled stránky upravovat jednodušeji.
 
 
   \subsection{JavaScript}
   Okolo roku 1995 bylo pro internetový prohlížeč Netscape potřeba vytvořit interpretovaný scriptovací jazyk pro zlepšení interaktivity webových stránek, který by měl jít vložit přímo do HTML. Tímto úkolem byl pověřen Brendan Eich a jelikož bylo z ekonomických důvodů potřeba práci vykonat rychle, první funkční verze JavaScriptu byla údajně zhotovena za pouhých 10 dní\cite{the-origin-of-javascript}.
 
-  Dnes se jedná o webový standard, díky kterému přidat to webové stránky interaktivitu a o dlouhodobě nejpoužívanější programovací jazyk na platformě GitHub\cite{github-statistics} a na kterém stojí řada podstatných funkcí tohoto projektu. % zmínit, že je to client-side
+  Provádění JavaScriptového kódu probíhá na straně uživatele, díky čemuž není server hostující danou webovou stránku zatěžován. % TODO: add more writing about the language
+
+  Dnes se jedná o webový standard, díky kterému přidat to webové stránky interaktivitu a o dlouhodobě nejpoužívanější programovací jazyk na platformě GitHub\cite{github-statistics} a na kterém stojí řada podstatných funkcí tohoto projektu.
 
 
   \subsubsection{p5.js} \label{sec:p5.js}
@@ -310,7 +312,7 @@
   % Konfigurace themu.
 
   \subsection{Webhosting a doména} \label{sec:Webhosting a doména}
-  Na českém trhu operuje velké množství firem, které zajišťují jak registraci domény, tak hostování webové stránky. Každá má své výhody a nevýhody, proto je volba provozovatele vysoce individuální a záleží na řadě faktorů.
+  Na českém trhu operuje řada firem, které zajišťují jak registraci domény, tak hostování webové stránky. Každá má své výhody a nevýhody, proto je volba provozovatele vysoce individuální a záleží na řadě faktorů.
 
   Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit (\url{https://hosting.wedos.com/cs/webhosting.html}), zejména kvůli mým pozitivním zkušenostem s tímto provozovatelem v rámci minulých projektů a faktem, že ceny a parametry služeb jiných hostingů se od využívané příliš neliší.
 
@@ -327,7 +329,7 @@
 
     \subfloat[Počáteční nápad]{{\includegraphics[width=.3\linewidth]{logo1.png}}}%
     \hfill
-    \subfloat[Zahrnutí ozubeného kola]{{\includegraphics[width=.3\linewidth]{logo2.png}}}%
+    \subfloat[Přidání ozubeného kola]{{\includegraphics[width=.3\linewidth]{logo2.png}}}%
     \hfill
     \subfloat[Konečná podoba]{{\includegraphics[width=.3\linewidth]{logo3.png}}}%
 
@@ -339,7 +341,7 @@
 
 
   \section{Obsah webové stránky}
-  Následující kapitola rozebírá obsah webové stránky~--~pro koho je určena, jakým způsobem probíhá tvorba obsahu a jak je strukturovaná.
+  Následující kapitola rozebírá obsah webové stránky~--~pro koho je určený, jakým způsobem probíhá jeho tvorba a jak je na stránce strukturovaný.
 
 
   \subsection{Cílové publikum}
@@ -347,21 +349,21 @@
 
 
   \subsection{Tvorba článků} \label{sec:Tvorba článků}
-  Články jsou psány převážně o tématech, se kterými jsem měl problém, když jsem se je snažil pochopit z jiných internetových zdrojů.
+  Články jsou psány o tématech, jejichž pochopení autorovi při studiu z ostatních internetových zdrojů dělalo problémy z důvodu odbornosti studijního materiálu či jeho nedostatku.
 
-  Při psaní je nejprve potřeba vyhledat potřebné materiály ke studiu daného tématu.
+  Po vybrání tématu článku jsou nejprve shromážděny dostupné materiály o daném tématu. Poté jsou hlavní koncepty tématu implementovány v jazyce Python a jejich funkčnost testována na robotovi ze stavebnice VEX EDR. Po úspěšném testování a odladění kódu je odvození implementace co nejjednodušším způsobem v článku vysvětleno.
 
 
   \subsubsection{Vizualizace} \label{sec:Vizualizace}
   Vizualizace jsou implementovány v jazyce JavaScript s využitím knihovny p5.js (viz. kapitola \ref{sec:p5.js}) a jsou uzpůsobeny pro ovládání myší či dotykem, aby byly funkční jak na osobních počítačích, tak na mobilech.
 
-  Za zmínku stojí, že offline verze vizualizace neobsahuje, protože formát PDF vkládání kódu kvůli bezpečnosti neumožňuje\cite{history-of-pdf}.
+  Za zmínku stojí, že PDF verze vizualizace neobsahuje, protože formát PDF vkládání kódu kvůli bezpečnosti neumožňuje\cite{history-of-pdf}.
 
 
   \subsubsection{Ilustrace} \label{sec:Ilustrace}
   Ke tvorbě ilustrací je používán program na tvorbu vektorové grafiky Inkscape (viz. kapitola \ref{sec:Inkscape}) v kombinaci s CAD softwarem Fusion 360 (viz. kapitola \ref{sec:Fusion 360}).
 
-  Vektorová grafika je pro vytváření ilustrací dobrá volba proto, že potřebné tvary lze vytvářet a upravovat výrazně rychleji a efektivněji než rastr. Zabírá rovněž méně místa a je ukládána v prostém textu, což má oproti binárnímu formátu řadu výhod.
+  Vektorová grafika je pro vytváření ilustrací dobrá volba proto, že potřebné tvary lze vytvářet a upravovat výrazně rychleji a efektivněji než rastr. Zabírá také méně místa a je ukládána v prostém textu, což má oproti binárnímu formátu řadu výhod.
 
 
   \subsubsection{Matematika} \label{sec:Matematika}
@@ -456,8 +458,6 @@
 
   Script \texttt{tex.py} získá pořadí článků, spojí je za sebe do jednoho dokumentu a poté na ně aplikuje řadu regulárních výrazů, které provedou konverzi z formátu Markdown do formátu \LaTeX.
 
-  % příklad konverze
-
 
   \subsubsection{Komprimace obrázků}
   O komprimaci obrázků pro zmenšení velikosti stránky se stará script \texttt{compress.py}, který pomocí služby TinyPNG (\url{https://tinypng.com/}) a jejího Python API zkomprimuje všechny obrázky vygenerované stránky. Samotný API klíč je pro zamezení zneužití šifrován symetrickou šifrou AES.
@@ -478,6 +478,7 @@
   \subsection{Verzování zdrojového kódu}
   Stránka je verzována pomocí verzovacího systému Git (viz. kapitola \ref{sec:Git}). Kód je otevřený a volně dostupný přes GitHub na adrese \url{https://github.com/xiaoxiae/Robotics-Simplified-Website}.
 
+
   \subsection{Testování výkonu}
   % https://www.webpagetest.org/
 
@@ -486,29 +487,29 @@
   % Jak rychle se načítá z různých zemí světa.
 
   \subsubsection{Multiplatformnost}
-  % Jak to funguje na různých prohlížečích.
-  % Jak to funguje na různých platformách.
-
+  % TODO: how does the website work on different devices and browsers
 
   \section{Analytika a propagace webové stránky}
-  % Jak probíhá provoz serveru.
+  % TODO: how is traffic analysis and marketting done
 
   \subsection{Analýza návštěvnosti}
 
   \subsubsection{Google Analytics}
-  % Na co to je
-  % Proč Analytics
-  % Ukázat hezké statistiky a grafy
+  Google Analytics je služba od společnosti Google určena pro analýzu návštěvnosti webových stránek. Pro použití stačí na danou stránku přidat JavaScriptovou knihovnu
+
+  % TODO: add location pie chart
+  % TODO: add device pie chart
+  % TODO: add age pie chart
+  % TODO: add gender pie chart
+
 
   \subsubsection{Google Search Console}
-  % Na co to je
-  % Proč Search
-  % Ukázat hezké statistiky, grafy
+  % TODO: what is it good foor
 
   \subsection{Marketting}
 
   \subsubsection{Sociální média}
-  % Reddit, Hacker News, Facebook...
+  % TODO: add posts on ChiefDelphi, Reddit and Hacker News
 
   \subsubsection{FRC a FLL teamy}
 
