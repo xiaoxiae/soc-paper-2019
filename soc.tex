@@ -186,7 +186,7 @@
 
   \newpage
 
-  \section{Požadavky na výsledný produkt}
+  \section{Požadavky na výsledný produkt} \label{sec:Požadavky na výsledný produkt}
   Nápad tvorby kvalitních materiálů pro studium robotiky je příliš rozsáhlá na to, aby mohla práce na projektu začít bez větší úvahy: bude se jednat o webovou stránku, aplikaci, knihu, či repozitář se zdrojovými kódy?
 
   Před začátkem je třeba určit požadavky, které by výsledný produkt měl splňovat. Podle těch lze způsoby provedení porovnat a použít ten, který se jeví za nejvhodnější.
@@ -303,15 +303,16 @@
 
   Fusion 360 je jediný v projeku používaný program, který nefunguje na operačním systému Linux,  jelikož za něho neexistuje kvalitní multiplatformní náhrada.
 
+
   \section{Vývoj webové stránky}
-  % Rozhodl jsem se pro stránku
-  % OS
-  % Multiplatformn
-  % Ilustrace fungování jak na mobilu, tak na PC?
+  Po důkladném zvážení všech výhod a nevýhod přístupů k tvorbě vzdelávacího materiálu omezeného požadavky danými v kapitole \ref{sec:Požadavky na výsledný produkt} se webová stránka jeví jako nejvhodnější výsledný produkt. Sama o sobě totiž může při pečlivém výběru technologií splňovat jak multiplatformnost (i dostupnost ve formátu PDF), tak otevřenost zdrojového kódu.
+
+  Pro tvorbu stránky v rámci splnění otevřenosti zdrojového kódu byl tedy vybrán generátor statických webových stránek Jekyll (viz. kapitola \ref{sec:Jekyll}), díky čemuž lze kód produktu verzovat a volně sdílet jednodušeji, než kód webové stránky s databází.
+
 
   \subsection{Konfigurace Jekyllu}
-  % Hledání themu.
-  % Konfigurace themu.
+  Po zvážení možností zdarma dostupných šablon pro Jekyll byla zvolena šablona Just the Docs (\url{https://github.com/pmarsceill/just-the-docs}), která díky své optimalizaci pro mobilní zařízení pomáhá splnit požadavek multiplatformnosti produktu. Další atraktivní atributy jsou čistý vzhled, podpora vyhledávání a přizpůsobitelné zvýrazňování syntaxe kódu.
+
 
   \subsection{Webhosting a doména} \label{sec:Webhosting a doména}
   Na českém trhu operuje řada firem, které zajišťují jak registraci domény, tak hostování webové stránky. Každá má své výhody a nevýhody, proto je volba provozovatele vysoce individuální a záleží na řadě faktorů.
