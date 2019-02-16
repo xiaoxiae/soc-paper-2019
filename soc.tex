@@ -1,33 +1,21 @@
 \documentclass[a4paper, 12pt]{article}
 \usepackage[top=2.5cm, left=3.5cm, right=1.5cm, bottom=2.5cm, includefoot]{geometry}
 
+% LANGUAGE %
+%-========-%
 \usepackage{luavlna}                            % auto non-breaking spaces
 \AtBeginDocument{\singlechars{czech}{AaIiVvOoUuSsZzKk}}
-
-\usepackage[subfigure]{tocloft}                 % for controlling lof and toc
-\setlength{\cftfigindent}{0pt}                  % remove left lof margin
-
 \usepackage[czech]{babel}                       % use the czech language
 
-\usepackage{graphicx}                           % graphics
-\graphicspath{ {./img/} }                       % graphics path
-\usepackage{float}                              % floats in correct position
-\usepackage{subfig}                             % subfigure package
 
-\setlength{\fboxsep}{0pt}                       % image border separation
-\setlength{\fboxrule}{1pt}                      % image border thickness
+% TOC AND LOF %
+%-===========-%
+\usepackage[subfigure,titles]{tocloft}          % for controlling LOF and LOF
+\setlength{\cftfigindent}{0pt}                  % remove left LOF margin
 
-\usepackage{titlesec}                           % title
-\usepackage{tabularx}                           % tables
-\usepackage[hyphens,spaces,obeyspaces]{url}     % url
-\usepackage[hidelinks,unicode]{hyperref}        % interactive links
-\usepackage{amsmath, amstext}                   % math
+\usepackage[numbib, nottoc]{tocbibind}          % number bib, no TOC in TOC
 
-\usepackage[font=small,labelfont=bf]{caption}   % caption settings
-\usepackage[figurename=Obr.]{caption}        % caption name
-
-\usepackage[numbib, nottoc]{tocbibind}          % number bib, no toc in toc
-\makeatletter                                   % lof numbering
+\makeatletter                                   % LOF numbering
 \renewcommand\listoffigures{%
     \section{\listfigurename}%
     \@mkboth{\MakeUppercase\listfigurename}%
@@ -36,27 +24,68 @@
 }
 \makeatother
 
+\renewcommand{\contentsname}{Obsah}             % change TOC name
+
+
+% GRAPHICS %
+%-========-%
+\usepackage{graphicx}                           % graphics package
+\graphicspath{ {./img/} }                       % graphics path
+
+\usepackage{float}                              % floats in correct position
+\usepackage{subfig}                             % subfigure package
+
+\setlength{\fboxsep}{0pt}                       % image border separation
+\setlength{\fboxrule}{1pt}                      % image border thickness
+
+
+% MISCELLANEOUS %
+%-=============-%
+\usepackage{tabularx}                           % tables
+\usepackage[hyphens,spaces,obeyspaces]{url}     % url
+\usepackage[hidelinks,unicode]{hyperref}        % interactive links
+\usepackage{amsmath, amstext}                   % math
+
+\usepackage[font=small,labelfont=bf]{caption}   % caption settings
+\usepackage[figurename=Obr.]{caption}           % caption name
+
+
+% DATETIME %
+%-========-%
 \usepackage[dmyyyy]{datetime}                   % dmyyyy datetimes
 \renewcommand{\dateseparator}{. }               % changes datetime separator
 
+
+% FONT AND ENCODING %
+%-=================-%
 \usepackage[T1]{fontenc}                        % font encoding
 \usepackage{fontspec}                           % font selector
+
 \setmainfont{CMU Serif}                         % select font that suports bx sc
 
 \setlength\parindent{0pt}                       % paragraph indentation
 \setlength{\parskip}{1.2em}                     % paragraph spacing
+
+
+% TITLE FORMATTING %
+%-================-%
+\usepackage{titlesec}
 
 % title formatting
 \titleformat{\section}{\bfseries\scshape\fontsize{18}{21.6}\selectfont}{\thesection}{1em}{}
 \titleformat{\subsection}{\bfseries\fontsize{16}{19.2}\selectfont}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\bfseries\fontsize{14}{16.8}\selectfont}{\thesubsubsection}{1em}{}
 
-\titlespacing{\section}{0pt}{0pt}{0.3em}        % section spacing
-\titlespacing{\subsection}{0pt}{0pt}{0.2em}     % subsection spacing
-\titlespacing{\subsubsection}{0pt}{0pt}{0.0em}  % subsubsection spacing
+% title spacing
+\titlespacing{\section}{0pt}{0pt}{0.3em}
+\titlespacing{\subsection}{0pt}{0pt}{0.2em}
+\titlespacing{\subsubsection}{0pt}{0pt}{0.0em}
 
-\widowpenalty10000                              % prevent widows
-\clubpenalty10000                               % prevent orphans
+
+% OTHER %
+%-=====-%
+\widowpenalty10000  % prevent widows
+\clubpenalty10000   % prevent widows
 
 \pagenumbering{gobble}   % suppress page numbering until TOC page
 
@@ -72,6 +101,7 @@
 }\kern -.15em
 \TeX}
 \makeatother
+
 
 \begin{document}
   % should fix some lines going to the margins
@@ -175,8 +205,7 @@
   \pagenumbering{arabic}
   \setcounter{page}{\numexpr\value{savepage}-1}%
 
-  % genereate TOC (with a different name for contents)
-  \renewcommand{\contentsname}{Obsah}
+  % genereate TOC
   \tableofcontents
 
   \newpage
