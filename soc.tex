@@ -211,7 +211,7 @@
   \newpage
 
   \section*{\normalfont\textbf{Poděkování}}
-  V první řadě bych rád poděkoval své rodině a přátelům za neustálou podporu a pozitivitu při tvorbě projektu. Za konzultace o obsahu, struktuře a použitých technologiích děkuji Lukáši Pitoňákovi, Janu Poláškovi a Tomáši Novotnému. Také děkuji Kateřině Sulkové za rady ke psaní samotné SOČ práce a na závěr všem návštěvníkům projektu, kteří svou přítomností a feedbackem pomáhají v jeho rozvoji.
+  V první řadě bych rád poděkoval své rodině a přátelům za neustálou podporu a pozitivitu při tvorbě projektu. Za konzultace o obsahu, struktuře a použitých technologiích děkuji Lukáši Pitoňákovi, Janu Poláškovi a Tomáši Novotnému. Také děkuji Kateřině Sulkové za rady ke psaní samotné SOČ práce a na závěr všem návštěvníkům projektu, kteří svou přítomností a zpětnou vazbou pomáhají v jeho rozvoji.
 
   % TODO: add actual titles for
 
@@ -270,7 +270,7 @@
   \subsection{Multiplatformnost}
   Co se dostupnosti týče, důležitým požadavkem je \emph{multiplatformnost}, tj. možnost přístupu k produktu z více než jedné platformy jako stolní počítač, mobil, či čtečka elektronických knih. Výsledný produkt musí být multiplatformní zejména kvůli mému osobnímu názoru, že vzdělání by nemělo být omezeno technologickými preferencemi jednotlivce.
 
-  Tato podmínka fakticky znemožňuje tvorbu aplikace, jelikož by finanční i časové nároky stavby aplikací pro vícero systémů přerostly nad rámec jednotlivce.
+  Tato podmínka fakticky znemožňuje tvorbu aplikace, jelikož by finanční i časové nároky stavby aplikací pro několik systémů přerostly nad rámec jednotlivce.
 
 
   \section{Použité programovací jazyky}
@@ -297,7 +297,7 @@
   \subsection{CSS} \label{sec:CSS}
   Po vzniku \gls{html} bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který r. 1994 publikoval první specifikaci stylopisného standardu \gls{css} \cite{css-proposal}. \gls{css} umožňuje ovlivnit vlastnosti \gls{html} tagů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné \gls{html} neumožňuje\footnote{To, že v \gls{html} nejde měnit vzhled stránky není pravda, ale většinou se jedná o zastaralé a nepoužívané tagy (jako např. \texttt{<center>}), jejichž použití je oproti \gls{css} nedoporučované.} \cite{css-saga}.
 
-  Příklad kombinace HTML a CSS lze vidět na následujícím kódu, kde \gls{html} udává strukturu textu a \gls{css} jeho barvu:
+  Příkladem kombinace HTML a CSS je následující kód, kde \gls{html} udává strukturu textu a \gls{css} jeho barvu:
 
   \begin{minted}[linenos,breaklines]{html}
   <h1 style="color:Red;">CSS</h1>
@@ -336,9 +336,9 @@
 
 
   \subsection{Markdown} \label{sec:Markdown}
-  Markdown je styl formátování prostého textu, vytvořený v roce 2004 Johnem Gruberem pro autory webových stránek. Je uzpůsobený k jednoduchému čtení, psaní, a převodu do pokročilejších značkovacích jazyků jako \gls{html} \cite{markdown-history}. Dále existuje řada variant Markdownu jako Kramdown či Redcarpet, které jsou oproti originálu rozšířeny o dodatečnou funkcionalitu jako poznámky pod čarou či kombinace s \gls{css}.
+  Markdown je styl formátování prostého textu, vytvořený v roce 2004 Johnem Gruberem pro autory webových stránek. Je uzpůsobený k jednoduchému čtení, psaní, a převodu do pokročilejších značkovacích jazyků jako \gls{html} \cite{markdown-history}. Pro svou jednoduchost se jedná o populární formát zápisu dokumentací projektů, souborů README (čti mě) pro repozitáře stránek jako GitHub a GitLab, či článků některých blogů a osobních stránek.
 
-  Pro svou jednoduchost se jedná o populární formát zápisu dokumentací projektů, souborů README (čti mě) pro repozitáře stránek jako GitHub a GitLab, či článků některých blogů a osobních stránek.
+  Dále existuje velká řada variant Markdownu jako Kramdown či Redcarpet, které originál rozšiřují o dodatečnou funkcionalitu jako poznámky pod čarou či podpora \gls{css}.
 
   V projektu je v kombinaci s šablonovým jazykem Liquid používán ke psaní článků (viz. kapitola \ref{sec:Tvorba článků}).
 
@@ -356,7 +356,7 @@
 
   Hlavní kritérium výběru byla multiplatformnost, jelikož jsou při vývoji aktivně využívaný oba operační systémy Windows a Linux.
 
-  % TODO: add a definition of a programming language and some basic overview
+  % TODO: add a definition of a tool and some basic overview
 
 
   \subsection{Git} \label{sec:Git}
@@ -364,9 +364,9 @@
 
   Verzovací systém umožňuje zaznamenávat změny a jejich důvod/význam na verzované skupině souborů a složek (tzv. repozitáři) a pomáhá tím zamezit ztrátě práce, zjednodušit hledání chyb v kódu a usnadnit spolupráci mezi autory.
 
-  Narozdíl od centralizovaných verzovacích systémů jako Subversion či \gls{cvs} je Git decentralizovaný~--~místo jedné centrální úschovny kódu má každý svou lokální kopii s úplnou historií projektu. Výhody tohoto přístupu oproti centrální úschovně jsou např. rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru \cite{cvcs-vs-dvcs}.
+  Narozdíl od centralizovaných verzovacích systémů jako Subversion či \gls{cvs} je Git decentralizovaný~--~místo hlavní úschovny kódu pracuje každý s lokální kopií, která obsahuje úplnou historií projektu. Výhody tohoto přístupu oproti centrální úschovně jsou např. rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru \cite{cvcs-vs-dvcs}.
 
-  To, že má každý svou lokální kopii však nezamezuje existenci hlavní kopie. Tento fakt dokazují služby jako GitHub, GitLab či GitBucket, které tuto centrální úschovnu poskytují. % Tento fakt ... frázovat jinak
+  Decentralizovanost Gitu existenci hlavní kopie nezamezuje~--~existuje řada služeb jako GitHub, GitLab či GitBucket, které tuto centrální úschovnu poskytují.
 
 
   \subsection{Jekyll} \label{sec:Jekyll}
@@ -439,11 +439,9 @@
 
 
   \subsection{Tvorba článků} \label{sec:Tvorba článků}
-  Články jsou psány o tématech, jejichž pochopení autorovi při studiu z ostatních internetových zdrojů dělalo problémy z důvodu odbornosti studijního materiálu či jeho nedostatku.
+  Témata článků jsou vybírána převážně podle jejich využití v soutěži \gls{frc}. Další důležitý faktor je množství kvalitních zdrojů, které tato témata zpracovávají.
 
-  % TODO: rephrase the first paragraph
-
-  Po vybrání tématu článku jsou nejprve shromážděny dostupné materiály o daném tématu. Poté jsou hlavní koncepty tématu implementovány v jazyce Python a jejich funkčnost testována na robotovi ze stavebnice VEX EDR. Po úspěšném testování a odladění kódu je odvození implementace co nejjednodušším způsobem v článku vysvětleno.
+  Po vybrání tématu článku jsou nejprve shromážděny dostupné materiály o daném tématu. Poté jsou hlavní koncepty článku implementovány v jazyce Python a jejich funkčnost testována na robotovi ze stavebnice VEX EDR. Po úspěšném testování a odladění kódu je odvození implementace v článku jednoduchým způsobem vysvětleno.
 
 
   \subsubsection{Vizualizace} \label{sec:Vizualizace}
@@ -463,7 +461,7 @@
   \subsubsection{Matematika} \label{sec:Matematika}
   Jelikož jsou probírané koncepty a algoritmy založeny na matematice, tak stránka podporuje vkládání rovnic a výrazů do článků. Tuto funkcionalitu zajišťuje JavaScriptová knihovna \KaTeX{} (viz. kapitola \ref{sec:KaTeX}), díky které lze \LaTeX ové rovnice umísťovat přímo do Markdownových článků.
 
-  Příkladem zápisu matematiky v článku je rovnice č. \ref{eq:katex equation}, která je pomocí \KaTeX u převedena na rovnici č. \ref{eq:converted equation}.
+  Příkladem zápisu matematiky v článku je rovnice \ref{eq:katex equation}, která je pomocí \KaTeX u převedena na rovnici \ref{eq:converted equation}.
 
   \begin{equation} \label{eq:katex equation}
     \verb|Je pravda, že $$\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$$.|
