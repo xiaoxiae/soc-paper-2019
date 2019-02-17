@@ -1,5 +1,7 @@
 import os
 
+os.chdir("..")
+
 os.system("lualatex --shell-escape soc.tex")
 os.system("bibtex soc")
 os.system("makeglossaries soc")
