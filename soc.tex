@@ -284,15 +284,27 @@
   \subsection{HTML} \label{sec:HTML}
   Značkovací jazyk \gls{html} vytvořil Tim Berners-Lee z výzkumného centra \gls{cern} v roce 1989. Hlavní důvod vzniku byla snaha zjednodušit přístup k odborné literatuře vkládáním odkazů přímo do samotných dokumentů. V rámci této snahy Tim rovněž vytvořil protokol \gls{http}, který slouží ke přenosu souborů \gls{html} po síti \cite{html-history}.
 
-  % TODO: write more about how the structuring works and how there should be no styling in HTML
+  Strukturování obsahu pomocí \gls{html} funguje na principu lomítky značených tagů, které obklopený text formátují:
+
+  \begin{minted}[linenos,breaklines]{html}
+  <h1>HTML</h1>
+  <p>Značkovací jazyk HTML vytvořil Tim Berners-Lee z výzkumného centra <a href="https://home.cern/">CERN</a> v roce 1989.</p>
+  \end{minted}
 
   V \gls{html} je psán zdrojový kód převážné většiny webových stránek včetně kódu tohoto projektu, který je generován programem Jekyll.
 
 
   \subsection{CSS} \label{sec:CSS}
-  Po vzniku \gls{html} bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu \gls{html} dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který r. 1994 publikoval první specifikaci stylopisného standardu \gls{css} \cite{css-proposal, css-saga}, který umožňuje ovlivnit vlastnosti \gls{html} tagů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné \gls{html} neumožňuje\footnote{To, že v \gls{html} nejde měnit vzhled stránky není pravda, ale většinou se jedná o zastaralé a nepoužívané tagy (jako např. \texttt{<center>}), jejichž použití je oproti \gls{css} nepotřebné.}.
+  Po vzniku \gls{html} bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který r. 1994 publikoval první specifikaci stylopisného standardu \gls{css} \cite{css-proposal}. \gls{css} umožňuje ovlivnit vlastnosti \gls{html} tagů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné \gls{html} neumožňuje\footnote{To, že v \gls{html} nejde měnit vzhled stránky není pravda, ale většinou se jedná o zastaralé a nepoužívané tagy (jako např. \texttt{<center>}), jejichž použití je oproti \gls{css} nedoporučované.} \cite{css-saga}.
 
-  Při použití \gls{css} je důležitý princip kaskádování~--~vzhled stránky mohou ovlivnit jak požadavky čtenáře, tak požadavky autora. Samotné kaskádování je kombinace těchto požadavků a případná rezoluce takto vzniklých konfliktů (autor chce písmo velikosti \texttt{12pt}, ale čtenář velikosti \texttt{10pt}).
+  Příklad kombinace HTML a CSS lze vidět na následujícím kódu, kde \gls{html} udává strukturu textu a \gls{css} jeho barvu:
+
+  \begin{minted}[linenos,breaklines]{html}
+  <h1 style="color:Red;">CSS</h1>
+  <p style="color:Blue;">Po vzniku HTML bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů.</p>
+  \end{minted}
+
+  Při použití \gls{css} je důležitý princip kaskádování~--~vzhled stránky může ovlivnit jak čtenář, tak autor. Samotné kaskádování je kombinace těchto přeferencí a případná rezoluce vzniklých konfliktů (autor chce písmo velikosti \texttt{12pt}, ale čtenář velikosti \texttt{10pt}).
 
   V projektu je používán \gls{sass}, který převádí \gls{css} s pokročilejším syntaxem a dodatečnou funkcionalitou do standardního \gls{css}, díky čemuž jde vzhled stránky upravovat jednodušeji.
 
