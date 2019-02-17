@@ -24,6 +24,7 @@
 *.out
 *.synctex.gz
 *.toc
+_minted-soc/
 
 # ignore binary files
 *.pdf
