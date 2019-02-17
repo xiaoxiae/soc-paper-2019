@@ -455,7 +455,20 @@
 
   Vektorová grafika je pro vytváření ilustrací dobrá volba proto, že potřebné tvary lze vytvářet a upravovat výrazně rychleji a efektivněji než rastr. Zabírá také méně místa a je ukládána v prostém textu, což má oproti binárnímu formátu řadu výhod.
 
-  % TODO: add illustration examples
+  \begin{figure}[H]
+    \minipage{0.3\textwidth}
+      \fbox{\includegraphics[width=\linewidth]{illustration1.png}}
+      \caption{Příklad ilustrace 1} \label{img:Příklad ilustrace 1}
+    \endminipage\hfill
+     \minipage{0.3\textwidth}
+      \fbox{\includegraphics[width=\linewidth]{illustration2.png}}
+      \caption{Příklad ilustrace 2} \label{img:Příklad ilustrace 2}
+    \endminipage\hfill
+     \minipage{0.3\textwidth}
+      \fbox{\includegraphics[width=\linewidth]{illustration3.png}}
+      \caption{Příklad ilustrace 3} \label{img:Příklad ilustrace 3}
+    \endminipage
+  \end{figure}
 
 
   \subsubsection{Matematika} \label{sec:Matematika}
