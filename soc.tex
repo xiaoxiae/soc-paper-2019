@@ -89,7 +89,7 @@
 \newacronym{fll}{FLL}{First Lego League}
 \newacronym{pdf}{PDF}{Portable Document Format}
 \newacronym{html}{HTML}{HyperText Mark-up Language}
-\newacronym{cern}{CERN}{Conseil Européen pour la Recherche Nucléaire}
+\newacronym{cern}{CERN}{Evropská organizace pro jaderný výzkum}
 \newacronym{http}{HTTP}{HyperText Transfer Protocol}
 \newacronym{css}{CSS}{Cascading Style Sheets}
 \newacronym{sass}{SASS}{Syntactically Awesome Style Sheets}
@@ -98,7 +98,7 @@
 \newacronym{ftp}{FTP}{File Transfer Protocol}
 \newacronym{aes}{AES}{Advanced Encryption Standard}
 \newacronym{api}{API}{Application Programming Interface}
-\newacronym{si}{SI}{Système international}
+\newacronym{si}{SI}{Mezinárodní systém jednotek}
 \newacronym{ip}{IP}{Internet Protocol}
 \newacronym{png}{PNG}{Portable Network Graphics}
 \newacronym{wysiwyg}{WYSIWYG}{What You See Is What You Get}
@@ -217,9 +217,7 @@
   \newpage
 
   \section*{\normalfont\textbf{Poděkování}}
-  V první řadě bych rád poděkoval své rodině a přátelům za neustálou podporu a pozitivitu při tvorbě projektu. Za konzultace o obsahu, struktuře a použitých technologiích děkuji Lukáši Pitoňákovi, Janu Poláškovi a Tomáši Novotnému. Také děkuji Kateřině Sulkové za rady ke psaní samotné SOČ práce a na závěr všem návštěvníkům projektu, kteří svou přítomností a zpětnou vazbou pomáhají v jeho rozvoji.
-
-  % TODO: add actual titles for
+  V první řadě bych rád poděkoval své rodině a přátelům za neustálou podporu a pozitivitu při tvorbě projektu. Za konzultace o obsahu, struktuře a v projektu použitých technologiích děkuji Mgr. Lukáši Pitoňákovi a Mgr. Tomáši Novotnému. Také děkuji Kateřině Sulkové za rady ke psaní samotné SOČ práce a na závěr všem návštěvníkům projektu, kteří svou přítomností a zpětnou vazbou pomáhají v jeho rozvoji.
 
   \newpage
 
@@ -251,7 +249,7 @@
   \section{Úvod}
   V dnešním světě plném technologií se robotika rozvíjí stále rapidnějším tempem. Roboti jsou díky nadaným programátorům a inženýrům rychlejší, obratnější a chytřejší než kdy jindy a uplatnění nalézají v nesčetném množství oborů. Jen za rok 2018 se prodej industriálních robotů zvýšil o 30 \% \cite{industrial-robot-growth} a nadnárodní korporace jako Amazon jich používají na úkor lidské pracovní síly stále více \cite{amazon-hiring}. Bez talentovaných lidí by však takový pokrok nebyl možný, proto vzniká řada programů a organizací, které se vzdělávání budoucí generace snaží podporovat.
 
-  Značnou zásluhu má například neziskový program FIRST (\url{https://www.firstinspires.org/}) a jeho soutěže \gls{frc}, \gls{ftc} a \gls{fll}, které z robotiky dělají hru. Týmy tvořeny studenty základních a středních škol mají za úkol během několika týdnů robota od základu navrhnout, postavit a naprogramovat tak, aby plnil úkoly každým rokem se měnící výzvy.
+  Značnou zásluhu má například neziskový program FIRST a jeho soutěže \gls{frc}, \gls{ftc} a \gls{fll}, které z robotiky dělají hru. Týmy tvořeny studenty základních a středních škol mají za úkol během několika týdnů robota od základu navrhnout, postavit a naprogramovat tak, aby plnil úkoly každým rokem se měnící výzvy.
 
   Začátečníci se zájmem o robotiku se však musí potýkat s problematikou nedostatku studijních materiálů, ať už se jedná o programování robota či o jeho stavbu. Čtení odborných prací však není pro každého, zvláště pokud o daném oboru ví málo, a hledání přístupnějších kvalitních zdrojů ne vždu končí úspěchem.
 
@@ -282,7 +280,7 @@
   \section{Použité programovací jazyky}
   Programovací jazyk je notace pro psaní programů. \emph{Syntaxe} jazyka popisuje strukturu~--~jakým způsobem za sebe uspořádat znaky, aby v rámci jazyka tvořily platná spojení. \emph{Sémantika} jazyka popisuje význam těchto platných spojení \cite{intro-to-programming-languages}.
 
-  Každý programovací jazyk využívá \emph{paradigmata}~--~způsoby, kterými programovací jazyk přistupuje ke tvorbě programů. Paradigmaty můžeme dělit programovací jazyky do kategorií\footnote{Jeden programovací jazyk může využívat více paradigmat a spadat tak do několika kategorií (viz. kapitoly \fullref{sec:Python} a \fullref{sec:JavaScript}).} jako např. funkcionální, procedurální, či logické.
+  Každý programovací jazyk využívá \emph{paradigmata}~--~způsoby, kterými programovací jazyk přistupuje ke tvorbě programů. Paradigmaty můžeme dělit programovací jazyky do kategorií\footnote{Jeden programovací jazyk může využívat více paradigmat a spadat tak do několika kategorií (viz. programovací jazyky rozebírány v kapitolách \fullref{sec:Python} a \fullref{sec:JavaScript}).} jako např. funkcionální, procedurální, či logické.
 
   Následující kapitola rozebírá použití programovacích jazyků v projektu a jejích stručnou historii.
 
@@ -290,7 +288,7 @@
   \subsection{HTML} \label{sec:HTML}
   Značkovací jazyk \gls{html} vytvořil Tim Berners-Lee z výzkumného centra \gls{cern} v roce 1989. Hlavní důvod vzniku byla snaha zjednodušit přístup k odborné literatuře vkládáním odkazů přímo do samotných dokumentů. V rámci této snahy Tim rovněž vytvořil protokol \gls{http}, který slouží ke přenosu souborů \gls{html} po síti \cite{html-history}.
 
-  Strukturování obsahu pomocí \gls{html} funguje na principu lomítky značených tagů, které obklopený text formátují:
+  Strukturování obsahu pomocí \gls{html} funguje na principu lomítky značených tagů, které obklopený text formátují: % TODO: explain example
 
   \begin{minted}[linenos,breaklines]{html}
   <h1>HTML</h1>
@@ -301,9 +299,9 @@
 
 
   \subsection{CSS} \label{sec:CSS}
-  Po vzniku \gls{html} bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který r. 1994 publikoval první specifikaci stylopisného standardu \gls{css} \cite{css-proposal}. \gls{css} umožňuje ovlivnit vlastnosti \gls{html} tagů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné \gls{html} neumožňuje\footnote{To, že v \gls{html} nejde měnit vzhled stránky není pravda, ale většinou se jedná o zastaralé a nepoužívané tagy (jako např. \texttt{<center>}), jejichž použití je oproti \gls{css} nedoporučované.} \cite{css-saga}.
+  Po vzniku \gls{html} bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který roku 1994 publikoval první specifikaci stylopisného standardu \gls{css} \cite{css-proposal}. \gls{css} umožňuje ovlivnit vlastnosti \gls{html} tagů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné \gls{html} neumožňuje\footnote{To, že v \gls{html} nejde měnit vzhled stránky není pravda, ale většinou se jedná o zastaralé a nepoužívané tagy (jako např. \mintinline{html}{<center>}), jejichž použití je oproti \gls{css} nedoporučované.} \cite{css-saga}.
 
-  Příkladem kombinace HTML a CSS je následující kód, kde \gls{html} udává strukturu textu a \gls{css} jeho barvu:
+  Příkladem kombinace HTML a CSS je následující kód, kde \gls{html} udává strukturu textu a \gls{css} jeho barvu: % TODO: explain example
 
   \begin{minted}[linenos,breaklines]{html}
   <h1 style="color:Red;">CSS</h1>
@@ -318,9 +316,9 @@
   \subsection{JavaScript} \label{sec:JavaScript}
   Okolo roku 1995 bylo pro internetový prohlížeč Netscape potřeba vytvořit interpretovaný scriptovací jazyk pro zlepšení interaktivity webových stránek, který by měl jít vložit přímo do \gls{html}. Tímto úkolem byl pověřen Brendan Eich a jelikož bylo z ekonomických důvodů potřeba práci vykonat rychle, první funkční verze JavaScriptu byla údajně zhotovena za pouhých 10 dní \cite{the-origin-of-javascript}.
 
-  Na rozdíl od kódu psaném v dalším frekventovaně používaném jazyce webu \gls{php}, který je vykonáván na straně serveru, je JavaScriptový kód vykonáván na straně uživatele. Díky tomu, že kód nemusí být v neustálém kontaktu se serverem (jelikož výměna informací tímto způsobem zpravidla není okamžitá) se jedná o preferovaný jazyk pro vkládání interaktivity do webových stránek, ať už se jedná o kontrolu správného vyplnění formuláře či tvorbu webových her.
+  Na rozdíl od kódu psaném v dalším frekventovaně používaném jazyce webu \gls{php}, který je vykonáván na straně serveru, je JavaScriptový kód vykonáván na straně uživatele. Díky tomu vykonává na webové stránce funkce, které nevyžadují neustálý kontakt se serverem (jelikož výměna informací tímto způsobem zpravidla není okamžitá) jako kontrola správného vyplnění formuláře, přidání plynulosti do uživatelského prostředí, či tvorba webových her.
 
-  Dnes se jedná o webový standard a dlouhodobě nejpoužívanější programovací jazyk platformy GitHub \cite{github-statistics}, na kterém stojí řada podstatných funkcí tohoto projektu.
+  Dnes se jedná o webový standard a dlouhodobě nejpoužívanější programovací jazyk platformy GitHub \cite{github-statistics}, který pohání řadu podstatných funkcí tohoto projektu.
 
 
   \subsubsection{p5.js} \label{sec:p5.js}
@@ -336,29 +334,31 @@
   \subsection{Python} \label{sec:Python}
   Python je programovací jazyk vytvořený pro distribuovaný operační systém Amoeba Guidem van Rossumem v 80. letech 20. století. Byl silně inspirován Guidovou prací na jazyce ABC: „Vzal jsem ingredience z ABC a trochu jsem je promíchal. Python je v mnoha věcech podobný ABC, ale v mnoha také rozdílný \cite{making-of-python}“ (přeloženo z angličtiny).
 
-  Od svého vzniku se Python vyvinul v mocný a frekventovaně používaný programovací jazyk~--~má rozsáhlou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub \cite{github-statistics}, od stavby webových stránek po knihovny na trénování neuronových sítí.
+  Od svého vzniku se Python vyvinul v mocný a frekventovaně používaný programovací jazyk~--~má rozsáhlou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub \cite{github-statistics} s využitím při stavbě webových stránek po tvorbu knihovny na trénování neuronových sítí.
 
   Na stránce zastává funkci scriptovacího jazyka pro automatizaci provozu (viz. kapitola \fullref{sec:Automatizace provozu}).
 
 
   \subsection{Markdown} \label{sec:Markdown}
-  Markdown je styl formátování prostého textu, vytvořený v roce 2004 Johnem Gruberem pro autory webových stránek. Je uzpůsobený k jednoduchému čtení, psaní, a převodu do pokročilejších značkovacích jazyků jako \gls{html} \cite{markdown-history}. Pro svou jednoduchost se jedná o populární formát zápisu dokumentací projektů, souborů README (čti mě) pro repozitáře stránek jako GitHub a GitLab, či článků některých blogů a osobních stránek.
+  Markdown je styl formátování prostého textu, vytvořený v roce 2004 Johnem Gruberem pro autory webových stránek. Je uzpůsobený k jednoduchému čtení, psaní, a převodu do pokročilejších značkovacích jazyků jako \gls{html} \cite{markdown-history}. Jedná se o populární formát zápisu dokumentací projektů, souborů README (čti mě) pro repozitáře stránek jako GitHub a GitLab, či článků některých blogů a osobních stránek.
 
-  Dále existuje velká řada variant Markdownu jako Kramdown či Redcarpet, které originál rozšiřují o dodatečnou funkcionalitu jako poznámky pod čarou či podpora \gls{css}.
+  Existuje velká řada variant Markdownu jako Kramdown či Redcarpet, které originál rozšiřují o dodatečnou funkcionalitu jako poznámky pod čarou, podporu úpravy vzhledu pomocí \gls{css} či vkládání rovnic pomocí \LaTeX ové notace.
 
   V projektu je v kombinaci s šablonovým jazykem Liquid používán ke psaní článků (viz. kapitola \fullref{sec:Tvorba článků}).
 
 
   \subsection{\TeX} \label{sec:TeX}
-  \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století. Počáteční impulz pro vznik byla Knuthova nespokojenost s tiskovou kvalitou při vydávání jedné z jeho knih, což jej vedlo ke studiu principů sázení, tvorby fontů a později až k vytvoření vlastního sázecího systému \TeX{} \cite{tex-history}.
+  \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století. Počáteční impulz pro vznik byla Knuthova nespokojenost s tiskovou kvalitou vydání jedné z jeho knih, což jej vedlo ke studiu principů sázení, tvorby fontů a později až k vytvoření vlastního sázecího systému \TeX{} \cite{tex-history}.
 
   Od klasických \gls{wysiwyg} programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postárá. Tento přístup klade větší důraz na obsah~--~autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda \TeX u je fakt, že celý dokument je prostý text, proto jej lze verzovat.
+
+  % TODO: add an example?
 
   V projektu je používán \LaTeX{} (viz. kapitola \fullref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů \cite{getting-started-with-latex}. K převodu \LaTeX u do formátu \gls{pdf} je používán český program pdf\TeX{} \cite{pdftex}.
 
 
   \section{Použité nástroje} \label{sec:Použité nástroje}
-  Tato kapitola rozebírá v projektu použité nástroje, jejich účel a porovnání s alternativami.
+  Tato kapitola rozebírá v projektu použité nástroje, jejich účel a porovnání s alternativami. % TODO: move to the end after the adding the definition of a tool
 
   Hlavní kritérium výběru byla multiplatformnost, jelikož jsou při vývoji aktivně využívaný oba operační systémy Windows a Linux.
 
@@ -386,7 +386,7 @@
   \subsection{Inkscape} \label{sec:Inkscape}
   Inkscape je otevřený\footnote{Zdrojový kód Jekyllu je dostupný na adrese \url{https://github.com/jekyll/jekyll}.} multiplaformní software na tvorbu vektorové grafiky. Oproti rastrovým softwarům, které pracují s  pixely obrázku, si vektorové pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola \fullref{sec:Ilustrace}).
 
-  Jedná se o populární volbu pro ty, kteří nepoužívají profesionální software jako Adobe Illustrator kvůli vysoké ceně, uzavřenosti zdrojového kódu či nedostupnosti pro operační systém Linux.
+  Jedná se o populární volbu pro ty, kteří nepoužívají profesionální software jako Adobe Illustrator z důvodu vysoké ceny, uzavřenosti zdrojového kódu či nedostupnosti pro operační systém Linux.
 
 
   \subsection{Fusion 360} \label{sec:Fusion 360}
@@ -398,13 +398,13 @@
 
 
   \section{Vývoj webové stránky}
-  Po důkladném zvážení všech výhod a nevýhod přístupů k tvorbě vzdelávacího materiálu omezeného požadavky danými v kapitole \fullref{sec:Požadavky na výsledný produkt} se webová stránka jeví jako nejvhodnější výsledný produkt. Sama o sobě totiž může při pečlivém výběru technologií splňovat jak multiplatformnost (i dostupnost ve formátu \gls{pdf}), tak otevřenost zdrojového kódu.
+  Po důkladném zvážení výhod a nevýhod přístupů k projektu s požadavky vymezenými kapitolou \fullref{sec:Požadavky na výsledný produkt} se webová stránka jeví jako nejvhodnější výsledný produkt. Sama o sobě totiž může při správném výběru technologií splňovat jak multiplatformnost (i dostupnost ve formátu \gls{pdf}), tak otevřenost zdrojového kódu.
 
-  Pro tvorbu stránky v rámci splnění otevřenosti zdrojového kódu byl tedy vybrán generátor statických webových stránek Jekyll (viz. kapitola \fullref{sec:Jekyll}), díky čemuž lze kód produktu verzovat a volně sdílet jednodušeji, než kód webové stránky s databází.
+  Pro tvorbu stránky v rámci splnění otevřenosti zdrojového kódu byl vybrán generátor statických webových stránek Jekyll (viz. kapitola \fullref{sec:Jekyll}), díky čemuž lze kód produktu verzovat a volně sdílet jednodušeji, než kód webové stránky s databází.
 
 
   \subsection{Konfigurace Jekyllu}
-  Po zvážení možností zdarma dostupných šablon pro Jekyll byla zvolena šablona Just the Docs (\url{https://github.com/pmarsceill/just-the-docs}), která díky své optimalizaci pro mobilní zařízení pomáhá splnit požadavek multiplatformnosti produktu. Další atraktivní atributy jsou čistý vzhled, podpora vyhledávání a přizpůsobitelné zvýrazňování syntaxe kódu.
+  Po zvážení možností zdarma dostupných šablon pro Jekyll byla zvolena šablona Just the Docs (\url{https://github.com/pmarsceill/just-the-docs}), která díky své optimalizaci pro mobilní zařízení pomáhá s multiplatformností projektu. Další atraktivní atributy této šablony je její přehlednost, podpora vyhledávání a přizpůsobitelné zvýrazňování syntaxe kódu.
 
 
   \subsection{Webhosting a doména} \label{sec:Webhosting a doména}
@@ -412,13 +412,13 @@
 
   Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit (\url{https://hosting.wedos.com/cs/webhosting.html}), zejména díky mým pozitivním zkušenostem s tímto provozovatelem v rámci minulých projektů a faktem, že ceny a parametry služeb jiných hostingů se od využívané příliš neliší.
 
-  Jelikož je Jekyll podporován GitHubem, na kterém je hostován zdrojový kód stránky, další možností je služba GitHub Pages (\url{https://pages.github.com/}). Stránka by byla hostována zdarma, nebylo by třeba obsah nahrávat přes \gls{ftp} a generování stránky by probíhalo automaticky. Tento přístup by však znemožnil využívání Python scriptů, proto není pro účely projektu vhodný.
+  Další možností hostingu je služba GitHub Pages (\url{https://pages.github.com/}), která umožňuje přes GitHub repozitář hostovat stránku generovanou Jekyllem. Hosting by byl zdarma, nebylo by třeba obsah nahrávat přes \gls{ftp} a generování by po provedení změny v repozitáři proběhlo automaticky. Tento přístup by však znemožnil využívání Python scriptů, proto není pro účely projektu vhodný.
 
 
   \subsection{Design loga}
   Na dobré vizáži každé stránky má značný podíl její logo, které by mělo tematicky odpovídat zaměření stránky bez toho, aby bylo příliš komplikované.
 
-  Hlavní myšlenka za vzhledem loga je spojení výrazů „RO“ a „SI“ (první dvě písmena názvu stránky) do jednoho. Toto spojení výrazy zjednodušuje a tematicky tak odpovídá obsahu webové stránky, která je založena na jednoduchosti a intuitivnosti. Tvar písmene „O“ je rovněž podobné ozubenému kolu, což do designu loga pro stránku zaměřenou na robotiku elegantně zapadá.
+  Hlavní myšlenka za vzhledem loga je spojení výrazů „RO“ a „SI“ (první dvě písmena názvu stránky) do jednoho. Toto spojení výrazy zjednodušuje a tematicky tak odpovídá obsahu webové stránky, která je založena na jednoduchosti a intuitivnosti. Tvar písmene „O“ je rovněž podobný ozubenému kolu, což do designu loga pro stránku zaměřenou na robotiku elegantně zapadá.
 
   \begin{figure}[H]%
     \centering
@@ -437,29 +437,29 @@
 
 
   \section{Obsah webové stránky}
-  Následující kapitola rozebírá obsah webové stránky~--~pro koho je určený, jakým způsobem probíhá jeho tvorba a jak je na stránce strukturovaný.
+  Následující kapitola rozebírá obsah webové stránky~--~pro koho je určena, jakým způsobem probíhá tvorba článků a jak je na stránka strukturována.
 
 
   \subsection{Cílové publikum}
-  Jako cílové publikum jsem si vybral lidi v podobné situaci, ve které jsem byl já v roce 2017~--~jedinci se zájmem o robotiku, kteří jsou frustrovaní nedostatkem kvalitních materiálů pro studium. Materiál není kromě zájmu o robotiku omezen věkem, pohlavím či jinými osobními charakteristikami.
+  Jako cílové publikum jsem si vybral lidi v podobné situaci, ve které jsem byl já v roce 2017~--~jedinci se zájmem o robotiku, kteří jsou nespokojení nedostatkem kvalitních materiálů pro studium. Materiál není kromě zájmu o robotiku omezen věkem, pohlavím či jinými osobními charakteristikami.
 
 
   \subsection{Tvorba článků} \label{sec:Tvorba článků}
-  Témata článků jsou vybírána převážně podle jejich využití v soutěži \gls{frc}. Další důležitý faktor je množství kvalitních zdrojů, které tato témata zpracovávají.
+  Témata článků jsou vybírána převážně podle jejich využití v soutěži \gls{frc}. Vyšší prioritu mají rovněž témata, jejichž pochopení pro mě bylo z dostupných internetových zdrojů náročné.
 
-  Po vybrání tématu článku jsou nejprve shromážděny dostupné materiály o daném tématu. Poté jsou hlavní koncepty článku implementovány v jazyce Python a jejich funkčnost testována na robotovi ze stavebnice VEX EDR. Po úspěšném testování a odladění kódu je odvození implementace v článku jednoduchým způsobem vysvětleno.
+  Po vybrání tématu článku jsou nejprve shromážděny dostupné materiály o daném tématu. Poté jsou hlavní koncepty článku implementovány v jazyce Python testovány na robotovi ze stavebnice VEX EDR. Po úspěšném testování a odladění kódu je odvození implementace v článku jednoduchým způsobem (pokud možno s názornými ilustracemi a vizualizacemi) vysvětleno.
 
 
   \subsubsection{Vizualizace} \label{sec:Vizualizace}
   Vizualizace jsou implementovány v jazyce JavaScript s využitím knihovny p5.js (viz. kapitola \fullref{sec:p5.js}) a jsou uzpůsobeny pro ovládání myší či dotykem, aby byly funkční jak na osobních počítačích, tak na mobilech.
 
-  Za zmínku stojí, že \gls{pdf} verze vizualizace neobsahuje, protože formát \gls{pdf} vkládání kódu kvůli bezpečnosti neumožňuje \cite{history-of-pdf}.
+  Za zmínku stojí, že offline verze stránky vizualizace neobsahuje, protože formát \gls{pdf} vkládání kódu kvůli bezpečnosti neumožňuje \cite{history-of-pdf}.
 
 
   \subsubsection{Ilustrace} \label{sec:Ilustrace}
   Ke tvorbě ilustrací je používán program na tvorbu vektorové grafiky Inkscape (viz. kapitola \fullref{sec:Inkscape}) v kombinaci s \gls{cad} softwarem Fusion 360 (viz. kapitola \fullref{sec:Fusion 360}).
 
-  Vektorová grafika je pro vytváření ilustrací dobrá volba proto, že potřebné tvary lze vytvářet a upravovat výrazně rychleji a efektivněji než rastr. Zabírá také méně místa a je ukládána v prostém textu, což má oproti binárnímu formátu řadu výhod.
+  Vektorová grafika je pro vytváření ilustrací správná volba proto, že potřebné tvary lze vytvářet a upravovat výrazně rychleji a efektivněji než rastr. Zabírá také méně místa a je ukládána v prostém textu, což má oproti binárnímu formátu řadu výhod.
 
   \begin{figure}[H]
     \minipage{0.3\textwidth}
@@ -476,6 +476,7 @@
     \endminipage
   \end{figure}
 
+  % TODO: write about illustrations
 
   \subsubsection{Matematika} \label{sec:Matematika}
   Jelikož jsou probírané koncepty a algoritmy založeny na matematice, tak stránka podporuje vkládání rovnic a výrazů do článků. Tuto funkcionalitu zajišťuje JavaScriptová knihovna \KaTeX{} (viz. kapitola \fullref{sec:KaTeX}), díky které lze \LaTeX ové rovnice umísťovat přímo do Markdownových článků.
@@ -490,6 +491,7 @@
     \text{Je pravda, že }\sum_{i=1}^{n} i = \frac{n(n+1)}{2}\text{.}
   \end{equation}
 
+  % TODO: write about equations
 
   \subsection{Navigace}
   Stránka je pro ulehčení převodu do \gls{pdf} a plynulosti navigace strukturována do značné míry jako kniha.
@@ -524,7 +526,7 @@
     \endminipage
   \end{figure}
 
-  Na závěr je přiložen článek s \emph{odkazy na materiály} (obr. \ref{img:Odkazy na materiály}) použité při tvorbě projektu a sekce \emph{O nás} (obr. \ref{img:O nás}), která popisuje důvod za vznikem projektu, kontakty a návod na případnou spolupráci na projektu.
+  Na závěr je přiložen článek s \emph{odkazy na materiály} (obr. \ref{img:Odkazy na materiály}) použité při tvorbě projektu a sekce \emph{O nás} (obr. \ref{img:O nás}), která popisuje důvod za vznikem projektu, návod na případnou spolupráci na projektu a poděkování.
 
   \begin{figure}[H]
     \minipage{0.47\textwidth}
@@ -539,17 +541,17 @@
 
 
   \section{Funkčnost webové stránky}
-  Následující kapitola pokrývá některé ze zajímavějších technických řešení použitých při tvorbě projektu.
+  Následující kapitola pokrývá některá ze zajímavějších technických řešení použitých při tvorbě projektu.
 
 
   \subsection{Automatizace provozu} \label{sec:Automatizace provozu}
-  Ke tvorbě kvalitního vzdělávacího materiálu je potřeba plynulý a do nejvyšší možné míry automatizovaný provoz stránky~--~k přidání článků by mělo stačit v příslušné složce projektu vytvořit nový soubor a zbytek procesu by měl proběhnout bez zásahu autora.
+  Ke tvorbě kvalitního vzdělávacího materiálu je potřeba plynulý a do nejvyšší možné míry automatizovaný provoz stránky~--~k přidání nového článků by mělo stačit v příslušné složce projektu vytvořit nový soubor a zbytek procesu by měl proběhnout bez zásahu autora.
 
   Stránka je v tomto duchu automatizována scripty psanými v jazyce Python (viz. kapitola \fullref{sec:Python}), aby se autor mohl plně soustředit na práci.
 
 
   \subsubsection{Nahrání obsahu přes FTP}
-  \gls{ftp} je protokol zprostředkovávající přenos souborů mezi počítači po síti. Jedná se o populární volbu protokolu pro hostingy webových stránek a hosting tohoto projektu není výjimkou.
+  \gls{ftp} je protokol zprostředkovávající přenos souborů mezi počítači po síti. Jedná se o populární volbu protokolu pro hostingy webových stránek a hosting tohoto projektu není výjimkou. % TODO: write more about FTP and phrase this paragraph differently
 
   Script \texttt{upload.py} se po zadání hesla připojí přes protokol \gls{ftp} na server, rekurzivně smaže soubory a adresáře aktuální verze stránky a nahraje verzi novou. Pro dodatečné zabezpečení je \gls{ip} serveru šifrována symetrickou šifrou \gls{aes}.
 
@@ -563,9 +565,9 @@
   \subsubsection{Převod webové stránky do PDF} \label{sec:Převod webové stránky do PDF}
   Pro offline dostupnost existuje mnoho různých typů souborů, na které by stránka šla převést. Často používané formáty jako \texttt{doc} a \texttt{docx} jsou však pro použití v projektu nevhodné, protože se mohou na různých zařízeních zobrazit jinak. Je tedy vhodnější použít formáty PostScript či \gls{pdf}, jejichž vizáž na prostředí závislá není \cite{history-of-pdf}.
 
-  Přímočará varianta by tedy byla převést články do formátu \gls{pdf} programem pro převod textových formátů (jako Pandoc). Tímto přístupem by však bylo obtížné generovat obsah a úvodní stránku, a prakticky nemožné ovlivnit výsledné formátování.
+  Přímočará varianta by byla převést články do \gls{pdf} libovolným programem pro převod textových formátů (jako Pandoc). Tímto přístupem by však bylo obtížné generovat obsah a úvodní stránku, a prakticky nemožné ovlivnit výsledné formátování.
 
-  Pro potřeby projektu byl tedy zvolen převod článků do formátu \LaTeX{} (viz. kapitola \fullref{sec:TeX}) a až poté do formátu \gls{pdf}, což elegantně řeší všechny nevýhody Pandocu.
+  Pro potřeby projektu byl tedy zvolen převod článků do formátu \LaTeX{} (viz. kapitola \fullref{sec:TeX}) a až poté do formátu \gls{pdf}, což elegantně řeší všechny nevýhody první varianty.
 
   Script \texttt{tex.py} získá pořadí článků, spojí je za sebe do jednoho dokumentu a poté na ně aplikuje řadu regulárních výrazů, které provedou konverzi z formátu Markdown do formátu \LaTeX.
 
@@ -575,12 +577,14 @@
 
   Úprava fotek funguje na principu \emph{kvantování barev}~--~podobné barvy jsou spojeny do jedné, čímž lze z tradičních 24-bitových palet \gls{png} obrázků udělat palety 8-bitové a zmenšit tím obrázek bez výrazného zhoršení kvality.
 
+  % TODO: add stats
 
   \subsubsection{Minimalizace zdrojového kódu}
   Zkompaktnění zdrojového kódu je další možná optimalizace, kterou lze načítání stránky urychlit. Prohlížečům na vzhledu kódu nezáleží a běžné uživatele nezajímá, proto jej lze na úkor čitelnosti zmenšit.
 
   Tuto funkci zastává script \texttt{minify.py}, který soubory typu \gls{css} a \gls{html} zmenší odstraněním komentářů, nepotřebných tagů a uvozovek, přebytečných mezer a úpravou dalších věcí, které funkcionalitu kódu nezmění.
 
+  % TODO: add stats
 
   \subsubsection{Automatizace procesu}
   Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí script \texttt{deploy.py}, který stránku nejprve pomocí Jekyllu vygeneruje, poté ve správném pořadí spustí všechny scripty pro generování dodatečného obsahu a optimalizace, a nakonec i script pro nahrání stránky na webhosting.
@@ -604,7 +608,7 @@
     \caption{Mapa rychlostí načítání} \label{img:Mapa rychlostí načítání}
   \end{figure}
 
-  Z obrázku \ref{img:Mapa rychlostí načítání} je patrné, že rychlost načtení webové stránky je závislá na vzdálenosti od České Republiky, ve které je hostována. Samotné doby načítání stránky v testovaných zemích rovněž výrazně nepřevyšují optimální dobu, což je při uvážení ceny webhostingu přijatelné.
+  Z obrázku \ref{img:Mapa rychlostí načítání} je patrné, že rychlost načtení webové stránky je do značné míry závislá na vzdálenosti od České Republiky, ve které je hostována. Samotné doby načítání stránky v testovaných zemích rovněž výrazně nepřevyšují optimální dobu, což je při uvážení ceny webhostingu přijatelné.
 
 
   \subsubsection{Multiplatformnost}
@@ -616,7 +620,7 @@
   \subsection{Analýza návštěvnosti}
 
   \subsubsection{Google Analytics}
-  Google Analytics je služba od společnosti Google určena pro analýzu návštěvnosti webových stránek. Pro použití stačí na danou stránku přidat JavaScriptovou knihovnu
+  Google Analytics je služba od společnosti Google určena pro analýzu návštěvnosti webových stránek. Pro použití stačí na danou stránku přidat JavaScriptovou knihovnu % TODO: remove or finish this atrocity of a paragraph
 
   % TODO: add location pie chart
   % TODO: add device pie chart
