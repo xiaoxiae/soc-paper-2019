@@ -355,9 +355,16 @@
 
   Od klasických \gls{wysiwyg} programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postárá. Tento přístup klade větší důraz na obsah~--~autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda \TeX u je fakt, že celý dokument je prostý text, proto jej lze verzovat.
 
-  % TODO: add an example?
+  V projektu je používán \LaTeX{} (viz. kapitola \fullref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů \cite{getting-started-with-latex}.
 
-  V projektu je používán \LaTeX{} (viz. kapitola \fullref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů \cite{getting-started-with-latex}. K převodu \LaTeX u do formátu \gls{pdf} je používán český program pdf\TeX{} \cite{pdftex}.
+  Následující příklad ukazuje část zdrojového kódu \LaTeX ového dokumentu, který vytvoří nadpis a paragraf, na jehož konec vloží odkaz na citaci:
+
+  \begin{minted}[linenos,breaklines]{latex}
+  \subsection{\TeX}
+  \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století \cite{tex-history}.
+  \end{minted}
+
+  K převodu \LaTeX u do formátu \gls{pdf} je v projektu používán český program pdf\TeX{} \cite{pdftex}.
 
 
   \section{Použité nástroje} \label{sec:Použité nástroje}
