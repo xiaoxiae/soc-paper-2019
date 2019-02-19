@@ -291,20 +291,20 @@
   \subsection{HTML} \label{sec:HTML}
   Značkovací jazyk \gls{html} vytvořil Tim Berners-Lee z výzkumného centra \gls{cern} v roce 1989. Hlavní důvod vzniku byla snaha zjednodušit přístup k odborné literatuře vkládáním odkazů přímo do samotných dokumentů. V rámci této snahy Tim rovněž vytvořil protokol \gls{http}, který slouží ke přenosu souborů \gls{html} po síti \cite{html-history}.
 
-  Strukturování obsahu pomocí \gls{html} funguje na principu lomítky značených tagů, které obklopený text formátují: % TODO: explain example
+  Strukturování obsahu pomocí \gls{html} funguje na principu lomítky značených tagů, které obklopený text formátují. Následující ukázka \gls{html} dokumentu se skládá z hlavního nadpisu (\mintinline{html}{<h1>}), pod kterým je paragraf (\mintinline{html}{<p>}), ve kterém se dále vyskytuje odkaz na webovou stránku (\mintinline{html}{<a>}):
 
   \begin{minted}[linenos,breaklines]{html}
   <h1>HTML</h1>
   <p>Značkovací jazyk HTML vytvořil Tim Berners-Lee z výzkumného centra <a href="https://home.cern/">CERN</a> v roce 1989.</p>
   \end{minted}
 
-  V \gls{html} je psán zdrojový kód převážné většiny webových stránek včetně kódu tohoto projektu, který je generován programem Jekyll.
+  V \gls{html} je psán zdrojový kód převážné většiny webových stránek a tento projekt není výjimkou.
 
 
   \subsection{CSS} \label{sec:CSS}
-  Po vzniku \gls{html} bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který roku 1994 publikoval první specifikaci stylopisného standardu \gls{css} \cite{css-proposal}. \gls{css} umožňuje ovlivnit vlastnosti \gls{html} tagů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné \gls{html} neumožňuje\footnote{To, že v \gls{html} nejde měnit vzhled stránky není pravda, ale většinou se jedná o zastaralé a nepoužívané tagy (jako např. \mintinline{html}{<center>}), jejichž použití je oproti \gls{css} nedoporučované.} \cite{css-saga}.
+  Po vzniku \gls{html} bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který roku 1994 publikoval první návrh stylopisného jazyka \gls{css} \cite{css-proposal}, který by umožňoval ovlivnit vlastnosti \gls{html} dokumentů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné \gls{html} neumožňuje\footnote{To, že v \gls{html} nejde měnit vzhled stránky není pravda, ale většinou se jedná o zastaralé a nepoužívané tagy (jako např. \mintinline{html}{<center>}), jejichž použití je oproti \gls{css} nedoporučované.} \cite{css-saga}.
 
-  Příkladem kombinace HTML a CSS je následující kód, kde \gls{html} udává strukturu textu a \gls{css} jeho barvu: % TODO: explain example
+  Příkladem kombinace HTML a CSS je následující ukázka, ve které \gls{html} udává strukturu textu a \gls{css} jeho barvu. Výsledkem bude červený nadpis následovaný modrým paragrafem:
 
   \begin{minted}[linenos,breaklines]{html}
   <h1 style="color:Red;">CSS</h1>
@@ -319,7 +319,7 @@
   \subsection{JavaScript} \label{sec:JavaScript}
   Okolo roku 1995 bylo pro internetový prohlížeč Netscape potřeba vytvořit interpretovaný scriptovací jazyk pro zlepšení interaktivity webových stránek, který by měl jít vložit přímo do \gls{html}. Tímto úkolem byl pověřen Brendan Eich a jelikož bylo z ekonomických důvodů potřeba práci vykonat rychle, první funkční verze JavaScriptu byla údajně zhotovena za pouhých 10 dní \cite{the-origin-of-javascript}.
 
-  Na rozdíl od kódu psaném v dalším frekventovaně používaném jazyce webu \gls{php}, který je vykonáván na straně serveru, je JavaScriptový kód vykonáván na straně uživatele. Díky tomu vykonává na webové stránce funkce, které nevyžadují neustálý kontakt se serverem (jelikož výměna informací tímto způsobem zpravidla není okamžitá) jako kontrola správného vyplnění formuláře, přidání plynulosti do uživatelského prostředí, či tvorba webových her.
+  Na rozdíl od kódu psaném v dalším frekventovaně používaném jazyce webu \gls{php}, který je vykonáván na straně serveru, je JavaScriptový kód vykonáván na straně uživatele. Díky tomu vykonává na webové stránce funkce, které nevyžadují neustálý kontakt se serverem (jelikož výměna informací tímto způsobem zpravidla není okamžitá) jako kontrola správného vyplnění formuláře, zajištění plynulosti uživatelského prostředí, či tvorba webových her.
 
   Dnes se jedná o webový standard a dlouhodobě nejpoužívanější programovací jazyk platformy GitHub \cite{github-statistics}, který pohání řadu podstatných funkcí tohoto projektu.
 
@@ -331,7 +331,7 @@
   \subsubsection{\texorpdfstring{\KaTeX}{KaTeX}} \label{sec:KaTeX}
   \KaTeX{} (\url{https://katex.org/}) je JavaScriptová knihovna vytvořena pro vzdělávací stránku Khan Academy, která je na stránce používána na renderování matematických rovnic z \LaTeX ové notace (viz. kapitola \fullref{sec:Matematika}).
 
-  Populární alternativa, která byla na stránce dříve používána je knihovna MathJax (\url{https://www.mathjax.org/}), která je však oproti \KaTeX u znatelně pomalejší \cite{katex-mathjax-comparison}, proto již není používána.
+  Populární alternativou, která byla na stránce dříve používána je knihovna MathJax (\url{https://www.mathjax.org/}), která je však oproti \KaTeX u znatelně pomalejší \cite{katex-mathjax-comparison}, proto již není používána.
 
 
   \subsection{Python} \label{sec:Python}
@@ -361,11 +361,9 @@
 
 
   \section{Použité nástroje} \label{sec:Použité nástroje}
-  Tato kapitola rozebírá v projektu použité nástroje, jejich účel a porovnání s alternativami. % TODO: move to the end after the adding the definition of a tool
+  Tato kapitola rozebírá programy, které jsou aktivně používány při vývoji stránky, vyjma programů používaných čistě kvůli osobní preferenci (textový editor Atom a Gitový klient GitKraken).
 
-  Hlavní kritérium výběru byla multiplatformnost, jelikož jsou při vývoji aktivně využívaný oba operační systémy Windows a Linux.
-
-  % TODO: add a definition of a tool and some basic overview
+  Hlavní kritérium výběru programů byla multiplatformnost, jelikož jsou při vývoji aktivně využívány operační systémy Windows a Linux.
 
 
   \subsection{Git} \label{sec:Git}
@@ -494,7 +492,6 @@
     \text{Je pravda, že }\sum_{i=1}^{n} i = \frac{n(n+1)}{2}\text{.}
   \end{equation}
 
-  % TODO: write about equations
 
   \subsection{Navigace}
   Stránka je pro ulehčení převodu do \gls{pdf} a plynulosti navigace strukturována do značné míry jako kniha.
@@ -544,7 +541,7 @@
 
 
   \section{Funkčnost webové stránky}
-  Následující kapitola pokrývá některá ze zajímavějších technických řešení použitých při tvorbě projektu.
+  Následující kapitola pokrývá některá ze zajímavějších technických řešení použitých při tvorbě stránky. Dále rozebírá způsoby a výsledky testování její rychlosti a multiplatformnosti.
 
 
   \subsection{Automatizace provozu} \label{sec:Automatizace provozu}
@@ -597,14 +594,15 @@
   Stránka je verzována pomocí verzovacího systému Git (viz. kapitola \fullref{sec:Git}). Kód je otevřený a volně dostupný přes GitHub na adrese \url{https://github.com/xiaoxiae/Robotics-Simplified-Website}.
 
 
-  \subsection{Testování výkonu}
+  \subsection{Testování}
+  Následující kapitola rozebírá testování výkonu a multiplatformnosti
 
   \subsubsection{Rychlost načítání}
-  Rychlost načítání webové stránky je jedním z hlavních faktorů ovlivňujících její úspěšnost. Přebytečný čas nad optimální dobu (mezi $1,8$ a $2,7$ vteřinami) má negativní vliv na procento konverzí stránky. Při zpoždění o $100$ milisekund nad tuto dobu klesá procento konverzí uživatelů osobních počítačů o $7,8 \%$. Konverze dále klesají až o $26,2 \%$ při zpoždění v řádu $2$ vteřin \cite{conversion-rate-statistics}.
+  Rychlost načítání webové stránky je jedním z hlavních faktorů ovlivňujících její úspěšnost. Přebytečný čas nad optimální dobu (mezi $1,8$ a $2,7$ vteřinami) má negativní vliv na procento konverzí stránky. Při zpoždění o $100$ milisekund nad tuto dobu klesá procento konverzí uživatelů osobních počítačů o $7,8$ \%. Konverze dále klesají až o $26,2$ \% při zpoždění v řádu $2$ vteřin \cite{conversion-rate-statistics}.
 
   Testování bylo provedeno službou \url{https://www.webpagetest.org/}, která analyzuje webové stránky z různých lokací světa (a různých prohlížečů) a poskytuje statistiky o rychlosti načítání, množství načtených dat a mnoho dalšího.
 
-  Obrázek \ref{img:Mapa rychlostí načítání} (vytvořený pomocí Google GeoChart \gls{api}) obsahuje informace o rychlosti načítání stránky \url{http://robotics-simplified.com/} z většiny dostupných testovacích lokalit výše uvedené služby. % TODO: přidat odkazy na testovaná data do přílohy
+  Obrázek \ref{img:Mapa rychlostí načítání} (vytvořený pomocí Google GeoChart \gls{api}) obsahuje informace o rychlosti načítání stránky \url{http://robotics-simplified.com/} z většiny dostupných testovacích lokalit výše uvedené služby.
 
   \begin{figure}[H]
     \includegraphics[width=\linewidth]{map.png}
@@ -673,4 +671,5 @@
   \listoffigures%
   }
 
+  % TODO: correctly include links to the stats for testing page loading speed as an attachment
 \end{document}
