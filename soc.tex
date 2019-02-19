@@ -103,6 +103,7 @@
 \newacronym{png}{PNG}{Portable Network Graphics}
 \newacronym{wysiwyg}{WYSIWYG}{What You See Is What You Get}
 \newacronym{php}{PHP}{Hypertext Preprocessor}
+\newacronym{mit}{MIT}{Massachusetts Institute of Technology}
 
 
 % TITLE FORMATTING %
@@ -551,7 +552,7 @@
 
 
   \subsubsection{Nahrání obsahu přes FTP}
-  \gls{ftp} je protokol zprostředkovávající přenos souborů mezi počítači po síti. Jedná se o populární volbu protokolu pro hostingy webových stránek a hosting tohoto projektu není výjimkou. % TODO: write more about FTP and phrase this paragraph differently
+  \gls{ftp} je protokol zprostředkovávající přenos souborů mezi počítači po síti. Od prvního návrhu pro využití na \gls{mit} v roce 1971 až po oficiální specifikaci publikovanou roku 1985 prošel mnoha revizemi a je stále vyvíjen \cite{ftp-specification}. Jedná se o populární volbu protokolu pro hostingy webových stránek a hosting tohoto projektu není výjimkou.
 
   Script \texttt{upload.py} se po zadání hesla připojí přes protokol \gls{ftp} na server, rekurzivně smaže soubory a adresáře aktuální verze stránky a nahraje verzi novou. Pro dodatečné zabezpečení je \gls{ip} serveru šifrována symetrickou šifrou \gls{aes}.
 
