@@ -138,10 +138,10 @@ FUNCTION {add.blank}
 {  " " * before.all 'output.state :=
 }
 
-FUNCTION {add.colon}
+FUNCTION {add.dot}
 { duplicate$ empty$
     'skip$
-    { ":" * add.blank }
+    { add.period$ add.blank }
   if$
 }
 
@@ -1063,7 +1063,7 @@ FUNCTION {format.organization.address}
 FUNCTION {article}
 { output.bibitem
   format.authors "author" output.check
-  add.colon
+  add.dot
   format.title "title" output.check
   new.sentence
   crossref missing$
@@ -1093,10 +1093,10 @@ FUNCTION {book}
 { output.bibitem
   author empty$
     { format.editors "author and editor" output.check
-      add.colon
+      add.dot
     }
     { format.authors output.nonnull
-      add.colon
+      add.dot
       crossref missing$
         { "author and editor" editor either.or.check }
         'skip$
@@ -1128,7 +1128,7 @@ FUNCTION {book}
 FUNCTION {booklet}
 { output.bibitem
   format.authors output
-  add.colon
+  add.dot
   format.title "title" output.check
   new.sentence
   howpublished "howpublished" bibinfo.check output
@@ -1147,10 +1147,10 @@ FUNCTION {inbook}
 { output.bibitem
   author empty$
     { format.editors "author and editor" output.check
-      add.colon
+      add.dot
     }
     { format.authors output.nonnull
-      add.colon
+      add.dot
       crossref missing$
         { "author and editor" editor either.or.check }
         'skip$
@@ -1189,7 +1189,7 @@ FUNCTION {inbook}
 FUNCTION {incollection}
 { output.bibitem
   format.authors "author" output.check
-  add.colon
+  add.dot
   format.title "title" output.check
   new.sentence
   crossref missing$
@@ -1215,7 +1215,7 @@ FUNCTION {incollection}
 FUNCTION {inproceedings}
 { output.bibitem
   format.authors "author" output.check
-  add.colon
+  add.dot
   format.title "title" output.check
   new.sentence
   crossref missing$
@@ -1254,7 +1254,7 @@ FUNCTION {manual}
     }
     { format.authors output.nonnull }
   if$
-  add.colon
+  add.dot
   format.btitle "title" output.check
   new.sentence
   author empty$
@@ -1282,7 +1282,7 @@ FUNCTION {manual}
 FUNCTION {mastersthesis}
 { output.bibitem
   format.authors "author" output.check
-  add.colon
+  add.dot
   format.btitle
   "title" output.check
   new.sentence
@@ -1300,7 +1300,7 @@ FUNCTION {mastersthesis}
 FUNCTION {misc}
 { output.bibitem
   format.authors output
-  add.colon
+  add.dot
   format.title output
   new.sentence
   howpublished "howpublished" bibinfo.check output
@@ -1315,7 +1315,7 @@ FUNCTION {misc}
 FUNCTION {phdthesis}
 { output.bibitem
   format.authors "author" output.check
-  add.colon
+  add.dot
   format.btitle
   "title" output.check
   new.sentence
@@ -1337,7 +1337,7 @@ FUNCTION {proceedings}
     }
     { format.editors output.nonnull }
   if$
-  add.colon
+  add.dot
   format.btitle "title" output.check
   format.bvolume output
   format.number.series output
@@ -1372,7 +1372,7 @@ FUNCTION {proceedings}
 FUNCTION {techreport}
 { output.bibitem
   format.authors "author" output.check
-  add.colon
+  add.dot
   format.title
   "title" output.check
   new.sentence
@@ -1390,7 +1390,7 @@ FUNCTION {techreport}
 FUNCTION {unpublished}
 { output.bibitem
   format.authors "author" output.check
-  add.colon
+  add.dot
   format.title "title" output.check
   format.date output
   format.doi output
