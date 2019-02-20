@@ -304,11 +304,14 @@
   \subsection{CSS} \label{sec:CSS}
   Po vzniku \gls{html} bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který roku 1994 publikoval první návrh stylopisného jazyka \gls{css} \cite{css-proposal}, který by umožňoval ovlivnit vlastnosti \gls{html} dokumentů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné \gls{html} neumožňuje\footnote{To, že v \gls{html} nejde měnit vzhled stránky není pravda, ale většinou se jedná o zastaralé a nepoužívané tagy (jako např. \mintinline{html}{<center>}), jejichž použití je oproti \gls{css} nedoporučované.} \cite{css-saga}.
 
-  Příkladem kombinace HTML a CSS je následující ukázka, ve které \gls{html} udává strukturu textu a \gls{css} jeho barvu. Výsledkem bude červený nadpis následovaný modrým paragrafem:
+  Příkladem \gls{css} je následující ukázka kódu, ve které jsou upraveny vlastnosti nadpisu \mintinline{html}{<h1>}~--~\gls{html} změnou barvy na zelenou, pozice na střed stránky a velikosti na 18:
 
-  \begin{minted}[linenos,breaklines]{html}
-  <h1 style="color:Red;">CSS</h1>
-  <p style="color:Blue;">Po vzniku HTML bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů.</p>
+  \begin{minted}[linenos,breaklines]{css}
+  h1 {
+    color: green;
+    font-size: 18pt;
+    text-align: center;
+  }
   \end{minted}
 
   Při použití \gls{css} je důležitý princip kaskádování~--~vzhled stránky může ovlivnit jak čtenář, tak autor. Samotné kaskádování je kombinace těchto přeferencí a případná rezoluce vzniklých konfliktů (autor chce písmo velikosti \texttt{12pt}, ale čtenář velikosti \texttt{10pt}).
