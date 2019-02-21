@@ -58,9 +58,16 @@
 \newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1}~\nameref*{#1}}}
 
 
+% TABLES          %
+% requires: float %
+%-===============-%
+\floatstyle{plaintop}
+\restylefloat{table}
+\usepackage{booktabs}                           % table formatting
+
+
 % MISCELLANEOUS %
 %-=============-%
-\usepackage{tabularx}                           % tables
 \usepackage{amsmath, amstext}                   % math
 
 \usepackage[font=small, labelfont=bf, figurename=Obr., tablename=Tab.]{caption}
