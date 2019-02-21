@@ -61,6 +61,7 @@
 
 \usepackage{enumitem}                           % lists
 
+
 % DATETIME %
 %-========-%
 \usepackage[dmyyyy]{datetime}                   % dmyyyy datetimes
@@ -358,7 +359,7 @@
   \subsection{\TeX} \label{sec:TeX}
   \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století. Počáteční impulz pro vznik byla Knuthova nespokojenost s tiskovou kvalitou vydání jedné z jeho knih, což jej vedlo ke studiu principů sázení, tvorby fontů a později až k vytvoření vlastního sázecího systému \TeX{} \cite{tex-history}.
 
-  Od klasických \gls{wysiwyg} programů pro tvorbu dokumentů jako MS Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postárá. Tento přístup klade větší důraz na obsah~--~autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda \TeX u je fakt, že celý dokument je prostý text, proto jej lze verzovat.
+  Od klasických \gls{wysiwyg} programů pro tvorbu dokumentů jako Microsoft Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postárá. Tento přístup klade větší důraz na obsah~--~autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda \TeX u je fakt, že celý dokument je prostý text, proto jej lze verzovat.
 
   V projektu je používán \LaTeX{} (viz. kapitola \fullref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů \cite{getting-started-with-latex}.
 
@@ -614,9 +615,9 @@
   \subsubsection{Rychlost načítání}
   Doba načtení webové stránky je jedním z hlavních faktorů ovlivňujících její úspěšnost. Přebytečný čas nad optimální dobu (mezi $1,8$ a $2,7$ vteřinami) má negativní vliv na procento konverzí stránky. Při zpoždění o $100$ milisekund nad tuto dobu klesá procento konverzí uživatelů osobních počítačů o $7,8$ \%. Konverze dále klesají až o $26,2$ \% při zpoždění v řádu $2$ vteřin \cite{conversion-rate-statistics}.
 
-  Testování bylo provedeno s pomocí služby \url{https://www.webpagetest.org/}, která analyzuje webové stránky z různých lokací světa (a různých prohlížečů) a poskytuje statistiky o rychlosti načítání, množství načtených dat a mnoho dalšího.
+  Testování bylo provedeno s pomocí služby \url{https://www.webpagetest.org/}, která analyzuje webové stránky z různých lokací světa (a různých prohlížečů) a poskytuje statistiky o rychlosti načítání, množství načtených dat a mnohém dalším.
 
-  Obrázek \ref{img:Mapa dob načítání} (vytvořený pomocí Google GeoChart \gls{api}) obsahuje informace o době úplného načtení stránky \url{http://robotics-simplified.com/} z většiny dostupných testovacích lokalit výše uvedené služby.
+  Obrázek \ref{img:Mapa dob načítání} (vytvořený pomocí Google GeoChart \gls{api}) obsahuje informace o době úplného načtení stránky \url{http://robotics-simplified.com/} z většiny dostupných testovacích lokalit výše uvedené služby ke 13. únoru 2019.
 
   \begin{figure}[H]
     \includegraphics[width=\linewidth]{map.png}
@@ -635,7 +636,7 @@
   \subsection{Analýza návštěvnosti}
 
   \subsubsection{Google Analytics}
-  Google Analytics je služba od společnosti Google určena pro analýzu návštěvnosti webových stránek. Pro použití stačí na danou stránku přidat JavaScriptovou knihovnu % TODO: remove or finish this atrocity of a paragraph
+  Google Analytics je služba společnosti Google. Slouží k analýze návštěvnosti webových stránek. Pro použití stačí na danou stránku přidat JavaScriptovou knihovnu % TODO: finish writing this
 
   % TODO: add location pie chart
   % TODO: add device pie chart
