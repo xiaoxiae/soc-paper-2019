@@ -290,7 +290,7 @@
   Následující kapitola rozebírá použití programovacích jazyků v projektu a jejích stručnou historii.
 
 
-  \subsection{HTML} \label{sec:HTML}
+  \subsection{\acrshort{html}} \label{sec:HTML}
   Značkovací jazyk \gls{html} vytvořil Tim Berners-Lee z výzkumného centra \gls{cern} v roce 1989. Hlavní důvod vzniku byla snaha zjednodušit přístup k odborné literatuře vkládáním odkazů přímo do samotných dokumentů. V rámci této snahy Tim rovněž vytvořil protokol \gls{http}, který slouží ke přenosu souborů \gls{html} po síti \cite{html-history}.
 
   Strukturování obsahu pomocí \gls{html} funguje na principu lomítky značených tagů, které jimi obklopený text formátují. Následující ukázka \gls{html} dokumentu se skládá z hlavního nadpisu (\mintinline{html}{<h1>}), pod kterým je paragraf (\mintinline{html}{<p>}), ve kterém se dále vyskytuje odkaz na webovou stránku (\mintinline{html}{<a>}):
@@ -303,7 +303,7 @@
   V \gls{html} je psán zdrojový kód převážné většiny webových stránek a tento projekt není výjimkou.
 
 
-  \subsection{CSS} \label{sec:CSS}
+  \subsection{\acrshort{css}} \label{sec:CSS}
   Po vzniku \gls{html} bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který roku 1994 publikoval první návrh stylopisného jazyka \gls{css} \cite{css-proposal}, který by umožňoval ovlivnit vlastnosti \gls{html} dokumentů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné \gls{html} neumožňuje\footnote{To, že v \gls{html} nejde měnit vzhled stránky není pravda, ale většinou se jedná o zastaralé a nepoužívané tagy (jako např. \mintinline{html}{<center>}), jejichž použití je oproti \gls{css} nedoporučované.} \cite{css-saga}.
 
   Příkladem \gls{css} je následující ukázka kódu, ve které jsou upraveny vlastnosti nadpisu \mintinline{html}{<h1>}~--~\gls{html} změnou barvy na zelenou, pozice na střed stránky a velikosti na 18:
@@ -564,7 +564,7 @@
   Stránka je v tomto duchu automatizována scripty psanými v jazyce Python (viz. kapitola \fullref{sec:Python}), aby se autor mohl plně soustředit na práci.
 
 
-  \subsubsection{Nahrání obsahu přes FTP}
+  \subsubsection{Nahrání obsahu přes \acrshort{ftp}}
   \gls{ftp} je protokol zprostředkovávající přenos souborů mezi počítači po síti. Od prvního návrhu pro využití na \gls{mit} v roce 1971 až po oficiální specifikaci publikovanou roku 1985 prošel mnoha revizemi a je stále vyvíjen \cite{ftp-specification}. Jedná se o populární volbu protokolu pro hostingy webových stránek a hosting tohoto projektu není výjimkou.
 
   Script \texttt{upload.py} se po zadání hesla připojí přes protokol \gls{ftp} na server, rekurzivně smaže soubory a adresáře aktuální verze stránky a nahraje verzi novou. Pro dodatečné zabezpečení je \gls{ip} serveru šifrována symetrickou šifrou \gls{aes}.
@@ -576,7 +576,7 @@
   Script \texttt{sitemap.py} podle pořadí článků generuje záznamy do souboru \texttt{sitemap.xml}. Informace o umístění a poslední úpravě jsou získávány z atributů souborů (článků) a priorita je přidělena podle jejich pozice na stránce~--~úvodní stránka má prioritu $1.0$, hlavní články mají prioritu $0.8$ a vedlejší články prioritu $0.6$.
 
 
-  \subsubsection{Převod webové stránky do PDF} \label{sec:Převod webové stránky do PDF}
+  \subsubsection{Převod webové stránky do \acrshort{pdf}} \label{sec:Převod webové stránky do PDF}
   Pro offline dostupnost existuje mnoho různých typů souborů, na které by stránka šla převést. Často používané formáty jako \texttt{doc} a \texttt{docx} jsou však pro použití v projektu nevhodné, protože se mohou na různých zařízeních zobrazit rozdílně. Je tedy vhodnější použít formáty jako PostScript či \gls{pdf}, jejichž vizáž na prostředí závislá není \cite{history-of-pdf}.
 
   Přímočará varianta by byla převést články do \gls{pdf} libovolným programem pro převod textových formátů (jako Pandoc). Tímto přístupem by však bylo obtížné generovat obsah a úvodní stránku, a prakticky nemožné ovlivnit výsledné formátování.
