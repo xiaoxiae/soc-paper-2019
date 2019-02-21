@@ -15,14 +15,21 @@
 
 \usepackage[numbib, nottoc]{tocbibind}          % number bib, no TOC in TOC
 
-\makeatletter                                   % LOF numbering
+\makeatletter                                   % remove titles from lof and lot
 \renewcommand\listoffigures{%
-    \section{\listfigurename}%
     \@mkboth{\MakeUppercase\listfigurename}%
         {\MakeUppercase\listfigurename}%
     \@starttoc{lof}%
 }
+\renewcommand\listoftables{%
+    \@mkboth{\MakeUppercase\listtablename}%
+        {\MakeUppercase\listtablename}%
+    \@starttoc{lot}%
+}
 \makeatother
+
+\setlength{\cftfigindent}{0pt}                  % lof indentation
+\setlength{\cfttabindent}{0pt}                  % lot indentation
 
 \renewcommand{\contentsname}{Obsah}             % change TOC name
 
@@ -56,7 +63,7 @@
 \usepackage{tabularx}                           % tables
 \usepackage{amsmath, amstext}                   % math
 
-\usepackage[font=small, labelfont=bf, figurename=Obr.]{caption}
+\usepackage[font=small, labelfont=bf, figurename=Obr., tablename=Tab.]{caption}
 
 \usepackage{enumitem}                           % lists
 
@@ -694,12 +701,18 @@
 
   \newpage
 
-  % create the list of figures
-  \renewcommand{\listfigurename}{Seznam obrázků a tabulek}
+  % create lof and lot
+  \section{Seznam obrázků a tabulek}
   {%
   \let\oldnumberline\numberline%
   \renewcommand{\numberline}{\figurename~\oldnumberline}%
   \listoffigures%
+  }
+  \vspace{\baselineskip}
+  {%
+  \let\oldnumberline\numberline%
+  \renewcommand{\numberline}{\tablename~\oldnumberline}%
+  \listoftables%
   }
 
   % TODO: correctly include links to the stats for testing page loading speed as an attachment
