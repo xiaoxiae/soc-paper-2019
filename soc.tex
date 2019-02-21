@@ -335,9 +335,9 @@
 
 
   \subsubsection{\texorpdfstring{\KaTeX}{KaTeX}} \label{sec:KaTeX}
-  \KaTeX{} (\url{https://katex.org/}) je JavaScriptová knihovna vytvořena pro vzdělávací stránku Khan Academy, která je na stránce používána na renderování matematických rovnic z \LaTeX ové notace (viz. kapitola \fullref{sec:Matematika}).
+  \KaTeX{} je JavaScriptová knihovna vytvořena pro vzdělávací stránku Khan Academy, která je na stránce používána na renderování matematických rovnic z \LaTeX ové notace (viz. kapitola \fullref{sec:Matematika}).
 
-  Populární alternativou, která byla na stránce dříve používána je knihovna MathJax (\url{https://www.mathjax.org/}), která je však oproti \KaTeX u znatelně pomalejší \cite{katex-mathjax-comparison}, proto již není používána.
+  Populární alternativou, která byla na stránce dříve používána je knihovna MathJax, která je však oproti \KaTeX u znatelně pomalejší \cite{katex-mathjax-comparison}, proto již není používána.
 
 
   \subsection{Python} \label{sec:Python}
@@ -418,15 +418,15 @@
 
 
   \subsection{Konfigurace Jekyllu}
-  Po zvážení možností zdarma dostupných šablon pro Jekyll byla zvolena šablona Just the Docs (\url{https://github.com/pmarsceill/just-the-docs}), která díky své optimalizaci pro mobilní zařízení pomáhá s multiplatformností projektu. Další atraktivní atributy této šablony jsou její přehlednost, vestavěná podpora vyhledávání a přizpůsobitelné zvýrazňování syntaxe kódu.
+  Po zvážení možností zdarma dostupných šablon pro Jekyll byla zvolena šablona Just the Docs, která díky své optimalizaci pro mobilní zařízení pomáhá s multiplatformností projektu. Další atraktivní atributy této šablony jsou její přehlednost, vestavěná podpora vyhledávání a přizpůsobitelné zvýrazňování syntaxe kódu.
 
 
   \subsection{Webhosting a doména} \label{sec:Webhosting a doména}
   Na českém trhu operuje řada firem, které zajišťují jak registraci domény, tak hostování webové stránky. Každá má své výhody a nevýhody, proto je volba provozovatele vysoce individuální a záleží na řadě faktorů.
 
-  Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit (\url{https://hosting.wedos.com/cs/webhosting.html}), zejména díky mým pozitivním zkušenostem s tímto provozovatelem v rámci minulých projektů a faktem, že ceny a parametry služeb jiných hostingů se od využívané příliš neliší.
+  Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit, zejména díky mým pozitivním zkušenostem s tímto provozovatelem v rámci minulých projektů a faktem, že ceny a parametry služeb jiných hostingů se od využívané příliš neliší.
 
-  Další možností hostingu je služba GitHub Pages (\url{https://pages.github.com/}), která umožňuje přes GitHub hostovat stránku generovanou Jekyllem. Hosting i doména by byly zdarma, nebylo by třeba obsah nahrávat přes \acrshort{ftp} a generování by po provedení změny v repozitáři proběhlo automaticky. Tento přístup by však znemožnil využívání Python scriptů, proto není pro účely projektu vhodný.
+  Další možností hostingu je služba GitHub Pages, která umožňuje přes GitHub hostovat stránku generovanou Jekyllem. Hosting i doména by byly zdarma, nebylo by třeba obsah nahrávat přes \acrshort{ftp} a generování by po provedení změny v repozitáři proběhlo automaticky. Tento přístup by však znemožnil využívání Python scriptů, proto není pro účely projektu vhodný.
 
 
   \subsection{Design loga}
@@ -572,7 +572,7 @@
 
 
   \subsubsection{Generování souboru sitemap.xml}
-  Soubor protokolu sitemap (\url{https://www.sitemaps.org/protocol.html}) obsahuje informace o pořadí procházení, časech změny a relativní prioritě částí stránky. Slouží vyhledávacím portálům, které tyto soubory využívají pro inteligentnější indexování stránky ve svém systému.
+  Soubor protokolu sitemap obsahuje informace o pořadí procházení, časech změny a relativní prioritě částí stránky. Slouží vyhledávacím portálům, které tyto soubory využívají pro inteligentnější indexování stránky ve svém systému.
 
   Script \texttt{sitemap.py} podle pořadí článků generuje záznamy do souboru \texttt{sitemap.xml}. Informace o umístění a poslední úpravě jsou získávány z atributů souborů (článků) a priorita je přidělena podle jejich pozice na stránce~--~úvodní stránka má prioritu $1.0$, hlavní články mají prioritu $0.8$ a vedlejší články prioritu $0.6$.
 
@@ -588,7 +588,7 @@
 
 
   \subsubsection{Komprimace obrázků}
-  O komprimaci obrázků pro zmenšení velikosti stránky se stará script \texttt{compress.py}, který pomocí služby TinyPNG (\url{https://tinypng.com/}) a jejího Python \gls{api} zkomprimuje všechny obrázky vygenerované stránky. Samotný \gls{api} klíč je pro zamezení zneužití šifrován symetrickou šifrou \gls{aes}.
+  O komprimaci obrázků pro zmenšení velikosti stránky se stará script \texttt{compress.py}, který pomocí služby TinyPNG a jejího Python \gls{api} zkomprimuje všechny obrázky vygenerované stránky. Samotný \gls{api} klíč je pro zamezení zneužití šifrován symetrickou šifrou \gls{aes}.
 
   Úprava fotek funguje na principu \emph{kvantování barev}~--~podobné barvy jsou spojeny do jedné, čímž lze z tradičních 24-bitových palet \gls{png} obrázků udělat palety 8-bitové a zmenšit tím obrázek bez výrazného zhoršení kvality.
 
@@ -654,13 +654,13 @@
 
   {\parskip=0pt
   \begin{itemize}[topsep=\itemsep]
-    \item \emph{ChiefDelphi} (\url{https://www.chiefdelphi.com/})~--~internetové fórum zaměřené na soutěž \gls{frc}, převážně pro členy \gls{frc} teamů.
-    \item \emph{Reddit} (\url{https://www.reddit.com/})~--~jedno z nejpopulárnějších internetových fór dneška. Zajímavostí jsou subreddity~--~samospravované celky, na kterých jsou zveřejňovány články se společnou tématikou.
+    \item \emph{ChiefDelphi}~--~internetové fórum zaměřené na soutěž \gls{frc}, převážně pro členy \gls{frc} teamů.
+    \item \emph{Reddit}~--~jedno z nejpopulárnějších internetových fór dneška. Zajímavostí jsou subreddity~--~samospravované celky, na kterých jsou zveřejňovány články se společnou tématikou.
     \begin{itemize}[topsep=0pt]
-      \item \emph{Subreddit \gls{frc}} (\url{https://www.reddit.com/r/FRC/})~--~zaměření na soutěž \gls{frc}, od vtipných obrázků a videí po odborné články.
-      \item \emph{Subreddit Robotics} (\url{https://www.reddit.com/r/robotics/})~--~většina příspěvků jsou vzdělávacího charakteru. Časté příspěvky jsou videa či články o domácích projektech uživatelů fóra.
+      \item \emph{Subreddit \gls{frc}}~--~zaměření na soutěž \gls{frc}, od vtipných obrázků a videí po odborné články.
+      \item \emph{Subreddit Robotics}~--~většina příspěvků jsou vzdělávacího charakteru. Časté příspěvky jsou videa či články o domácích projektech uživatelů fóra.
     \end{itemize}
-    \item \emph{Hacker News} (\url{https://news.ycombinator.com/})~--~internetové fórum, které je ve svém fungování blízké Redditu. Není však dále strukturováno na subreddity a obsah je vážnějšího charakteru~--~světové novinky, nové výzkumy a odborné práce, měsíční přehledy dostupných pracovních pozic \gls{it} firem, aj.
+    \item \emph{Hacker News}~--~internetové fórum, které je ve svém fungování blízké Redditu. Není však dále strukturováno na subreddity a obsah je vážnějšího charakteru~--~světové novinky, nové výzkumy a odborné práce, měsíční přehledy dostupných pracovních pozic \gls{it} firem, aj.
   \end{itemize}}
 
 
