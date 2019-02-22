@@ -24,6 +24,8 @@
 *.out
 *.synctex.gz
 *.toc
+*.bcf
+*.run.xml
 _minted-soc/
 
 # ignore binary files

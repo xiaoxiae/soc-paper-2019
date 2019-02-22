@@ -11,7 +11,7 @@ for file in [f for f in os.listdir(".") if os.path.isfile(f)]:
 os.system("lualatex --shell-escape soc.tex")
 
 # build bibliography
-os.system("bibtex soc")
+os.system("biber soc")
 
 # build glossaries
 os.system("makeglossaries soc")

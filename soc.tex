@@ -13,7 +13,7 @@
 \usepackage[subfigure,titles]{tocloft}          % for controlling LOF and LOF
 \setlength{\cftfigindent}{0pt}                  % remove left LOF margin
 
-\usepackage[numbib, nottoc]{tocbibind}          % number bib, no TOC in TOC
+\usepackage[nottoc]{tocbibind}                  % no TOC in TOC
 
 \makeatletter                                   % remove titles from lof and lot
 \renewcommand\listoffigures{%
@@ -58,6 +58,22 @@
 \newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1}~\nameref*{#1}}}
 
 
+% BIBLIOGRAPHY %
+%-============-%
+\usepackage[backend=biber,
+            style=iso-numeric,
+            sortlocale=cs_CZ,
+            autolang=other,
+            bibencoding=UTF8]{biblatex}         % use BibLaTeX for references
+\addbibresource{soc.bib}                        % reference file
+
+\renewcommand*{\finentrypunct}{}                % don't end the reference with .
+
+\renewcommand{\multinamedelim}{\addcomma\space} % use comma as delimeter
+\renewcommand{\finalnamedelim}{\addspace a \space} % use a as final name delim
+\renewbibmacro{in:}{}                           % don't use In:
+
+
 % TABLES          %
 % requires: float %
 %-===============-%
@@ -69,9 +85,7 @@
 % MISCELLANEOUS %
 %-=============-%
 \usepackage{amsmath, amstext}                   % math
-
 \usepackage[font=small, labelfont=bf, figurename=Obr., tablename=Tab.]{caption}
-
 \usepackage{enumitem}                           % lists
 
 
@@ -703,8 +717,7 @@
 
   % create the bibliography
   \renewcommand{\refname}{Použitá literatura}
-  \bibliographystyle{czechiso}
-  \bibliography{soc}
+  \printbibliography[heading=bibnumbered]
 
   \newpage
 
