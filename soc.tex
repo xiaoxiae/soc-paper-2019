@@ -125,7 +125,8 @@
 
 \setglossarystyle{alttree}                      % set style of glossary
 
-\renewcommand{\glossarypreamble}{\vspace*{-2\baselineskip}} % reduce glossaries title spacing
+% make glossary title spacing be the same as regular title
+\renewcommand{\glossarypreamble}{\vspace*{-\baselineskip}\vspace*{-\parskip}}
 
 \makeglossaries
 
