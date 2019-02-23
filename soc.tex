@@ -104,8 +104,6 @@
 
 \setmainfont{CMU Serif}                         % select font that suports bx sc
 
-\setlength\parindent{0pt}                       % paragraph indentation
-\setlength{\parskip}{1.2em}                     % paragraph spacing
 
 
 % ACRONYMS %
@@ -140,19 +138,24 @@
 \newacronym{it}{IT}{Information Technology}
 
 
-% TITLE FORMATTING %
+% TEXT FORMATTING %
 %-================-%
 \usepackage{titlesec}
 
-% title formatting
-\titleformat{\section}{\bfseries\scshape\fontsize{18}{21.6}\selectfont}{\thesection}{1em}{}
-\titleformat{\subsection}{\bfseries\fontsize{16}{19.2}\selectfont}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}{\bfseries\fontsize{14}{16.8}\selectfont}{\thesubsubsection}{1em}{}
+% titles have sizes 18pt, 16pt and 14pt, respectively
+% the space between the number and the text of the title is 1em = 10pt
+\titleformat{\section}{\bfseries\scshape\fontsize{18pt}{21.6}\selectfont}{\thesection}{1em}{}
+\titleformat{\subsection}{\bfseries\fontsize{16pt}{19.2}\selectfont}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\bfseries\fontsize{14pt}{16.8}\selectfont}{\thesubsubsection}{1em}{}
 
-% title spacing
-\titlespacing{\section}{0pt}{0pt}{0.3em}
-\titlespacing{\subsection}{0pt}{0pt}{0.2em}
-\titlespacing{\subsubsection}{0pt}{0pt}{0.0em}
+\titlespacing{\section}      {0pt}{0pt}{6pt}    % 18pt (12pt + 6pt)
+\titlespacing{\subsection}   {0pt}{0pt}{4pt}    % 16pt (12pt + 4pt)
+\titlespacing{\subsubsection}{0pt}{0pt}{2pt}    % 14pt (12pt + 2pt)
+
+\renewcommand{\baselinestretch}{1.15}           % baseline stretch
+
+\setlength\parindent{0pt}                       % 0pt paragraph indentation
+\setlength\parskip{12pt}                        % 12pt paragraph spacing
 
 
 % OTHER %
