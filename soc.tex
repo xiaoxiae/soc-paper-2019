@@ -1,5 +1,9 @@
 \documentclass[a4paper, 12pt]{article}
-\usepackage[top=2.5cm, left=3.5cm, right=1.5cm, bottom=2.5cm, includefoot]{geometry}
+\usepackage[top=2.5cm,
+            left=3.5cm,
+            right=1.5cm,
+            bottom=2.5cm,
+            includefoot]{geometry}              % set margins
 
 % LANGUAGE %
 %-========-%
@@ -10,10 +14,10 @@
 
 % TOC AND LOF %
 %-===========-%
-\usepackage[subfigure,titles]{tocloft}          % for controlling LOF and LOF
-\setlength{\cftfigindent}{0pt}                  % remove left LOF margin
+\usepackage[subfigure, titles]{tocloft}         % controlling lof and lot
+\setlength{\cftfigindent}{0pt}                  % remove left lof margin
 
-\usepackage[nottoc]{tocbibind}                  % no TOC in TOC
+\usepackage[nottoc]{tocbibind}                  % no toc in toc
 
 \makeatletter                                   % remove titles from lof and lot
 \renewcommand\listoffigures{%
@@ -28,8 +32,8 @@
 }
 \makeatother
 
-\setlength{\cftfigindent}{0pt}                  % lof indentation
-\setlength{\cfttabindent}{0pt}                  % lot indentation
+\setlength{\cftfigindent}{0pt}                  % no lof indentation
+\setlength{\cfttabindent}{0pt}                  % no lot indentation
 
 \renewcommand{\contentsname}{Obsah}             % change TOC name
 
@@ -68,26 +72,30 @@
 \addbibresource{soc.bib}                        % reference file
 
 \renewcommand*{\finentrypunct}{}                % don't end the reference with .
-
 \renewcommand{\multinamedelim}{\addcomma\space} % use comma as delimeter
 \renewcommand{\finalnamedelim}{\addspace a \space} % use a as final name delim
 \renewbibmacro{in:}{}                           % don't use In:
 
-\DeclareFieldFormat{labelnumberwidth}{[#1]}     % wrap references in square br.
+\DeclareFieldFormat{labelnumberwidth}{[#1]}     % wrap refs in square brackets
 
 
 % TABLES          %
 % requires: float %
 %-===============-%
-\floatstyle{plaintop}
-\restylefloat{table}
+\floatstyle{plaintop}                           % table caption on top
+\restylefloat{table}                            % -||-
 \usepackage{booktabs}                           % table formatting
 
 
 % MISCELLANEOUS %
 %-=============-%
 \usepackage{amsmath, amstext}                   % math
-\usepackage[font=small, labelfont=bf, figurename=Obr., tablename=Tab.]{caption}
+
+\usepackage[font=small,
+            labelfont=bf,
+            figurename=Obr.,
+            tablename=Tab.]{caption}            % captions
+
 \usepackage{enumitem}                           % lists
 
 
@@ -102,14 +110,22 @@
 \usepackage[T1]{fontenc}                        % font encoding
 \usepackage{fontspec}                           % font selector
 
-\setmainfont{CMU Serif}                         % select font that suports bx sc
-
+\setmainfont{CMU Serif}                         % a font that suports bx sc
 
 
 % ACRONYMS %
-%-================-%
-\usepackage[acronym,nopostdot,numberedsection,nogroupskip,nonumberlist]{glossaries}
-\renewcommand{\acrfullformat}[2]{#2\space(#1)}  % switch long (short) for short (long)
+%-========-%
+\usepackage[acronym,                            % use acronyms
+            nopostdot,                          % no dot at end of 2nd column
+            numberedsection,                    % number glossary
+            nogroupskip,                        % no grouping by same letter
+            nonumberlist]{glossaries}           % no page numbers
+
+\renewcommand{\acrfullformat}[2]{#2\space(#1)}  % long (short) to short (long)
+
+\setglossarystyle{alttree}                      % set style of glossary
+
+\renewcommand{\glossarypreamble}{\vspace*{-2\baselineskip}} % reduce glossaries title spacing
 
 \makeglossaries
 
@@ -137,16 +153,22 @@
 \newacronym{mit}{MIT}{Massachusetts Institute of Technology}
 \newacronym{it}{IT}{Information Technology}
 
+\glsaddall                                      % add all acronyms
+\glsfindwidesttoplevelname
+
 
 % TEXT FORMATTING %
 %-================-%
 \usepackage{titlesec}
 
 % titles have sizes 18pt, 16pt and 14pt, respectively
-% the space between the number and the text of the title is 1em = 10pt
+% the space between the number and the text of the title is 1em
 \titleformat{\section}{\bfseries\scshape\fontsize{18pt}{21.6}\selectfont}{\thesection}{1em}{}
 \titleformat{\subsection}{\bfseries\fontsize{16pt}{19.2}\selectfont}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\bfseries\fontsize{14pt}{16.8}\selectfont}{\thesubsubsection}{1em}{}
+
+\setlength\parindent{0pt}                       % 0pt paragraph indentation
+\setlength\parskip{12pt}                        % 12pt paragraph spacing
 
 \titlespacing{\section}      {0pt}{0pt}{6pt}    % 18pt (12pt + 6pt)
 \titlespacing{\subsection}   {0pt}{0pt}{4pt}    % 16pt (12pt + 4pt)
@@ -154,16 +176,13 @@
 
 \renewcommand{\baselinestretch}{1.15}           % baseline stretch
 
-\setlength\parindent{0pt}                       % 0pt paragraph indentation
-\setlength\parskip{12pt}                        % 12pt paragraph spacing
-
 
 % OTHER %
 %-=====-%
-\widowpenalty10000  % prevent widows
-\clubpenalty10000   % prevent widows
+\widowpenalty10000                              % prevent widows
+\clubpenalty10000                               % prevent widows
 
-\pagenumbering{gobble}   % suppress page numbering until TOC page
+\pagenumbering{gobble}                          % suppress page numbering
 
 % define KaTeX logo
 \makeatletter
@@ -180,7 +199,7 @@
 
 
 \begin{document}
-  % should fix some lines going to the margins
+  % fixes some lines going to the margins
   \sloppy
 
   % first page's geometry is different
@@ -273,13 +292,13 @@
 
   \newpage
 
-  % start page numbering at the first TOC page
+  % resume page numbering
   \newcounter{savepage}
   \setcounter{savepage}{\value{page}}%
   \pagenumbering{arabic}
   \setcounter{page}{\numexpr\value{savepage}-1}%
 
-  % genereate TOC
+  % genereate toc
   \tableofcontents
 
   \newpage
@@ -711,18 +730,12 @@
   \newpage
 
   % create list of acronyms
-  \glsaddall
-  \glssetwidest{WYSIWYGGG}
-  \setglossarystyle{alttree}
-  \renewcommand{\glossarypreamble}{\vspace*{-2\baselineskip}}
-
-  \printglossary[type=\acronymtype,title=Seznam zkratek]
+  \printglossary[type=\acronymtype, title=Seznam zkratek]
 
   \newpage
 
   % create the bibliography
-  \renewcommand{\refname}{Použitá literatura}
-  \printbibliography[heading=bibnumbered]
+  \printbibliography[heading=bibnumbered, title=Použitá literatura]
 
   \newpage
 
