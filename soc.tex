@@ -153,6 +153,8 @@
 \newacronym{mobi}{MOBI}{Mobipocket e-book}
 \newacronym{mit}{MIT}{Massachusetts Institute of Technology}
 \newacronym{it}{IT}{Information Technology}
+\newacronym{www}{WWW}{World Wide Web}
+\newacronym{sgml}{SGML}{Standard Generalized Mark-up Language}
 
 \glsaddall                                      % add all acronyms
 \glsfindwidesttoplevelname
@@ -349,16 +351,18 @@
 
 
   \subsection{\acrshort{html}} \label{sec:HTML}
-  Značkovací jazyk \gls{html} vytvořil Tim Berners-Lee z výzkumného centra \gls{cern} v roce 1989. Hlavní důvod vzniku byla snaha zjednodušit přístup k odborné literatuře vkládáním odkazů přímo do samotných dokumentů. V rámci této snahy Tim rovněž vytvořil protokol \gls{http}, který slouží ke přenosu souborů \gls{html} po síti \cite{html-history}.
+  Značkovací jazyk \gls{html} vytvořil Tim Berners-Lee z výzkumného centra \gls{cern} v roce 1989. Hlavní důvod vzniku byla snaha zjednodušit přístup k informacím pomocí dokumentů, které by na sebe navzájem odkazovaly a tvořily tím „celosvětovou síť“ sdílených informací \gls{www}. V rámci této snahy Tim rovněž vytvořil protokol \gls{http}, který slouží k přenosu souborů \gls{html} po síti a je k tomuto účelu využíván dodnes \cite{html-history}.
 
-  Strukturování obsahu pomocí \gls{html} funguje na principu lomítky značených tagů, které jimi obklopený text formátují. Následující ukázka \gls{html} dokumentu se skládá z hlavního nadpisu (\mintinline{html}{<h1>}), pod kterým je paragraf (\mintinline{html}{<p>}), ve kterém se dále vyskytuje odkaz na webovou stránku (\mintinline{html}{<a>}):
+  Jazyk \gls{html} používá ke struktuře textu tzv. \emph{tagy}~--~slova ohraničená lomítky, která určují význam jimi obklopené části textu. Tento nápad byl inspirován mezinárodním standardem \gls{sgml}, což bylo s ohledem na dnešní popularitu \gls{html} bezesporu správné rozhodnutí.
+
+  Příkladem \gls{html} je následující ukázka, která se skládá z hlavního nadpisu (\mintinline{html}{<h1>}), následovaného paragrafem (\mintinline{html}{<p>}), ve kterém se dále vyskytuje odkaz na webovou stránku (\mintinline{html}{<a>}):
 
   \begin{minted}[linenos,breaklines]{html}
   <h1>HTML</h1>
   <p>Značkovací jazyk HTML vytvořil Tim Berners-Lee z výzkumného centra <a href="https://home.cern/">CERN</a> v roce 1989.</p>
   \end{minted}
 
-  V \gls{html} je psán zdrojový kód převážné většiny webových stránek a tento projekt není výjimkou.
+  V \gls{html} psán zdrojový kód převážné většiny webových stránek internetu a tento projekt není výjimkou.
 
 
   \subsection{\acrshort{css}} \label{sec:CSS}
