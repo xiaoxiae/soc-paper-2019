@@ -341,11 +341,11 @@
 
 
   \section{Použité programovací jazyky}
-  Programovací jazyk je notace pro psaní programů. \emph{Syntaxe} jazyka popisuje strukturu~--~jakým způsobem za sebe uspořádat znaky, aby v rámci jazyka tvořily platná spojení. \emph{Sémantika} jazyka popisuje význam těchto platných spojení \cite{intro-to-programming-languages}.
+  Programovací jazyk je notace pro psaní programů. \emph{Syntaxe} jazyka popisuje strukturu~--~jakým způsobem za sebe uspořádat znaky, aby v rámci jazyka tvořily platná spojení. \emph{Sémantika} jazyka popisuje význam těchto platných spojení \cite{intro-to-programming-languages}. % TODO: write more
 
   Každý programovací jazyk využívá \emph{programovací paradigmata}~--~způsoby, kterými lze přistupovat ke tvorbě programů. Paradigmaty můžeme dělit programovací jazyky do kategorií\footnote{Jeden programovací jazyk může využívat více paradigmat a spadat tak do několika kategorií (viz. programovací jazyky rozebírány v kapitolách \fullref{sec:Python} a \fullref{sec:JavaScript}).} jako např. funkcionální, procedurální, či logické.
 
-  Následující kapitola rozebírá použití programovacích jazyků v projektu a jejích stručnou historii.
+  Následující kapitola rozebírá použití programovacích jazyků v projektu a jejích stručnou historii. % TODO: add how only the most relevant ones are being discussed
 
 
   \subsection{\acrshort{html}} \label{sec:HTML}
@@ -402,7 +402,7 @@
 
   Od svého vzniku se Python vyvinul v mocný a frekventovaně používaný programovací jazyk~--~má rozsáhlou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub \cite{github-statistics} s využitím při stavbě webových stránek po tvorbu knihovny na trénování neuronových sítí.
 
-  Na stránce zastává funkci scriptovacího jazyka pro automatizaci provozu (viz. kapitola \fullref{sec:Automatizace provozu}).
+  Na stránce zastává funkci scriptovacího jazyka pro automatizaci provozu (viz. kapitola \fullref{sec:Automatizace provozu webové stránky}).
 
 
   \subsection{Markdown} \label{sec:Markdown}
@@ -507,18 +507,47 @@
   K designu loga byl použit program na úpravu vektorové grafiky Inkscape (viz. kapitola \fullref{sec:Inkscape}).
 
 
+  \subsection{Verzování zdrojového kódu}
+  Stránka je verzována pomocí verzovacího systému Git (viz. kapitola \fullref{sec:Git}). Kód je otevřený a volně dostupný přes GitHub na adrese \url{https://github.com/xiaoxiae/Robotics-Simplified-Website}.
+
+
+  \subsection{Testování výkonu}
+  % TODO: write about what performance means in this context -- both speed and versitality
+
+  \subsubsection{Rychlost načítání}
+  Doba načtení webové stránky je jedním z hlavních faktorů ovlivňujících její úspěšnost. Přebytečný čas nad optimální dobu (mezi $1,8$ a $2,7$ vteřinami) má negativní vliv na procento konverzí stránky. Při zpoždění o $100$ milisekund nad tuto dobu klesá procento konverzí uživatelů osobních počítačů o $7,8$ \%. Konverze dále klesají až o $26,2$ \% při zpoždění v řádu $2$ vteřin \cite{conversion-rate-statistics}.
+
+  Testování bylo provedeno s pomocí služby \url{https://www.webpagetest.org/}, která analyzuje webové stránky z různých lokací světa (a různých prohlížečů) a poskytuje statistiky o rychlosti načítání, množství načtených dat a mnohém dalším.
+
+  Obrázek \ref{img:Mapa dob načítání} obsahuje informace o době úplného načtení stránky \url{http://robotics-simplified.com/} z většiny dostupných testovacích lokalit výše uvedené služby ke 13. únoru 2019.
+
+  \begin{figure}[H]
+    \includegraphics[width=\linewidth]{map.png}
+    \caption{Mapa dob načítání} \label{img:Mapa dob načítání}
+  \end{figure}
+
+  Z obrázku \ref{img:Mapa dob načítání} je patrné, že doba načtení webové stránky je do značné míry závislá na vzdálenosti od České republiky, ve které je hostována. Tyto hodnoty rovněž v testovaných zemích výrazně nepřevyšují optimální dobu, což je při uvážení ceny webhostingu přijatelné.
+
+
+  \subsubsection{Multiplatformnost}
+  % TODO: how does the website work on different devices and browsers
+
   \section{Obsah webové stránky}
   Následující kapitola rozebírá obsah webové stránky~--~pro koho je určena, jakým způsobem probíhá tvorba článků a jak je strukturována.
 
 
-  \subsection{Cílové publikum}
+  \subsection{Cílová skupina}
   Jako cílové publikum jsem si vybral lidi v podobné situaci, ve které jsem byl já v roce 2017~--~jedinci se zájmem o robotiku, kteří jsou nespokojeni s nedostatkem kvalitních materiálů pro studium. Materiál není kromě zájmu o robotiku omezen věkem, pohlavím či jinými osobními charakteristikami.
 
 
-  \subsection{Tvorba článků} \label{sec:Tvorba článků}
+  \subsection{Proces tvorby článků} \label{sec:Tvorba článků}
   Témata článků jsou vybírána převážně podle jejich využití v soutěži \gls{frc}. Vyšší prioritu mají rovněž témata, jejichž pochopení pro mě bylo z dostupných internetových zdrojů náročné.
 
   Po vybrání tématu článku jsou nejprve shromážděny dostupné materiály o daném tématu. Poté jsou hlavní koncepty článku implementovány v jazyce Python a testovány na robotovi ze stavebnice VEX EDR. Po úspěšném testování a odladění kódu je odvození implementace v článku jednoduchým způsobem (pokud možno obohaceným názornými ilustracemi a vizualizacemi) vysvětleno.
+
+
+  \subsubsection{Ověření správnosti kódu} \label{sec:Ověření správnosti kódu}
+  % TODO: write about the robot built for testing the code
 
 
   \subsubsection{Vizualizace} \label{sec:Vizualizace}
@@ -612,29 +641,25 @@
   \end{figure}
 
 
-  \section{Funkčnost webové stránky}
-  Následující kapitola pokrývá některá ze zajímavějších technických řešení použitých při tvorbě stránky. Dále rozebírá způsoby a výsledky testování její rychlosti a multiplatformnosti.
-
-
-  \subsection{Automatizace provozu} \label{sec:Automatizace provozu}
+  \section{Automatizace provozu webové stránky} \label{sec:Automatizace provozu webové stránky}
   Ke tvorbě kvalitního vzdělávacího materiálu je potřeba plynulý a do nejvyšší možné míry automatizovaný provoz stránky~--~k přidání nového článků by mělo stačit v příslušné složce projektu vytvořit nový soubor a zbytek procesu by měl proběhnout bez zásahu autora.
 
   Stránka je v tomto duchu automatizována scripty psanými v jazyce Python (viz. kapitola \fullref{sec:Python}), aby se autor mohl plně soustředit na práci.
 
 
-  \subsubsection{Nahrání obsahu přes \acrshort{ftp}}
+  \subsection{Nahrání obsahu přes \acrshort{ftp}}
   \gls{ftp} je protokol zprostředkovávající přenos souborů mezi počítači po síti. Od prvního návrhu pro využití na \gls{mit} v roce 1971 až po oficiální specifikaci publikovanou roku 1985 prošel mnoha revizemi a je stále vyvíjen \cite{ftp-specification}. Jedná se o populární volbu protokolu pro hostingy webových stránek a hosting tohoto projektu není výjimkou.
 
   Script \texttt{upload.py} se po zadání hesla připojí přes protokol \gls{ftp} na server, rekurzivně smaže soubory a adresáře aktuální verze stránky a nahraje verzi novou. Pro dodatečné zabezpečení je \gls{ip} serveru šifrována symetrickou šifrou \gls{aes}.
 
 
-  \subsubsection{Generování souboru sitemap.xml}
+  \subsection{Generování souboru sitemap.xml}
   Soubor protokolu sitemap obsahuje informace o pořadí procházení, časech změny a relativní prioritě částí stránky. Slouží vyhledávacím portálům, které tyto soubory využívají pro inteligentnější indexování stránky ve svém systému.
 
   Script \texttt{sitemap.py} podle pořadí článků generuje záznamy do souboru \texttt{sitemap.xml}. Informace o umístění a poslední úpravě jsou získávány z atributů souborů (článků) a priorita je přidělena podle jejich pozice na stránce~--~úvodní stránka má prioritu $1.0$, hlavní články mají prioritu $0.8$ a vedlejší články prioritu $0.6$.
 
 
-  \subsubsection{Převod webové stránky do \acrshort{pdf}} \label{sec:Převod webové stránky do PDF}
+  \subsection{Převod webové stránky do \acrshort{pdf}} \label{sec:Převod webové stránky do PDF}
   Pro offline dostupnost existuje mnoho různých typů souborů, na které by stránka šla převést. Často používané formáty jako \texttt{doc} a \texttt{docx} jsou však pro použití v projektu nevhodné, protože se mohou na různých zařízeních zobrazit rozdílně. Je tedy vhodnější použít formáty jako PostScript či \gls{pdf}, jejichž vizáž na prostředí závislá není \cite{history-of-pdf}.
 
   Přímočará varianta by byla převést články do \gls{pdf} libovolným programem pro převod textových formátů (jako Pandoc). Tímto přístupem by však bylo obtížné generovat obsah a úvodní stránku, a prakticky nemožné ovlivnit výsledné formátování.
@@ -644,48 +669,23 @@
   Script \texttt{tex.py} získá pořadí článků, spojí je za sebe do jednoho dokumentu a poté na ně aplikuje řadu regulárních výrazů, které provedou převod z formátu Markdown do formátu \LaTeX.
 
 
-  \subsubsection{Komprimace obrázků}
+  \subsection{Komprimace obrázků}
   O komprimaci obrázků pro zmenšení velikosti stránky se stará script \texttt{compress.py}, který pomocí služby TinyPNG a jejího Python \gls{api} zkomprimuje všechny obrázky vygenerované stránky. Samotný \gls{api} klíč je pro zamezení zneužití šifrován symetrickou šifrou \gls{aes}.
 
   Úprava fotek funguje na principu \emph{kvantování barev}~--~podobné barvy jsou spojeny do jedné, čímž lze z tradičních 24-bitových palet \gls{png} obrázků udělat palety 8-bitové a zmenšit tím obrázek bez výrazného zhoršení kvality.
 
   % TODO: add stats
 
-  \subsubsection{Minimalizace zdrojového kódu}
+  \subsection{Minimalizace zdrojového kódu}
   Zkompaktnění zdrojového kódu je další možná optimalizace, kterou lze načítání stránky urychlit. Prohlížečům na vzhledu kódu nezáleží a běžné uživatele nezajímá, proto jej lze na úkor čitelnosti zmenšit.
 
   Tuto funkci zastává script \texttt{minify.py}, který soubory typu \gls{css} a \gls{html} zmenší odstraněním komentářů, nepotřebných tagů a uvozovek, přebytečných mezer a dalších částí kódu, které po jejich odstranění funkcionalitu kódu nezmění.
 
   % TODO: add stats
 
-  \subsubsection{Automatizace procesu}
+  \subsection{Automatizace procesu}
   Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí script \texttt{deploy.py}, který stránku nejprve pomocí Jekyllu vygeneruje, poté ve správném pořadí spustí všechny scripty pro generování dodatečného obsahu a optimalizace a nakonec i script pro nahrání stránky na webhosting.
 
-
-  \subsection{Verzování zdrojového kódu}
-  Stránka je verzována pomocí verzovacího systému Git (viz. kapitola \fullref{sec:Git}). Kód je otevřený a volně dostupný přes GitHub na adrese \url{https://github.com/xiaoxiae/Robotics-Simplified-Website}.
-
-
-  \subsection{Testování}
-  Následující kapitola rozebírá testování výkonu a multiplatformnosti
-
-  \subsubsection{Rychlost načítání}
-  Doba načtení webové stránky je jedním z hlavních faktorů ovlivňujících její úspěšnost. Přebytečný čas nad optimální dobu (mezi $1,8$ a $2,7$ vteřinami) má negativní vliv na procento konverzí stránky. Při zpoždění o $100$ milisekund nad tuto dobu klesá procento konverzí uživatelů osobních počítačů o $7,8$ \%. Konverze dále klesají až o $26,2$ \% při zpoždění v řádu $2$ vteřin \cite{conversion-rate-statistics}.
-
-  Testování bylo provedeno s pomocí služby \url{https://www.webpagetest.org/}, která analyzuje webové stránky z různých lokací světa (a různých prohlížečů) a poskytuje statistiky o rychlosti načítání, množství načtených dat a mnohém dalším.
-
-  Obrázek \ref{img:Mapa dob načítání} (vytvořený pomocí Google GeoChart \gls{api}) obsahuje informace o době úplného načtení stránky \url{http://robotics-simplified.com/} z většiny dostupných testovacích lokalit výše uvedené služby ke 13. únoru 2019.
-
-  \begin{figure}[H]
-    \includegraphics[width=\linewidth]{map.png}
-    \caption{Mapa dob načítání} \label{img:Mapa dob načítání}
-  \end{figure}
-
-  Z obrázku \ref{img:Mapa dob načítání} je patrné, že doba načtení webové stránky je do značné míry závislá na vzdálenosti od České republiky, ve které je hostována. Tyto hodnoty rovněž v testovaných zemích výrazně nepřevyšují optimální dobu, což je při uvážení ceny webhostingu přijatelné.
-
-
-  \subsubsection{Multiplatformnost}
-  % TODO: how does the website work on different devices and browsers
 
   \section{Analytika a propagace webové stránky}
   % TODO: how is traffic analysis and marketting done
@@ -702,7 +702,8 @@
 
 
   \subsubsection{Google Search Console}
-  % TODO: what is it good foor
+  Kromě služby Google Analytics rozebírané v předešlé kapitole k slouží získávání statistik o webové stránce služba Google Search Engine, která zobrazuje statistiky o indexování webové stránky v rámci vyhledávání Google~--~její průměrné pozice při relevantních vyhledáváních, počet zobrazení, indexované podstránky, aj.
+
 
   \subsection{Marketting}
 
