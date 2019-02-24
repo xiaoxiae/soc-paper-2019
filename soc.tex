@@ -306,7 +306,7 @@
   \setcounter{page}{\numexpr\value{savepage}-1}%
 
   % genereate toc
-  \addtocontents{toc}{\protect\setstretch{0.1}}
+  \addtocontents{toc}{\vspace{-\cftaftertoctitleskip}\protect\setstretch{0.1}}
   \tableofcontents
 
   \newpage
