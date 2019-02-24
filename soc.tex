@@ -137,9 +137,9 @@
 \newacronym{ftc}{FTC}{First Technical Challenge}
 \newacronym{fll}{FLL}{First Lego League}
 \newacronym{pdf}{PDF}{Portable Document Format}
-\newacronym{html}{HTML}{HyperText Mark-up Language}
+\newacronym{html}{HTML}{Hypertext Mark-up Language}
 \newacronym{cern}{CERN}{Evropská organizace pro jaderný výzkum}
-\newacronym{http}{HTTP}{HyperText Transfer Protocol}
+\newacronym{http}{HTTP}{Hypertext Transfer Protocol}
 \newacronym{css}{CSS}{Cascading Style Sheets}
 \newacronym{sass}{SASS}{Syntactically Awesome Style Sheets}
 \newacronym{cvs}{CVS}{Concurrent Versions System}
@@ -158,6 +158,7 @@
 \newacronym{it}{IT}{Information Technology}
 \newacronym{www}{WWW}{World Wide Web}
 \newacronym{sgml}{SGML}{Standard Generalized Mark-up Language}
+\newacronym{https}{HTTPS}{Hypertext Transfer Protocol Secure}
 
 \glsaddall                                      % add all acronyms
 \glsfindwidesttoplevelname
@@ -737,12 +738,14 @@
   \newpage
 
   \section{Závěr}
-  Náplní vývoje projektu je v dohledné budoucnosti tvorba nových článků a jejich lokalizace do českého jazyka. S tím je též úzce spjata revize již napsaných článků~--~přidávání dodatečných ilustrací a vizualizací, zpřehlednění textu, revize kódu, aj.
+  Náplní práce na projektu je v dohledné budoucnosti tvorba nových článků a jejich lokalizace do českého jazyka. S tím je též úzce spjata revize již napsaných článků~--~přidávání dodatečných ilustrací a vizualizací, zpřehlednění textu, revize kódu, aj.
 
-  Další oblasti zlepšení převod webové stránky do offline verze~--~přidání formátů jako \gls{epub} a \gls{mobi} pro zlepšení podpory elektronických čteček knih, zajištění větší spolehlivosti převodu a přidání dalších dosud nepodporovaných funkcí (přeškrtnutí textu, podtržení textu, reference, citace...).
+  Stránka rovněž prozatím nepoužívá protokol \gls{https}, který narozdíl od \gls{http} šifruje komunikaci mezi klientem a serverem a zamezuje tím řadě možných útoků, před kterými \gls{http} uživatele nechrání. Jelikož však WEDOS podporuje mezinárodně uznávanou certifikační autoritu Let's Encrypt, tak by tato změna neměla být složitá.
 
-  % TODO: write about expanding to HTTPS
-  % TODO: write about ditching p5.js
+  Další oblastí zlepšení je převod webové stránky do offline verze~--~přidání dodatečných formátů jako \gls{epub} a \gls{mobi} pro zlepšení podpory elektronických čteček knih, zajištění větší spolehlivosti převodu a přidání dalších funkcí (přeškrtnutí textu, podtržení textu, reference, citace...).
+
+  Jedna z dalších možných úprav by byla nahrazení knihovny p5.js za kód využívající pouze JavaScript canvas kvůli zmenšení velikostí článků obsahující vizualizace, jelikož velikost samotné knihovny je \emph{451 KB}.
+
 
   \newpage
 
