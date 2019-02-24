@@ -35,7 +35,9 @@
 \setlength{\cftfigindent}{0pt}                  % no lof indentation
 \setlength{\cfttabindent}{0pt}                  % no lot indentation
 
-\renewcommand{\contentsname}{Obsah}             % change TOC name
+\renewcommand{\contentsname}{Obsah}             % change toc name
+
+\usepackage{setspace}                           % for making a more concise toc
 
 
 % CODE %
@@ -303,6 +305,7 @@
   \setcounter{page}{\numexpr\value{savepage}-1}%
 
   % genereate toc
+  \addtocontents{toc}{\protect\setstretch{0.1}}
   \tableofcontents
 
   \newpage
