@@ -285,7 +285,7 @@
   \newpage
 
   \section*{\normalfont\textbf{Anotace}}
-  Tato práce popisuje proces tvorby webové stránky \url{robotics-simplified.com}. Stránka zpracovává témata z oboru robotiky formou pochopitelnou i naprostým začátečníkem. Je poháněna generátorem statických stránek Jekyll, který doplňují JavaSriptové knihovny pro vykreslování matematických rovnic, analýzy návštěvnosti a interaktivní vizualizaci probíraných konceptů. Python scripty automatizují kompresi obrázků, generování souboru sitemap, nahrání obsahu na hosting přes \acrshort{ftp} a převod stránky do knižní podoby pro offline čtení.
+  Tato práce popisuje proces tvorby webové stránky \url{robotics-simplified.com}. Stránka zpracovává témata z oboru robotiky formou pochopitelnou i naprostým začátečníkem. Je poháněna generátorem statických stránek Jekyll, který doplňují JavaSriptové knihovny pro vykreslování matematických rovnic, analýzy návštěvnosti a interaktivní vizualizaci probíraných konceptů. Python skripty automatizují kompresi obrázků, generování souboru sitemap, nahrání obsahu na hosting přes \acrshort{ftp} a převod stránky do knižní podoby pro offline čtení.
 
   \section*{\normalfont\textbf{Klíčová slova}}
   robotika; webová stránka; vzdělávání
@@ -388,7 +388,7 @@
 
 
   \subsection{JavaScript} \label{sec:JavaScript}
-  Okolo roku 1995 bylo pro internetový prohlížeč Netscape potřeba vytvořit interpretovaný scriptovací jazyk pro zlepšení interaktivity webových stránek, který by měl jít vložit přímo do \gls{html}. Tímto úkolem byl pověřen Brendan Eich a jelikož bylo z ekonomických důvodů potřeba práci vykonat rychle, první funkční verze JavaScriptu byla údajně zhotovena za pouhých 10 dní \cite{the-origin-of-javascript}.
+  Okolo roku 1995 bylo pro internetový prohlížeč Netscape potřeba vytvořit interpretovaný skriptovací jazyk pro zlepšení interaktivity webových stránek, který by měl jít vložit přímo do \gls{html}. Tímto úkolem byl pověřen Brendan Eich a jelikož bylo z ekonomických důvodů potřeba práci vykonat rychle, první funkční verze JavaScriptu byla údajně zhotovena za pouhých 10 dní \cite{the-origin-of-javascript}.
 
   Na rozdíl od kódu psaném v dalším populárním webovém jazyce \gls{php}, který je vykonáván na straně serveru, je JavaScriptový kód vykonáván na straně uživatele. Díky tomu plní na webové stránce funkce, které nevyžadují neustálý kontakt se serverem (jelikož výměna informací tímto způsobem zpravidla není okamžitá) jako kontrola správného vyplnění formuláře, zajištění plynulosti uživatelského prostředí, či tvorba webových her.
 
@@ -410,7 +410,7 @@
 
   Od svého vzniku se Python vyvinul v mocný a frekventovaně používaný programovací jazyk~--~má rozsáhlou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub \cite{github-statistics} s využitím při stavbě webových stránek po tvorbu knihovny na trénování neuronových sítí.
 
-  Na stránce zastává funkci scriptovacího jazyka pro automatizaci provozu (viz. kapitola \fullref{sec:Automatizace provozu webové stránky}).
+  Na stránce zastává funkci skriptovacího jazyka pro automatizaci provozu (viz. kapitola \fullref{sec:Automatizace provozu webové stránky}).
 
 
   \subsection{Markdown} \label{sec:Markdown}
@@ -491,7 +491,7 @@
 
   Stránka je hostována a doména zprostředkována společností WEDOS Internet a její službou NoLimit, zejména díky mým pozitivním zkušenostem s tímto provozovatelem v rámci minulých projektů a faktem, že ceny a parametry služeb jiných hostingů se od využívané příliš neliší.
 
-  Další možností hostingu je služba GitHub Pages, která umožňuje přes GitHub hostovat stránku generovanou Jekyllem. Hosting i doména by byly zdarma, nebylo by třeba obsah nahrávat přes \acrshort{ftp} a generování by po provedení změny v repozitáři proběhlo automaticky. Tento přístup by však znemožnil využívání Python scriptů, proto není pro účely projektu vhodný.
+  Další možností hostingu je služba GitHub Pages, která umožňuje přes GitHub hostovat stránku generovanou Jekyllem. Hosting i doména by byly zdarma, nebylo by třeba obsah nahrávat přes \acrshort{ftp} a generování by po provedení změny v repozitáři proběhlo automaticky. Tento přístup by však znemožnil využívání Python skriptů, proto není pro účely projektu vhodný.
 
 
   \subsection{Design loga}
@@ -652,7 +652,7 @@
   \section{Automatizace provozu webové stránky} \label{sec:Automatizace provozu webové stránky}
   Ke tvorbě kvalitního vzdělávacího materiálu je potřeba plynulý a do nejvyšší možné míry automatizovaný provoz stránky~--~k přidání nového článků by mělo stačit v příslušné složce projektu vytvořit nový soubor a zbytek procesu by měl proběhnout bez zásahu autora.
 
-  Stránka je v tomto duchu automatizována scripty psanými v jazyce Python (viz. kapitola \fullref{sec:Python}), aby se autor mohl plně soustředit na práci.
+  Stránka je v tomto duchu automatizována skripty psanými v jazyce Python (viz. kapitola \fullref{sec:Python}), aby se autor mohl plně soustředit na práci.
 
 
   \subsection{Nahrání obsahu přes \acrshort{ftp}}
@@ -678,7 +678,7 @@
 
 
   \subsection{Komprimace obrázků}
-  O komprimaci obrázků pro zmenšení velikosti stránky se stará script \texttt{compress.py}, který pomocí služby TinyPNG a jejího Python \gls{api} zkomprimuje všechny obrázky vygenerované stránky. Samotný \gls{api} klíč je pro zamezení zneužití šifrován symetrickou šifrou \gls{aes}.
+  O komprimaci obrázků pro zmenšení velikosti stránky se stará skript \texttt{compress.py}, který pomocí služby TinyPNG a jejího Python \gls{api} zkomprimuje všechny obrázky vygenerované stránky. Samotný \gls{api} klíč je pro zamezení zneužití šifrován symetrickou šifrou \gls{aes}.
 
   Úprava fotek funguje na principu \emph{kvantování barev}~--~podobné barvy jsou spojeny do jedné, čímž lze z tradičních 24-bitových palet \gls{png} obrázků udělat palety 8-bitové a zmenšit tím obrázek bez výrazného zhoršení kvality.
 
@@ -688,13 +688,13 @@
   \subsection{Minimalizace zdrojového kódu}
   Zkompaktnění zdrojového kódu je další možná optimalizace, kterou lze načítání stránky urychlit. Prohlížečům na vzhledu kódu nezáleží a běžné uživatele nezajímá, proto jej lze na úkor čitelnosti zmenšit.
 
-  Tuto funkci zastává script \texttt{minify.py}, který soubory typu \gls{css} a \gls{html} zmenší odstraněním komentářů, nepotřebných tagů a uvozovek, přebytečných mezer a dalších částí kódu, které po jejich odstranění funkcionalitu kódu nezmění.
+  Tuto funkci zastává skript \texttt{minify.py}, který soubory typu \gls{css} a \gls{html} zmenší odstraněním komentářů, nepotřebných tagů a uvozovek, přebytečných mezer a dalších částí kódu, které po jejich odstranění funkcionalitu kódu nezmění.
 
   Ke 24. únoru 2019 tento skript zkompaktní \gls{css} a \gls{html} webové stránky na $72.89$ \% a $68.12$ \% jejich původní velikosti a zmenší tím její velikost o \emph{129 KB}.
 
 
   \subsection{Automatizace procesu}
-  Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí script \texttt{deploy.py}, který stránku nejprve pomocí Jekyllu vygeneruje, poté ve správném pořadí spustí všechny scripty pro generování dodatečného obsahu a optimalizace a nakonec i script pro nahrání stránky na webhosting.
+  Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí skript \texttt{deploy.py}, který stránku nejprve pomocí Jekyllu vygeneruje, poté ve správném pořadí spustí všechny skripty pro generování dodatečného obsahu a optimalizace a nakonec i skript pro nahrání stránky na webhosting.
 
 
   \section{Analytika a propagace webové stránky}
