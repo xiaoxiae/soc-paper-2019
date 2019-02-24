@@ -682,14 +682,16 @@
 
   Úprava fotek funguje na principu \emph{kvantování barev}~--~podobné barvy jsou spojeny do jedné, čímž lze z tradičních 24-bitových palet \gls{png} obrázků udělat palety 8-bitové a zmenšit tím obrázek bez výrazného zhoršení kvality.
 
-  % TODO: add stats
+  Ke 24. únoru 2019 tento skript zkomprimuje obrázky webové stránky na $72.3$ \% jejich původní velikosti a zmenší tím její velikost o \emph{262 KB}.
+
 
   \subsection{Minimalizace zdrojového kódu}
   Zkompaktnění zdrojového kódu je další možná optimalizace, kterou lze načítání stránky urychlit. Prohlížečům na vzhledu kódu nezáleží a běžné uživatele nezajímá, proto jej lze na úkor čitelnosti zmenšit.
 
   Tuto funkci zastává script \texttt{minify.py}, který soubory typu \gls{css} a \gls{html} zmenší odstraněním komentářů, nepotřebných tagů a uvozovek, přebytečných mezer a dalších částí kódu, které po jejich odstranění funkcionalitu kódu nezmění.
 
-  % TODO: add stats
+  Ke 24. únoru 2019 tento skript zkompaktní \gls{css} a \gls{html} webové stránky na $72.89$ \% a $68.12$ \% jejich původní velikosti a zmenší tím její velikost o \emph{129 KB}.
+
 
   \subsection{Automatizace procesu}
   Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí script \texttt{deploy.py}, který stránku nejprve pomocí Jekyllu vygeneruje, poté ve správném pořadí spustí všechny scripty pro generování dodatečného obsahu a optimalizace a nakonec i script pro nahrání stránky na webhosting.
