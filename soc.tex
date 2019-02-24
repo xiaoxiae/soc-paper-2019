@@ -15,8 +15,6 @@
 % TOC AND LOF %
 %-===========-%
 \usepackage[subfigure, titles]{tocloft}         % controlling lof and lot
-\setlength{\cftfigindent}{0pt}                  % remove left lof margin
-
 \usepackage[nottoc]{tocbibind}                  % no toc in toc
 
 \makeatletter                                   % remove titles from lof and lot
@@ -97,7 +95,7 @@
             labelfont=bf,
             figurename=Obr.,
             tablename=Tab.,
-            belowskip=-12pt]{caption}            % captions
+            belowskip=-12pt]{caption}           % captions
 
 \usepackage{enumitem}                           % lists
 
@@ -330,7 +328,7 @@
   \newpage
 
   \section{Požadavky na výsledný produkt} \label{sec:Požadavky na výsledný produkt}
-  Nápad tvorby kvalitních materiálů pro studium robotiky je příliš rozsáhlý na to, aby mohla práce na projektu začít bez větší úvahy~--~bude se jednat o webovou stránku, aplikaci, knihu, či repozitář se zdrojovými kódy?
+  Myšlenka tvorby kvalitních materiálů pro studium robotiky je příliš rozsáhlá na to, aby mohla práce na projektu začít bez větší úvahy~--~bude se jednat o webovou stránku, aplikaci, knihu, či repozitář se zdrojovými kódy?
 
   Před začátkem je třeba určit požadavky, které by výsledný produkt měl splňovat. Podle těch lze způsoby provedení porovnat a použít ten, který se jeví za nejvhodnější.
 
@@ -350,15 +348,15 @@
   \section{Použité programovací jazyky}
   Programovací jazyk je notace pro psaní programů. \emph{Syntaxe} jazyka popisuje strukturu~--~jakým způsobem za sebe uspořádat znaky, aby v rámci jazyka tvořily platná spojení. \emph{Sémantika} jazyka popisuje význam těchto platných spojení \cite{intro-to-programming-languages}. % TODO: write more
 
-  Každý programovací jazyk využívá \emph{programovací paradigmata}~--~způsoby, kterými lze přistupovat ke tvorbě programů. Paradigmaty můžeme dělit programovací jazyky do kategorií\footnote{Jeden programovací jazyk může využívat více paradigmat a spadat tak do několika kategorií (viz. programovací jazyky rozebírány v kapitolách \fullref{sec:Python} a \fullref{sec:JavaScript}).} jako např. funkcionální, procedurální, či logické.
+  Každý programovací jazyk využívá \emph{programovací paradigmata}~--~způsoby, kterými lze přistupovat ke tvorbě programů. Paradigmaty můžeme dělit programovací jazyky do kategorií\footnote{Jeden programovací jazyk může využívat více paradigmat a spadat tak do několika kategorií (viz. kapitoly \fullref{sec:Python} a \fullref{sec:JavaScript}).} jako např. funkcionální, procedurální, či logické.
 
-  Následující kapitola rozebírá použití programovacích jazyků v projektu a jejích stručnou historii. % TODO: add how only the most relevant ones are being discussed
+  Následující kapitola rozebírá použití programovacích jazyků, které mají v projektu významnou roli, a jejích stručnou historii.
 
 
   \subsection{\acrshort{html}} \label{sec:HTML}
   Značkovací jazyk \gls{html} vytvořil Tim Berners-Lee z výzkumného centra \gls{cern} v roce 1989. Hlavní důvod vzniku byla snaha zjednodušit přístup k informacím pomocí dokumentů, které by na sebe navzájem odkazovaly a tvořily tím „celosvětovou síť“ sdílených informací \gls{www}. V rámci této snahy Tim rovněž vytvořil protokol \gls{http}, který slouží k přenosu souborů \gls{html} po síti a je k tomuto účelu využíván dodnes \cite{html-history}.
 
-  Jazyk \gls{html} používá ke struktuře textu tzv. \emph{tagy}~--~slova ohraničená lomítky, která určují význam jimi obklopené části textu. Tento nápad byl inspirován mezinárodním standardem \gls{sgml}, což bylo s ohledem na dnešní popularitu \gls{html} bezesporu správné rozhodnutí.
+  Jazyk \gls{html} používá ke strukturování textu tzv. \emph{tagy}~--~slova ohraničená lomítky, která určují význam jimi obklopené části textu. Tento nápad byl inspirován mezinárodním standardem \gls{sgml}, což bylo s ohledem na dnešní popularitu \gls{html} bezesporu správné rozhodnutí.
 
   Příkladem \gls{html} je následující ukázka, která se skládá z hlavního nadpisu (\mintinline{html}{<h1>}), následovaného paragrafem (\mintinline{html}{<p>}), ve kterém se dále vyskytuje odkaz na webovou stránku (\mintinline{html}{<a>}):
 
@@ -371,9 +369,9 @@
 
 
   \subsection{\acrshort{css}} \label{sec:CSS}
-  Po vzniku \gls{html} bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který roku 1994 publikoval první návrh stylopisného jazyka \gls{css} \cite{css-proposal}, který by umožňoval ovlivnit vlastnosti \gls{html} dokumentů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné \gls{html} neumožňuje\footnote{To, že v \gls{html} nejde měnit vzhled stránky není pravda, ale většinou se jedná o zastaralé a nepoužívané tagy (jako např. \mintinline{html}{<center>}), jejichž použití je oproti \gls{css} nedoporučované.} \cite{css-saga}.
+  Po vzniku \gls{html} bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který roku 1994 publikoval první návrh stylopisného jazyka \gls{css} \cite{css-proposal}. \gls{css} umožňuje ovlivnit vlastnosti \gls{html} dokumentů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné \gls{html} neumožňuje\footnote{To, že v \gls{html} nejde měnit vzhled dokumentu není úplně pravda, ale jedná se převážně o zastaralé a nepoužívané tagy (jako např. \mintinline{html}{<center>}), jejichž použití je oproti \gls{css} nedoporučované.} \cite{css-saga}.
 
-  Příkladem \gls{css} je následující ukázka kódu, ve které jsou upraveny vlastnosti nadpisu \mintinline{html}{<h1>}~--~\gls{html} změnou barvy na zelenou, pozice na střed stránky a velikosti na 18:
+  Příkladem \gls{css} je následující ukázka kódu, ve které jsou upraveny vlastnosti nadpisu \mintinline{html}{<h1>} změnou barvy na zelenou, pozice na střed stránky a velikosti na 18b:
 
   \begin{minted}[linenos,breaklines]{css}
   h1 {
@@ -391,7 +389,7 @@
   \subsection{JavaScript} \label{sec:JavaScript}
   Okolo roku 1995 bylo pro internetový prohlížeč Netscape potřeba vytvořit interpretovaný skriptovací jazyk pro zlepšení interaktivity webových stránek, který by měl jít vložit přímo do \gls{html}. Tímto úkolem byl pověřen Brendan Eich a jelikož bylo z ekonomických důvodů potřeba práci vykonat rychle, první funkční verze JavaScriptu byla údajně zhotovena za pouhých 10 dní \cite{the-origin-of-javascript}.
 
-  Na rozdíl od kódu psaném v dalším populárním webovém jazyce \gls{php}, který je vykonáván na straně serveru, je JavaScriptový kód vykonáván na straně uživatele. Díky tomu plní na webové stránce funkce, které nevyžadují neustálý kontakt se serverem (jelikož výměna informací tímto způsobem zpravidla není okamžitá) jako kontrola správného vyplnění formuláře, zajištění plynulosti uživatelského prostředí, či tvorba webových her.
+  Na rozdíl od kódu psaném v jazyce \gls{php}, který je vykonáván na straně serveru, je JavaScriptový kód vykonáván na straně uživatele. Díky tomu plní na webové stránce funkce, které nevyžadují neustálý kontakt se serverem (jelikož výměna informací tímto způsobem zpravidla není okamžitá) jako kontrola správného vyplnění formuláře, zajištění plynulosti uživatelského prostředí, či tvorba webových her.
 
   Dnes se jedná o webový standard a dlouhodobě nejpoužívanější programovací jazyk platformy GitHub \cite{github-statistics}, který zastává řadu podstatných funkcí tohoto projektu.
 
@@ -411,21 +409,21 @@
 
   Od svého vzniku se Python vyvinul v mocný a frekventovaně používaný programovací jazyk~--~má rozsáhlou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub \cite{github-statistics} s využitím při stavbě webových stránek po tvorbu knihovny na trénování neuronových sítí.
 
-  Na stránce zastává funkci skriptovacího jazyka pro automatizaci provozu (viz. kapitola \fullref{sec:Automatizace provozu webové stránky}).
+  Na stránce zastává funkci skriptovacího jazyka pro automatizaci provozu (viz. kapitola \fullref{sec:Automatizace provozu webové stránky}) Je oproti alternativám jako \gls{php} a Java na stránce používán převážně z osobní preference.
 
 
   \subsection{Markdown} \label{sec:Markdown}
   Markdown je styl formátování prostého textu, vytvořený v roce 2004 Johnem Gruberem pro autory webových stránek. Je uzpůsobený k jednoduchému čtení, psaní, a převodu do pokročilejších značkovacích jazyků jako \gls{html} \cite{markdown-history}. Jedná se o populární formát zápisu dokumentací projektů, souborů README (čti mě) pro repozitáře stránek jako GitHub a GitLab, či článků některých blogů a osobních stránek.
 
-  Existuje velká řada variant Markdownu jako Kramdown či Redcarpet, které originál rozšiřují o dodatečnou funkcionalitu jako poznámky pod čarou, podporu úpravy vzhledu pomocí \gls{css} či vkládání rovnic pomocí \LaTeX ové notace.
+  Existuje velká řada variant Markdownu jako Kramdown či Redcarpet, které originál rozšiřují o dodatečnou funkcionalitu jako poznámky pod čarou, podporu úpravy vzhledu stránky pomocí \gls{css} či vkládání rovnic v \LaTeX ové notaci.
 
-  V projektu je v kombinaci s šablonovým jazykem Liquid používán ke psaní článků (viz. kapitola \fullref{sec:Tvorba článků}).
+  V projektu je v kombinaci s šablonovým jazykem Liquid používán ke psaní článků (viz. kapitola \fullref{sec:Proces tvorby článků}), jelikož je na nich Jekyll založen.
 
 
   \subsection{\TeX} \label{sec:TeX}
   \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století. Počáteční impulz pro vznik byla Knuthova nespokojenost s tiskovou kvalitou vydání jedné z jeho knih, což jej vedlo ke studiu principů sázení, tvorby fontů a později až k vytvoření vlastního sázecího systému \TeX{} \cite{tex-history}.
 
-  Od klasických \gls{wysiwyg} programů pro tvorbu dokumentů jako Microsoft Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postárá. Tento přístup klade větší důraz na obsah~--~autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda \TeX u je fakt, že celý dokument je prostý text, proto jej lze verzovat.
+  Od klasických \gls{wysiwyg} programů jako Microsoft Word či LibreOffice se liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postárá. Tento přístup klade větší důraz na obsah~--~autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda \TeX u je fakt, že celý dokument je prostý text, proto jej lze verzovat.
 
   V projektu je používán \LaTeX{} (viz. kapitola \fullref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů \cite{getting-started-with-latex}.
 
@@ -440,13 +438,13 @@
 
 
   \section{Použité nástroje} \label{sec:Použité nástroje}
-  Tato kapitola rozebírá programy, které jsou aktivně používány při vývoji stránky, vyjma programů používaných čistě kvůli osobní preferenci (textový editor Atom a Git klient GitKraken).
+  Tato kapitola popisuje programy, které jsou aktivně používány při vývoji stránky. Do této kapitoly nejsou zahrnuty textový editor Atom a Git klient GitKraken, jelikož by jejich nahrazení za jednu z mnoha alternativ provoz stránky výrazným způsobem neovlivnilo.
 
   Hlavní kritérium výběru programů byla multiplatformnost, jelikož jsou při vývoji aktivně využívány operační systémy Windows a Linux.
 
 
   \subsection{Git} \label{sec:Git}
-  Git je otevřený\footnote{Zdrojový kód Gitu je dostupný na adrese \url{https://github.com/git/git}.} verzovací systém vytvořený Linusem Torvaldsem pro použití na operačním systému Linux. V open-source komunitě se v současné době (březen 2018) jedná o nejpoužívanější vezrovací systém \cite{version-control-usage-statistics}, což je jeden z hlavních důvodů pro jeho využití v tomto projektu.
+  Git je otevřený\footnote{Zdrojový kód Gitu je dostupný na adrese \url{https://github.com/git/git}.} verzovací systém vytvořený Linusem Torvaldsem pro použití na operačním systému Linux. V open-source komunitě se v současné době (31. leden 2019) jedná o nejpoužívanější vezrovací systém \cite{version-control-usage-statistics}, což je jeden z hlavních důvodů pro jeho využití v tomto projektu.
 
   Verzovací systém umožňuje zaznamenávat změny a jejich důvod/význam na verzované skupině souborů a složek (tzv. repozitáři) a pomáhá tím zamezit ztrátě práce, zjednodušit hledání chyb v kódu a usnadnit spolupráci mezi autory.
 
@@ -472,19 +470,19 @@
   \subsection{Fusion 360} \label{sec:Fusion 360}
   V rámci tvorby ilustrací k odborné literatuře je kromě přístupů rozebíraných v kapitole \fullref{sec:Inkscape} dále používán \gls{cad} software, který slouží ke tvorbě technických nákresů. Na rozdíl od tradičních programů na tvorbu grafiky jsou rozměry tvořených objektů přesně definovány v jednotkách \gls{si}, aby odpovídaly objektům reálného světa.
 
-  Populární \gls{cad} software využívaný členy \gls{frc} teamů je Fusion 360 od společnosti Autodesk, převážně kvůli dostupnosti licence (zdarma pro studenty a jejich mentory). Profesionální alternativou je program SolidWorks, který je často používán studenty technických škol.
+  Populární \gls{cad} software využívaný členy \gls{frc} týmů je Fusion 360 od společnosti Autodesk, převážně kvůli dostupnosti licence (zdarma pro studenty a jejich mentory). Profesionální alternativou je program SolidWorks, který je často používán studenty technických škol.
 
-  Fusion 360 je jediný v projeku používaný program, který nefunguje na operačním systému Linux,  jelikož za něho neexistuje kvalitní multiplatformní náhrada.
+  Fusion 360 je jediný v projeku používaný program, který nefunguje na operačním systému Linux, jelikož neexistuje kvalitní multiplatformní náhrada.
 
 
   \section{Vývoj webové stránky}
-  Po důkladném zvážení výhod a nevýhod přístupů k projektu s požadavky vymezenými kapitolou \fullref{sec:Požadavky na výsledný produkt} se webová stránka jeví jako nejvhodnější výsledný produkt. Sama o sobě totiž může při správném výběru technologií splňovat jak multiplatformnost (i dostupnost ve formátu \gls{pdf}), tak otevřenost zdrojového kódu.
-
-  Pro tvorbu stránky v rámci splnění otevřenosti zdrojového kódu byl vybrán generátor statických webových stránek Jekyll (viz. kapitola \fullref{sec:Jekyll}), díky čemuž lze kód produktu verzovat a volně sdílet jednodušeji, než kód webové stránky s databází.
+  Po důkladném zvážení výhod a nevýhod přístupů k projektu s požadavky vymezenými kapitolou \fullref{sec:Požadavky na výsledný produkt} se webová stránka jeví jako nejvhodnější výsledný produkt. Může totiž při správném výběru technologií splňovat jak multiplatformnost, tak otevřenost zdrojového kódu.
 
 
   \subsection{Konfigurace Jekyllu}
-  Po zvážení možností zdarma dostupných šablon pro Jekyll byla zvolena šablona Just the Docs, která díky své optimalizaci pro mobilní zařízení pomáhá s multiplatformností projektu. Další atraktivní atributy této šablony jsou její přehlednost, vestavěná podpora vyhledávání a přizpůsobitelné zvýrazňování syntaxe kódu.
+  Pro tvorbu stránky v rámci splnění otevřenosti zdrojového kódu byl vybrán generátor statických webových stránek Jekyll (viz. kapitola \fullref{sec:Jekyll}), díky čemuž lze kód produktu verzovat a volně sdílet jednodušeji, než kód webové stránky s databází.
+
+  Po zvážení možností zdarma dostupných otevřených šablon pro byla zvolena šablona Just the Docs, která díky své optimalizaci pro mobilní zařízení pomáhá s multiplatformností projektu. Další atraktivní atributy této šablony jsou její přehlednost, vestavěná podpora vyhledávání a přizpůsobitelné zvýrazňování syntaxe kódu.
 
 
   \subsection{Webhosting a doména} \label{sec:Webhosting a doména}
@@ -542,30 +540,30 @@
   % TODO: how does the website work on different devices and browsers
 
   \section{Obsah webové stránky}
-  Následující kapitola rozebírá obsah webové stránky~--~pro koho je určena, jakým způsobem probíhá tvorba článků a jak je strukturována.
-
 
   \subsection{Cílová skupina}
-  Jako cílové publikum jsem si vybral lidi v podobné situaci, ve které jsem byl já v roce 2017~--~jedinci se zájmem o robotiku, kteří jsou nespokojeni s nedostatkem kvalitních materiálů pro studium. Materiál není kromě zájmu o robotiku omezen věkem, pohlavím či jinými osobními charakteristikami.
+  Do cílové skupiny patří lidé v podobné situaci, ve které jsem byl já v roce 2017 při začátku mého členství v \gls{frc} týmu Metal Moose~--~jedinci se zájmem o robotiku, které od studia odrazuje nedostatek intuitivních a lehce pochopitelných materiálů pro studium. Předešlé znalosti v oblasti robotiky či elektrotechniky proto čtení článků stránky potřebné nejsou, doporučeny jsou pouze základní znalosti programování a středoškolské matematiky (geometrie, algebra).
 
 
-  \subsection{Proces tvorby článků} \label{sec:Tvorba článků}
-  Témata článků jsou vybírána převážně podle jejich využití v soutěži \gls{frc}. Vyšší prioritu mají rovněž témata, jejichž pochopení pro mě bylo z dostupných internetových zdrojů náročné.
+  \subsection{Proces tvorby článků} \label{sec:Proces tvorby článků}
+  Při tvorbě nového článku je nejprve zvoleno téma, které bude článek rozebírat. Vyšší prioritu mají témata, jejichž pochopení pro mě bylo z dostupných internetových zdrojů náročné. Další faktory ovlivňující tento výběr jsou obtížnost zařazení tématu do již vytvořených tématických okruhů a jeho použitelnost v soutěži \gls{frc}.
 
-  Po vybrání tématu článku jsou nejprve shromážděny dostupné materiály o daném tématu. Poté jsou hlavní koncepty článku implementovány v jazyce Python a testovány na robotovi ze stavebnice VEX EDR. Po úspěšném testování a odladění kódu je odvození implementace v článku jednoduchým způsobem (pokud možno obohaceným názornými ilustracemi a vizualizacemi) vysvětleno.
+  Po vybrání tématu článku jsou shromážděny dostupné materiály různého druhu~--~prezentace, odborné práce, články, aj. Poté jsou seřazeny podle jejich užitečnosti v mém pochopení daného tématu a na stránce následně zmíněny jako dodatečné studijní materiály.
 
+  Hlavní koncepty těchto témat jsou dále implementovány přes online prostředí RobotMesh v jazyce Python na robotovi ze stavebnice VEX EDR, který byl pro tento účel vytvořen.
 
-  \subsubsection{Ověření správnosti kódu} \label{sec:Ověření správnosti kódu}
-  % TODO: write about the robot built for testing the code
+  % TODO: add the CAD model x the real model
 
-
-  \subsubsection{Vizualizace} \label{sec:Vizualizace}
-  Vizualizace jsou implementovány v jazyce JavaScript s využitím knihovny p5.js (viz. kapitola \fullref{sec:p5.js}) a jsou uzpůsobeny pro ovládání myší či dotykem, aby byly funkční jak na osobních počítačích, tak na mobilech.
-
-  Za zmínku stojí, že offline verze stránky vizualizace neobsahuje, protože formát \gls{pdf} vkládání kódu kvůli bezpečnosti neumožňuje \cite{history-of-pdf}.
+  Po úspěšném testování a odladění kódu jsou implementace a jejích odvození v článku jednoduchým způsobem (pokud možno obohacené názornými ilustracemi a vizualizacemi) vysvětleny. Na konci je zpravidla rozebírána použitelnost daných konceptů v reálné robotice a nastíněny navazující články v rámci daného tématického okruhu.
 
 
-  \subsubsection{Ilustrace} \label{sec:Ilustrace}
+  \subsection{Vizualizace} \label{sec:Vizualizace}
+  Vizualizace jsou implementovány v jazyce JavaScript s využitím knihovny p5.js (viz. kapitola \fullref{sec:p5.js}). Jsou uzpůsobeny pro ovládání myší či dotykem, aby byly funkční jak na osobních počítačích, tak na mobilech.
+
+  Offline verze stránky vizualizace neobsahuje, protože formát \gls{pdf} vkládání kódu kvůli bezpečnosti neumožňuje \cite{history-of-pdf}.
+
+
+  \subsection{Ilustrace} \label{sec:Ilustrace}
   Ke tvorbě ilustrací je používán program na tvorbu vektorové grafiky Inkscape (viz. kapitola \fullref{sec:Inkscape}) v kombinaci s \gls{cad} softwarem Fusion 360 (viz. kapitola \fullref{sec:Fusion 360}).
 
   Vektorová grafika je pro vytváření ilustrací správná volba proto, že potřebné tvary lze vytvářet a upravovat výrazně rychleji a efektivněji než rastr. Zabírá také méně místa a je ukládána v prostém textu, což má oproti binárnímu formátu řadu výhod.
@@ -589,7 +587,7 @@
 
   % TODO: write about illustrations
 
-  \subsubsection{Matematika} \label{sec:Matematika}
+  \subsection{Matematika} \label{sec:Matematika}
   Jelikož jsou probírané koncepty a algoritmy založeny na matematice, tak stránka podporuje vkládání rovnic a výrazů do článků. Tuto funkcionalitu zajišťuje JavaScriptová knihovna \KaTeX{} (viz. kapitola \fullref{sec:KaTeX}), díky které lze \LaTeX ové rovnice umísťovat přímo do Markdownových článků.
 
   Příkladem zápisu matematiky v článku je rovnice \ref{eq:katex equation}, která je pomocí \KaTeX u převedena na rovnici \ref{eq:converted equation}.
@@ -603,7 +601,7 @@
   \end{equation}
 
 
-  \subsection{Navigace}
+  \subsection{Struktura}
   Stránka je pro ulehčení převodu do \gls{pdf} a plynulosti navigace strukturována do značné míry jako kniha.
 
   Návštěvníka po zobrazení stránky přivítá \emph{úvodní stránka} (obr. \ref{img:Úvodní stránka}), která představí projekt a jeho cíle, případně obsahuje důležitá sdělení o provozu stránky. Poté následuje \emph{předmluva} (obr. \ref{img:Předmluva}), kde jsou kromě diskuzi o předpokladech pro čtení zodpovězeny otázky, které by čtenáři při čtení článků stránky mohli mít.
@@ -649,6 +647,9 @@
     \endminipage
   \end{figure}
 
+
+  \subsection{Uplatnění}
+  % TODO: write about what does the website try to achieve
 
   \section{Automatizace provozu webové stránky} \label{sec:Automatizace provozu webové stránky}
   Ke tvorbě kvalitního vzdělávacího materiálu je potřeba plynulý a do nejvyšší možné míry automatizovaný provoz stránky~--~k přidání nového článků by mělo stačit v příslušné složce projektu vytvořit nový soubor a zbytek procesu by měl proběhnout bez zásahu autora.
@@ -719,21 +720,21 @@
   \subsection{Marketting}
 
   \subsubsection{Sociální média}
-  K získávání zpětné vazby o technicky zaměřené stránce jsou vhodná webová fóra s obdobnou tématikou. Projekt byl tedy z tohoto důvodů zveřejněn na následujících internetových fórech:
+  K získání zpětné vazby o technicky zaměřeném projektu je vhodné použít webové stránky s obdobnou tématikou. Projekt byl z tohoto důvodů zveřejněn na následujících internetových fórech:
 
   {\parskip=0pt
   \begin{itemize}[topsep=\itemsep]
-    \item \emph{ChiefDelphi}~--~internetové fórum zaměřené na soutěž \gls{frc}, převážně pro členy \gls{frc} teamů.
+    \item \emph{ChiefDelphi}~--~internetové fórum zaměřené na soutěž \gls{frc}, převážně pro členy \gls{frc} týmů.
     \item \emph{Reddit}~--~jedno z nejpopulárnějších internetových fór dneška. Zajímavostí jsou subreddity~--~samospravované celky, na kterých jsou zveřejňovány články se společnou tématikou.
     \begin{itemize}[topsep=0pt]
-      \item \emph{Subreddit \gls{frc}}~--~zaměření na soutěž \gls{frc}, od vtipných obrázků a videí po odborné články.
-      \item \emph{Subreddit Robotics}~--~většina příspěvků jsou vzdělávacího charakteru. Časté příspěvky jsou videa či články o domácích projektech uživatelů fóra.
+      \item \emph{Subreddit \gls{frc}}~--~zaměření na soutěž \gls{frc}, od vtipných obrázků a videí po odborné články. Časté jsou též novinky a události ze světa soutěže.
+      \item \emph{Subreddit Robotics}~--~většina příspěvků jsou vzdělávacího charakteru. Časté druhy příspěvků jsou videa a články o domácích projektech uživatelů tohoto fóra.
     \end{itemize}
-    \item \emph{Hacker News}~--~internetové fórum, které je ve svém fungování blízké Redditu. Není však dále strukturováno na subreddity a obsah je vážnějšího charakteru~--~světové novinky, nové výzkumy a odborné práce, měsíční přehledy dostupných pracovních pozic \gls{it} firem, aj.
+    \item \emph{Hacker News}~--~internetové fórum, které je ve svém fungování blízké Redditu. Není však dále strukturováno na subreddity a obsah je vážnějšího charakteru~--~světové novinky, nové výzkumy a odborné práce, měsíční přehledy dostupných pracovních pozic \gls{it} firem, apod.
   \end{itemize}}
 
 
-  \subsubsection{\acrshort{frc} a \acrshort{fll} teamy}
+  \subsubsection{\acrshort{frc} a \acrshort{fll} týmy}
 
   \newpage
 
