@@ -87,10 +87,14 @@
 \usepackage{booktabs}                           % table formatting
 
 
+% MATH %
+%-====-%
+\usepackage{amsmath, amstext}                   % math
+\DeclareMathSymbol{.}{\mathord}{letters}{"3B}   % change dot in math to comma
+
+
 % MISCELLANEOUS %
 %-=============-%
-\usepackage{amsmath, amstext}                   % math
-
 \usepackage[font=small,
             labelfont=bf,
             figurename=Obr.,
@@ -522,7 +526,7 @@
   % TODO: write about what performance means in this context -- both speed and versitality
 
   \subsubsection{Rychlost načítání}
-  Doba načtení webové stránky je jedním z hlavních faktorů ovlivňujících její úspěšnost. Přebytečný čas nad optimální dobu (mezi $1,8$ a $2,7$ vteřinami) má negativní vliv na procento konverzí stránky. Při zpoždění o $100$ milisekund nad tuto dobu klesá procento konverzí uživatelů osobních počítačů o $7,8$ \%. Konverze dále klesají až o $26,2$ \% při zpoždění v řádu $2$ vteřin~\cite{conversion-rate-statistics}.
+  Doba načtení webové stránky je jedním z hlavních faktorů ovlivňujících její úspěšnost. Přebytečný čas nad optimální dobu (mezi $1.8$ a $2.7$ vteřinami) má negativní vliv na procento konverzí stránky. Při zpoždění o $100$ milisekund nad tuto dobu klesá procento konverzí uživatelů osobních počítačů o $7.8$ \%. Konverze dále klesají až o $26.2$ \% při zpoždění v řádu $2$ vteřin~\cite{conversion-rate-statistics}.
 
   Testování bylo provedeno s pomocí služby \url{https://www.webpagetest.org/}, která analyzuje webové stránky z různých lokací světa (a různých prohlížečů) a poskytuje statistiky o rychlosti načítání, množství načtených dat a mnohém dalším.
 
