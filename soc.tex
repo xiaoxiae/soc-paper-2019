@@ -85,6 +85,7 @@
 \floatstyle{plaintop}                           % table caption on top
 \restylefloat{table}                            % -||-
 \usepackage{booktabs}                           % table formatting
+\setlength\heavyrulewidth{0.25ex}
 
 
 % MATH %
@@ -784,7 +785,8 @@
 \begin{table}[H]
   \footnotesize
   \centering
-  \begin{tabular}{*5l}  \toprule
+  \begin{tabular}{*5l}
+    \toprule
     \emph{Město}            & \emph{Označení}                      \\ \midrule
     Buenos Aires, Argentina & \href{https://www.webpagetest.org/result/190213_PC_5d05753a2ce2126089db6b8726171c13}{\texttt{190213\_PC\_5d05753a2ce2126089db6b8726171c13}} \\
     Toronto, Canada         & \href{https://www.webpagetest.org/result/190213_44_a861d3caa2bdbb547775b76e0ca7e357}{\texttt{190213\_44\_a861d3caa2bdbb547775b76e0ca7e357}} \\
@@ -809,7 +811,8 @@
     Tokyo, Japan            & \href{https://www.webpagetest.org/result/190213_8Q_083b45677c2c51f4fe7bd25b554dff38}{\texttt{190213\_8Q\_083b45677c2c51f4fe7bd25b554dff38}} \\
     Sao Paulo, Brazil       & \href{https://www.webpagetest.org/result/190213_AD_d2d6ea6b39f36853cf476a5f1d1f3092}{\texttt{190213\_AD\_d2d6ea6b39f36853cf476a5f1d1f3092}} \\
     Vietnam                 & \href{https://www.webpagetest.org/result/190213_RQ_18f2a02931599884f8922a3ce09f56bc}{\texttt{190213\_RQ\_18f2a02931599884f8922a3ce09f56bc}} \\
-    Hong Kong, China        & \href{https://www.webpagetest.org/result/190213_NK_dfd8ddf4b9766b3386799de124a67ad8}{\texttt{190213\_NK\_dfd8ddf4b9766b3386799de124a67ad8}} \\ \bottomrule \hline
+    Hong Kong, China        & \href{https://www.webpagetest.org/result/190213_NK_dfd8ddf4b9766b3386799de124a67ad8}{\texttt{190213\_NK\_dfd8ddf4b9766b3386799de124a67ad8}} \\
+    \bottomrule
   \end{tabular}
   \caption{Data testování doby načtení}
   \label{tab:Data testování doby načtení}
