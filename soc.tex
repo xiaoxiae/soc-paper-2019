@@ -176,6 +176,8 @@
 \newacronym{www}{WWW}{World Wide Web}
 \newacronym{sgml}{SGML}{Standard Generalized Mark-up Language}
 \newacronym{https}{HTTPS}{Hypertext Transfer Protocol Secure}
+\newacronym{dvi}{DVI}{DeVice-Independent}
+\newacronym{ps}{PS}{PostScript}
 
 \glsaddall                                      % add all acronyms
 \glssetwidest{WYSIWYGGG}                        % manually set the widest acr.
@@ -280,13 +282,13 @@
 
   \qquad
 
-  V Turnově dne \today \, .......................................................\\%
+  V Turnově dne \today \, ..................................................\\%
   \makebox[\linewidth]{Tomáš Sláma}%
 
   \newpage
 
   \section*{\normalfont\textbf{Poděkování}}
-  V první řadě bych rád poděkoval své rodině a přátelům za neustálou podporu a pozitivitu při tvorbě projektu. Za konzultace o obsahu, struktuře a v projektu použitých technologiích děkuji Mgr. Lukáši Pitoňákovi a Mgr. Tomáši Novotnému. Také děkuji Kateřině Sulkové za rady ke psaní samotné SOČ práce a na závěr všem návštěvníkům projektu, kteří svou přítomností a zpětnou vazbou pomáhají v jeho rozvoji.
+  V první řadě bych rád poděkoval své rodině a přátelům za neustálou podporu a pozitivitu při tvorbě projektu. Za konzultace o obsahu, struktuře a v projektu použitých technologiích děkuji Ing. Danielovi Kajzrovi, Mgr. Lukáši Pitoňákovi a Mgr. Tomáši Novotnému. Také děkuji Kateřině Sulkové za rady ke psaní samotné SOČ práce a na závěr všem návštěvníkům projektu, kteří svou přítomností a zpětnou vazbou pomáhají v jeho rozvoji.
 
   \newpage
 
@@ -330,7 +332,7 @@
 
   Stránka \url{robotics-simplified.com} se snaží tento problém řešit tím, že poskytuje centralizovaný zdroj informací pro nováčky do oboru robotiky. Je strukturována jako série článků, které koncepty intuitivním způsobem vysvětlují. Články obsahují ilustrace a interaktivní vizualizace, a jsou pro zájemce o programování doplněny zdrojovými kódy, které koncepty implementují. Celá stránka je rovněž optimalizovaná pro mobilní zařízení a je dostupná také ve formátu \gls{pdf}, proto připojení k internetu není pro čtení stránky třeba.
 
-  Tato práce se zabývá procesem tvorby, provozem a fungováním výše zmíněné webové stránky. Popisuje nástroje a programovací jazyky, které stránka využívá a opodstatňuje jejich použití oproti alternativám. Ke konci rozebírá statistiky návštěvnosti a jejich dělení podle kritérií jako věk, pohlaví, délka návštěvy stránky a jiné.
+  Tato práce se zabývá procesem tvorby, provozem a fungováním výše zmíněné webové stránky. Popisuje nástroje a programovací jazyky, které stránka využívá a opodstatňuje jejich použití oproti alternativám. Ke konci rozebírá statistiky návštěvnosti a jejich dělení podle kritérií jako věk, pohlaví, délka návštěvy stránky a jiné. % TODO: write precisely what the chapters talk about
 
   \newpage
 
@@ -352,7 +354,7 @@
   Tato podmínka fakticky znemožňuje tvorbu aplikace, jelikož by finanční i časové nároky stavby aplikací pro několik systémů přerostly nad rámec jednotlivce.
 
 
-  \section{Použité programovací jazyky}
+  \section{Použité programovací jazyky} \label{sec:Použité programovací jazyky}
   Programovací jazyk je notace pro psaní programů. \emph{Syntaxe} jazyka popisuje strukturu~--~jakým způsobem za sebe uspořádat znaky, aby v rámci jazyka tvořily platná spojení, kdežto \emph{sémantika} jazyka popisuje význam těchto platných spojení~\cite{intro-to-programming-languages}.
 
   Každý programovací jazyk využívá \emph{programovací paradigmata}~--~způsoby, kterými lze přistupovat ke tvorbě programů. Paradigmaty můžeme dělit programovací jazyky do kategorií\footnote{Jeden programovací jazyk může využívat více paradigmat a spadat tak do několika kategorií (viz. kapitoly~\fullref{sec:Python} a~\fullref{sec:JavaScript}).} jako např. funkcionální, procedurální, či logické. I přes jejich rozdíly jsou však navzájem ekvivalentní~--~problém řešitelný v libovolném z nich je nutně řešitelný ve všech.
@@ -365,7 +367,7 @@
 
   Jazyk \gls{html} používá ke strukturování textu tzv. \emph{tagy}~--~slova ohraničená lomítky, která určují význam jimi obklopené části textu. Tento nápad byl inspirován mezinárodním standardem \gls{sgml}, což bylo s ohledem na dnešní popularitu \gls{html} bezesporu správné rozhodnutí.
 
-  Příkladem \gls{html} je následující ukázka, která se skládá z hlavního nadpisu (\mintinline{html}{<h1>}), následovaného paragrafem (\mintinline{html}{<p>}), ve kterém se dále vyskytuje odkaz na webovou stránku (\mintinline{html}{<a>}):
+  Příkladem \gls{html} je následující ukázka, která se skládá z hlavního nadpisu (\mintinline{html}{<h1>}~--~heading), následovaného paragrafem (\mintinline{html}{<p>}~--~paragraph), ve kterém se dále vyskytuje odkaz na webovou stránku (\mintinline{html}{<a>}~--~anchor):
 
   \begin{minted}[linenos,breaklines]{html}
   <h1>HTML</h1>
@@ -378,7 +380,7 @@
   \subsection{\acrshort{css}} \label{sec:CSS}
   Po vzniku \gls{html} bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který roku 1994 publikoval první návrh stylopisného jazyka \gls{css}~\cite{css-proposal}. \gls{css} umožňuje ovlivnit vlastnosti \gls{html} dokumentů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné \gls{html} neumožňuje\footnote{To, že v \gls{html} nejde měnit vzhled dokumentu není úplně pravda, ale jedná se převážně o zastaralé a nepoužívané tagy (jako např. \mintinline{html}{<center>}), jejichž použití je oproti \gls{css} nedoporučované.}~\cite{css-saga}.
 
-  Příkladem \gls{css} je následující ukázka kódu, ve které jsou upraveny vlastnosti nadpisu \mintinline{html}{<h1>} změnou barvy na zelenou, pozice na střed stránky a velikosti na 18b:
+  Příkladem \gls{css} je následující ukázka kódu, která upravuje vlastnosti nadpisu \mintinline{html}{<h1>}~--~mění barvu textu na zelenou, pozici na střed stránky a velikost na 18b:
 
   \begin{minted}[linenos,breaklines]{css}
   h1 {
@@ -388,7 +390,7 @@
   }
   \end{minted}
 
-  Při použití \gls{css} je důležitý princip kaskádování~--~vzhled stránky může ovlivnit jak čtenář, tak autor. Samotné kaskádování je kombinace těchto přeferencí a případná rezoluce vzniklých konfliktů (autor chce písmo velikosti \texttt{12pt}, ale čtenář velikosti \texttt{10pt}).
+  Při použití \gls{css} je důležitý princip kaskádování~--~vzhled stránky ovlivňují jak požadavky čtenáře, tak požadavky autora. Samotné kaskádování je kombinace těchto požadavků a v případě vzniku konfliktů (autor požaduje písmo velikosti \texttt{12pt}, ale čtenář velikosti \texttt{10pt}) jejich rezoluce.
 
   V projektu je používán \gls{sass}, který převádí \gls{css} s pokročilejším syntaxem a dodatečnou funkcionalitou do standardního \gls{css}, díky čemuž jde vzhled stránky upravovat jednodušeji.
 
@@ -412,7 +414,7 @@
 
 
   \subsection{Python} \label{sec:Python}
-  Python je programovací jazyk vytvořený pro distribuovaný operační systém Amoeba Guidem van Rossumem v 80. letech 20. století. Byl silně inspirován Guidovou prací na jazyce ABC: „Vzal jsem ingredience z ABC a trochu jsem je promíchal. Python je v mnoha věcech podobný ABC, ale v mnoha také rozdílný~\cite{making-of-python}“ (přeloženo z angličtiny).
+  Python je programovací jazyk vytvořený pro distribuovaný operační systém Amoeba Guidem van Rossumem v 80. letech 20. století. Byl silně inspirován Guidovou prací na jazyce ABC: „Vzal jsem ingredience z ABC a trochu jsem je promíchal. Python je v mnoha věcech podobný ABC, ale v mnoha také rozdílný“~\cite{making-of-python} (přeloženo z angličtiny).
 
   Od svého vzniku se Python vyvinul v mocný a frekventovaně používaný programovací jazyk~--~má rozsáhlou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub~\cite{github-statistics} s využitím při stavbě webových stránek po tvorbu knihovny na trénování neuronových sítí.
 
@@ -422,9 +424,9 @@
   \subsection{Markdown} \label{sec:Markdown}
   Markdown je styl formátování prostého textu, vytvořený v roce 2004 Johnem Gruberem pro autory webových stránek. Je uzpůsobený k jednoduchému čtení, psaní, a převodu do pokročilejších značkovacích jazyků jako \gls{html}~\cite{markdown-history}. Jedná se o populární formát zápisu dokumentací projektů, souborů README (čti mě) pro repozitáře stránek jako GitHub a GitLab, či článků některých blogů a osobních stránek.
 
-  Existuje velká řada variant Markdownu jako Kramdown či Redcarpet, které originál rozšiřují o dodatečnou funkcionalitu jako poznámky pod čarou, podporu úpravy vzhledu stránky pomocí \gls{css} či vkládání rovnic v \LaTeX ové notaci.
+  Existuje velká řada „variant“ (z anglického slova flavor) Markdownu jako Kramdown či Redcarpet, které originál rozšiřují o dodatečnou funkcionalitu jako vkládání poznámek pod čarou, podporu úpravy vzhledu stránky pomocí \gls{css} či možnost přidávání rovnic v \LaTeX ové notaci.
 
-  V projektu je v kombinaci s šablonovým jazykem Liquid používán ke psaní článků (viz. kapitola~\fullref{sec:Proces tvorby článků}), jelikož je na nich Jekyll založen.
+  V projektu je v kombinaci s šablonovým jazykem Liquid používán ke psaní článků (viz. kapitola~\fullref{sec:Proces tvorby článků}), jelikož právě z nich Jekyll generuje výslednou statickou stránku.
 
 
   \subsection{\TeX} \label{sec:TeX}
@@ -434,14 +436,14 @@
 
   V projektu je používán \LaTeX{} (viz. kapitola~\fullref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů~\cite{getting-started-with-latex}.
 
-  Následující příklad ukazuje část zdrojového kódu \LaTeX ového dokumentu, který vytvoří nadpis a paragraf, na jehož konec vloží odkaz na citaci:
+  Následující příklad ukazuje část zdrojového kódu \LaTeX ového dokumentu, který vytvoří nadpis a paragraf, na jehož konec je vložen odkaz na citaci:
 
   \begin{minted}[linenos,breaklines]{latex}
   \subsection{\TeX}
   \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století~\cite{tex-history}.
   \end{minted}
 
-  K převodu \LaTeX u do formátu \gls{pdf} je v projektu používán český program pdf\TeX{}~\cite{pdftex}. % TODO: write a little mode about pdfTeX
+  K převodu \LaTeX u do formátu \gls{pdf} je v projektu používán český program pdf\TeX. Umožňuje „produkci \gls{pdf} přimo z \TeX ového vstupu bez převodu do přechodných formátů jako \acrshort{dvi} (\acrlong{dvi}~--~původní výstupný formát \TeX u) či \gls{ps}“~\cite{pdftex} (přeloženo z angličtiny).
 
 
   \section{Použité nástroje} \label{sec:Použité nástroje}
@@ -526,21 +528,22 @@
 
 
   \subsection{Testování výkonu}
-  % TODO: write about what performance means in this context -- both speed and versitality
+  V rámci testování webové stránky jsou hlavní dvě kritéria: doba úplného načtení stránky při běžné rychlosti internetového připojení a její funkčnost na různých typech zařízení. % TODO: write more...
 
-  \subsubsection{Rychlost načítání}
+
+  \subsubsection{Doba načtení}
   Doba načtení webové stránky je jedním z hlavních faktorů ovlivňujících její úspěšnost. Přebytečný čas nad optimální dobu (mezi $1.8$ a $2.7$ vteřinami) má negativní vliv na procento konverzí stránky. Při zpoždění o $100$ milisekund nad tuto dobu klesá procento konverzí uživatelů osobních počítačů o $7.8$ \%. Konverze dále klesají až o $26.2$ \% při zpoždění v řádu $2$ vteřin~\cite{conversion-rate-statistics}.
 
-  Testování bylo provedeno s pomocí služby \url{https://www.webpagetest.org/}, která analyzuje webové stránky z různých lokací světa (a různých prohlížečů) a poskytuje statistiky o rychlosti načítání, množství načtených dat a mnohém dalším.
+  Testování bylo provedeno s pomocí služby \url{https://www.webpagetest.org/}, která analyzuje webové stránky z různých lokací světa (a různých prohlížečů) a poskytuje statistiky o rychlosti načtení, množství načtených dat a mnohém dalším.
 
-  Obrázek~\ref{img:Mapa dob načítání} obsahuje informace o době úplného načtení stránky \url{http://robotics-simplified.com/} z většiny dostupných testovacích lokalit výše uvedené služby ke 13. únoru 2019.
+  Obrázek~\ref{img:Mapa dob načtení z různých míst světa} obsahuje informace o době \emph{úplného načtení stránky} (tj. plně funkční a interaktivní) \url{http://robotics-simplified.com/} z většiny dostupných testovacích lokalit výše uvedené služby ke 13. únoru 2019.
 
   \begin{figure}[H]
     \includegraphics[width=\linewidth]{map.png}
-    \caption{Mapa dob načítání} \label{img:Mapa dob načítání}
+    \caption{Mapa dob načtení z různých míst světa} \label{img:Mapa dob načtení z různých míst světa}
   \end{figure}
 
-  Z obrázku~\ref{img:Mapa dob načítání} je patrné, že doba načtení webové stránky je do značné míry závislá na vzdálenosti od České republiky, ve které je hostována. Tyto hodnoty rovněž v testovaných zemích výrazně nepřevyšují optimální dobu, což je při uvážení ceny webhostingu přijatelné.
+  Z obrázku~\ref{img:Mapa dob načtení z různých míst světa} je patrné, že doba načtení webové stránky je do značné míry závislá na vzdálenosti od České republiky, ve které je hostována. Tyto hodnoty rovněž v testovaných zemích výrazně nepřevyšují optimální dobu, což je při uvážení ceny webhostingu přijatelné.
 
 
   \subsubsection{Multiplatformnost}
@@ -592,7 +595,6 @@
     \endminipage
   \end{figure}
 
-  % TODO: write about illustrations
 
   \subsubsection{Matematika} \label{sec:Matematika}
   Jelikož jsou probírané koncepty a algoritmy založeny na matematice, tak stránka podporuje vkládání rovnic a výrazů do článků. Tuto funkcionalitu zajišťuje JavaScriptová knihovna \KaTeX{} (viz. kapitola~\fullref{sec:KaTeX}), díky které lze \LaTeX ové rovnice umísťovat přímo do Markdownových článků.
@@ -680,7 +682,7 @@
 
 
   \subsection{Převod webové stránky do \acrshort{pdf}} \label{sec:Převod webové stránky do PDF}
-  Pro offline dostupnost existuje mnoho různých typů souborů, na které by stránka šla převést. Často používané formáty jako \texttt{doc} a \texttt{docx} jsou však pro použití v projektu nevhodné, protože se mohou na různých zařízeních zobrazit rozdílně. Je tedy vhodnější použít formáty jako PostScript či \gls{pdf}, jejichž vizáž na prostředí závislá není~\cite{history-of-pdf}.
+  Pro offline dostupnost existuje mnoho různých typů souborů, na které by stránka šla převést. Často používané formáty jako \texttt{doc} a \texttt{docx} jsou však pro použití v projektu nevhodné, protože se mohou na různých zařízeních zobrazit rozdílně. Je tedy vhodnější použít formáty jako \gls{ps} či \gls{pdf}, jejichž vizáž na prostředí závislá není~\cite{history-of-pdf}.
 
   Přímočará varianta by byla převést články do \gls{pdf} libovolným programem pro převod textových formátů (jako Pandoc). Tímto přístupem by však bylo obtížné generovat obsah a úvodní stránku, a prakticky nemožné ovlivnit výsledné formátování.
 
@@ -694,7 +696,7 @@
 
   Úprava fotek funguje na principu \emph{kvantování barev}~--~podobné barvy jsou spojeny do jedné, čímž lze z tradičních 24-bitových palet \gls{png} obrázků udělat palety 8-bitové a zmenšit tím obrázek bez výrazného zhoršení kvality.
 
-  Ke 24. únoru 2019 tento skript zkomprimuje obrázky webové stránky na $72.3$ \% jejich původní velikosti a zmenší tím její velikost o \emph{262 KB}.
+  Ke 24. únoru 2019 tento skript zkomprimuje obrázky webové stránky na $72.3$ \% jejich původní velikosti a zmenší tím jejich velikost o \emph{262 KB}.
 
 
   \subsection{Minimalizace zdrojového kódu}
@@ -702,7 +704,7 @@
 
   Tuto funkci zastává skript \texttt{minify.py}, který soubory typu \gls{css} a \gls{html} zmenší odstraněním komentářů, nepotřebných tagů a uvozovek, přebytečných mezer a dalších částí kódu, které po jejich odstranění funkcionalitu kódu nezmění.
 
-  Ke 24. únoru 2019 tento skript zkompaktní \gls{css} a \gls{html} webové stránky na $72.89$ \% a $68.12$ \% jejich původní velikosti a zmenší tím její velikost o \emph{129 KB}.
+  Ke 24. únoru 2019 tento skript zkompaktní \gls{css} a \gls{html} webové stránky na $72.89$ \% a $68.12$ \% jejich původní velikosti a zmenší tím jejich velikost o \emph{129 KB}.
 
 
   \subsection{Automatizace procesu}
@@ -715,7 +717,7 @@
   \subsection{Analýza návštěvnosti}
 
   \subsubsection{Google Analytics}
-  Google Analytics je služba společnosti Google. Slouží k analýze návštěvnosti webových stránek. Pro použití stačí na danou stránku přidat JavaScriptovou knihovnu % TODO: finish writing this
+  Google Analytics je služba společnosti Google, která slouží k analýze návštěvnosti webových stránek. Pro použití stačí na danou stránku přidat JavaScriptovou knihovnu, která shromažďuje informace o návštěvnících (z údajů prohlížeče a také \gls{http} cookies) a jejich interakcí s danou stránkou.
 
   % TODO: add location pie chart
   % TODO: add device pie chart
