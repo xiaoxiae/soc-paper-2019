@@ -8,7 +8,7 @@
 % LANGUAGE %
 %-========-%
 \usepackage{luavlna}                            % auto non-breaking spaces
-\AtBeginDocument{\singlechars{czech}{AaIiVvOoUuSsZzKk}}
+\AtBeginDocument{\singlechars{czech}{AaIiVvOoUuSsZzKk}} % chars not to break on
 \usepackage[czech]{babel}                       % use the czech language
 
 
@@ -80,18 +80,17 @@
 % BIBLIOGRAPHY %
 %-============-%
 \usepackage[backend=biber,
-            style=iso-numeric,
+            style=iso-numeric,                  % numeric ISO 690
             sortlocale=cs_CZ,
             autolang=other,
             bibencoding=UTF8]{biblatex}         % use BibLaTeX for references
-\addbibresource{soc.bib}                        % reference file
+\addbibresource{soc.bib}                        % references file
 
-\renewcommand*{\finentrypunct}{}                % don't end the reference with .
-\renewcommand{\multinamedelim}{\addcomma\space} % use comma as delimeter
-\renewcommand{\finalnamedelim}{\addspace a \space} % use a as final name delim
+\renewcommand*{\finentrypunct}{}                % don't end references with dot
+\renewcommand{\multinamedelim}{\addcomma\space} % use comma as name delimeter
+\renewcommand{\finalnamedelim}{\addspace a \space} % use a as final name delim.
 \renewbibmacro{in:}{}                           % don't use In:
-
-\DeclareFieldFormat{labelnumberwidth}{[#1]}     % wrap refs in square brackets
+\DeclareFieldFormat{labelnumberwidth}{[#1]}     % wrap ref nums in sqr brackets
 
 
 % TABLES          %
@@ -100,7 +99,7 @@
 \floatstyle{plaintop}                           % table caption on top
 \restylefloat{table}                            % -||-
 \usepackage{booktabs}                           % table formatting
-\setlength\heavyrulewidth{0.25ex}
+\setlength\heavyrulewidth{0.2ex}                % top and bottomrule thickness
 
 
 % MATH %
@@ -111,11 +110,11 @@
 
 % MISCELLANEOUS %
 %-=============-%
-\usepackage[font=footnotesize,
-            labelfont=bf,
-            figurename=Obr.,
-            tablename=Tab.,
-            belowskip=-12pt]{caption}           % captions
+\usepackage[font=footnotesize,                  % 10pt captions
+            labelfont=bf,                       % bold captions
+            figurename=Obr.,                    % picture captions are "Obr."
+            tablename=Tab.,                     % table captions are "Tab."
+            belowskip=-12pt]{caption}           % reduced below skip
 
 \usepackage{enumitem}                           % lists
 
@@ -131,7 +130,7 @@
 \usepackage[T1]{fontenc}                        % font encoding
 \usepackage{fontspec}                           % font selector
 
-\setmainfont{CMU Serif}                         % a font that suports bx sc
+\setmainfont{CMU Serif}                         % font supporting bold smallcaps
 
 
 % ACRONYMS %
