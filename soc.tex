@@ -54,6 +54,21 @@
 \setlength{\fboxsep}{0pt}                       % image border separation
 \setlength{\fboxrule}{0.5pt}                    % image border thickness
 
+\usepackage{titlesec}
+
+
+% TITLE FORMATTING %
+%-================-%
+% titles have sizes 18pt, 16pt and 14pt, respectively
+% the space between the number and the text of the title is 1em
+\titleformat{\section}{\bfseries\scshape\fontsize{18pt}{21.6}\selectfont}{\thesection}{1em}{}
+\titleformat{\subsection}{\bfseries\fontsize{16pt}{19.2}\selectfont}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\bfseries\fontsize{14pt}{16.8}\selectfont}{\thesubsubsection}{1em}{}
+
+\titlespacing{\section}      {0pt}{0pt}{6pt}    % 18pt (12pt + 6pt)
+\titlespacing{\subsection}   {0pt}{0pt}{4pt}    % 16pt (12pt + 4pt)
+\titlespacing{\subsubsection}{0pt}{0pt}{2pt}    % 14pt (12pt + 2pt)
+
 
 % CROSS-REFERENCES %
 %-================-%
@@ -167,24 +182,12 @@
 \glssetwidest{WYSIWYGGG}                        % manually set the widest acr.
 
 
-% TEXT FORMATTING %
-%-================-%
-\usepackage{titlesec}
-
-% titles have sizes 18pt, 16pt and 14pt, respectively
-% the space between the number and the text of the title is 1em
-\titleformat{\section}{\bfseries\scshape\fontsize{18pt}{21.6}\selectfont}{\thesection}{1em}{}
-\titleformat{\subsection}{\bfseries\fontsize{16pt}{19.2}\selectfont}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}{\bfseries\fontsize{14pt}{16.8}\selectfont}{\thesubsubsection}{1em}{}
-
+% PARAGRAPH FORMATTING %
+%-====================-%
 \setlength\parindent{0pt}                       % 0pt paragraph indentation
 \setlength\parskip{12pt}                        % 12pt paragraph spacing
 
-\titlespacing{\section}      {0pt}{0pt}{6pt}    % 18pt (12pt + 6pt)
-\titlespacing{\subsection}   {0pt}{0pt}{4pt}    % 16pt (12pt + 4pt)
-\titlespacing{\subsubsection}{0pt}{0pt}{2pt}    % 14pt (12pt + 2pt)
-
-\renewcommand{\baselinestretch}{1.15}           % baseline stretch
+\renewcommand{\baselinestretch}{1.15}           % baseline stretch is 1.15
 
 
 % OTHER %
