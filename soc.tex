@@ -99,7 +99,12 @@
 \floatstyle{plaintop}                           % table caption on top
 \restylefloat{table}                            % -||-
 \usepackage{booktabs}                           % table formatting
+\usepackage{multirow}                           % for creating multirow tables
 \setlength\heavyrulewidth{0.2ex}                % top and bottomrule thickness
+
+% fixes the issue with babel and multirow: https://tex.stackexchange.com/questions/111999/slovak-and-czech-babel-gives-problems-with-cmidrule-and-cline
+\usepackage{etoolbox}
+\preto\tabular{\shorthandoff{-}}
 
 
 % MATH %
