@@ -4,7 +4,7 @@ os.chdir("..")
 
 # clean-up files from the previous compilation
 for file in [f for f in os.listdir(".") if os.path.isfile(f)]:
-    if file.startswith("soc") and not file.endswith(("tex", "bib")):
+    if file.startswith("soc") and not file.endswith(("tex", "bib", "xoj")):
         os.remove(file)
 
 # initial lualatex run
