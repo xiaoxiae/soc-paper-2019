@@ -382,9 +382,9 @@
 
 
   \subsection{\acrshort{css}} \label{sec:CSS}
-  Po vzniku \gls{html} bylo třeba vytvořit stylopisný jazyk, který by umožňoval přizpůsobení vzhledu těchto dokumentů. Jedním z průkopníků této myšlenky byl Håkon Wimu Lie, který roku 1994 publikoval první návrh stylopisného jazyka \gls{css}~\cite{css-proposal}. \gls{css} umožňuje ovlivnit vlastnosti \gls{html} dokumentů jako barva a velikost písma, textura pozadí, či pozice obrázku, které samotné \gls{html} neumožňuje\footnote{To, že v \gls{html} nejde měnit vzhled dokumentu není úplně pravda, ale jedná se převážně o zastaralé a nepoužívané tagy (jako např. \mintinline{html}{<center>}), jejichž použití je oproti \gls{css} nedoporučované.}~\cite{css-saga}.
+  Se stoupající popularitou webu v 90. letech 20. rostla také nespokojenost autorů dokumentů \gls{html} s nedostatky v jeho formátování, jelikož bylo řízeno prohlížeči a nemohlo jimi být žádným způsobem ovlivňeno\footnote{To, že v čistém \gls{html} nejde ovlivnit vzhled dokumentu není pravda, ale není to doporučované~--~\gls{html} by mělo být zaměřeno na sémantiku dokumentů, ne na jejich formátování.}. Z tohoto důvodu Håkon Wimu Lie publikoval roku 1994 možné řešení tohoto problému~--~návrh stylopisného jazyka \gls{css}~\cite{css-proposal,css-saga}.
 
-  Příkladem \gls{css} je následující ukázka kódu, která upravuje vlastnosti nadpisu \mintinline{html}{<h1>}~--~mění barvu textu na zelenou, pozici na střed stránky a velikost na 18b:
+  Funkcionalita \gls{css} je vidět na následující ukázce kódu, která upravuje vlastnosti nadpisu \mintinline{html}{<h1>} \gls{html} dokumentu~--~mění jeho barvu textu na zelenou, pozici na střed stránky a velikost na \texttt{18b}:
 
   \begin{minted}[linenos,breaklines]{css}
   h1 {
@@ -394,7 +394,7 @@
   }
   \end{minted}
 
-  Při použití \gls{css} je důležitý princip kaskádování~--~vzhled stránky ovlivňují jak požadavky čtenáře, tak požadavky autora. Samotné kaskádování je kombinace těchto požadavků a v případě vzniku konfliktů (autor požaduje písmo velikosti \texttt{12pt}, ale čtenář velikosti \texttt{10pt}) jejich rezoluce.
+  Při použití \gls{css} je důležitý princip kaskádování~--~vzhled stránky ovlivňují jak požadavky čtenáře, tak požadavky autora. Samotné kaskádování je kombinace těchto požadavků a v případě vzniku konfliktů (autor požaduje písmo velikosti \texttt{12b}, ale čtenář velikosti \texttt{10b}) jejich rozřešení.
 
   V projektu je používán \gls{sass}, který převádí \gls{css} s pokročilejším syntaxem a dodatečnou funkcionalitou do standardního \gls{css}, díky čemuž jde vzhled stránky upravovat jednodušeji.
 
