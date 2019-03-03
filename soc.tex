@@ -558,7 +558,35 @@
 
 
   \subsubsection{Multiplatformnost}
-  % TODO: how does the website work on different devices and browsers
+  Jelikož je výsledný produkt webová stránka, tak další kritický faktor ovlivňující její úspěšnost je správné fungování na různých typech zařízení a prohlížečích.
+
+  Funkčnost různých komponent stránky byla testována na několika z nejpoužívanějších prolížečů internetu~\cite{browser-statistics}: Firefox 65.0.1 (\faIcon{firefox}), Chrome ... (\faIcon{chrome}), Internet Explorer ... (\faIcon{internet-explorer}), Edge ... (\faIcon{edge}), Safari ... (\faIcon{safari}) a Opera ... (\faIcon{opera}). Testování se skládalo z načtení stránky na příslušném prohlížeči a kontrolování, zda testované komponenty fungují správně.
+
+  Výsledky těchto testů jsou zaneseny do tabulky \ref{tab:Data testování stránky na různých zařízeních}~--~správné fungování je značeno symbolem \faIcon{check}, špatné symbolem \faIcon{times} a nemožnost testování z důvodu nedostupnosti prohlížeče na dané platformně je značeno symbolem \faIcon{minus}).
+
+  \begin{table}[H]
+    \footnotesize
+    \centering
+    \ra{1.3}
+    \begin{tabular}{@{}rccccccccccccc@{}} \toprule
+      & \multicolumn{6}{c}{Stolní počítač} & \phantom{abc} & \multicolumn{6}{c}{Mobilní zařízení} \\
+        \cmidrule{2-7} \cmidrule{9-14}
+       & \faIcon{firefox} & \faIcon{chrome} & \faIcon{internet-explorer} & \faIcon{edge} & \faIcon{safari} & \faIcon{opera}
+      && \faIcon{firefox} & \faIcon{chrome} & \faIcon{internet-explorer} & \faIcon{edge} & \faIcon{safari} & \faIcon{opera}\\
+        \midrule
+      Obrázky     & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check} & & \faIcon{check}
+      && \faIcon{check} & \faIcon{check} & \faIcon{minus} & \faIcon{check} & & \faIcon{check} \\
+      Rovnice     & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check} & & \faIcon{check}
+      && \faIcon{check} & \faIcon{check} & \faIcon{minus} & \faIcon{check} & & \faIcon{check} \\
+      Vizualizace & \faIcon{check} & \faIcon{check} & \faIcon{times} & \faIcon{check} & & \faIcon{check}
+      && \faIcon{check} & \faIcon{check} & \faIcon{minus} & \faIcon{check} & & \faIcon{check} \\
+      Formátování & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check} & & \faIcon{check}
+       && \faIcon{check} & \faIcon{check} & \faIcon{minus} & \faIcon{check} & & \faIcon{check} \\
+        \bottomrule
+    \end{tabular}
+    \caption{Data testování stránky na různých zařízeních}
+    \label{tab:Data testování stránky na různých zařízeních}
+  \end{table}
 
   \section{Obsah webové stránky} \label{sec:Obsah webové stránky}
 
