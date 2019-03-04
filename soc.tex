@@ -335,11 +335,11 @@
 
   Značnou zásluhu má například neziskový program FIRST a jeho soutěže \gls{frc}, \gls{ftc} a \gls{fll}, které z robotiky dělají hru. Týmy tvořeny studenty základních a středních škol mají za úkol během několika týdnů robota od základu navrhnout, postavit a naprogramovat tak, aby plnil úkoly každým rokem se měnící výzvy.
 
-  Začátečníci se zájmem o robotiku se však musí potýkat s problematikou nedostatku studijních materiálů, ať už se jedná o programování robota či o jeho stavbu. Čtení odborných prací však není pro každého, zvláště pokud o daném oboru ví málo, a hledání přístupnějších kvalitních zdrojů ne vždu končí úspěchem.
+  Začátečníci se zájmem o robotiku se však musí potýkat s problematikou nedostatku studijních materiálů, ať už se jedná o programování robota či o jeho stavbu. Čtení odborných prací však není pro každého, zvláště pokud o daném oboru ví málo, a hledání přístupnějších kvalitních zdrojů ne vždy končí úspěchem.
 
   Stránka \url{robotics-simplified.com}~\cite{robotics-simplified} se snaží tento problém řešit tím, že poskytuje centralizovaný zdroj informací pro nováčky do oboru robotiky. Je strukturována jako série článků, které koncepty intuitivním způsobem vysvětlují. Články obsahují ilustrace a interaktivní vizualizace, a jsou pro zájemce o programování doplněny zdrojovými kódy, které koncepty implementují. Celá stránka je rovněž optimalizovaná pro mobilní zařízení a je dostupná také ve formátu \gls{pdf}, proto připojení k internetu není pro čtení stránky třeba.
 
-  Tato práce se zabývá obsahem a tvorbou výše uvedené webové stránky. Nejprve stanovuje požadavky, které musí výsledný proukt práce splňovat. Poté popisuje programovací jazyky a nástroje, které jsou v projektu využívány a opodstatňuje jejich použití oproti alternativám. Dále rozebírá vývoj, obsah a automatizaci provozu webové stránky a na závěr analyzuje její návštěvnost a propagaci.
+  Tato práce se zabývá obsahem a tvorbou výše uvedené webové stránky. Nejprve stanovuje požadavky, které musí výsledný produkt práce splňovat. Poté popisuje programovací jazyky a nástroje, které jsou v projektu využívány a opodstatňuje jejich použití oproti alternativám. Dále rozebírá vývoj, obsah a automatizaci provozu webové stránky a na závěr analyzuje její návštěvnost a propagaci.
 
   \newpage
 
@@ -350,7 +350,7 @@
 
 
   \subsection{Otevřenost zdrojového kódu}
-  Hlavní požadavek, který by měl produkt splňovat je \emph{otevřenost} (tj. bezplatná dostupnost) zdrojového kódu. Otevřenost výrazně usnadňuje kolaboraci (kdokoliv může navrhnout změnu) a zvyšuje důvěru v daný software (chování programu lze snadno ověřit nahlednutím do kódu), což jsou žádoucí kvality softwaru zaměřeného na vzdělávání.
+  Hlavní požadavek, který by měl produkt splňovat je \emph{otevřenost} (tj. bezplatná dostupnost) zdrojového kódu. Otevřenost výrazně usnadňuje kolaboraci (kdokoliv může navrhnout změnu) a zvyšuje důvěru v daný software (chování programu lze snadno ověřit nahlédnutím do kódu), což jsou žádoucí kvality softwaru zaměřeného na vzdělávání.
 
   Příklady populárního otevřeného softwaru využívaného při stavbě tohoto projektu jsou např. Inkscape, Atom, Git či Jekyll, které jsou podrobněji rozebírány v kapitole~\fullref{sec:Použité nástroje}.
 
@@ -385,7 +385,7 @@
 
 
   \subsection{\acrshort{css}} \label{sec:CSS}
-  Se stoupající popularitou webu v 90. letech 20. rostla také nespokojenost autorů dokumentů \gls{html} s nedostatky v jeho formátování, jelikož bylo řízeno prohlížeči a nemohlo jimi být žádným způsobem ovlivňeno\footnote{To, že v čistém \gls{html} nejde ovlivnit vzhled dokumentu není pravda, ale není to doporučované~--~\gls{html} by mělo být zaměřeno na sémantiku dokumentů, ne na jejich formátování.}. Z tohoto důvodu Håkon Wimu Lie publikoval roku 1994 možné řešení tohoto problému~--~návrh stylopisného jazyka \gls{css}~\cite{css-proposal,css-saga}.
+  Se stoupající popularitou webu v 90. letech 20. rostla také nespokojenost autorů dokumentů \gls{html} s nedostatky v jeho formátování, jelikož bylo řízeno prohlížeči a nemohlo jimi být žádným způsobem ovlivněno\footnote{To, že v čistém \gls{html} nejde ovlivnit vzhled dokumentu není pravda, ale není to doporučované~--~\gls{html} by mělo být zaměřeno na sémantiku dokumentů, ne na jejich formátování.}. Z tohoto důvodu Håkon Wimu Lie publikoval roku 1994 možné řešení tohoto problému~--~návrh stylopisného jazyka \gls{css}~\cite{css-proposal,css-saga}.
 
   Funkcionalita \gls{css} je vidět na následující ukázce kódu, která upravuje vlastnosti nadpisu \mintinline{html}{<h1>} \gls{html} dokumentu~--~mění jeho barvu textu na zelenou, pozici na střed stránky a velikost na \texttt{18b}:
 
@@ -439,7 +439,7 @@
   \subsection{\TeX} \label{sec:TeX}
   \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století. Počáteční impulz pro vznik byla Knuthova nespokojenost s tiskovou kvalitou vydání jedné z jeho knih, což jej vedlo ke studiu principů sázení, tvorby fontů a později až k vytvoření vlastního sázecího systému \TeX{}~\cite{tex-history}.
 
-  Od \gls{wysiwyg} programů jako Microsoft Word či LibreOffice se \TeX{} liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postárá. Tento přístup klade větší důraz na obsah~--~autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda tohoto přístupu je jednoduchost verzování \TeX ových dokumentů, jelikož jsou psány v prostém textu.
+  Od \gls{wysiwyg} programů jako Microsoft Word či LibreOffice se \TeX{} liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postará. Tento přístup klade větší důraz na obsah~--~autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda tohoto přístupu je jednoduchost verzování \TeX ových dokumentů, jelikož jsou psány v prostém textu.
 
   V projektu je používán \LaTeX{} (viz. kapitola~\fullref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů~\cite{getting-started-with-latex}.
 
@@ -450,7 +450,7 @@
   \TeX{} je programovací jazyk pro sázení odborné literatury vytvořený Donaldem E. Knuthem v 70. létech 20. století~\cite{tex-history}.
   \end{minted}
 
-  K převodu \LaTeX u do formátu \gls{pdf} je v projektu používán český program pdf\TeX, který umožňuje „produkci \gls{pdf} přimo z \TeX ového vstupu bez převodu do přechodných formátů jako \acrshort{dvi} (\acrlong{dvi}~--~původní výstupný formát \TeX u) či \gls{ps}“~\cite{pdftex} (přeloženo z angličtiny).
+  K převodu \LaTeX u do formátu \gls{pdf} je v projektu používán český program pdf\TeX, který umožňuje „produkci \gls{pdf} přímo z \TeX ového vstupu bez převodu do přechodných formátů jako \acrshort{dvi} (\acrlong{dvi}~--~původní výstupný formát \TeX u) či \gls{ps}“~\cite{pdftex} (přeloženo z angličtiny).
 
 
   \section{Použité nástroje} \label{sec:Použité nástroje}
@@ -460,11 +460,11 @@
 
 
   \subsection{Git} \label{sec:Git}
-  Git je otevřený\footnote{Zdrojový kód Gitu je dostupný na adrese \url{https://github.com/git/git}.} verzovací systém vytvořený Linusem Torvaldsem pro použití na operačním systému Linux. V open-source komunitě se v současné době (31. leden 2019) jedná o nejpoužívanější vezrovací systém~\cite{version-control-usage-statistics}, což je jeden z hlavních důvodů pro jeho využití v tomto projektu.
+  Git je otevřený\footnote{Zdrojový kód Gitu je dostupný na adrese \url{https://github.com/git/git}.} verzovací systém vytvořený Linusem Torvaldsem pro použití na operačním systému Linux. V open-source komunitě se v současné době (31. leden 2019) jedná o nejpoužívanější verzovací systém~\cite{version-control-usage-statistics}, což je jeden z hlavních důvodů pro jeho využití v tomto projektu.
 
   Verzovací systém umožňuje zaznamenávat změny a jejich důvod/význam na verzované skupině souborů a složek (tzv. repozitáři) a pomáhá tím zamezit ztrátě práce, zjednodušit hledání chyb v kódu a usnadnit spolupráci mezi autory.
 
-  Narozdíl od centralizovaných verzovacích systémů jako Subversion či \gls{cvs} je Git decentralizovaný~--~místo hlavní úschovny kódu pracuje každý s lokální kopií, která obsahuje úplnou historií projektu. Hlavní výhody tohoto přístupu oproti centrální úschovně jsou rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru~\cite{cvcs-vs-dvcs}.
+  Na rozdíl od centralizovaných verzovacích systémů jako Subversion či \gls{cvs} je Git decentralizovaný~--~místo hlavní úschovny kódu pracuje každý s lokální kopií, která obsahuje úplnou historií projektu. Hlavní výhody tohoto přístupu oproti centrální úschovně jsou rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru~\cite{cvcs-vs-dvcs}.
 
   Decentralizovanost Gitu však existenci hlavní kopie nezamezuje~--~existuje řada služeb jako GitHub, GitLab či GitBucket, které tuto centrální úschovnu poskytují. % TODO: rephrase this paragraph
 
@@ -476,11 +476,11 @@
 
   Hlavní nevýhodou statických webových stránek je obtížné přidávání dynamicky-se měnícího obsahu jako komentáře či přihlašování, ke kterému jsou zpravidla potřeba databáze. Díky tomu se nejedná o vhodné technické řešení pro sociální sítě a diskuzní fóra.
 
-  Nejpopulárnější alternativna Jekyllu je Hugo, který byl při vývoji stránky rovněž testován, avšak nakonec byl kvůli aktivnější komunitě a osobní preferenci zvolen Jekyll.
+  Nejpopulárnější alternativa Jekyllu je Hugo, který byl při vývoji stránky rovněž testován, avšak nakonec byl kvůli aktivnější komunitě a osobní preferenci zvolen Jekyll.
 
 
   \subsection{Inkscape} \label{sec:Inkscape}
-  Inkscape je otevřený\footnote{Zdrojový kód Jekyllu je dostupný na adrese \url{https://github.com/jekyll/jekyll}.} multiplaformní software na tvorbu vektorové grafiky. Oproti rastrovým softwarům, které pracují s  pixely obrázku, si vektorové pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola~\fullref{sec:Ilustrace}).
+  Inkscape je otevřený\footnote{Zdrojový kód Jekyllu je dostupný na adrese \url{https://github.com/jekyll/jekyll}.} multiplatformní software na tvorbu vektorové grafiky. Oproti rastrovým softwarům, které pracují s  pixely obrázku, si vektorové pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola~\fullref{sec:Ilustrace}).
 
   Jedná se o populární volbu pro ty, kteří nepoužívají profesionální software jako Adobe Illustrator z důvodu jeho vysoké ceny, uzavřenosti zdrojového kódu či nedostupnosti pro operační systém Linux.
 
@@ -490,7 +490,7 @@
 
   Populární \gls{cad} software využívaný členy \gls{frc} týmů je Fusion 360 od společnosti Autodesk, převážně kvůli dostupnosti licence (zdarma pro studenty a jejich mentory). Profesionální alternativou je program SolidWorks, který je kvůli své ceně využíván převážně studenty technicky zaměřených škol přes školní licenci.
 
-  Fusion 360 je jediný v projeku používaný program, který nefunguje na operačním systému Linux. Za zmínku stojí otevřený\footnote{Zdrojový kód FreeCADu je dostupný na adrese \url{https://github.com/FreeCAD/FreeCAD}} multiplatformní program FreeCAD, se kterým však nemám dostatek zkušeností, proto nebyl v projektu používán.
+  Fusion 360 je jediný v projektu používaný program, který nefunguje na operačním systému Linux. Za zmínku stojí otevřený\footnote{Zdrojový kód FreeCADu je dostupný na adrese \url{https://github.com/FreeCAD/FreeCAD}} multiplatformní program FreeCAD, se kterým však nemám dostatek zkušeností, proto nebyl v projektu používán.
 
 
   \section{Vývoj webové stránky} \label{sec:Vývoj webové stránky}
@@ -560,7 +560,7 @@
   \subsubsection{Multiplatformnost}
   Jelikož je výsledný produkt webová stránka, tak další kritický faktor ovlivňující její úspěšnost je správné fungování na různých typech zařízení a prohlížečích.
 
-  Funkčnost různých komponent stránky byla testována na několika z nejpoužívanějších prolížečů internetu~\cite{browser-statistics}: Firefox 65.0.1 (\faIcon{firefox}), Chrome ... (\faIcon{chrome}), Internet Explorer ... (\faIcon{internet-explorer}), Edge ... (\faIcon{edge}), Safari ... (\faIcon{safari}) a Opera ... (\faIcon{opera}). Testování se skládalo z načtení stránky na příslušném prohlížeči a kontrolování, zda testované komponenty fungují správně.
+  Funkčnost různých komponent stránky byla testována na několika z nejpoužívanějších prohlížečů internetu~\cite{browser-statistics}: Firefox 65.0.1 (\faIcon{firefox}), Chrome ... (\faIcon{chrome}), Internet Explorer ... (\faIcon{internet-explorer}), Edge ... (\faIcon{edge}), Safari ... (\faIcon{safari}) a Opera ... (\faIcon{opera}). Testování se skládalo z načtení stránky na příslušném prohlížeči a kontrolování, zda testované komponenty fungují správně. % TODO: finish writing this paragraph
 
   Výsledky těchto testů jsou zaneseny do tabulky \ref{tab:Data testování stránky na různých zařízeních}~--~správné fungování je značeno symbolem \faIcon{check}, špatné symbolem \faIcon{times} a nemožnost testování z důvodu nedostupnosti prohlížeče na dané platformně je značeno symbolem \faIcon{minus}).
 
@@ -701,7 +701,7 @@
   \subsection{Uplatnění}
   Kromě snahy o zpřístupnění robotiky pro začátečníky stránka rovněž poskytuje zdroj strukturovaných vzdělávacích materiálů pro lektory kurzů robotiky a programování. Sám jich několik na Vzdělávacím centru Turnov pomocí mé stránky vyučuji a mé zkušenosti byly zatím pouze kladné.
 
-  Díky otevřenosti zdrojového kódu stránka dále slouží jako šablona pro Jekyllem poháněné projekty, které by rády docílily obdobné funkcionality (rovnice, automatizace pomocí skriptů, zvýrazňování syntaxe kódu, aj.) bez dlouhavého psaní a ladění kódu.
+  Díky otevřenosti zdrojového kódu stránka dále slouží jako šablona pro Jekyllem poháněné projekty, které by rády docílily obdobné funkcionality (rovnice, automatizace pomocí skriptů, zvýrazňování syntaxe kódu, aj.) bez zdlouhavého psaní a ladění kódu.
 
 
   \section{Automatizace provozu webové stránky} \label{sec:Automatizace provozu webové stránky}
@@ -789,7 +789,7 @@
   \section{Závěr}
   Náplní práce na projektu je v dohledné budoucnosti tvorba nových článků a jejich lokalizace do českého jazyka. S tím je též úzce spjata revize již napsaných článků~--~přidávání dodatečných ilustrací a vizualizací, zpřehlednění textu, revize kódu, aj.
 
-  Stránka rovněž nepoužívá protokol \gls{https}, který narozdíl od \gls{http} šifruje komunikaci mezi klientem a serverem a zamezuje tím řadě možných útoků, před kterými \gls{http} uživatele nechrání. Jelikož však WEDOS podporuje mezinárodně uznávanou certifikační autoritu Let's Encrypt, tak by tato změna neměla být příliš komplikovaná.
+  Stránka rovněž nepoužívá protokol \gls{https}, který na rozdíl od \gls{http} šifruje komunikaci mezi klientem a serverem a zamezuje tím řadě možných útoků, před kterými \gls{http} uživatele nechrání. Jelikož však WEDOS podporuje mezinárodně uznávanou certifikační autoritu Let's Encrypt, tak by tato změna neměla být příliš komplikovaná.
 
   Další oblastí zlepšení je převod webové stránky do offline verze~--~přidání dodatečných formátů jako \gls{epub} a \gls{mobi} pro zlepšení podpory elektronických čteček knih, zajištění větší spolehlivosti převodu a přidání dalších funkcí (přeškrtnutí textu, podtržení textu, reference, citace...).
 
@@ -820,7 +820,7 @@
   \newpage
 
   \section{Příloha 1: Data testování doby načtení} \label{sec:Příloha 1: Data testování doby načtení}
-  Tabulka \ref{tab:Data testování doby načtení} obsahuje místa, ze kterých byla testována doba načtení stránky \url{http://robotics-simplified.com/} a častečné odkazy na testovací data. K vytvoření úplného odkazu stačí před označení daného města přidat \texttt{www.webpagetest.org/result/}.
+  Tabulka \ref{tab:Data testování doby načtení} obsahuje místa, ze kterých byla testována doba načtení stránky \url{http://robotics-simplified.com/} a částečné odkazy na testovací data. K vytvoření úplného odkazu stačí před označení daného města přidat \texttt{www.webpagetest.org/result/}.
 
   \begin{table}[H]
     \footnotesize
