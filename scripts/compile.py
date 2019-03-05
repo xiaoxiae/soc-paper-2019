@@ -1,6 +1,10 @@
 import os
 
-os.chdir("..")
+# the path to this file
+file_dir = os.path.dirname(os.path.abspath(__file__))
+
+# change working directory to one below this file
+os.chdir(file_dir + os.sep + "..")
 
 # clean-up files from the previous compilation
 for file in [f for f in os.listdir(".") if os.path.isfile(f)]:
