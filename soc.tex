@@ -45,7 +45,7 @@
 \graphicspath{ {./img/} }                       % graphics path
 
 \usepackage{float}                              % floats in correct position
-\usepackage{subfig}                             % subfigure package
+\usepackage{subfig}                             % for subfigures
 
 \setlength{\fboxsep}{0pt}                       % image border separation
 \setlength{\fboxrule}{0.5pt}                    % image border thickness
@@ -68,8 +68,8 @@
 
 % CROSS-REFERENCES %
 %-================-%
-\usepackage[hyphens,spaces,obeyspaces]{url}     % url
-\usepackage[hidelinks,unicode]{hyperref}        % interactive links
+\usepackage[hyphens,spaces,obeyspaces]{url}     % for formatting urls
+\usepackage[hidelinks,unicode]{hyperref}        % interactive references
 \newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1}}}
 
 
@@ -115,6 +115,7 @@
 %-========-%
 \usepackage[font=footnotesize,                  % 10pt captions
             labelfont=bf,                       % bold captions
+            justification=centering,            % center the captions
             figurename=Obr.,                    % picture captions are "Obr."
             tablename=Tab.,                     % table captions are "Tab."
             belowskip=-12pt]{caption}           % reduce skip below figures
@@ -362,11 +363,11 @@
 
 
   \section{Použité programovací jazyky} \label{sec:Použité programovací jazyky}
-  Programovací jazyk je notace pro psaní programů. \emph{Syntaxe} jazyka popisuje strukturu~--~jakým způsobem za sebe uspořádat znaky, aby v rámci jazyka tvořily platná spojení, kdežto \emph{sémantika} jazyka popisuje význam těchto platných spojení~\cite{intro-to-programming-languages}. % TODO: write a little more
+  Programovací jazyk je notace pro psaní programů, které ve své podstatě v slouží k provádění výpočtů. \emph{Syntaxe} jazyka popisuje strukturu~--~jakým způsobem za sebe uspořádat znaky, aby v rámci jazyka tvořily platná spojení, kdežto \emph{sémantika} jazyka popisuje význam těchto platných spojení~\cite{intro-to-programming-languages}.
 
   Každý programovací jazyk využívá \emph{programovací paradigmata}~--~způsoby, kterými lze přistupovat ke tvorbě programů. Paradigmaty můžeme dělit programovací jazyky do kategorií\footnote{Jeden programovací jazyk může využívat více paradigmat a spadat tak do několika kategorií (viz. jazyky rozebírány v kapitolách~\fullref{sec:Python} a~\fullref{sec:JavaScript}).} jako např. funkcionální, procedurální, či logické. I přes jejich rozdíly jsou však výpočetně ekvivalentní~--~problém řešitelný v libovolném z nich je nutně řešitelný ve všech.
 
-  Následující kapitola rozebírá v projektu používané jazyky~--~jejich stručnou historii, podstatné principy jejich fungování a jejich roli v projektu. Je nutno dodat, že jsou rozebírány jen jazyky pro funkci projektu nezbytné, jelikož by rozbor všech použitých jazyků byl příliš obsáhlý.
+  Následující kapitola rozebírá v projektu používané programovací jazyky~--~jejich stručnou historii, podstatné principy jejich fungování a jejich roli v projektu. Je nutno dodat, že jsou rozebírány jen jazyky pro funkci projektu nezbytné, jelikož by rozbor všech použitých jazyků byl příliš obsáhlý.
 
 
   \subsection{\acrshort{html}} \label{sec:HTML}
@@ -399,7 +400,7 @@
 
   Při použití \gls{css} je důležitý princip kaskádování~--~vzhled stránky ovlivňují jak požadavky čtenáře, tak požadavky autora. Samotné kaskádování je kombinace těchto požadavků a v případě vzniku konfliktů (autor požaduje písmo velikosti \texttt{12b}, ale čtenář velikosti \texttt{10b}) jejich rozřešení.
 
-  V projektu je používán \gls{sass}, který převádí \gls{css} s pokročilejším syntaxem a dodatečnou funkcionalitou do standardního \gls{css}. Díky vyšší míře abstrakce a dodatečným funkcím lze vzhled stránky upravovat o poznání pohodlněji.
+  V projektu je používán \gls{sass}, který převádí \gls{css} s pokročilejší syntaxí a dodatečnou funkcionalitou do standardního \gls{css}. Díky vyšší míře abstrakce a dodatečným funkcím lze vzhled stránky upravovat o poznání pohodlněji.
 
 
   \subsection{JavaScript} \label{sec:JavaScript}
@@ -464,9 +465,9 @@
 
   Verzovací systém umožňuje zaznamenávat změny a jejich důvod/význam na verzované skupině souborů a složek (tzv. repozitáři) a pomáhá tím zamezit ztrátě práce, zjednodušit hledání chyb v kódu a usnadnit spolupráci mezi autory.
 
-  Na rozdíl od centralizovaných verzovacích systémů jako Subversion či \gls{cvs} je Git decentralizovaný~--~místo hlavní úschovny kódu pracuje každý s lokální kopií, která obsahuje úplnou historií projektu. Hlavní výhody tohoto přístupu oproti centrální úschovně jsou rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru~\cite{cvcs-vs-dvcs}.
+  Na rozdíl od centralizovaných verzovacích systémů jako Subversion či \gls{cvs} je Git decentralizovaný~--~místo hlavní úschovny kódu pracuje každý s lokální kopií, která obsahuje úplnou historií projektu. Hlavní výhody tohoto přístupu jsou rychlost práce s repozitářem, možnost pracovat na projektu bez internetového připojení a zamezení ztráty kódu při selhání centrálního serveru~\cite{cvcs-vs-dvcs}.
 
-  Decentralizovanost Gitu však existenci hlavní kopie nezamezuje~--~existuje řada služeb jako GitHub, GitLab či GitBucket, které tuto centrální úschovnu poskytují. % TODO: rephrase this paragraph
+  Decentralizovanost Gitu však existenci hlavní kopie nezamezuje~--~existuje řada služeb jako GitHub, GitLab či GitBucket, které centrální úschovny pro Gitem verzované projekty (jako tento dokument) hostují a poskytují tím při ztrátě či poškození lokální kopie dodatečnou ochranu.
 
 
   \subsection{Jekyll} \label{sec:Jekyll}
@@ -496,10 +497,11 @@
   \section{Vývoj webové stránky} \label{sec:Vývoj webové stránky}
   Po důkladném zvážení výhod a nevýhod přístupů k projektu s požadavky vymezenými kapitolou~\fullref{sec:Požadavky na výsledný produkt} se webová stránka jeví jako nejvhodnější výsledný produkt. Může totiž při správném výběru technologií splňovat jak multiplatformnost, tak otevřenost zdrojového kódu.
 
-  % TODO: add what the chapter is about
+  Následující kapitoly popisují, jakými způsoby byly části stránky (jako její hosting, logo, aj.) řešeny. Jelikož vývoj probíhal postupně, tak za nejdou chronologicky. % TODO: rephrase!
 
-  \subsection{Konfigurace Jekyllu}
-  Pro tvorbu stránky v rámci splnění otevřenosti zdrojového kódu byl vybrán generátor statických webových stránek Jekyll (viz. kapitola~\fullref{sec:Jekyll}), díky čemuž lze kód produktu verzovat a volně sdílet jednodušeji, než kód webové stránky s databází.
+
+  \subsection{Technické provedení stránky}
+  Pro tvorbu stránky s ohledem na otevřenost jejího zdrojového kódu byl vybrán generátor statických webových stránek Jekyll (viz. kapitola~\fullref{sec:Jekyll}). Díky tomu lze kód produktu verzovat a volně sdílet jednodušeji, než kód webové stránky s databází.
 
   Po zvážení možností zdarma dostupných otevřených šablon pro byla zvolena šablona Just the Docs, která díky své optimalizaci pro mobilní zařízení pomáhá s multiplatformností projektu. Další atraktivní vlastnosti této šablony jsou její přehlednost, vestavěná podpora vyhledávání a přizpůsobitelné zvýrazňování syntaxe kódu.
 
@@ -560,9 +562,9 @@
   \subsubsection{Multiplatformnost}
   Jelikož je výsledný produkt webová stránka, tak další kritický faktor ovlivňující její úspěšnost je správné fungování na různých typech zařízení a prohlížečích.
 
-  Funkčnost různých komponent stránky byla testována na několika z nejpoužívanějších prohlížečů internetu~\cite{browser-statistics}: Firefox 65.0.1 (\faIcon{firefox}), Chrome ... (\faIcon{chrome}), Internet Explorer ... (\faIcon{internet-explorer}), Edge ... (\faIcon{edge}), Safari ... (\faIcon{safari}) a Opera ... (\faIcon{opera}). Testování se skládalo z načtení stránky na příslušném prohlížeči a kontrolování, zda testované komponenty fungují správně. % TODO: finish writing this paragraph
+  Funkčnost různých komponent stránky byla testována na několika z nejpoužívanějších prohlížečů světa~\cite{browser-statistics}: Firefox 65.0.1 (\faIcon{firefox}), Chrome 72.0.3626.105 (\faIcon{chrome}), Internet Explorer ... (\faIcon{internet-explorer}), Edge ... (\faIcon{edge}), Safari ... (\faIcon{safari}) a Opera ... (\faIcon{opera}). Testování se skládalo z načtení stránky na příslušném prohlížeči a kontroly, zda testované komponenty fungují tak, jak by měly.
 
-  Výsledky těchto testů jsou zaneseny do tabulky \ref{tab:Data testování stránky na různých zařízeních}~--~správné fungování je značeno symbolem \faIcon{check}, špatné symbolem \faIcon{times} a nemožnost testování z důvodu nedostupnosti prohlížeče na dané platformně je značeno symbolem \faIcon{minus}).
+  Výsledky těchto testů jsou zaneseny do tabulky \ref{tab:Testování stránky na různých zařízeních}~--~správné fungování je značeno symbolem \faIcon{check}, špatné symbolem \faIcon{times} a nemožnost testování z důvodu nedostupnosti prohlížeče na dané platformně je značeno symbolem \faIcon{minus}.
 
   \begin{table}[H]
     \footnotesize
@@ -574,18 +576,18 @@
        & \faIcon{firefox} & \faIcon{chrome} & \faIcon{internet-explorer} & \faIcon{edge} & \faIcon{safari} & \faIcon{opera}
       && \faIcon{firefox} & \faIcon{chrome} & \faIcon{internet-explorer} & \faIcon{edge} & \faIcon{safari} & \faIcon{opera}\\
         \midrule
-      Obrázky     & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check} & & \faIcon{check}
-      && \faIcon{check} & \faIcon{check} & \faIcon{minus} & \faIcon{check} & & \faIcon{check} \\
-      Rovnice     & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check} & & \faIcon{check}
-      && \faIcon{check} & \faIcon{check} & \faIcon{minus} & \faIcon{check} & & \faIcon{check} \\
-      Vizualizace & \faIcon{check} & \faIcon{check} & \faIcon{times} & \faIcon{check} & & \faIcon{check}
-      && \faIcon{check} & \faIcon{check} & \faIcon{minus} & \faIcon{check} & & \faIcon{check} \\
-      Formátování & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check} & & \faIcon{check}
-       && \faIcon{check} & \faIcon{check} & \faIcon{minus} & \faIcon{check} & & \faIcon{check} \\
+      Zobrazení obrázků     & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check}
+      && \faIcon{check} & \faIcon{check} & \faIcon{minus} & \faIcon{check} & \faIcon{check} & \faIcon{check} \\
+      Zobrazení rovnic     & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check}
+      && \faIcon{check} & \faIcon{check} & \faIcon{minus} & \faIcon{check} & \faIcon{check} & \faIcon{check} \\
+      Interaktivita vizualizací & \faIcon{check} & \faIcon{check} & \faIcon{times} & \faIcon{check} & \faIcon{check} & \faIcon{check}
+      && \faIcon{check} & \faIcon{check} & \faIcon{minus} & \faIcon{check} & \faIcon{check} & \faIcon{check} \\
+      Formátování & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check} & \faIcon{check}
+      && \faIcon{check} & \faIcon{check} & \faIcon{minus} & \faIcon{check} & \faIcon{check} & \faIcon{check} \\
         \bottomrule
     \end{tabular}
-    \caption{Data testování stránky na různých zařízeních}
-    \label{tab:Data testování stránky na různých zařízeních}
+    \caption{Testování stránky na různých zařízeních}
+    \label{tab:Testování stránky na různých zařízeních}
   \end{table}
 
   \section{Obsah webové stránky} \label{sec:Obsah webové stránky}
@@ -828,7 +830,7 @@
     \ra{1.3}
     \begin{tabular}{*5l}
       \toprule
-      \emph{Město}            & \emph{Označení}                      \\ \midrule
+      \emph{Lokace}            & \emph{Označení}                      \\ \midrule
       Argentina (Buenos Aires)        & \href{https://www.webpagetest.org/result/190213_PC_5d05753a2ce2126089db6b8726171c13}{\texttt{190213\_PC\_5d05753a2ce2126089db6b8726171c13}} \\
       Austrálie (Sydney)              & \href{https://www.webpagetest.org/result/190213_8N_c4802d60f2820dd2b7f8e3e5d6a384c1}{\texttt{190213\_8N\_c4802d60f2820dd2b7f8e3e5d6a384c1}} \\
       Belgie (Brusel)                 & \href{https://www.webpagetest.org/result/190213_PK_8973798f51f040a199501b3332071bc2}{\texttt{190213\_PK\_8973798f51f040a199501b3332071bc2}} \\
