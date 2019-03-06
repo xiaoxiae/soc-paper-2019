@@ -70,7 +70,6 @@
 %-================-%
 \usepackage[hyphens,spaces,obeyspaces]{url}     % for formatting urls
 \usepackage[hidelinks,unicode]{hyperref}        % interactive references
-\newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1}}}
 
 
 % BIBLIOGRAPHY %
@@ -353,7 +352,7 @@
   \subsection{Otevřenost zdrojového kódu}
   Hlavní požadavek, který by měl produkt splňovat je \emph{otevřenost} (tj. bezplatná dostupnost) zdrojového kódu. Otevřenost výrazně usnadňuje kolaboraci (kdokoliv může navrhnout změnu) a zvyšuje důvěru v daný software (chování programu lze snadno ověřit nahlédnutím do kódu), což jsou žádoucí kvality softwaru zaměřeného na vzdělávání.
 
-  Příklady populárního otevřeného softwaru využívaného při stavbě tohoto projektu jsou např. Inkscape, Atom, Git či Jekyll, které jsou podrobněji rozebírány v kapitole~\fullref{sec:Použité nástroje}.
+  Příklady populárního otevřeného softwaru využívaného při stavbě tohoto projektu jsou např. Inkscape, Atom, Git či Jekyll, které jsou podrobněji rozebírány v kapitole~\ref{sec:Použité nástroje}.
 
 
   \subsection{Multiplatformnost}
@@ -365,7 +364,7 @@
   \section{Použité programovací jazyky} \label{sec:Použité programovací jazyky}
   Programovací jazyk je notace pro psaní programů, které ve své podstatě v slouží k provádění výpočtů. \emph{Syntaxe} jazyka popisuje strukturu~--~jakým způsobem za sebe uspořádat znaky, aby v rámci jazyka tvořily platná spojení, kdežto \emph{sémantika} jazyka popisuje význam těchto platných spojení~\cite{intro-to-programming-languages}.
 
-  Každý programovací jazyk využívá \emph{programovací paradigmata}~--~způsoby, kterými lze přistupovat ke tvorbě programů. Paradigmaty můžeme dělit programovací jazyky do kategorií\footnote{Jeden programovací jazyk může využívat více paradigmat a spadat tak do několika kategorií (viz. jazyky rozebírány v kapitolách~\fullref{sec:Python} a~\fullref{sec:JavaScript}).} jako např. funkcionální, procedurální, či logické. I přes jejich rozdíly jsou však výpočetně ekvivalentní~--~problém řešitelný v libovolném z nich je nutně řešitelný ve všech.
+  Každý programovací jazyk využívá \emph{programovací paradigmata}~--~způsoby, kterými lze přistupovat ke tvorbě programů. Paradigmaty můžeme dělit programovací jazyky do kategorií\footnote{Jeden programovací jazyk může využívat více paradigmat a spadat tak do několika kategorií (viz. jazyky rozebírány v kapitolách~\ref{sec:Python} a~\ref{sec:JavaScript}).} jako např. funkcionální, procedurální, či logické. I přes jejich rozdíly jsou však výpočetně ekvivalentní~--~problém řešitelný v libovolném z nich je nutně řešitelný ve všech.
 
   Následující kapitola rozebírá v projektu používané programovací jazyky~--~jejich stručnou historii, podstatné principy jejich fungování a jejich roli v projektu. Je nutno dodat, že jsou rozebírány jen jazyky pro funkci projektu nezbytné, jelikož by rozbor všech použitých jazyků byl příliš obsáhlý.
 
@@ -416,7 +415,7 @@
 
 
   \subsubsection{\texorpdfstring{\KaTeX}{KaTeX}} \label{sec:KaTeX}
-  \KaTeX{} je JavaScriptová knihovna vytvořena pro vzdělávací stránku Khan Academy, která je na stránce používána na renderování matematických rovnic z \LaTeX ové notace (viz. kapitola~\fullref{sec:Matematika}).
+  \KaTeX{} je JavaScriptová knihovna vytvořena pro vzdělávací stránku Khan Academy, která je na stránce používána na renderování matematických rovnic z \LaTeX ové notace (viz. kapitola~\ref{sec:Matematika}).
 
   Populární alternativou, která byla na stránce dříve používána je populární JavaScriptová knihovna MathJax. Oproti \KaTeX u je však znatelně pomalejší~\cite{katex-mathjax-comparison}, proto již není používána.
 
@@ -426,7 +425,7 @@
 
   Od svého vzniku se Python postupně vyvinul v mocný a frekventovaně používaný programovací jazyk~--~má rozsáhlou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub~\cite{github-statistics}, od stavby webových stránek (Django) po knihovny na trénování neuronových sítí (TensorFlow).
 
-  Na stránce zastává funkci skriptovacího jazyka pro automatizaci provozu (viz. kapitola~\fullref{sec:Automatizace provozu webové stránky}). Oproti alternativám jako \gls{php} a Java je na stránce používán převážně z osobní preference.
+  Na stránce zastává funkci skriptovacího jazyka pro automatizaci provozu (viz. kapitola~\ref{sec:Automatizace provozu webové stránky}). Oproti alternativám jako \gls{php} a Java je na stránce používán převážně z osobní preference.
 
 
   \subsection{Markdown} \label{sec:Markdown}
@@ -434,7 +433,7 @@
 
   Existuje řada „variant“ (z anglického \textit{flavor}) Markdownu jako Kramdown či Redcarpet, které originál rozšiřují o dodatečnou funkcionalitu jako vkládání poznámek pod čarou, podporu úpravy vzhledu stránky pomocí \gls{css} či možnost přidávání rovnic v \LaTeX ové notaci.
 
-  V projektu je v kombinaci s šablonovým jazykem Liquid používán ke psaní článků (viz. kapitola~\fullref{sec:Proces tvorby článků}), jelikož právě z nich Jekyll generuje výslednou webovou stránku.
+  V projektu je v kombinaci s šablonovým jazykem Liquid používán ke psaní článků (viz. kapitola~\ref{sec:Proces tvorby článků}), jelikož právě z nich Jekyll generuje výslednou webovou stránku.
 
 
   \subsection{\TeX} \label{sec:TeX}
@@ -442,7 +441,7 @@
 
   Od \gls{wysiwyg} programů jako Microsoft Word či LibreOffice se \TeX{} liší tím, že autor při psaní nevidí, jak dokument vypadá. Namísto toho pomocí „maker” (souborů instrukcí) definuje, jak by dokument vypadat měl a \TeX{} se o samotné sázení postará. Tento přístup klade větší důraz na obsah~--~autor se formátováním do značné míry nemusí zabývat a může se soustředit na psaní. Další výhoda tohoto přístupu je jednoduchost verzování \TeX ových dokumentů, jelikož jsou psány v prostém textu.
 
-  V projektu je používán \LaTeX{} (viz. kapitola~\fullref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů~\cite{getting-started-with-latex}.
+  V projektu je používán \LaTeX{} (viz. kapitola~\ref{sec:Převod webové stránky do PDF}). Jedná se o nadstavbu \TeX u, která díky pokročilejším makrům jako automatické číslování stránek, vkládání referencí, aj. umožňuje pohodlnější tvorbu dokumentů~\cite{getting-started-with-latex}.
 
   Následující příklad ukazuje část zdrojového kódu \LaTeX ového dokumentu, který definuje nadpis a paragraf, na jehož konec je vložen odkaz na citaci:
 
@@ -481,13 +480,13 @@
 
 
   \subsection{Inkscape} \label{sec:Inkscape}
-  Inkscape je otevřený\footnote{Zdrojový kód Jekyllu je dostupný na adrese \url{https://github.com/jekyll/jekyll}.} multiplatformní software na tvorbu vektorové grafiky. Oproti rastrovým softwarům, které pracují s  pixely obrázku, si vektorové pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola~\fullref{sec:Ilustrace}).
+  Inkscape je otevřený\footnote{Zdrojový kód Jekyllu je dostupný na adrese \url{https://github.com/jekyll/jekyll}.} multiplatformní software na tvorbu vektorové grafiky. Oproti rastrovým softwarům, které pracují s  pixely obrázku, si vektorové pamatují informace o tom, z jakých tvarů se obrázek skládá, což z nich dělá ideální kandidáty pro tvorbu ilustrací (viz. kapitola~\ref{sec:Ilustrace}).
 
   Jedná se o populární volbu pro ty, kteří nepoužívají profesionální software jako Adobe Illustrator z důvodu jeho vysoké ceny, uzavřenosti zdrojového kódu či nedostupnosti pro operační systém Linux.
 
 
   \subsection{Fusion 360} \label{sec:Fusion 360}
-  Ke tvorbě ilustrací k je kromě přístupů rozebíraných v kapitole~\fullref{sec:Inkscape} dále používán \gls{cad} software, který slouží ke tvorbě technických nákresů. Na rozdíl od tradičních programů na tvorbu grafiky jsou rozměry tvořených objektů přesně definovány v jednotkách \gls{si}, aby odpovídaly objektům reálného světa.
+  Ke tvorbě ilustrací k je kromě přístupů rozebíraných v kapitole~\ref{sec:Inkscape} dále používán \gls{cad} software, který slouží ke tvorbě technických nákresů. Na rozdíl od tradičních programů na tvorbu grafiky jsou rozměry tvořených objektů přesně definovány v jednotkách \gls{si}, aby odpovídaly objektům reálného světa.
 
   Populární \gls{cad} software využívaný členy \gls{frc} týmů je Fusion 360 od společnosti Autodesk, převážně kvůli dostupnosti licence (zdarma pro studenty a jejich mentory). Profesionální alternativou je program SolidWorks, který je kvůli své ceně využíván převážně studenty technicky zaměřených škol přes školní licenci.
 
@@ -495,13 +494,13 @@
 
 
   \section{Vývoj webové stránky} \label{sec:Vývoj webové stránky}
-  Po důkladném zvážení výhod a nevýhod přístupů k projektu s požadavky vymezenými kapitolou~\fullref{sec:Požadavky na výsledný produkt} se webová stránka jeví jako nejvhodnější výsledný produkt. Může totiž při správném výběru technologií splňovat jak multiplatformnost, tak otevřenost zdrojového kódu.
+  Po důkladném zvážení výhod a nevýhod přístupů k projektu s požadavky vymezenými kapitolou~\ref{sec:Požadavky na výsledný produkt} se webová stránka jeví jako nejvhodnější výsledný produkt. Může totiž při správném výběru technologií splňovat jak multiplatformnost, tak otevřenost zdrojového kódu.
 
   Následující kapitoly popisují, jakými způsoby byly části stránky (jako její hosting, logo, aj.) řešeny. Jelikož vývoj probíhal postupně, tak za nejdou chronologicky. % TODO: rephrase!
 
 
   \subsection{Technické provedení stránky}
-  Pro tvorbu stránky s ohledem na otevřenost jejího zdrojového kódu byl vybrán generátor statických webových stránek Jekyll (viz. kapitola~\fullref{sec:Jekyll}). Díky tomu lze kód produktu verzovat a volně sdílet jednodušeji, než kód webové stránky s databází.
+  Pro tvorbu stránky s ohledem na otevřenost jejího zdrojového kódu byl vybrán generátor statických webových stránek Jekyll (viz. kapitola~\ref{sec:Jekyll}). Díky tomu lze kód produktu verzovat a volně sdílet jednodušeji, než kód webové stránky s databází.
 
   Po zvážení možností zdarma dostupných otevřených šablon pro byla zvolena šablona Just the Docs, která díky své optimalizaci pro mobilní zařízení pomáhá s multiplatformností projektu. Další atraktivní vlastnosti této šablony jsou její přehlednost, vestavěná podpora vyhledávání a přizpůsobitelné zvýrazňování syntaxe kódu.
 
@@ -532,11 +531,11 @@
     \label{img:Design loga stránky}%
   \end{figure}
 
-  K designu loga byl použit program na úpravu vektorové grafiky Inkscape (viz. kapitola~\fullref{sec:Inkscape}).
+  K designu loga byl použit program na úpravu vektorové grafiky Inkscape (viz. kapitola~\ref{sec:Inkscape}).
 
 
   \subsection{Verzování zdrojového kódu}
-  Stránka je verzována pomocí verzovacího systému Git (viz. kapitola~\fullref{sec:Git}). Kód je otevřený a volně dostupný přes GitHub na adrese \url{https://github.com/xiaoxiae/Robotics-Simplified-Website}.
+  Stránka je verzována pomocí verzovacího systému Git (viz. kapitola~\ref{sec:Git}). Kód je otevřený a volně dostupný přes GitHub na adrese \url{https://github.com/xiaoxiae/Robotics-Simplified-Website}.
 
   Kromě větších binárních souborů jako ilustrace, které se do budoucna mohou měnit a zbytečně tak zabírat velikost repozitáře jsou verzovány takové soubory, které nejsou automaticky generované Jekyllem či některým z Python scriptů, tj. všechny soubory udávající vzhled a obsah webové stránky.
 
@@ -611,13 +610,13 @@
 
 
   \subsubsection{Vizualizace} \label{sec:Vizualizace}
-  Vizualizace jsou implementovány v jazyce JavaScript s využitím knihovny p5.js (viz. kapitola~\fullref{sec:p5.js}). Jsou uzpůsobeny pro ovládání myší či dotykem, aby byly funkční jak na osobních počítačích, tak na mobilech.
+  Vizualizace jsou implementovány v jazyce JavaScript s využitím knihovny p5.js (viz. kapitola~\ref{sec:p5.js}). Jsou uzpůsobeny pro ovládání myší či dotykem, aby byly funkční jak na osobních počítačích, tak na mobilech.
 
   Offline verze stránky vizualizace neobsahuje, protože formát \gls{pdf} vkládání kódu kvůli bezpečnosti neumožňuje~\cite{history-of-pdf}.
 
 
   \subsubsection{Ilustrace} \label{sec:Ilustrace}
-  Ke tvorbě ilustrací je používán program na tvorbu vektorové grafiky Inkscape (viz. kapitola~\fullref{sec:Inkscape}) v kombinaci s \gls{cad} softwarem Fusion 360 (viz. kapitola~\fullref{sec:Fusion 360}).
+  Ke tvorbě ilustrací je používán program na tvorbu vektorové grafiky Inkscape (viz. kapitola~\ref{sec:Inkscape}) v kombinaci s \gls{cad} softwarem Fusion 360 (viz. kapitola~\ref{sec:Fusion 360}).
 
   Vektorová grafika je pro vytváření ilustrací správná volba z toho důvodu, že potřebné tvary lze vytvářet a upravovat výrazně rychleji a efektivněji než rastr. Zabírá také méně místa a je ukládána v prostém textu, což má oproti binárnímu formátu řadu výhod.
 
@@ -640,7 +639,7 @@
 
 
   \subsubsection{Matematika} \label{sec:Matematika}
-  Jelikož jsou probírané koncepty a algoritmy založeny na matematice, tak stránka podporuje vkládání rovnic a výrazů do článků. Tuto funkcionalitu zajišťuje JavaScriptová knihovna \KaTeX{} (viz. kapitola~\fullref{sec:KaTeX}), díky které lze \LaTeX ové rovnice umísťovat přímo do Markdownových článků.
+  Jelikož jsou probírané koncepty a algoritmy založeny na matematice, tak stránka podporuje vkládání rovnic a výrazů do článků. Tuto funkcionalitu zajišťuje JavaScriptová knihovna \KaTeX{} (viz. kapitola~\ref{sec:KaTeX}), díky které lze \LaTeX ové rovnice umísťovat přímo do Markdownových článků.
 
   Příkladem zápisu matematiky v článku je rovnice~(\ref{eq:katex equation}), která je pomocí \KaTeX u převedena na rovnici~(\ref{eq:converted equation}).
 
@@ -709,7 +708,7 @@
   \section{Automatizace provozu webové stránky} \label{sec:Automatizace provozu webové stránky}
   Ke tvorbě kvalitního vzdělávacího materiálu je potřeba plynulý a do nejvyšší možné míry automatizovaný provoz stránky~--~k přidání nového článků by mělo stačit v příslušné složce projektu vytvořit nový soubor a zbytek procesu by měl proběhnout bez zásahu autora.
 
-  Stránka je v tomto duchu automatizována skripty psanými v jazyce Python (viz. kapitola~\fullref{sec:Python}), aby se autor mohl plně soustředit na práci.
+  Stránka je v tomto duchu automatizována skripty psanými v jazyce Python (viz. kapitola~\ref{sec:Python}), aby se autor mohl plně soustředit na práci.
 
 
   \subsection{Nahrání obsahu přes \acrshort{ftp}}
@@ -729,7 +728,7 @@
 
   Přímočará varianta by byla převést články do \gls{pdf} libovolným programem pro převod textových formátů (jako Pandoc). Tímto přístupem by však bylo obtížné generovat obsah a úvodní stránku, a prakticky nemožné ovlivnit výsledné formátování.
 
-  Pro potřeby projektu byl tedy zvolen převod článků do formátu \LaTeX{} (viz. kapitola~\fullref{sec:TeX}) a až poté do \gls{pdf}, což všechny nevýhody první varianty elegantně řeší.
+  Pro potřeby projektu byl tedy zvolen převod článků do formátu \LaTeX{} (viz. kapitola~\ref{sec:TeX}) a až poté do \gls{pdf}, což všechny nevýhody první varianty elegantně řeší.
 
   Script \texttt{tex.py} získá pořadí článků, spojí je za sebe do jednoho dokumentu a poté na ně aplikuje řadu regulárních výrazů, které provedou převod z formátu Markdown do formátu \LaTeX.
 
