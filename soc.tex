@@ -1,19 +1,21 @@
 \documentclass[a4paper, 12pt]{article}
-\usepackage[includefoot]{geometry}              % set margins
+\usepackage[includefoot]{geometry} % for typesetting geometry
 
 % LANGUAGE %
 %-========-%
-\usepackage{luavlna}                            % auto non-breaking spaces
+\usepackage{luavlna} % for auto non-breaking spaces
 \AtBeginDocument{\singlechars{czech}{AaIiVvOoUuSsZzKk}} % chars not to break on
-\usepackage[czech]{babel}                       % use the czech language
+
+\usepackage[czech]{babel} % czech language localization
 
 
 % TOC AND LOF %
 %-===========-%
-\usepackage[subfigure, titles]{tocloft}         % controlling lof and lot
-\usepackage[nottoc]{tocbibind}                  % no toc in toc
+\usepackage[subfigure, titles]{tocloft} % controlling lof and lot
+\usepackage[nottoc]{tocbibind} % remove reference to toc from toc
 
-\makeatletter                                   % remove titles from lof and lot
+% remove titles from lof and lot, since they are grouped into one section
+\makeatletter
 \renewcommand\listoffigures{%
     \@mkboth{\MakeUppercase\listfigurename}%
         {\MakeUppercase\listfigurename}%
@@ -26,29 +28,28 @@
 }
 \makeatother
 
-\setlength{\cftfigindent}{0pt}                  % no lof indentation
-\setlength{\cfttabindent}{0pt}                  % no lot indentation
+\setlength{\cftfigindent}{0pt} % remove lof indentation
+\setlength{\cfttabindent}{0pt} % remove lot indentation
 
-\renewcommand{\contentsname}{Obsah}             % change toc name
-
-\usepackage{setspace}                           % for making a more concise toc
+\usepackage{setspace} % for making a more concise toc
 
 
 % CODE %
 %-====-%
-\usepackage{minted}                             % uses python pygmentize
+\usepackage{minted} % highlight code with Pygments
 
 
 % GRAPHICS %
 %-========-%
-\usepackage{graphicx}                           % graphics package
-\graphicspath{ {./img/} }                       % graphics path
+\usepackage{graphicx}     % graphics package
+\graphicspath{ {./img/} } % path to images
 
-\usepackage{float}                              % floats in correct position
-\usepackage{subfig}                             % for subfigures
+\usepackage{float} % floats in correct position (the [H] option)
 
-\setlength{\fboxsep}{0pt}                       % image border separation
-\setlength{\fboxrule}{0.5pt}                    % image border thickness
+\usepackage{subfig} % for subfigures
+
+\setlength{\fboxsep}{0pt}    % image border separation
+\setlength{\fboxrule}{0.5pt} % image border thickness
 
 
 % TITLE FORMATTING %
@@ -61,96 +62,99 @@
 \titleformat{\subsection}{\bfseries\fontsize{16pt}{19.2}\selectfont}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\bfseries\fontsize{14pt}{16.8}\selectfont}{\thesubsubsection}{1em}{}
 
-\titlespacing{\section}      {0pt}{0pt}{6pt}    % 18pt (12pt + 6pt)
-\titlespacing{\subsection}   {0pt}{0pt}{4pt}    % 16pt (12pt + 4pt)
-\titlespacing{\subsubsection}{0pt}{0pt}{2pt}    % 14pt (12pt + 2pt)
+\titlespacing{\section}      {0pt}{0pt}{6pt} % 18pt (12pt from parskip + 6pt)
+\titlespacing{\subsection}   {0pt}{0pt}{4pt} % 16pt (12pt from parskip + 4pt)
+\titlespacing{\subsubsection}{0pt}{0pt}{2pt} % 14pt (12pt from parskip + 2pt)
 
 
 % CROSS-REFERENCES %
 %-================-%
-\usepackage[hyphens,spaces,obeyspaces]{url}     % for formatting urls
-\usepackage[hidelinks,unicode]{hyperref}        % interactive references
+\usepackage[hyphens,spaces,obeyspaces]{url} % for formatting urls
+\usepackage[hidelinks,unicode]{hyperref} % interactive references
 
 
 % BIBLIOGRAPHY %
 %-============-%
 \usepackage[backend=biber,
-            style=iso-numeric,                  % numeric ISO 690
+            style=iso-numeric, % citations are in style [1], [2]...
             sortlocale=cs_CZ,
             autolang=other,
-            bibencoding=UTF8]{biblatex}         % use BibLaTeX for references
-\addbibresource{soc.bib}                        % references file
+            bibencoding=UTF8]{biblatex} % use BibLaTeX for references
 
-\renewcommand*{\finentrypunct}{}                % don't end references with dot
+\addbibresource{soc.bib} % location of the references file
+
+\renewcommand*{\finentrypunct}{} % don't end references with a dot
 \renewcommand{\multinamedelim}{\addcomma\space} % use comma as name delimeter
-\renewcommand{\finalnamedelim}{\addspace a \space} % use a as final name delim.
-\renewbibmacro{in:}{}                           % don't use In: in references
-\DeclareFieldFormat{labelnumberwidth}{[#1]}     % wrap ref nums in sqr brackets
+\renewcommand{\finalnamedelim}{\addspace a \space} % "a" between the last 2 names
+\renewbibmacro{in:}{} % don't use In: in references
+\DeclareFieldFormat{labelnumberwidth}{[#1]} % wrap reference numbers in square brackets
 
 
 % TABLES          %
 % requires: float %
 %-===============-%
-\floatstyle{plaintop}                           % table caption on top
-\restylefloat{table}                            % -||-
-\usepackage{booktabs}                           % table formatting
-\usepackage{multirow}                           % for creating multirow tables
-\setlength\heavyrulewidth{0.2ex}                % inc top & bottomrule thickness
+\floatstyle{plaintop} % table caption on top
+\restylefloat{table}  % -||-
+
+\usepackage{booktabs} % table formatting
+
+\usepackage{multirow}            % for creating multirow tables
+\setlength\heavyrulewidth{0.2ex} % increase top and bottom rule thicknesses
 
 % fixes the issue with babel and multirow: https://tex.stackexchange.com/questions/111999/slovak-and-czech-babel-gives-problems-with-cmidrule-and-cline
 \usepackage{etoolbox}
 \preto\tabular{\shorthandoff{-}}
 
-\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % for table row stretching
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % table row stretching
 
 
 % MATH %
 %-====-%
-\usepackage{amsmath, amstext}                   % math
-\DeclareMathSymbol{.}{\mathord}{letters}{"3B}   % change dot in math to comma
+\usepackage{amsmath, amstext} % for typesetting math
+\DeclareMathSymbol{.}{\mathord}{letters}{"3B} % change dot in math to a comma
 
 
 % CAPTIONS %
 %-========-%
-\usepackage[font=footnotesize,                  % 10pt captions
-            labelfont=bf,                       % bold captions
-            justification=centering,            % center the captions
-            figurename=Obr.,                    % picture captions are "Obr."
-            tablename=Tab.,                     % table captions are "Tab."
-            belowskip=-12pt]{caption}           % reduce skip below figures
+\usepackage[font=footnotesize,        % 10pt captions
+            labelfont=bf,             % bold captions
+            justification=centering,  % center the captions
+            figurename=Obr.,          % picture captions are "Obr."
+            tablename=Tab.,           % table captions are "Tab."
+            belowskip=-12pt]{caption} % reduce skip below figures
 
 
 % LISTS %
 %-=====-%
-\usepackage{enumitem}                           % lists
+\usepackage{enumitem} % lists
 
 
 % DATETIME %
 %-========-%
-\usepackage[dmyyyy]{datetime}                   % dmyyyy datetimes
-\renewcommand{\dateseparator}{. }               % changes datetime separator
+\usepackage[dmyyyy]{datetime}     % dmyyyy datetimes
+\renewcommand{\dateseparator}{. } % changes datetime separator
 
 
 % FONT AND ENCODING %
 %-=================-%
-\usepackage[T1]{fontenc}                        % font encoding
-\usepackage{fontspec}                           % font selector
+\usepackage[T1]{fontenc} % font encoding
+\usepackage{fontspec}    % font selector
 
-\setmainfont{CMU Serif}                         % font supporting bold smallcaps
-\usepackage{fontawesome5}                       % use FontAwesome 5 for icons
+\setmainfont{CMU Serif}   % font supporting bold smallcaps
+\usepackage{fontawesome5} % use FontAwesome 5 for icons
 
 
 % ACRONYMS %
 %-========-%
-\usepackage[acronym,                            % use acronyms
-            nopostdot,                          % no dot at end of 2nd column
-            numberedsection,                    % number glossary
-            nogroupskip,                        % no grouping by same letter
-            nonumberlist]{glossaries}           % no page numbers
+\usepackage[acronym,                  % use acronyms
+            nopostdot,                % no dot at end of 2nd column
+            numberedsection,          % number glossary
+            nogroupskip,              % no grouping by same letter
+            nonumberlist]{glossaries} % no page numbers
 
-\renewcommand{\acrfullformat}[2]{#2\space(#1)}  % long (short) to short (long)
+\renewcommand{\acrfullformat}[2]{#2\space(#1)} % long (short) to short (long)
 
-\setglossarystyle{alttree}                      % set style of glossary
+\setglossarystyle{alttree} % set style of glossary
 
 % make glossary title spacing be the same as regular title
 \renewcommand{\glossarypreamble}{\vspace*{-\baselineskip}\vspace*{-\parskip}}
@@ -186,24 +190,29 @@
 \newacronym{dvi}{DVI}{DeVice-Independent}
 \newacronym{ps}{PS}{PostScript}
 
-\glsaddall                                      % add all acronyms
-\glssetwidest{WYSIWYGGG}                        % manually set the widest acr.
+\glsaddall % add all acronyms
+
+% For setting the list of acronyms alignment (note the two extra G's). I didn't
+% find a better way to increase the spacing between the acronym and its
+% description in the "Seznam zkratek" section, since \glsfindwidesttoplevelname
+% only inserts one space.
+\glssetwidest{WYSIWYGGG}
 
 
 % PARAGRAPH FORMATTING %
 %-====================-%
-\setlength\parindent{0pt}                       % 0pt paragraph indentation
-\setlength\parskip{12pt}                        % 12pt paragraph spacing
+\setlength\parindent{0pt} % 0pt paragraph indentation
+\setlength\parskip{12pt}  % 12pt paragraph spacing
 
-\renewcommand{\baselinestretch}{1.15}           % baseline stretch is 1.15
+\renewcommand{\baselinestretch}{1.15} % baseline stretch is 1.15
 
 
 % OTHER %
 %-=====-%
-\widowpenalty10000                              % prevent widows
-\clubpenalty10000                               % prevent widows
+\widowpenalty10000 % prevent widows
+\clubpenalty10000  % prevent widows
 
-\pagenumbering{gobble}                          % suppress page numbering
+\pagenumbering{gobble} % suppress page numbering
 
 % define KaTeX logo
 \makeatletter
@@ -218,10 +227,11 @@
 \TeX}
 \makeatother
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% D O C U M E N T %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-  % fixes some lines going to the margins
-  \sloppy
+  \sloppy % fixes some lines going to the margins
+
 
   % first page's geometry is different
   \newgeometry{top=2.5cm, left=2.5cm, right=2.5cm, bottom=2.5cm}
@@ -319,8 +329,11 @@
   \pagenumbering{arabic}
   \setcounter{page}{\numexpr\value{savepage}-1}%
 
-  % genereate toc
+  % Makes the spacing between toc heading and the contents the same as other
+  % section and also makes the item spacing smaller
   \addtocontents{toc}{\vspace{-\cftaftertoctitleskip}\protect\setstretch{0.1}}
+
+  % genereate toc
   \tableofcontents
 
   \newpage
