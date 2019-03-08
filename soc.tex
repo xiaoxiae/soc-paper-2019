@@ -93,9 +93,6 @@
 % TABLES          %
 % requires: float %
 %-===============-%
-\floatstyle{plaintop} % table caption on top
-\restylefloat{table}  % -||-
-
 \usepackage{booktabs} % table formatting
 
 \usepackage{multirow}            % for creating multirow tables
@@ -581,7 +578,10 @@
 
   Výsledky těchto testů jsou zaneseny do tabulky \ref{tab:Funkčnost stránky na různých platformách}~--~správné fungování je značeno symbolem \faIcon{check}, špatné symbolem \faIcon{times} a nemožnost testování z důvodu nedostupnosti prohlížeče na dané platformně je značeno symbolem \faIcon{minus}.
 
+  \vspace{\parskip}
   \begin{table}[H]
+    \caption{Funkčnost stránky na různých platformách}
+    \label{tab:Funkčnost stránky na různých platformách}
     \footnotesize
     \centering
     \ra{1.3}
@@ -601,9 +601,8 @@
       && \faIcon{check} & \faIcon{check} & \faIcon{minus} & \faIcon{check} & \faIcon{check} & \faIcon{check} \\
         \bottomrule
     \end{tabular}
-    \caption{Funkčnost stránky na různých platformách}
-    \label{tab:Funkčnost stránky na různých platformách}
   \end{table}
+  \vspace{-\parskip}
 
   \section{Obsah webové stránky} \label{sec:Obsah webové stránky}
 
@@ -834,7 +833,10 @@
   \section{Příloha 1: Data testování doby načtení} \label{sec:Příloha 1: Data testování doby načtení}
   Tabulka \ref{tab:Data testování doby načtení} obsahuje místa, ze kterých byla testována doba načtení stránky \url{http://robotics-simplified.com/} a částečné odkazy na testovací data. K vytvoření úplného odkazu stačí před označení daného města přidat \texttt{www.webpagetest.org/result/}.
 
+  \vspace{\parskip}
   \begin{table}[H]
+    \caption{Data testování doby načtení}
+    \label{tab:Data testování doby načtení}
     \footnotesize
     \centering
     \ra{1.3}
@@ -867,7 +869,6 @@
       Vietnam (neurčeno)              & \href{https://www.webpagetest.org/result/190213_RQ_18f2a02931599884f8922a3ce09f56bc}{\texttt{190213\_RQ\_18f2a02931599884f8922a3ce09f56bc}} \\
       \bottomrule
     \end{tabular}
-    \caption{Data testování doby načtení}
-    \label{tab:Data testování doby načtení}
   \end{table}
+  \vspace{-\parskip}
 \end{document}
