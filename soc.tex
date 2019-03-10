@@ -762,13 +762,15 @@
   Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí skript \texttt{deploy.py}, který stránku nejprve pomocí Jekyllu vygeneruje, poté ve správném pořadí spustí všechny skripty pro generování dodatečného obsahu a optimalizace a nakonec i skript pro nahrání stránky na webhosting.
 
 
-  \section{Analytika a propagace webové stránky}
+  \section{Návštěvnost a zpětná vazba webové stránky}
   % TODO: how is traffic analysis and marketting done
 
   \subsection{Analýza návštěvnosti}
+  % TODO: why google
 
-  \subsubsection{Google Analytics}
-  Google Analytics je služba společnosti Google, která slouží k analýze návštěvnosti webových stránek. Pro použití stačí na danou stránku přidat JavaScriptovou knihovnu, která shromažďuje informace o návštěvnících (z údajů prohlížeče a také \gls{http} cookies) a jejich interakcí s danou stránkou.
+  \emph{Google Analytics} je služba společnosti Google, která slouží k analýze návštěvnosti webových stránek. Pro použití stačí na danou stránku přidat JavaScriptovou knihovnu, která shromažďuje informace o návštěvnících (z údajů prohlížeče a také \gls{http} cookies) a jejich interakcí s danou stránkou.
+
+  Kromě služby Google Analytics je dále používána služba \emph{Google Search Console}, která zobrazuje statistiky o indexování webové stránky v rámci vyhledávání Google~--~její průměrné pozice při relevantních vyhledáváních, počet zobrazení, indexované podstránky, aj. Kromě toho informuje správce stránky o potenciálních problémech jako špatné zobrazení na mobilních zařízeních či chybně vygenerovaný soubor \texttt{sitemap.xml}.
 
   % TODO: add location pie chart
   % TODO: add device pie chart
@@ -776,8 +778,7 @@
   % TODO: add gender pie chart
 
 
-  \subsubsection{Google Search Console}
-  Kromě služby Google Analytics rozebírané v předešlé kapitole k slouží získávání statistik o webové stránce služba Google Search Engine, která zobrazuje statistiky o indexování webové stránky v rámci vyhledávání Google~--~její průměrné pozice při relevantních vyhledáváních, počet zobrazení, indexované podstránky, aj.
+  % TODO: write something about the results
 
 
   \subsection{Zpětná vazba}
