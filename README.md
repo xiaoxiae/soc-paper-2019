@@ -7,7 +7,7 @@ If you want to use the project as a template for your own SOČ paper, or to comp
 
 
 ### Typesetting system
-The paper was converted to PDF using **LuaTeX**. It was chosen mainly for its out-of-the-box UFT-8 support (which pdfTeX lacks). It comes with most of the major TeX distributions, like TeX Live and MiKTeX, so you should already have it installed.
+The paper was converted to PDF using **LuaTeX**. It was chosen mainly for its out-of-the-box UFT-8 support (which pdfTeX lacks). It comes with most of the major TeX distributions like TeX Live and MiKTeX, so you should already have it installed.
 
 [compile.py](scripts/compile.py) is the script that was used to build the paper. I would recommend you either use it directly or run the same commands in the command line to properly render things like bibliography or the list of acronyms.
 
@@ -29,4 +29,4 @@ The font [**CMU Serif**](https://sourceforge.net/projects/cm-unicode/) was used 
 
 You can also use a different system font by changing the line `\setmainfont{CMU Serif}` in `soc.tex`.
 
-The paper also uses **FontAwesome5** and the fontawesome5 package to typeset certain symbols and icons. You can either remove the line `\usepackage{fontawesome5}` from `soc.tex` if you don't plan on using any of the icons, or to [install the font](https://fontawesome.com/download) on your system.
+The paper also uses **FontAwesome5** and the fontawesome5 package to typeset certain symbols and icons. You can either remove the line `\usepackage{fontawesome5}` from `soc.tex` if you don't plan on using any of the icons, or [install the font](https://fontawesome.com/download) on your system.
