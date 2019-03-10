@@ -792,11 +792,97 @@
 
   Kromě služby Google Analytics je dále používána služba \emph{Google Search Console}, která zobrazuje statistiky o indexování webové stránky v rámci vyhledávání Google~--~její průměrné pozice při relevantních vyhledáváních, počet zobrazení, indexované podstránky, aj. Kromě toho informuje správce stránky o potenciálních problémech jako špatné zobrazení na mobilních zařízeních či chybně vygenerovaný soubor \texttt{sitemap.xml}.
 
-  % TODO: add location pie chart
-  % TODO: add device pie chart
-  % TODO: add age pie chart
-  % TODO: add gender pie chart
+  Celková návštěvnost stránky v období od 18. prosince 2018 (počátek měření) k 18. března 2018 činí \emph{466} návštěvníků. Jejich demografické údaje zachycují grafy \ref{img:Pohlaví návštěvníků stránky} a \ref{img:Věk návštěvníků stránky}.
 
+  \begin{minipage}[b]{0.47\textwidth}
+    \footnotesize
+    \centering
+    \begin{tikzpicture}
+      \pie[color={blue!70, red!70}, rotate=-35, before number=\ScanPercentage, after  number ={ }\%,]{91.2/Muži, 8.8/Ženy}
+    \end{tikzpicture}
+    \captionof{figure}{Pohlaví návštěvníků stránky}
+    \label{img:Pohlaví návštěvníků stránky}
+  \end{minipage}\hfill
+  \begin{minipage}[b]{0.47\textwidth}
+    \footnotesize
+    \centering
+    \begin{tikzpicture}
+      \begin{axis}[
+        symbolic x coords={18--24, 25--34, 35--44, 45--54},
+        xtick=data,
+        ylabel={Procento návštěvníků},
+        xlabel={Věková kategorie},
+        bar width=1cm,
+        width=\textwidth,
+        enlarge x limits=0.18,
+        ymin=0, ymax=60,
+        nodes near coords={\pgfmathprintnumber\pgfplotspointmeta{ }\%},
+        yticklabel={\pgfmathparse{\tick}\pgfmathprintnumber{\pgfmathresult}{ }\%},]
+        \addplot[ybar,fill=blue] coordinates {
+          (18--24, 18.9)
+          (25--34, 48.4)
+          (35--44, 18.0)
+          (45--54, 14.7)
+        };
+      \end{axis}
+    \end{tikzpicture}
+    \captionof{figure}{Věk návštěvníků stránky}
+    \label{img:Věk návštěvníků stránky}
+  \end{minipage}
+  \vspace{\parskip}
+
+  Údaje o přístupu ke stránce jsou dále zaneseny do tabulek \ref{tab:Návštěvnost stránky podle země} a \ref{tab:Návštěvnost stránky podle prohlížeče}.
+
+  \begin{minipage}[b]{0.47\textwidth}
+    \begin{table}[H]
+      \caption{Návštěvnost stránky podle země}
+      \label{tab:Návštěvnost stránky podle země}
+      \footnotesize
+      \centering
+      \ra{1.3}
+      \begin{tabular}{*5l}
+        \toprule
+        \emph{Země} & \emph{Počet návštěvníků} \\
+        \midrule
+        Spojené státy americké & 240 \\
+        Česká republika	       & 35 \\
+        Spojené království     & 20 \\
+        Kanada                 & 17 \\
+        Německo                & 10 \\
+        Japonsko               & 10 \\
+        Čína                   & 8 \\
+        Indie                  & 8 \\
+        Španělsko              & 7 \\
+        Nizozemí               & 7 \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
+  \end{minipage}\hfill
+  \begin{minipage}[b]{0.47\textwidth}
+    \begin{table}[H]
+      \caption{Návštěvnost stránky podle prohlížeče}
+      \label{tab:Návštěvnost stránky podle prohlížeče}
+      \footnotesize
+      \centering
+      \ra{1.3}
+      \begin{tabular}{*5l}
+        \toprule
+        \emph{Prohlížeč} & \emph{Počet návštěvníků} \\
+        \midrule
+        Chrome            & 226 \\
+        Firefox	          & 111 \\
+        Safari            & 85 \\
+        Android Webview   & 14 \\
+        Internet Explorer & 6 \\
+        Opera             & 6 \\
+        Edge              & 5 \\
+        Samsung Internet  & 5 \\
+        Neurčeno          & 4 \\
+        Cốc Cốc           & 1 \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
+  \end{minipage}
 
   % TODO: write something about the results
 
