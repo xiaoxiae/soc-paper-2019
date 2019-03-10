@@ -73,6 +73,23 @@
 \usepackage[hidelinks,unicode]{hyperref} % interactive references
 
 
+
+
+% GRAPHS, CHARTS %
+%-==============-%
+\usepackage{pgf-pie} % pie charts
+
+% change pie chart number separator from dot to comma
+\usepackage{siunitx}
+\sisetup{
+  output-decimal-marker={,},
+  group-separator={\,},
+}
+\def\ScanPercentage#1\afternumber{\SI{#1}{\percent}}
+
+\usepackage{pgfplots} % bar charts
+
+
 % BIBLIOGRAPHY %
 %-============-%
 \usepackage[backend=biber,
