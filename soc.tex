@@ -137,6 +137,7 @@
 \usepackage{fontspec}    % font selector
 
 \setmainfont{CMU Serif}   % font supporting bold smallcaps
+
 \usepackage{fontawesome5} % use FontAwesome 5 for icons
 
 
@@ -394,7 +395,7 @@
   <p>Značkovací jazyk HTML vytvořil Tim Berners-Lee z výzkumného centra <a href="https://home.cern/">CERN</a> v roce 1989.</p>
   \end{minted}
 
-  V \gls{html} psán zdrojový kód převážné většiny webových stránek internetu a tento projekt není výjimkou. % TODO: write about how it's created?
+  V \gls{html} psán zdrojový kód převážné většiny webových stránek internetu a tento projekt není výjimkou. Je generován Jekyllem, který je podrobněji rozebírán v kapitole \ref{sec:Jekyll}.
 
 
   \subsection{\acrshort{css}} \label{sec:CSS}
@@ -420,7 +421,7 @@
 
   Na rozdíl od kódu psaném v jazyce \gls{php}, který je vykonáván na straně serveru, je JavaScriptový kód vykonáván na straně uživatele. Díky tomu plní na webové stránce funkce, které nevyžadují neustálý kontakt se serverem (jelikož výměna informací tímto způsobem zpravidla není okamžitá) jako kontrola správného vyplnění formuláře, zajištění plynulosti uživatelského prostředí, či tvorba webových her.
 
-  Dnes se jedná o webový standard a dlouhodobě nejpoužívanější programovací jazyk platformy GitHub~\cite{github-statistics}, který zajišťuje vykreslování rovnic, interaktivitu vizualizací, vyhledávání na stánce, aj.
+  Dnes se jedná o webový standard a dlouhodobě nejpoužívanější programovací jazyk platformy GitHub~\cite{github-statistics}, který zajišťuje vykreslování rovnic, interaktivitu vizualizací, vyhledávání na stránce, aj.
 
 
   \subsubsection{p5.js} \label{sec:p5.js}
@@ -438,7 +439,7 @@
 
   Od svého vzniku se Python postupně vyvinul v mocný a frekventovaně používaný programovací jazyk~--~má rozsáhlou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub~\cite{github-statistics}, od stavby webových stránek (Django) po knihovny na trénování neuronových sítí (TensorFlow).
 
-  Na stránce zastává funkci skriptovacího jazyka pro automatizaci provozu (viz. kapitola~\ref{sec:Automatizace provozu webové stránky}). Oproti alternativám jako \gls{php} a Java je na stránce používán převážně z osobní preference. % TODO: good library + easy syntax
+  Na stránce zastává funkci skriptovacího jazyka pro automatizaci provozu (viz. kapitola~\ref{sec:Automatizace provozu webové stránky}). Oproti alternativám jako \gls{php} a Java je na stránce používán převážně kvůli velkému množství „modulů“ (knihoven), jednoduché syntaxi a mým dlouhodobým zkušenostem.
 
 
   \subsection{Markdown} \label{sec:Markdown}
@@ -607,21 +608,23 @@
   \section{Obsah webové stránky} \label{sec:Obsah webové stránky}
 
   \subsection{Cílová skupina}
-  Do cílové skupiny patří lidé v podobné situaci, ve které jsem byl já na konci roku 2017 krátce po mém vstoupení do \gls{frc} týmu Metal Moose~--~jedinci se zájmem o robotiku, které od studia odrazuje nedostatek intuitivních a lehce pochopitelných materiálů.
+  Při tvorbě studijních materiálů je v první řadě třeba vymezit jeho cílovou skupinu, protože od ní se odvíjí vše ostatní~--~jazyk textu, obtížnost použité matematiky, detail ilustrací, aj. Při výběru musí být brána v potaz především úroveň vzdělávání autora, jelikož středoškolský student experta v oboru mnoho nenaučí.
 
-  Předešlé znalosti v oblasti robotiky či elektrotechniky proto pro čtení článků stránky potřebné nejsou, doporučeny jsou pouze základní znalosti programování a středoškolské matematiky (geometrie, algebra).
+  Do cílové skupiny proto patří lidé v podobné situaci, ve které jsem byl já na konci roku 2017 krátce po mém vstoupení do \gls{frc} týmu Metal Moose~--~jedinci se zájmem o robotiku, které od studia odrazuje nedostatek intuitivních a lehce pochopitelných materiálů. Díky tomu dokáži snadněji psát takové články, které bych si při mých začátcích s robotikou přál číst.
+
+  Předešlé znalosti v oblasti robotiky či elektrotechniky pro čtení článků stránky potřebné nejsou, doporučeny jsou pouze základní znalosti programování a středoškolské matematiky (geometrie, algebra).
 
 
   \subsection{Proces tvorby článků} \label{sec:Proces tvorby článků}
-  Při tvorbě nového článku je nejprve zvoleno téma, které bude článek rozebírat. Vyšší prioritu mají témata, jejichž pochopení pro mě bylo z dostupných internetových zdrojů náročné. Další faktory ovlivňující tento výběr jsou obtížnost zařazení tématu do již vytvořených tématických okruhů a jeho použitelnost v soutěži \gls{frc}.
+  Při tvorbě nového článku je nejprve zvoleno téma, které bude článek rozebírat. Vyšší prioritu mají témata, jejichž pochopení pro mě bylo z dostupných internetových zdrojů náročné. Další faktory ovlivňující tento výběr jsou obtížnost zařazení tématu do již vytvořených tématických okruhů a jeho užitečnost v soutěži \gls{frc}.
 
-  Po vybrání tématu článku jsou shromážděny dostupné materiály~--~prezentace, odborné práce, články, aj. Poté jsou seřazeny podle jejich užitečnosti v mém pochopení daného tématu a na stránce následně zmíněny jako dodatečné studijní materiály.
+  Po vybrání tématu článku jsou shromážděny dostupné materiály~--~prezentace, odborné práce, články, aj. Poté jsou seřazeny podle jejich podílu na mém pochopení daného tématu a na stránce následně zmíněny jako dodatečné studijní materiály.
 
   Hlavní koncepty těchto témat jsou dále implementovány přes online prostředí RobotMesh v jazyce Python na robotovi ze stavebnice VEX EDR, který byl pro tento účel vytvořen.
 
   % TODO: add the CAD model x the real model
 
-  Po úspěšném testování a odladění kódu jsou implementace a jejích odvození v článku jednoduchým způsobem (pokud možno obohacené názornými ilustracemi a vizualizacemi) vysvětleny. Na konci je zpravidla rozebírána použitelnost daných konceptů v reálné robotice a nastíněny navazující články v rámci daného tématického okruhu.
+  Po úspěšném testování a odladění kódu jsou implementace a jejích odvození v článku jednoduchým způsobem (pokud možno obohacené názornými ilustracemi a vizualizacemi) vysvětleny. Na konci je zpravidla rozebírána použitelnost daných konceptů v reálné robotice a nastíněny navazující články v rámci daného tematického okruhu.
 
 
   \subsubsection{Vizualizace} \label{sec:Vizualizace}
@@ -664,9 +667,9 @@
 
 
   \subsection{Struktura}
-  Stránka je pro ulehčení převodu do \gls{pdf} a plynulosti navigace strukturována do značné míry jako kniha.
+  Stránka je strukturována do značné míry jako kniha, převážně kvůli plynulosti jejího čtení a zjednodušení jejího převodu do formátu \gls{pdf}.
 
-  Návštěvníka po zobrazení stránky přivítá \emph{úvodní stránka} (obrázek~\ref{img:Úvodní stránka}), která představí projekt a jeho cíle, případně obsahuje důležitá sdělení o provozu stránky. Poté následuje \emph{předmluva} (obrázek~\ref{img:Předmluva}), kde jsou kromě diskuzi o předpokladech pro čtení zodpovězena řada otázek, které by čtenáři mohli při čtení stránky mít.
+  Návštěvníka po zobrazení stránky přivítá \emph{úvodní stránka} (obrázek~\ref{img:Úvodní stránka}), která představí projekt a jeho cíle. Příležitostně také obsahuje důležitá sdělení o provozu stránky. Poté následuje \emph{předmluva} (obrázek~\ref{img:Předmluva}), ve které je kromě diskuze o předpokladech pro čtení zodpovězena řada otázek, které by čtenáři mohli při čtení stránky mít.
 
   \begin{figure}[H]
     \minipage{0.47\textwidth}
@@ -679,7 +682,7 @@
     \endminipage
   \end{figure}
 
-  Hlavní náplní projektu jsou \emph{tématické okruhy} (obrázek~\ref{img:Příklady článků}), které se skládají z článků probírajících koncepty s podobnou tematikou, v pořadí, ve kterém by pro návaznost měly být čteny.
+  Hlavní náplní projektu jsou \emph{tematické okruhy} (obrázek~\ref{img:Příklady článků}), které se skládají z článků probírajících koncepty s podobnou tematikou, v pořadí, ve kterém by pro návaznost měly být čteny.
 
   \begin{figure}[H]
     \centering
@@ -781,7 +784,7 @@
   % TODO: write something about the results
 
 
-  \subsection{Zpětná vazba}
+  \subsection{Získávání zpětné vazby}
   K získání zpětné vazby o technicky zaměřeném projektu je vhodné použít webové stránky s obdobnou tématikou. Projekt byl z tohoto důvodů zveřejněn na následujících internetových fórech:
 
   {\parskip=0pt
@@ -795,7 +798,7 @@
     \item \emph{Hacker News}~--~internetové fórum, které je ve svém fungování blízké Redditu. Není však dále strukturováno na subreddity a obsah je vážnějšího charakteru~--~světové novinky, nové výzkumy a odborné práce, měsíční přehledy dostupných pracovních pozic \gls{it} firem, apod.
   \end{itemize}}
 
-  % TODO: diskuze vazby
+  Zpětná vazba obsahovala rady na potenciální možnost zpeněžnění webové stránky přidáním reklam, zlepšení kompatibility s obskurnějšími nastaveními prohlížečů a umožnění upravovat samotné ukázky kódu a měnit tím chování vizualizace.
 
   \newpage
 
@@ -863,10 +866,10 @@
       Polsko (Varšava)                & \href{https://www.webpagetest.org/result/190213_AV_e12420619d2b67b02b36fd8f85012634}{\texttt{190213\_AV\_e12420619d2b67b02b36fd8f85012634}} \\
       Spojené arabské emiráty (Dubaj) & \href{https://www.webpagetest.org/result/190213_66_d158a4ae09a1ef5d63b68693b5230066}{\texttt{190213\_66\_d158a4ae09a1ef5d63b68693b5230066}} \\
       Spojené království (Londýn)     & \href{https://www.webpagetest.org/result/190213_SS_1226a99822746d3cf16fb81bd19c9ac8}{\texttt{190213\_SS\_1226a99822746d3cf16fb81bd19c9ac8}} \\
+      Spojené státy americké (Clifton)& \href{https://www.webpagetest.org/result/190213_3S_570bc4b76dd084486a1ae6ba1829f2cc}{\texttt{190213\_3S\_570bc4b76dd084486a1ae6ba1829f2cc}} \\
       Španělsko (La Rioja)            & \href{https://www.webpagetest.org/result/190213_ZA_96b8ca66a5af8d0bbee48a48d1ebf901}{\texttt{190213\_ZA\_96b8ca66a5af8d0bbee48a48d1ebf901}} \\
       Švédsko (Stockholm)             & \href{https://www.webpagetest.org/result/190213_PC_8bf596590b3cb93164fb6b20e2ae9b7a}{\texttt{190213\_PC\_8bf596590b3cb93164fb6b20e2ae9b7a}} \\
       Turecko (Istanbul)              & \href{https://www.webpagetest.org/result/190213_FZ_3eb94a70dfdd8c92bcfcfaf74a412501}{\texttt{190213\_FZ\_3eb94a70dfdd8c92bcfcfaf74a412501}} \\
-      USA (Clifton)                   & \href{https://www.webpagetest.org/result/190213_3S_570bc4b76dd084486a1ae6ba1829f2cc}{\texttt{190213\_3S\_570bc4b76dd084486a1ae6ba1829f2cc}} \\
       Vietnam (neurčeno)              & \href{https://www.webpagetest.org/result/190213_RQ_18f2a02931599884f8922a3ce09f56bc}{\texttt{190213\_RQ\_18f2a02931599884f8922a3ce09f56bc}} \\
       \bottomrule
     \end{tabular}
