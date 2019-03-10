@@ -72,6 +72,7 @@
 \usepackage[hyphens,spaces,obeyspaces]{url} % for formatting urls
 \usepackage[hidelinks,unicode]{hyperref} % interactive references
 
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1}~--~\nameref*{#1}}} % reference number + name
 
 
 
@@ -792,7 +793,7 @@
 
   Kromě služby Google Analytics je dále používána služba \emph{Google Search Console}, která zobrazuje statistiky o indexování webové stránky v rámci vyhledávání Google~--~její průměrné pozice při relevantních vyhledáváních, počet zobrazení, indexované podstránky, aj. Kromě toho informuje správce stránky o potenciálních problémech jako špatné zobrazení na mobilních zařízeních či chybně vygenerovaný soubor \texttt{sitemap.xml}.
 
-  Celková návštěvnost stránky v období od 18. prosince 2018 (počátek měření) k 18. března 2018 činí \emph{466} návštěvníků. Jejich demografické údaje zachycují grafy \ref{img:Pohlaví návštěvníků stránky} a \ref{img:Věk návštěvníků stránky}.
+  Celková návštěvnost stránky v období od 18. prosince 2018 (počátek měření) k 18. března 2018 činí \emph{466} návštěvníků. Jejich demografické údaje zachycují grafy \fullref{img:Pohlaví návštěvníků stránky} a \fullref{img:Věk návštěvníků stránky}.
 
   \begin{minipage}[b]{0.47\textwidth}
     \footnotesize
@@ -831,7 +832,7 @@
   \end{minipage}
   \vspace{\parskip}
 
-  Údaje o přístupu ke stránce jsou dále zaneseny do tabulek \ref{tab:Návštěvnost stránky podle země} a \ref{tab:Návštěvnost stránky podle prohlížeče}.
+  Údaje o přístupu ke stránce jsou dále zaneseny do tabulek \fullref{tab:Návštěvnost stránky podle země} a \fullref{tab:Návštěvnost stránky podle prohlížeče}.
 
   \begin{minipage}[b]{0.47\textwidth}
     \begin{table}[H]
