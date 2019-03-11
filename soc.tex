@@ -11,7 +11,7 @@
 
 % TOC AND LOF %
 %-===========-%
-\usepackage[subfigure, titles]{tocloft} % controlling lof and lot
+\usepackage[titles]{tocloft} % controlling lof and lot
 \usepackage[nottoc]{tocbibind} % remove reference to toc from toc
 
 % remove titles from lof and lot, since they are grouped into one section
@@ -46,7 +46,7 @@
 
 \usepackage{float} % floats in correct position (the [H] option)
 
-\usepackage{subfig} % for subfigures
+\usepackage{subcaption} % for subfigures
 
 \setlength{\fboxsep}{0pt}    % image border separation
 \setlength{\fboxrule}{0.5pt} % image border thickness
@@ -120,6 +120,13 @@
 \usepackage{etoolbox}
 \preto\tabular{\shorthandoff{-}}
 
+ % fixes figure spacing
+ % the -8pt should be the default \belowcaptionskip, which doesn't work here for some reason
+\BeforeBeginEnvironment{figure}{\vspace{0.5\parskip}}
+\AfterEndEnvironment{figure}{\vspace{-0.5\parskip}\vspace{-8pt}}
+
+\AfterEndEnvironment{table}{\vspace{-\parskip}}
+
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % table row stretching
 
 
@@ -131,11 +138,10 @@
 
 % CAPTIONS %
 %-========-%
-\usepackage[font=footnotesize,        % 10pt captions
-            justification=centering,  % center the captions
-            figurename=Obr.,          % picture captions are "Obr."
-            tablename=Tab.,           % table captions are "Tab."
-            belowskip=-12pt]{caption} % reduce skip below figures
+\usepackage[font=footnotesize,       % 10pt captions
+            justification=centering, % center the captions
+            figurename=Obr.,         % picture captions are "Obr."
+            tablename=Tab.]{caption} % table captions are "Tab."
 
 
 % LISTS %
@@ -562,11 +568,11 @@
   \begin{figure}[H]%
     \centering
 
-    \subfloat[Počáteční nápad]{{\includegraphics[width=.3\linewidth]{logo1.png}}}%
+    \subcaptionbox{Počáteční nápad}{\includegraphics[width=.3\linewidth]{logo1.png}}%
     \hfill
-    \subfloat[Přidání ozubeného kola]{{\includegraphics[width=.3\linewidth]{logo2.png}}}%
+    \subcaptionbox{Přidání ozubeného kola}{\includegraphics[width=.3\linewidth]{logo2.png}}%
     \hfill
-    \subfloat[Konečná podoba]{{\includegraphics[width=.3\linewidth]{logo3.png}}}%
+    \subcaptionbox{Konečná podoba}{\includegraphics[width=.3\linewidth]{logo3.png}}%
 
     \caption{Design loga stránky}%
     \label{img:Design loga stránky}%
@@ -606,7 +612,6 @@
 
   Výsledky těchto testů jsou zaneseny do tabulky \ref{tab:Funkčnost stránky na různých platformách}~--~správné fungování je značeno symbolem \faIcon{check}, špatné symbolem \faIcon{times} a nemožnost testování z důvodu nedostupnosti prohlížeče na dané platformně je značeno symbolem \faIcon{minus}.
 
-  \vspace{\parskip}
   \begin{table}[H]
     \caption{Funkčnost stránky na různých platformách}
     \label{tab:Funkčnost stránky na různých platformách}
@@ -630,7 +635,6 @@
         \bottomrule
     \end{tabular}
   \end{table}
-  \vspace{-\parskip}
 
   \section{Obsah webové stránky} \label{sec:Obsah webové stránky}
 
@@ -668,11 +672,11 @@
   \begin{figure}[H]
     \centering
 
-    \subfloat[Pohyb robota po kružnici]{\fbox{\includegraphics[width=.3\linewidth]{illustration1.png}}}%
+    \subcaptionbox{Pohyb robota po kružnici}{\fbox{\includegraphics[width=.3\linewidth]{illustration1.png}}}%
     \hfill
-    \subfloat[Odhad pozice při pohybu po přímce]{\fbox{\includegraphics[width=.3\linewidth]{illustration2.png}}}%
+    \subcaptionbox{Odhad pozice při pohybu po přímce}{\fbox{\includegraphics[width=.3\linewidth]{illustration2.png}}}%
     \hfill
-    \subfloat[Odhad pozice při pohybu po kružnici]{\fbox{\includegraphics[width=.3\linewidth]{illustration3.png}}}%
+    \subcaptionbox{Odhad pozice při pohybu po kružnici}{\fbox{\includegraphics[width=.3\linewidth]{illustration3.png}}}%
 
     \caption{Příklady ilustrací}%
     \label{img:Příklady ilustrací}%
@@ -699,11 +703,11 @@
   Návštěvníka po zobrazení stránky přivítá \emph{úvodní stránka} (obrázek~\ref{img:Úvodní stránka}), která představí projekt a jeho cíle. Příležitostně také obsahuje důležitá sdělení o provozu stránky. Poté následuje \emph{předmluva} (obrázek~\ref{img:Předmluva}), ve které je kromě diskuze o předpokladech pro čtení zodpovězena řada otázek, které by čtenáři mohli při čtení stránky mít.
 
   \begin{figure}[H]
-    \minipage{0.47\textwidth}
+    \minipage{0.475\textwidth}
       \fbox{\includegraphics[width=\linewidth]{1.png}}
       \caption{Úvodní stránka} \label{img:Úvodní stránka}
     \endminipage\hfill
-     \minipage{0.47\textwidth}
+     \minipage{0.475\textwidth}
       \fbox{\includegraphics[width=\linewidth]{2.png}}
       \caption{Předmluva} \label{img:Předmluva}
     \endminipage
@@ -714,11 +718,11 @@
   \begin{figure}[H]
     \centering
 
-    \subfloat[Úvod do ovládání podvozku]{\fbox{\includegraphics[width=.3\linewidth]{3-1.png}}}%
+    \subcaptionbox{Úvod do ovládání podvozku}{\fbox{\includegraphics[width=.3\linewidth]{3-1.png}}}%
     \hfill
-    \subfloat[Metoda Tank drive pro ovládání podvozku robota]{\fbox{\includegraphics[width=.3\linewidth]{3-2.png}}}%
+    \subcaptionbox{Metoda Tank drive pro ovládání podvozku robota}{\fbox{\includegraphics[width=.3\linewidth]{3-2.png}}}%
     \hfill
-    \subfloat[Výpočet úhlu z enkóderů]{\fbox{\includegraphics[width=.3\linewidth]{3-3.png}}}%
+    \subcaptionbox{Výpočet úhlu z enkóderů}{\fbox{\includegraphics[width=.3\linewidth]{3-3.png}}}%
 
     \caption{Příklady článků}%
     \label{img:Příklady článků}%
@@ -727,11 +731,11 @@
   Na závěr je přiložen článek s \emph{dodatečnými materiály} (obrázek~\ref{img:Dodatečné materiály}) použité při tvorbě projektu a sekce \emph{O nás} (obrázek~\ref{img:O nás}), která popisuje důvod za vznikem projektu, návod na případnou spolupráci na projektu a poděkování.
 
   \begin{figure}[H]
-    \minipage{0.47\textwidth}
+    \minipage{0.475\textwidth}
       \fbox{\includegraphics[width=\linewidth]{4.png}}
       \caption{Dodatečné materiály} \label{img:Dodatečné materiály}
     \endminipage\hfill
-     \minipage{0.47\textwidth}
+     \minipage{0.475\textwidth}
       \fbox{\includegraphics[width=\linewidth]{5.png}}
       \caption{O nás} \label{img:O nás}
     \endminipage
@@ -804,7 +808,7 @@
 
   Celková návštěvnost stránky v období od 18. prosince 2018 (počátek měření) k 18. března 2018 činí \emph{466} návštěvníků. Jejich demografické údaje zachycují grafy \fullref{img:Pohlaví návštěvníků stránky} a \fullref{img:Věk návštěvníků stránky}.
 
-  \begin{minipage}[b]{0.47\textwidth}
+  \begin{minipage}[b]{0.475\textwidth}
     \footnotesize
     \centering
     \begin{tikzpicture}
@@ -813,7 +817,7 @@
     \captionof{figure}{Pohlaví návštěvníků stránky}
     \label{img:Pohlaví návštěvníků stránky}
   \end{minipage}\hfill
-  \begin{minipage}[b]{0.47\textwidth}
+  \begin{minipage}[b]{0.475\textwidth}
     \footnotesize
     \centering
     \begin{tikzpicture}
@@ -839,11 +843,11 @@
     \captionof{figure}{Věk návštěvníků stránky}
     \label{img:Věk návštěvníků stránky}
   \end{minipage}
-  \vspace{\parskip}
 
   Údaje o přístupu ke stránce jsou dále zaneseny do tabulek \fullref{tab:Návštěvnost stránky podle země} a \fullref{tab:Návštěvnost stránky podle prohlížeče}.
 
-  \begin{minipage}[b]{0.47\textwidth}
+  \vspace{-0.5\parskip}
+  \begin{minipage}[b]{0.475\textwidth}
     \begin{table}[H]
       \caption{Návštěvnost stránky podle země}
       \label{tab:Návštěvnost stránky podle země}
@@ -868,7 +872,7 @@
       \end{tabular}
     \end{table}
   \end{minipage}\hfill
-  \begin{minipage}[b]{0.47\textwidth}
+  \begin{minipage}[b]{0.475\textwidth}
     \begin{table}[H]
       \caption{Návštěvnost stránky podle prohlížeče}
       \label{tab:Návštěvnost stránky podle prohlížeče}
@@ -950,7 +954,6 @@
   \section{Příloha 1: Data testování doby načtení} \label{sec:Příloha 1: Data testování doby načtení}
   Tabulka \ref{tab:Data testování doby načtení} obsahuje místa, ze kterých byla testována doba načtení stránky \url{http://robotics-simplified.com/} a částečné odkazy na testovací data. K vytvoření úplného odkazu stačí před označení daného města přidat \texttt{www.webpagetest.org/result/}.
 
-  \vspace{\parskip}
   \begin{table}[H]
     \caption{Data testování doby načtení}
     \label{tab:Data testování doby načtení}
@@ -987,5 +990,4 @@
       \bottomrule
     \end{tabular}
   \end{table}
-  \vspace{-\parskip}
 \end{document}
