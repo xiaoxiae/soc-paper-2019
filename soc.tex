@@ -212,6 +212,7 @@
 \newacronym{ps}{PS}{PostScript}
 \newacronym{doc}{DOC}{Microsof Word document}
 \newacronym{docx}{DOCX}{Microsoft Word Open XML document}
+\newacronym{step}{STEP}{Standard for Exchange of Product model data}
 
 \glsaddall % add all acronyms
 
@@ -582,7 +583,7 @@
 
 
   \subsection{Verzování zdrojového kódu}
-  Stránka je verzována pomocí verzovacího systému Git (viz. kapitola~\ref{sec:Git}). Kód je otevřený a volně dostupný přes GitHub na adrese \url{https://github.com/xiaoxiae/Robotics-Simplified-Website}.
+  Stránka je verzována pomocí verzovacího systému Git (viz. kapitola~\ref{sec:Git}). Kód je otevřený a volně dostupný přes GitHub na adrese \url{https://github.com/xiaoxiae/Robotics-Simplified-Website} a rovněž jako příloha této práce (viz. kapitola \ref{sec:Příloha 1: Zdrojový kód webové stránky}).
 
   Kromě větších binárních souborů jako ilustrace, které se mohou při revizích článků měnit a zbytečně tak zvětšovat velikost repozitáře, jsou verzovány všechny negenerované soubory udávající vzhled a obsah stránky.
 
@@ -595,7 +596,7 @@
 
   Testování bylo provedeno s pomocí služby \url{https://www.webpagetest.org/}, která analyzuje webové stránky z různých lokací světa (a různých prohlížečů) a poskytuje statistiky o rychlosti načtení, množství načtených dat a mnohém dalším.
 
-  Obrázek~\ref{img:Mapa dob načtení z různých lokací světa} obsahuje informace o době \emph{úplného načtení} (tj. přenesení všech potřebných dat) stránky \url{http://robotics-simplified.com/} z většiny dostupných testovacích lokalit výše uvedené služby ke 13. únoru 2019.
+  Obrázek~\ref{img:Mapa dob načtení z různých lokací světa} obsahuje informace o době \emph{úplného načtení} (tj. přenesení všech potřebných dat) stránky \url{http://robotics-simplified.com/} z většiny dostupných testovacích lokalit výše uvedené služby ke 13. únoru 2019. Všechna data z testování jsou dostupná jako příloha této práce (viz. kapitola \ref{sec:Příloha 2: Data testování doby načtení}).
 
   \begin{figure}[H]
     \includegraphics[width=\linewidth]{map.png}
@@ -651,7 +652,7 @@
 
   Po vybrání tématu článku jsou shromážděny dostupné materiály~--~prezentace, odborné práce, články, aj. Poté jsou seřazeny podle jejich podílu na mém pochopení daného tématu a na stránce následně zmíněny jako dodatečné studijní materiály.
 
-  Hlavní koncepty těchto témat jsou dále implementovány přes online prostředí RobotMesh v jazyce Python na robotovi ze stavebnice VEX EDR, který byl pro tento účel vytvořen. Dva úhly pohledu na jeho konstrukci zachycuje obrázek \ref{img:3D Model robota}, který byl zhotoven v \gls{cad} programu Fusion 360 (viz. kapitola \ref{sec:Fusion 360}).
+  Hlavní koncepty těchto témat jsou dále implementovány přes online prostředí RobotMesh v jazyce Python na robotovi ze stavebnice VEX EDR, který byl pro tento účel vytvořen. Dva úhly pohledu na jeho konstrukci zachycuje obrázek \ref{img:3D Model robota}, který byl zhotoven v \gls{cad} programu Fusion 360 (viz. kapitola \ref{sec:Fusion 360}). Zdrojový kód tohoto modelu je dostupný ve formátu \gls{step} jako příloha této práce (viz. kapitola \ref{sec:Příloha 3: 3D model robota ve formátu STEP}).
 
   \begin{figure}[H]%
     \centering
@@ -960,7 +961,11 @@
 
   \newpage
 
-  \section{Příloha 1: Data testování doby načtení} \label{sec:Příloha 1: Data testování doby načtení}
+  \section{Příloha 1: Zdrojový kód webové stránky} \label{sec:Příloha 1: Zdrojový kód webové stránky}
+
+  \newpage
+
+  \section{Příloha 2: Data testování doby načtení} \label{sec:Příloha 2: Data testování doby načtení}
   Tabulka \ref{tab:Data testování doby načtení} obsahuje místa, ze kterých byla testována doba načtení stránky \url{http://robotics-simplified.com/} a částečné odkazy na testovací data. K vytvoření úplného odkazu stačí před označení daného města přidat \texttt{www.webpagetest.org/result/}.
 
   \begin{table}[H]
@@ -999,4 +1004,8 @@
       \bottomrule
     \end{tabular}
   \end{table}
+
+  \newpage
+
+  \section{Příloha 3: 3D model robota ve formátu \acrshort{step}} \label{sec:Příloha 3: 3D model robota ve formátu STEP}
 \end{document}
