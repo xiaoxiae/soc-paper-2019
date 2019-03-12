@@ -473,7 +473,7 @@
 
   Od svého vzniku se Python postupně vyvinul v mocný a frekventovaně používaný programovací jazyk~--~má rozsáhlou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub~\cite{github-statistics}, od stavby webových stránek (Django) po knihovny na trénování neuronových sítí (TensorFlow).
 
-  Na stránce zastává funkci skriptovacího jazyka pro automatizaci provozu (viz. kapitola~\ref{sec:Automatizace provozu webové stránky}). Oproti alternativám jako \gls{php} a Java je na stránce používán převážně kvůli velkému množství „modulů“ (knihoven), jednoduché syntaxi a mým dlouhodobým zkušenostem.
+  Na stránce zastává funkci skriptovacího jazyka pro automatizaci provozu (viz. kapitola~\ref{sec:Automatizace provozu stránky}). Oproti alternativám jako \gls{php} a Java je na stránce používán převážně kvůli velkému množství „modulů“ (knihoven), jednoduché syntaxi a mým dlouhodobým zkušenostem.
 
 
   \subsection{Markdown} \label{sec:Markdown}
@@ -541,7 +541,7 @@
   Fusion 360 je jediný v projektu používaný program, který nefunguje na operačním systému Linux, jelikož s ním mám dlouhodobé zkušenosti. Za zmínku stojí multiplatformní program FreeCAD, se kterým však dostatek zkušeností nemám, proto v projektu používán není.
 
 
-  \section{Vývoj webové stránky} \label{sec:Vývoj webové stránky}
+  \section{Vývoj stránky}
   Po důkladném zvážení výhod a nevýhod přístupů k projektu s požadavky vymezenými kapitolou~\ref{sec:Požadavky na výsledný produkt} se webová stránka jeví jako nejvhodnější výsledný produkt. Může totiž při správném výběru technologií splňovat jak multiplatformnost, tak otevřenost zdrojového kódu.
 
   Následující kapitoly popisují, jakými způsoby byly různé části stránky (hosting, logo, aj.) řešeny. Jelikož vývoj probíhal postupně, tak za nejdou chronologicky. % TODO: rephrase!
@@ -637,7 +637,8 @@
     \end{tabular}
   \end{table}
 
-  \section{Obsah webové stránky} \label{sec:Obsah webové stránky}
+
+  \section{Obsah stránky}
 
   \subsection{Cílová skupina}
   Při tvorbě studijních materiálů je v první řadě třeba vymezit jeho cílovou skupinu, protože od ní se odvíjí vše ostatní~--~jazyk textu, obtížnost použité matematiky, detail ilustrací, aj. Při výběru musí být brána v potaz především úroveň vzdělávání autora, jelikož středoškolský student experta v oboru mnoho nenaučí.
@@ -652,7 +653,7 @@
 
   Po vybrání tématu článku jsou shromážděny dostupné materiály~--~prezentace, odborné práce, články, aj. Poté jsou seřazeny podle jejich podílu na mém pochopení daného tématu a na stránce následně zmíněny jako dodatečné studijní materiály.
 
-  Hlavní koncepty těchto témat jsou dále implementovány přes online prostředí RobotMesh v jazyce Python na robotovi ze stavebnice VEX EDR, který byl pro tento účel vytvořen. Dva úhly pohledu na jeho konstrukci zachycuje obrázek \ref{img:3D Model robota}, který byl zhotoven v \gls{cad} programu Fusion 360 (viz. kapitola \ref{sec:Fusion 360}). Zdrojový kód tohoto modelu je dostupný ve formátu \gls{step} jako příloha této práce (viz. kapitola \ref{sec:Příloha 3: 3D model robota ve formátu STEP}).
+  Hlavní koncepty těchto témat jsou dále implementovány přes online prostředí RobotMesh v jazyce Python na robotovi ze stavebnice VEX EDR, který byl pro tento účel vytvořen. Dva úhly pohledu na jeho konstrukci zachycuje obrázek \ref{img:3D Model robota}, který byl zhotoven v \gls{cad} programu Fusion 360. Zdrojový kód tohoto modelu je dostupný jako příloha této práce (viz. kapitola \ref{sec:STEP model robota}) ve formátu \gls{step}.
 
   \begin{figure}[H]%
     \centering
@@ -758,7 +759,7 @@
   Díky otevřenosti zdrojového kódu stránka dále slouží jako šablona pro Jekyllem poháněné projekty, které by rády docílily obdobné funkcionality (rovnice, automatizace pomocí skriptů, zvýrazňování syntaxe kódu, aj.) bez zdlouhavého psaní a ladění kódu.
 
 
-  \section{Automatizace provozu webové stránky} \label{sec:Automatizace provozu webové stránky}
+  \section{Automatizace provozu stránky} \label{sec:Automatizace provozu stránky}
   Ke tvorbě kvalitního vzdělávacího materiálu je potřeba plynulý a do nejvyšší možné míry automatizovaný provoz stránky~--~k přidání nového článků by mělo stačit v příslušné složce projektu vytvořit nový soubor a zbytek procesu by měl proběhnout bez zásahu autora.
 
   Stránka je v tomto duchu automatizována skripty psanými v jazyce Python (viz. kapitola~\ref{sec:Python}), aby se autor mohl plně soustředit na práci.
@@ -806,7 +807,7 @@
   Po přidání či úpravě článku je potřeba verzi stránky na hostingu aktualizovat. Tento proces řídí skript \texttt{deploy.py}, který stránku nejprve pomocí Jekyllu vygeneruje, poté ve správném pořadí spustí všechny skripty pro generování dodatečného obsahu a optimalizace a nakonec i skript pro nahrání stránky na webhosting.
 
 
-  \section{Návštěvnost a zpětná vazba webové stránky}
+  \section{Návštěvnost a zpětná vazba stránky}
   % TODO: how is traffic analysis and marketting done
 
   \subsection{Analýza návštěvnosti}
@@ -961,7 +962,7 @@
 
   \newpage
 
-  \section{Příloha 1: Zdrojový kód webové stránky} \label{sec:Příloha 1: Zdrojový kód webové stránky}
+  \section{Příloha 1: Zdrojový kód stránky} \label{sec:Příloha 1: Zdrojový kód webové stránky}
 
   \newpage
 
@@ -1007,5 +1008,5 @@
 
   \newpage
 
-  \section{Příloha 3: 3D model robota ve formátu \acrshort{step}} \label{sec:Příloha 3: 3D model robota ve formátu STEP}
+  \section{Příloha 3: \acrshort{step} model robota} \label{sec:STEP model robota}
 \end{document}
