@@ -75,7 +75,6 @@
 \newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1}~--~\nameref*{#1}}} % reference number + name
 
 
-
 % GRAPHS, CHARTS %
 %-==============-%
 \usepackage{pgf-pie} % pie charts
@@ -125,6 +124,7 @@
 \BeforeBeginEnvironment{figure}{\vspace{0.5\parskip}}
 \AfterEndEnvironment{figure}{\vspace{-0.5\parskip}\vspace{-8pt}}
 
+ % fixes table spacing
 \AfterEndEnvironment{table}{\vspace{-\parskip}}
 
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % table row stretching
@@ -380,8 +380,6 @@
 
   \newpage
 
-  % TODO: make the transition from the beginning smoother
-
   \section{Požadavky na výsledný produkt} \label{sec:Požadavky na výsledný produkt}
   Myšlenka tvorby kvalitních materiálů pro studium robotiky je příliš rozsáhlá na to, aby mohla práce na projektu začít bez větší úvahy~--~bude se jednat o webovou stránku, aplikaci, knihu, či repozitář se zdrojovými kódy?
 
@@ -397,16 +395,13 @@
   \subsection{Multiplatformnost}
   Co se dostupnosti týče, důležitým požadavkem je \emph{multiplatformnost}, tj. možnost přístupu k produktu z více než jedné platformy jako stolní počítač, mobil, čtečka elektronických knih, aj. Výsledný produkt musí být multiplatformní zejména kvůli mému osobnímu názoru, že vzdělání by nemělo být omezeno technologickými preferencemi jednotlivce.
 
-  Tato podmínka fakticky znemožňuje tvorbu aplikace, jelikož by jak finanční, tak časové nároky její stavby pro různé operační systémy a zařízení přerostly nad rámec jednotlivce. % TODO: this paragraph might be misplaced
+  Tato podmínka fakticky znemožňuje tvorbu aplikace, jelikož by jak finanční, tak časové nároky její stavby pro různé operační systémy a zařízení přerostly nad rámec jednotlivce.
 
 
   \subsection{Interaktivita}
-  Posledním požadavkem je \emph{interaktivita} studijního materiálu, jelikož v technických oborech jako robotika a informatika porozumění nestačí~--~je potřeba si koncepty naživo vyzkoušet. Proto je potřeba, aby byl výsledný produkt do určité míry interaktivní a ilustroval probírané koncepty pomocí interaktivních vizualizací.
+  Posledním požadavkem je \emph{interaktivita} studijního materiálu, jelikož u technických oborů jako robotika a informatika porozumění nestačí~--~je potřeba si koncepty naživo vyzkoušet. Proto je nutné, aby byl výsledný produkt do určité míry interaktivní a ilustroval probírané koncepty vizualizacemi.
 
-  Kvůli této podmínce nepřipadá v úvahu kniha, jelikož převážná většina populárních formátů interaktivitu do takovéto míry neumožňuje.
-
-  % TODO: re-read and update wording
-
+  Kvůli této podmínce nepřipadá v úvahu kniha, jelikož převážná většina populárních formátů pro distribuci knih interaktivitu neumožňuje.
 
 
   \section{Použité programovací jazyky} \label{sec:Použité programovací jazyky}
@@ -433,7 +428,7 @@
 
 
   \subsection{\acrshort{css}} \label{sec:CSS}
-  Se stoupající popularitou webu v 90. letech 20. rostla také nespokojenost autorů dokumentů \gls{html} s nedostatky v jeho formátování, jelikož bylo řízeno prohlížeči a nemohlo jimi být žádným způsobem ovlivněno\footnote{To, že v čistém \gls{html} nejde ovlivnit vzhled dokumentu není pravda, ale není to doporučované~--~\gls{html} by mělo být zaměřeno na sémantiku dokumentů, ne na jejich formátování.}. Z tohoto důvodu Håkon Wimu Lie publikoval roku 1994 možné řešení tohoto problému~--~návrh stylopisného jazyka \gls{css}~\cite{css-proposal,css-saga}.
+  Se stoupající popularitou webu v 90. letech 20. rostla také nespokojenost autorů dokumentů \gls{html} s nedostatky v jeho formátování, jelikož bylo řízeno prohlížeči a nemohlo jimi být žádným způsobem ovlivněno\footnote{To, že v čistém \gls{html} nejde ovlivnit vzhled dokumentu není pravda, ale není to doporučované~--~\gls{html} by mělo být zaměřeno na sémantiku dokumentu, ne na jeho formátování.}. Z tohoto důvodu Håkon Wimu Lie publikoval roku 1994 možné řešení tohoto problému~--~návrh stylopisného jazyka \gls{css}~\cite{css-proposal,css-saga}.
 
   Při použití \gls{css} je důležitý princip kaskádování (o čemž koneckonců vypovídá zkratka \gls{css})~--~vzhled stránky ovlivňují jak požadavky čtenáře, tak požadavky autora. Samotné kaskádování je kombinace těchto požadavků a v případě vzniku konfliktů (autor požaduje písmo velikosti \texttt{12b}, ale čtenář velikosti \texttt{10b}) jejich rozřešení.
 
@@ -473,7 +468,7 @@
 
   Od svého vzniku se Python postupně vyvinul v mocný a frekventovaně používaný programovací jazyk~--~má rozsáhlou standardní knihovnu, podporuje mnoho různých programovacích paradigmat a je třetím nejpoužívanějším programovacím jazykem na platformě GitHub~\cite{github-statistics}, od stavby webových stránek (Django) po knihovny na trénování neuronových sítí (TensorFlow).
 
-  Na stránce zastává funkci skriptovacího jazyka pro automatizaci provozu (viz. kapitola~\ref{sec:Automatizace provozu stránky}). Oproti alternativám jako \gls{php} a Java je na stránce používán převážně díky velkému množství „modulů“ (knihoven), jednoduché syntaxi a mým dlouhodobým zkušenostem.
+  Na stránce zastává funkci skriptovacího jazyka pro automatizaci provozu (viz. kapitola~\ref{sec:Automatizace provozu stránky}). Oproti alternativám jako \gls{php} a Java je na stránce používán převážně díky velkému množství „modulů“ (knihoven), jednoduché syntaxi a mým dlouhodobým zkušenostem s jeho používáním.
 
 
   \subsection{Markdown} \label{sec:Markdown}
@@ -538,13 +533,13 @@
 
   Populární \gls{cad} software využíván členy \gls{frc} týmů je Fusion 360 od společnosti Autodesk, převážně kvůli dostupnosti licence (zdarma pro studenty a jejich mentory). Profesionální alternativou je program SolidWorks, který je kvůli své ceně využíván převážně studenty technicky zaměřených škol přes výhodnější školní licenci.
 
-  Fusion 360 je jediný v projektu používaný program, který nefunguje na operačním systému Linux, jelikož s ním mám dlouhodobé zkušenosti. Za zmínku stojí multiplatformní program FreeCAD, se kterým však dostatek zkušeností nemám, proto v projektu používán není.
+  Fusion 360 je jediný v projektu používaný program, který nefunguje na operačním systému Linux, jelikož s ním mám dlouhodobé zkušenosti. Alternativou je multiplatformní program FreeCAD, se kterým však dostatek zkušeností nemám, proto v projektu používán není.
 
 
   \section{Vývoj stránky}
   Po důkladném zvážení výhod a nevýhod přístupů k projektu s požadavky vymezenými kapitolou~\ref{sec:Požadavky na výsledný produkt} se webová stránka jeví jako nejvhodnější výsledný produkt. Může totiž při správném výběru technologií splňovat jak multiplatformnost, tak otevřenost zdrojového kódu.
 
-  Následující kapitoly popisují, jakými způsoby byly různé části stránky (hosting, logo, aj.) řešeny. Jelikož vývoj probíhal postupně, tak za nejdou chronologicky. % TODO: rephrase!
+  Následující kapitoly popisují, jakými způsoby byly různé části stránky (hosting, logo, aj.) řešeny. Za zmínku stojí, že jelikož vývoj těchto částí probíhal paralelně, tak kapitoly nejsou chronologicky řazené.
 
 
   \subsection{Technické provedení stránky}
@@ -603,13 +598,13 @@
     \caption{Mapa dob načtení z různých míst světa} \label{img:Mapa dob načtení z různých lokací světa}
   \end{figure}
 
-  Z obrázku~\ref{img:Mapa dob načtení z různých lokací světa} je patrné, že doba načtení webové stránky je do značné míry závislá na vzdálenosti od České republiky, ve které je hostována. Tyto hodnoty rovněž v testovaných zemích výrazně nepřevyšují optimální dobu, což je při uvážení ceny webhostingu více než přijatelné.
+  Z obrázku~\ref{img:Mapa dob načtení z různých lokací světa} je patrné, že doba načtení webové stránky je do značné míry závislá na vzdálenosti od České republiky, ve které je hostována. Tyto hodnoty v testovaných zemích rovněž výrazně nepřevyšují optimální dobu, což je při uvážení ceny webhostingu více než přijatelné.
 
 
   \subsubsection{Multiplatformnost}
   Jelikož je výsledný produkt webová stránka, tak další kritický faktor ovlivňující její úspěšnost je správné fungování na různých typech zařízení a prohlížečích.
 
-  Funkčnost různých komponent stránky byla testována na několika z nejpoužívanějších prohlížečů světa~\cite{browser-statistics}: Firefox 65.0.1 (\faIcon{firefox}), Chrome 72.0.3626.105 (\faIcon{chrome}), Internet Explorer 11.590.17134.0 (\faIcon{internet-explorer}), Edge 42.17134.1.0 (\faIcon{edge}), Safari 12.0 (14606.1.36.1.9) (\faIcon{safari}) a Opera 58.0.3135.79 (\faIcon{opera}). Testování se skládalo z načtení stránky na příslušném prohlížeči a kontroly, zda testované komponenty fungují tak, jak by měly.
+  Funkčnost různých komponent stránky byla testována na několika z nejpoužívanějších prohlížečů světa~\cite{browser-statistics}: Firefox 65.0.1 (\faIcon{firefox}), Chrome 72.0.3626.105 (\faIcon{chrome}), Internet Explorer 11.590.17134.0 (\faIcon{internet-explorer}), Edge 42.17134.1.0 (\faIcon{edge}), Safari 12.0, 14606.1.36.1.9 (\faIcon{safari}) a Opera 58.0.3135.79 (\faIcon{opera}). Testování se skládalo z načtení stránky na příslušném prohlížeči a kontroly, zda testované komponenty fungují tak, jak by měly.
 
   Výsledky těchto testů jsou zaneseny do tabulky \ref{tab:Funkčnost stránky na různých platformách}~--~správné fungování je značeno symbolem \faIcon{check}, špatné symbolem \faIcon{times} a nemožnost testování z důvodu nedostupnosti prohlížeče na dané platformně je značeno symbolem \faIcon{minus}.
 
@@ -643,7 +638,7 @@
   \subsection{Cílová skupina}
   Při tvorbě studijních materiálů je v první řadě třeba vymezit jeho cílovou skupinu, protože od ní se odvíjí vše ostatní~--~jazyk textu, obtížnost použité matematiky, detail ilustrací, aj. Při výběru musí být brána v potaz především úroveň vzdělávání autora, jelikož středoškolský student experta v oboru mnoho nenaučí.
 
-  Do cílové skupiny proto patří lidé v podobné situaci, ve které jsem byl já na konci roku 2017 krátce po mém vstoupení do \gls{frc} týmu Metal Moose~--~jedinci se zájmem o robotiku, které od studia odrazuje nedostatek intuitivních a lehce pochopitelných materiálů. Kvůli tomu dokáži snadněji psát takové články, které bych si při mých začátcích s robotikou přál číst.
+  Do cílové skupiny proto patří lidé v podobné situaci, ve které jsem byl já na konci roku 2017 krátce po mém vstoupení do \gls{frc} týmu Metal Moose~--~jedinci se zájmem o robotiku, které od studia odrazuje nedostatek intuitivních a lehce pochopitelných materiálů. Kvůli tomu, že jsem až donedávna do této skupiny patřil, dokáži snadněji psát takové články, které bych si při mých začátcích s robotikou přál číst.
 
   Předešlé znalosti v oblasti robotiky či elektrotechniky pro čtení článků stránky potřebné nejsou, doporučeny jsou pouze základní znalosti programování a středoškolské matematiky (geometrie, algebra).
 
@@ -739,7 +734,7 @@
     \label{img:Příklady článků}%
   \end{figure}
 
-  Na závěr je přiložen článek s \emph{dodatečnými materiály} (obrázek~\ref{img:Dodatečné materiály}) použité při tvorbě projektu a sekce \emph{O nás} (obrázek~\ref{img:O nás}), která popisuje důvod za vznikem projektu, návod na případnou spolupráci na projektu a poděkování.
+  Na závěr je přiložen článek s \emph{dodatečnými materiály} (obrázek~\ref{img:Dodatečné materiály}) použitými při tvorbě projektu a sekce \emph{O nás} (obrázek~\ref{img:O nás}), která popisuje důvod za vznikem projektu, návod na případnou spolupráci na projektu a poděkování.
 
   \begin{figure}[H]
     \minipage{0.475\textwidth}
@@ -811,13 +806,13 @@
   % TODO: how is traffic analysis and marketting done
 
   \subsection{Analýza návštěvnosti}
-  % TODO: why google
+  % TODO: why google - biggest add company in the world?
 
   \emph{Google Analytics} je služba společnosti Google, která slouží k analýze návštěvnosti webových stránek. Pro použití stačí na danou stránku přidat JavaScriptovou knihovnu, která shromažďuje informace o návštěvnících (z údajů prohlížeče a také \gls{http} cookies) a jejich interakcí s danou stránkou.
 
   Kromě služby Google Analytics je dále používána služba \emph{Google Search Console}, která zobrazuje statistiky o indexování webové stránky v rámci vyhledávání Google~--~její průměrné pozice při relevantních vyhledáváních, počet zobrazení, indexované podstránky, aj. Kromě toho informuje správce stránky o potenciálních problémech jako špatné zobrazení na mobilních zařízeních či chybně vygenerovaný soubor \texttt{sitemap.xml}.
 
-  Celková návštěvnost stránky v období od 18. prosince 2018 (počátek měření) k 18. března 2018 činí \emph{466} návštěvníků. Jejich demografické údaje zachycují grafy \fullref{img:Pohlaví návštěvníků stránky} a \fullref{img:Věk návštěvníků stránky}.
+  Celková návštěvnost stránky v období od 18. prosince 2018 (počátek měření) k 18. březnu 2018 činí \emph{466} návštěvníků. Jejich demografické údaje zachycují grafy \fullref{img:Pohlaví návštěvníků stránky} a \fullref{img:Věk návštěvníků stránky}.
 
   \begin{minipage}[b]{0.475\textwidth}
     \footnotesize
@@ -926,18 +921,20 @@
     \item \emph{Hacker News}~--~internetové fórum, které je ve svém fungování blízké Redditu. Není však dále strukturováno na subreddity a obsah je vážnějšího charakteru~--~světové novinky, nové výzkumy a odborné práce, měsíční přehledy dostupných pracovních pozic \gls{it} firem, apod.
   \end{itemize}}
 
-  Zpětná vazba obsahovala rady na potenciální možnost zpeněžnění webové stránky přidáním reklam, zlepšení kompatibility s obskurnějšími nastaveními prohlížečů a umožnění upravovat samotné ukázky kódu a měnit tím chování vizualizace.
+  Zpětná vazba obsahovala rady na potenciální možnost zpeněžení webové stránky přidáním reklam, zlepšení kompatibility s obskurnějšími nastaveními prohlížečů a umožnění upravovat samotné ukázky kódu a měnit tím chování vizualizace.
 
   \newpage
 
   \section{Závěr}
+  % TODO: sum-up the results of the paper
+
   Náplní práce na projektu je v dohledné budoucnosti tvorba nových článků a jejich lokalizace do českého jazyka. S tím je též úzce spjata revize již napsaných článků~--~přidávání dodatečných ilustrací a vizualizací, zpřehlednění textu, revize kódu, aj.
 
   Stránka rovněž nepoužívá protokol \gls{https}, který na rozdíl od \gls{http} šifruje komunikaci mezi klientem a serverem a zamezuje tím řadě možných útoků, před kterými \gls{http} uživatele nechrání. Jelikož však WEDOS podporuje mezinárodně uznávanou certifikační autoritu Let's Encrypt, tak by tato změna příliš komplikovaná být neměla.
 
   Další oblastí zlepšení je převod webové stránky do offline verze~--~export do formátů jako \gls{epub} a \gls{mobi} pro zlepšení podpory elektronických čteček knih, zajištění větší spolehlivosti převodu a implementace dodatečných funkcí (přeškrtnutí textu, podtržení textu, reference, citace...).
 
-  Jedna z dalších možných úprav by byla nahrazení knihovny p5.js za kód využívající pouze JavaScript canvas kvůli zmenšení velikostí článků obsahující vizualizace, jelikož velikost samotné knihovny je \emph{451 KB}.
+  % TODO: compare other works
 
   \newpage
 
