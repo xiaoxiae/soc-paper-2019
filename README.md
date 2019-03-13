@@ -13,7 +13,7 @@ The paper was converted to PDF using **LuaTeX**. It was chosen mainly for its ou
 
 
 ### Code Highlights
-_If you don't need code highlights, simply remove `\usepackage{minted}` from `soc.tex` and skip the rest of this section._
+_If you don't need code highlights, simply remove `\usepackage{minted}` from `paper.tex` and skip the rest of this section._
 
 Code highlights in the paper use the minted package, which uses **Pygments** (a Python syntax highlighter). To install it, run this command in your terminal:
 
@@ -27,6 +27,6 @@ You can then run `pygmentize -V` to ensure that the program installed correctly.
 ### Fonts
 The font [**CMU Serif**](https://sourceforge.net/projects/cm-unicode/) was used to typeset the (majority of the) paper, mainly due to it's bold small caps support that SOČ requires for certain headings. Make sure to have it installed either on your system or through your TeX distribution if you plan on using it.
 
-You can also use a different system font by changing the line `\setmainfont{CMU Serif}` in `soc.tex`.
+You can also use a different system font by changing the line `\setmainfont{CMU Serif}` in `paper.tex`.
 
-The paper also uses **FontAwesome5** and the fontawesome5 package to typeset certain symbols and icons. You can either remove the line `\usepackage{fontawesome5}` from `soc.tex` if you don't plan on using any of the icons, or [install the font](https://fontawesome.com/download) on your system.
+The paper also uses **FontAwesome5** and the fontawesome5 package to typeset certain symbols and icons. You can either remove the line `\usepackage{fontawesome5}` from `paper.tex` if you don't plan on using any of the icons, or [install the font](https://fontawesome.com/download) on your system.
