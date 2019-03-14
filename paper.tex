@@ -28,6 +28,16 @@
 }
 \makeatother
 
+% add "Obr. n: " and "Tab. n: " before each figure in lof and lot
+\renewcommand{\cftfigpresnum}{\figurename}
+\renewcommand{\cfttabpresnum}{\tablename}
+\renewcommand{\cftfigaftersnum}{:}
+\renewcommand{\cfttabaftersnum}{:}
+\newlength{\mylen}
+\settowidth{\mylen}{\cftfigpresnum\cftfigaftersnum}
+\addtolength{\cftfignumwidth}{.5\mylen}
+\addtolength{\cfttabnumwidth}{.5\mylen}
+
 \setlength{\cftfigindent}{0pt} % remove lof indentation
 \setlength{\cfttabindent}{0pt} % remove lot indentation
 
@@ -959,17 +969,9 @@
 
   % create lof and lot
   \section{Seznam obrázků a tabulek}
-  {%
-  \let\oldnumberline\numberline%
-  \renewcommand{\numberline}{\figurename~\oldnumberline}%
   \listoffigures%
-  }
   \vspace{\baselineskip}
-  {%
-  \let\oldnumberline\numberline%
-  \renewcommand{\numberline}{\tablename~\oldnumberline}%
   \listoftables%
-  }
 
   \newpage
 
