@@ -1,7 +1,7 @@
 import os
 
 # this makes it so that the name of the tex file isn't hardcoded
-file = [f for f in os.listdir(".") if f.endswith(".tex")][0]
+file = [f for f in os.listdir("..") if f.endswith(".tex")][0]
 
 # get the number of characters and words of the text
 characters = os.popen('perl texcount.pl -0 -sum -utf8 -char ../' + file).read()
