@@ -25,7 +25,7 @@ You can then run `pygmentize -V` to ensure that the program installed correctly.
 
 
 ### Fonts
-The font [**CMU Serif**](https://sourceforge.net/projects/cm-unicode/) was used to typeset the (majority of the) paper, mainly due to it's bold small caps support that SOČ requires for certain headings. Make sure to have it installed either on your system or through your TeX distribution if you plan on using it.
+The font **CMU Serif** was used to typeset the (majority of the) paper, mainly due to it's bold small caps support that SOČ requires for certain headings. Make sure to have it [installed](https://sourceforge.net/projects/cm-unicode/) either on your system or through your TeX distribution if you plan on using it.
 
 You can also use a different system font by changing the line `\setmainfont{CMU Serif}` in `paper.tex`.
 
