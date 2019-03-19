@@ -9,6 +9,29 @@
 \usepackage[czech]{babel} % czech language localization
 
 
+% URL HIGHLIGHTING %
+%-================-%
+% is loaded before biblatex to prevent option clashes
+\usepackage[hyphens,spaces,obeyspaces]{url} % for formatting urls
+
+
+% BIBLIOGRAPHY %
+%-============-%
+\usepackage[backend=biber,
+            style=iso-numeric, % citations are in style [1], [2]...
+            sortlocale=cs_CZ,
+            autolang=other,
+            bibencoding=UTF8]{biblatex} % use BibLaTeX for references
+
+\addbibresource{paper.bib} % location of the references file
+
+\renewcommand*{\finentrypunct}{} % don't end references with a dot
+\renewcommand{\multinamedelim}{\addcomma\space} % use comma as name delimeter
+\renewcommand{\finalnamedelim}{\addspace a \space} % "a" between the last 2 names
+\renewbibmacro{in:}{} % don't use In: in references
+\DeclareFieldFormat{labelnumberwidth}{[#1]} % wrap reference numbers in square brackets
+
+
 % TOC AND LOF %
 %-===========-%
 \usepackage[titles]{tocloft} % controlling lof and lot
@@ -81,11 +104,9 @@
 \titlespacing{\subsubsection}{0pt}{0pt}{2pt} % 14pt (12pt from parskip + 2pt)
 
 
-% CROSS-REFERENCES %
+% CROSS-REFERENING %
 %-================-%
-\usepackage[hyphens,spaces,obeyspaces]{url} % for formatting urls
 \usepackage[hidelinks,unicode]{hyperref} % interactive references
-
 \newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1}~--~\nameref*{#1}}} % reference number + name
 
 
@@ -102,23 +123,6 @@
 \def\ScanPercentage#1\afternumber{\SI{#1}{\percent}}
 
 \usepackage{pgfplots} % bar charts
-
-
-% BIBLIOGRAPHY %
-%-============-%
-\usepackage[backend=biber,
-            style=iso-numeric, % citations are in style [1], [2]...
-            sortlocale=cs_CZ,
-            autolang=other,
-            bibencoding=UTF8]{biblatex} % use BibLaTeX for references
-
-\addbibresource{paper.bib} % location of the references file
-
-\renewcommand*{\finentrypunct}{} % don't end references with a dot
-\renewcommand{\multinamedelim}{\addcomma\space} % use comma as name delimeter
-\renewcommand{\finalnamedelim}{\addspace a \space} % "a" between the last 2 names
-\renewbibmacro{in:}{} % don't use In: in references
-\DeclareFieldFormat{labelnumberwidth}{[#1]} % wrap reference numbers in square brackets
 
 
 % TABLES          %
