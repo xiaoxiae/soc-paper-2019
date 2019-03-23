@@ -252,7 +252,7 @@
 % OTHER %
 %-=====-%
 \widowpenalty10000 % prevent widows
-\clubpenalty10000  % prevent widows
+\clubpenalty10000  % prevent orphans
 
 \pagenumbering{gobble} % suppress page numbering
 
@@ -386,7 +386,7 @@
   \newpage
 
   \section{Úvod}
-  V dnešním světě plném technologií se robotika rozvíjí stále rapidnějším tempem. Roboti jsou díky nadaným programátorům a inženýrům rychlejší, obratnější a chytřejší než kdy jindy a uplatnění nalézají v nesčetném množství oborů. Jen za rok 2018 se prodej industriálních robotů zvýšil o \SI{30}{\percent}~\cite{industrial-robot-growth} a nadnárodní korporace jako Amazon jich používají na úkor lidské pracovní síly stále více~\cite{amazon-hiring}. Bez talentovaných lidí by však takový pokrok nebyl možný, proto vzniká řada programů a organizací, které se vzdělávání budoucí generace snaží podporovat.
+  V dnešním světě plném technologií se robotika rozvíjí stále rapidnějším tempem. Roboti jsou díky zkušeným programátorům a inženýrům rychlejší, obratnější a chytřejší než kdy jindy a uplatnění nalézají v nesčetném množství oborů. Jen za rok 2018 se prodej industriálních robotů zvýšil o \SI{30}{\percent}~\cite{industrial-robot-growth} a nadnárodní korporace jako Amazon jich používají na úkor lidské pracovní síly stále více~\cite{amazon-hiring}. Bez talentovaných lidí by však takový pokrok nebyl možný, proto vzniká řada programů a organizací, které se vzdělávání budoucí generace snaží podporovat.
 
   Značnou zásluhu má například neziskový program FIRST a jeho soutěže \gls{frc}, \gls{ftc} a \gls{fll}, které z robotiky dělají hru. Týmy tvořeny studenty základních a středních škol mají za úkol během několika týdnů robota od základu navrhnout, postavit a naprogramovat tak, aby plnil úkoly každým rokem se měnící výzvy.
 
@@ -472,9 +472,7 @@
 
 
   \subsubsection{p5.js} \label{sec:p5.js}
-  p5.js je JavaScriptová knihovna založena na softwaru pro tvorbu interaktivních „skečů“ Processing. Umožňuje vykreslovat tvary a křivky pomocí volání jednoduchých funkcí, proto se jedná o populární volbu pro umělce, učitele, či designéry.
-
-  Často používaná alternativa je prostý JavaScriptový canvas bez dodatečných knihoven, který však postrádá řadu podstatných funkcí využívaných ke tvorbě vizualizací stránky, proto není pro účely tohoto projektu vhodný.
+  p5.js je JavaScriptová knihovna založena na Java aplikaci Processing. Slouží ke tvorbě tzv. softwarových „skicářů“~--~umožňuje vykreslovat tvary a křivky různých barev a velikostí pomocí volání jednoduchých funkcí, které rovněž jednoduše propojuje se vstupy z myši či klávesnice. Pro své snadné používání se jedná o populární volbu pro umělce, začátečníky, či designéry.
 
 
   \subsubsection{\texorpdfstring{\KaTeX}{KaTeX}} \label{sec:KaTeX}
@@ -649,7 +647,7 @@
     \end{tabular}
   \end{table}
 
-  Z tabulky~\ref{tab:Funkčnost stránky na různých platformách} je patrné, že stránka funguje správně na všech prohlížečích a zařízeních kromě Internetu Explorer, který na mobilu dostupný není a na počítači nenačte vizualizace. S ohledem na procento návštěvníků stránky používajících Internet Explorer (viz. tabulka~\ref{tab:Návštěvnost stránky podle prohlížeče}) jsou však výsledky velmi uspokojivé.
+  Z tabulky~\ref{tab:Funkčnost stránky na různých platformách} je patrné, že stránka funguje správně na všech prohlížečích a zařízeních kromě Internetu Explorer, který na mobilu dostupný není a na počítači nenačte vizualizace. S ohledem na procento návštěvníků stránky používajících Internet Explorer (viz. tabulka~\ref{tab:Návštěvnost stránky podle prohlížeče}) se však o velký problém nejedná.
 
 
   \section{Obsah stránky}
@@ -743,11 +741,11 @@
   \begin{figure}[H]
     \centering
 
-    \subcaptionbox{Úvod do ovládání podvozku}{\fbox{\includegraphics[width=.3\linewidth]{3-1.png}}}%
+    \subcaptionbox{Úvod do ovládání podvozku robota}{\fbox{\includegraphics[width=.3\linewidth]{3-1.png}}}%
     \hfill
     \subcaptionbox{Metoda Tank drive pro ovládání podvozku robota}{\fbox{\includegraphics[width=.3\linewidth]{3-2.png}}}%
     \hfill
-    \subcaptionbox{Výpočet úhlu z enkóderů}{\fbox{\includegraphics[width=.3\linewidth]{3-3.png}}}%
+    \subcaptionbox{Výpočet úhlu z hodnot enkóderů}{\fbox{\includegraphics[width=.3\linewidth]{3-3.png}}}%
 
     \caption{Příklady článků}%
     \label{img:Příklady článků}%
