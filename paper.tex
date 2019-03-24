@@ -347,7 +347,7 @@
   \cleardoublepage
 
   \section*{\normalfont\textbf{Poděkování}}
-  V první řadě bych rád poděkoval své rodině a přátelům za neustálou podporu a pozitivitu při tvorbě projektu. Za konzultace o obsahu, struktuře a v projektu použitých technologiích děkuji Ing. Danielovi Kajzrovi, Mgr. Lukáši Pitoňákovi a Mgr. Tomáši Novotnému. Také děkuji Kateřině Sulkové za rady ke psaní samotné SOČ práce a na závěr všem návštěvníkům projektu, kteří svou přítomností a zpětnou vazbou pomáhají v jeho rozvoji.
+  V první řadě bych rád poděkoval své rodině a přátelům za neustálou podporu a pozitivitu při tvorbě projektu. Za konzultace o obsahu, struktuře a v projektu použitých technologiích děkuji Ing. Danielovi Kajzrovi, Mgr. Lukáši Pitoňákovi, Jakubu Medkovi a Mgr. Tomáši Novotnému. Také děkuji Kateřině Sulkové za rady ke psaní samotné SOČ práce a na závěr všem návštěvníkům projektu, kteří svou přítomností a zpětnou vazbou pomáhají v jeho rozvoji.
 
   \cleardoublepage
 
@@ -417,7 +417,7 @@
   \subsection{Interaktivita}
   Posledním požadavkem je \emph{interaktivita} studijního materiálu, jelikož u technických oborů jako robotika a informatika čtení zpravidla nestačí~--~po porozumění je potřeba si koncepty vyzkoušet. Proto je nutné, aby výsledný  produkt pro obohacení probíraných konceptů vizualizacemi umožňoval interaktivitu.
 
-  Kvůli této podmínce nepřipadá v úvahu kniha, jelikož převážná většina používaných knižních formátů jako \gls{pdf}, \gls{mobi} a \gls{epub} interaktivitu neumožňuje.
+  Kvůli této podmínce nepřipadá v úvahu kniha, jelikož převážná většina používaných knižních formátů jako \gls{pdf}, \gls{mobi} a \gls{epub} interaktivitu nepodporuje.
 
 
   \section{Použité programovací jazyky} \label{sec:Použité programovací jazyky}
@@ -440,7 +440,7 @@
   <p>Značkovací jazyk HTML vytvořil Tim Berners-Lee z výzkumného centra <a href="https://home.cern/">CERN</a> v roce 1989.</p>
   \end{minted}
 
-  V \gls{html} psán zdrojový kód převážné většiny webových stránek internetu a tento projekt není výjimkou. Je generován Jekyllem, který je podrobněji rozebírán v kapitole~\ref{sec:Jekyll}.
+  V \gls{html} je psán zdrojový kód převážné většiny webových stránek internetu a tento projekt není výjimkou. Je generován Jekyllem, který je podrobněji rozebírán v kapitole~\ref{sec:Jekyll}.
 
 
   \subsection{\acrshort{css}} \label{sec:CSS}
@@ -545,7 +545,7 @@
 
 
   \subsection{Fusion 360} \label{sec:Fusion 360}
-  Ke tvorbě ilustrací k je dále používán \gls{cad} software, který slouží ke tvorbě technických nákresů (viz. obrázek \ref{img:3D model robota}). Na rozdíl od tradičních programů na tvorbu grafiky jsou rozměry tvořených objektů přesně definovány v jednotkách \gls{si}, aby odpovídaly objektům reálného světa, díky čemuž jdou lehčím způsobem sestrojit či vytisknout na 3D tiskárně.
+  Ke tvorbě ilustrací je dále používán \gls{cad} software, který slouží ke tvorbě technických nákresů (viz. obrázek \ref{img:3D model robota}). Na rozdíl od tradičních programů na tvorbu grafiky jsou rozměry tvořených objektů přesně definovány v jednotkách \gls{si}, aby odpovídaly objektům reálného světa, díky čemuž jdou lehčím způsobem sestrojit či vytisknout na 3D tiskárně.
 
   Populární \gls{cad} software využíván členy \gls{frc} týmů je Fusion 360 od společnosti Autodesk, převážně díky dostupnosti licence (zdarma pro studenty a jejich mentory). Profesionální alternativou je program SolidWorks, který je kvůli své ceně využíván převážně studenty technicky zaměřených škol přes výhodnější licenci školní.
 
@@ -561,7 +561,7 @@
   \subsection{Technické provedení stránky}
   Pro tvorbu stránky s ohledem na otevřenost jejího zdrojového kódu byl vybrán generátor statických webových stránek Jekyll (viz. kapitola~\ref{sec:Jekyll}). Díky tomu lze kód produktu verzovat a volně sdílet jednodušeji, než kód webové stránky s databází.
 
-  Po zvážení možností zdarma dostupných otevřených šablon pro Jekyll byla zvolena šablona Just the Docs, která díky své optimalizaci pro mobilní zařízení pomáhá s multiplatformností projektu. Další atraktivní vlastnosti této šablony jsou její přehlednost, vestavěná podpora vyhledávání a přizpůsobitelné zvýrazňování syntaxe kódu.
+  Po zvážení možností zdarma dostupných otevřených šablon (z anglického „theme“) pro Jekyll byla zvolena šablona Just the Docs, která díky své optimalizaci pro mobilní zařízení pomáhá s multiplatformností projektu. Další atraktivní vlastnosti této šablony jsou její přehlednost, vestavěná podpora vyhledávání a přizpůsobitelné zvýrazňování syntaxe kódu.
 
 
   \subsection{Webhosting a doména} \label{sec:Webhosting a doména}
@@ -602,7 +602,7 @@
 
 
   \subsubsection{Doba načtení}
-  Doba načtení webové stránky je jedním z hlavních faktorů ovlivňujících její úspěšnost, jelikož přebytečný čas nad optimální dobu (mezi \num{1.8} a \num{2.7} vteřinami) má negativní vliv na procento jejich konverzí. Při zpoždění o \num{100} milisekund nad tuto dobu klesá toto procento pro uživatele osobních počítačů o \SI{7.8}{\percent}. Konverze dále klesají až o \SI{26.2}{\percent} při zpoždění v řádu \num{2} vteřin~\cite{conversion-rate-statistics}.
+  Doba načtení webové stránky je jedním z hlavních faktorů ovlivňujících její úspěšnost, jelikož přebytečný čas nad optimální dobu (mezi \num{1.8} a \num{2.7} vteřinami) má negativní vliv na počet jejich konverzí\footnote{Konverze v tomto kontextu znamená, že uživatel vykoná provozovatelem požadovanou akci, jako např. koupě stránkou propagovaného předmětu.}. Při zpoždění o \num{100} milisekund nad tuto dobu klesá pro uživatele osobních počítačů toto procento o \SI{7.8}{\percent}. Konverze dále klesají až o \SI{26.2}{\percent} při zpoždění v řádu \num{2} vteřin~\cite{conversion-rate-statistics}.
 
   Testování bylo provedeno s pomocí služby \url{https://www.webpagetest.org/}, která analyzuje webové stránky z různých lokací světa (a různých prohlížečů) a poskytuje statistiky o době načtení, množství načtených dat a mnohém dalším.
 
@@ -967,51 +967,13 @@
   \vspace{\baselineskip}
   \listoftables%
 
+  \cleardoublepage
+
+  \section{Příloha 1: Knižní verze stránky} \label{sec:Příloha 1: Knižní verze stránky}
+
   \newpage
 
-  \section{Příloha 1: Zdrojový kód stránky} \label{sec:Příloha 1: Zdrojový kód webové stránky}
-
-  \newpage
-
-  \section{Příloha 2: Data testování doby načtení} \label{sec:Příloha 2: Data testování doby načtení}
-  Tabulka~\ref{tab:Data testování doby načtení} obsahuje místa, ze kterých byla testována doba načtení stránky \url{http://robotics-simplified.com/} a částečné odkazy na testovací data. K vytvoření úplného odkazu stačí před označení daného města přidat \texttt{www.webpagetest.org/result/}.
-
-  \begin{table}[H]
-    \caption{Data testování doby načtení}
-    \label{tab:Data testování doby načtení}
-    \footnotesize
-    \centering
-    \ra{1.3}
-    \begin{tabular}{*5l}
-      \toprule
-      \emph{Lokace}            & \emph{Označení}                      \\ \midrule
-      Argentina (Buenos Aires)        & \href{https://www.webpagetest.org/result/190213_PC_5d05753a2ce2126089db6b8726171c13}{\texttt{190213\_PC\_5d05753a2ce2126089db6b8726171c13}} \\
-      Austrálie (Sydney)              & \href{https://www.webpagetest.org/result/190213_8N_c4802d60f2820dd2b7f8e3e5d6a384c1}{\texttt{190213\_8N\_c4802d60f2820dd2b7f8e3e5d6a384c1}} \\
-      Belgie (Brusel)                 & \href{https://www.webpagetest.org/result/190213_PK_8973798f51f040a199501b3332071bc2}{\texttt{190213\_PK\_8973798f51f040a199501b3332071bc2}} \\
-      Brazílie (Sao Paulo)            & \href{https://www.webpagetest.org/result/190213_AD_d2d6ea6b39f36853cf476a5f1d1f3092}{\texttt{190213\_AD\_d2d6ea6b39f36853cf476a5f1d1f3092}} \\
-      Česká republika (Praha)         & \href{https://www.webpagetest.org/result/190213_SD_119a43e321c4360178004f09bb4d27a0}{\texttt{190213\_SD\_119a43e321c4360178004f09bb4d27a0}} \\
-      Čína (Hong Kong)                & \href{https://www.webpagetest.org/result/190213_NK_dfd8ddf4b9766b3386799de124a67ad8}{\texttt{190213\_NK\_dfd8ddf4b9766b3386799de124a67ad8}} \\
-      Francie (Strasburg)             & \href{https://www.webpagetest.org/result/190213_35_5db33eb4e90d8b096d8853fa453d54d3}{\texttt{190213\_35\_5db33eb4e90d8b096d8853fa453d54d3}} \\
-      Indie (Mumbai)                  & \href{https://www.webpagetest.org/result/190213_ED_2a0542955442372c423c9306a7492c02}{\texttt{190213\_ED\_2a0542955442372c423c9306a7492c02}} \\
-      Indonésie (Jakarta)             & \href{https://www.webpagetest.org/result/190213_12_db0913a1b2708f54db46d5d40b7f61e5}{\texttt{190213\_12\_db0913a1b2708f54db46d5d40b7f61e5}} \\
-      Itálie (Milán)                  & \href{https://www.webpagetest.org/result/190213_QE_7d2d0c62fe56d0a992f83872fea9589a}{\texttt{190213\_QE\_7d2d0c62fe56d0a992f83872fea9589a}} \\
-      Izrael (neurčeno)               & \href{https://www.webpagetest.org/result/190213_XT_735a3f35ee6a8056ad47aac3d5a95917}{\texttt{190213\_XT\_735a3f35ee6a8056ad47aac3d5a95917}} \\
-      Japonsko (Tokio)                & \href{https://www.webpagetest.org/result/190213_8Q_083b45677c2c51f4fe7bd25b554dff38}{\texttt{190213\_8Q\_083b45677c2c51f4fe7bd25b554dff38}} \\
-      Jižní Korea (Soul)              & \href{https://www.webpagetest.org/result/190213_TX_d56f64b9948b96bdfdd1323fd16b0867}{\texttt{190213\_TX\_d56f64b9948b96bdfdd1323fd16b0867}} \\
-      Kanada (Toronto)                & \href{https://www.webpagetest.org/result/190213_44_a861d3caa2bdbb547775b76e0ca7e357}{\texttt{190213\_44\_a861d3caa2bdbb547775b76e0ca7e357}} \\
-      Nizozemí (Amsterdam)            & \href{https://www.webpagetest.org/result/190213_37_88f29978d6231e700fe963b8d943a79b}{\texttt{190213\_37\_88f29978d6231e700fe963b8d943a79b}} \\
-      Německo (Berlín)                & \href{https://www.webpagetest.org/result/190213_S3_321db7231844fc993d91fba974e569bb}{\texttt{190213\_S3\_321db7231844fc993d91fba974e569bb}} \\
-      Polsko (Varšava)                & \href{https://www.webpagetest.org/result/190213_AV_e12420619d2b67b02b36fd8f85012634}{\texttt{190213\_AV\_e12420619d2b67b02b36fd8f85012634}} \\
-      Spojené arabské emiráty (Dubaj) & \href{https://www.webpagetest.org/result/190213_66_d158a4ae09a1ef5d63b68693b5230066}{\texttt{190213\_66\_d158a4ae09a1ef5d63b68693b5230066}} \\
-      Spojené království (Londýn)     & \href{https://www.webpagetest.org/result/190213_SS_1226a99822746d3cf16fb81bd19c9ac8}{\texttt{190213\_SS\_1226a99822746d3cf16fb81bd19c9ac8}} \\
-      Spojené státy americké (Clifton)& \href{https://www.webpagetest.org/result/190213_3S_570bc4b76dd084486a1ae6ba1829f2cc}{\texttt{190213\_3S\_570bc4b76dd084486a1ae6ba1829f2cc}} \\
-      Španělsko (La Rioja)            & \href{https://www.webpagetest.org/result/190213_ZA_96b8ca66a5af8d0bbee48a48d1ebf901}{\texttt{190213\_ZA\_96b8ca66a5af8d0bbee48a48d1ebf901}} \\
-      Švédsko (Stockholm)             & \href{https://www.webpagetest.org/result/190213_PC_8bf596590b3cb93164fb6b20e2ae9b7a}{\texttt{190213\_PC\_8bf596590b3cb93164fb6b20e2ae9b7a}} \\
-      Turecko (Istanbul)              & \href{https://www.webpagetest.org/result/190213_FZ_3eb94a70dfdd8c92bcfcfaf74a412501}{\texttt{190213\_FZ\_3eb94a70dfdd8c92bcfcfaf74a412501}} \\
-      Vietnam (neurčeno)              & \href{https://www.webpagetest.org/result/190213_RQ_18f2a02931599884f8922a3ce09f56bc}{\texttt{190213\_RQ\_18f2a02931599884f8922a3ce09f56bc}} \\
-      \bottomrule
-    \end{tabular}
-  \end{table}
+  \section{Příloha 2: Zdrojový kód stránky} \label{sec:Příloha 2: Zdrojový kód stránky}
 
   \newpage
 
