@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[a4paper, 12pt, twoside]{article}
 \usepackage[includefoot]{geometry} % for typesetting geometry
 
 % LANGUAGE %
@@ -88,6 +88,12 @@
 \setlength{\fboxsep}{0pt}    % image border separation
 \setlength{\fboxrule}{0.5pt} % image border thickness
 
+% normalize figure spacing
+\setlength\intextsep{0pt}
+\setlength\floatsep{0pt}
+\setlength\textfloatsep{0pt}
+\BeforeBeginEnvironment{figure}{\vspace{1.2\baselineskip}}
+
 
 % TITLE FORMATTING %
 %-================-%
@@ -136,14 +142,6 @@
 % fixes the issue with babel and multirow: https://tex.stackexchange.com/questions/111999/slovak-and-czech-babel-gives-problems-with-cmidrule-and-cline
 \usepackage{etoolbox}
 \preto\tabular{\shorthandoff{-}}
-
- % fixes figure spacing
- % the -8pt should be the default \belowcaptionskip, which doesn't work here for some reason
-\BeforeBeginEnvironment{figure}{\vspace{0.5\parskip}}
-\AfterEndEnvironment{figure}{\vspace{-0.5\parskip}\vspace{-8pt}}
-
- % fixes table spacing
-\AfterEndEnvironment{table}{\vspace{-\parskip}}
 
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}} % table row stretching
 
@@ -297,8 +295,10 @@
   \hfill
   Turnov 2019
 
+  \cleardoublepage
+
   % the geometry for the rest of the document
-  \newgeometry{top=2.5cm, left=3.5cm, right=1.5cm, bottom=2.5cm}
+  \newgeometry{top=2.5cm, inner=3.5cm, outer=1.5cm, bottom=2.5cm}
 
   \newpage
   \begin{center}
@@ -330,7 +330,7 @@
 
   \vspace{4em}
 
-  \newpage
+  \cleardoublepage
 
   \section*{\normalfont\textbf{Prohlášení}}
   Prohlašuji, že jsem svou práci SOČ vypracoval/a samostatně a použil/a jsem pouze prameny a literaturu uvedené v seznamu bibliografických záznamů.
@@ -344,12 +344,12 @@
   V Turnově dne \today \, ..................................................\\%
   \makebox[\linewidth]{Tomáš Sláma}%
 
-  \newpage
+  \cleardoublepage
 
   \section*{\normalfont\textbf{Poděkování}}
   V první řadě bych rád poděkoval své rodině a přátelům za neustálou podporu a pozitivitu při tvorbě projektu. Za konzultace o obsahu, struktuře a v projektu použitých technologiích děkuji Ing. Danielovi Kajzrovi, Mgr. Lukáši Pitoňákovi a Mgr. Tomáši Novotnému. Také děkuji Kateřině Sulkové za rady ke psaní samotné SOČ práce a na závěr všem návštěvníkům projektu, kteří svou přítomností a zpětnou vazbou pomáhají v jeho rozvoji.
 
-  \newpage
+  \cleardoublepage
 
   \section*{\normalfont\textbf{Anotace}}
   Tato práce popisuje obsah a proces tvorby webové stránky \url{robotics-simplified.com}. Stránka zpracovává témata z oboru robotiky formou pochopitelnou i naprostým začátečníkem. Je poháněna generátorem statických stránek Jekyll, který doplňují JavaSriptové knihovny pro vykreslování matematických rovnic, analýzy návštěvnosti a interaktivní vizualizaci probíraných konceptů. Python skripty automatizují kompresi obrázků, generování souboru sitemap, nahrání obsahu na hosting přes \acrshort{ftp} a převod stránky do knižní podoby pro offline čtení.
@@ -363,13 +363,11 @@
   \section*{\normalfont\textbf{Keywords}}
   robotics; website; education
 
-  \newpage
+  \cleardoublepage
 
   % resume page numbering
-  \newcounter{savepage}
-  \setcounter{savepage}{\value{page}}%
   \pagenumbering{arabic}
-  \setcounter{page}{\numexpr\value{savepage}-1}%
+  \setcounter{page}{9}%
 
   % Makes the spacing between toc heading and the contents the same as other
   % section and also makes the item spacing smaller
@@ -378,12 +376,12 @@
   % genereate toc
   \tableofcontents
 
-  \newpage
+  \cleardoublepage
 
   % create list of acronyms
   \printglossary[type=\acronymtype, title=Seznam zkratek]
 
-  \newpage
+  \cleardoublepage
 
   \section{Úvod}
   V dnešním světě plném technologií se robotika rozvíjí stále rapidnějším tempem. Roboti jsou díky zkušeným programátorům a inženýrům rychlejší, obratnější a chytřejší než kdy jindy a uplatnění nalézají v nesčetném množství oborů. Jen za rok 2018 se prodej industriálních robotů zvýšil o \SI{30}{\percent}~\cite{industrial-robot-growth} a nadnárodní korporace jako Amazon jich používají na úkor lidské pracovní síly stále více~\cite{amazon-hiring}. Bez talentovaných lidí by však takový pokrok nebyl možný, proto vzniká řada programů a organizací, které se vzdělávání budoucí generace snaží podporovat.
@@ -832,7 +830,8 @@
 
   Celková návštěvnost stránky v období od 18. prosince 2018 (počátek měření) k 18. březnu 2018 činí \num{466} návštěvníků. Jejich demografické údaje zachycují grafy \fullref{img:Pohlaví návštěvníků stránky} a \fullref{img:Věk návštěvníků stránky}. Údaje o přístupu ke stránce jsou dále zaneseny do tabulek \fullref{tab:Návštěvnost stránky podle země} a \fullref{tab:Návštěvnost stránky podle prohlížeče}.\\
 
-  \begin{figure}
+  \vspace{-2\parskip}
+  \begin{figure}[H]
     \begin{minipage}[b]{0.475\textwidth}
       \footnotesize
       \centering
@@ -870,7 +869,11 @@
     \end{minipage}
   \end{figure}
 
-  \begin{figure}
+  Statistiky pohlaví návštěvníků stránky z grafu~\ref{img:Pohlaví návštěvníků stránky} odpovídají očekávání, jelikož technické obory jako robotika a \gls{it} jsou zastoupeny z převážné části muži~\cite{women-in-stem}. Statistiky věku z grafu~\ref{img:Věk návštěvníků stránky} lze opodstatnit uvážením průměrného věku uživatelů fór, na kterých byla tato stránka zveřejněna~\cite{reddit-demographics}.
+
+  Jelikož je stránka psána v angličtině, tak většina návštěvníků pochází z anglicky mluvící země, což tabulka~\ref{tab:Návštěvnost stránky podle země} podporuje. Zvláštností je četnost prohlížeče Firefox v tabulce~\ref{tab:Návštěvnost stránky podle prohlížeče}, která jeho průměrnému používání dle statistiky \cite{browser-statistics} neodpovídá.
+
+  \begin{figure}[H]
     \begin{minipage}[b]{0.475\textwidth}
       \begin{table}[H]
         \caption{Návštěvnost stránky podle země}
@@ -923,10 +926,6 @@
     \end{minipage}
   \end{figure}
 
-  Statistiky pohlaví návštěvníků stránky z grafu~\ref{img:Pohlaví návštěvníků stránky} odpovídají očekávání, jelikož technické obory jako robotika a \gls{it} jsou zastoupeny z převážné části muži~\cite{women-in-stem}. Statistiky věku z grafu~\ref{img:Věk návštěvníků stránky} lze opodstatnit uvážením průměrného věku uživatelů fór, na kterých byla tato stránka zveřejněna~\cite{reddit-demographics}.
-
-  Jelikož je stránka psána v angličtině, tak většina návštěvníků pochází z anglicky mluvící země, což tabulka~\ref{tab:Návštěvnost stránky podle země} podporuje. Zvláštností je četnost prohlížeče Firefox v tabulce~\ref{tab:Návštěvnost stránky podle prohlížeče}, která jeho průměrnému používání dle statistiky \cite{browser-statistics} neodpovídá.
-
 
   \subsection{Získávání zpětné vazby}
   K získání zpětné vazby o technicky zaměřeném projektu je vhodné použít webové stránky s obdobnou tématikou. Projekt byl z tohoto důvodů zveřejněn na následujících internetových fórech:
@@ -944,7 +943,7 @@
 
   Zpětná vazba obsahovala rady na potenciální možnost zpeněžení webové stránky přidáním reklam, zlepšení kompatibility s obskurnějšími nastaveními prohlížečů a umožnění upravovat samotné ukázky kódu a měnit tím chování vizualizace.
 
-  \newpage
+  \cleardoublepage
 
   \section{Závěr}
   Vytvořil jsem otevřenou vzdělávací webovou stránku o robotice pro začátečníky, kteří mohou být nespokojeni s nedostatkem intuitivních zdrojů. Obsahuje interaktivní vizualizace, ilustrace a ukázky zdrojových kódu probíraných konceptů, a je rovněž dostupná ve formátu \gls{pdf}. Její provoz je automatizován scripty psanými v jazyce Python, které zajišťují řadu optimalizací a zjednodušují její provoz a údržbu. Kromě nováčků může také pomoci pedagogům jako osnova pro vyučování roboticky zaměřených kurzů.
@@ -955,12 +954,12 @@
 
   Další oblastí zlepšení je převod webové stránky do offline verze~--~export do formátů jako \gls{epub} a \gls{mobi} pro zlepšení podpory elektronických čteček knih, zajištění větší spolehlivosti převodu a implementace dodatečných funkcí (přeškrtnutí textu, podtržení textu, reference, citace, aj.).
 
-  \newpage
+  \cleardoublepage
 
   % create the bibliography
   \printbibliography[heading=bibnumbered, title=Použitá literatura]
 
-  \newpage
+  \cleardoublepage
 
   % create lof and lot
   \section{Seznam obrázků a tabulek}
